@@ -14,7 +14,7 @@ There is several common reason:
 
 ## **What is the metric for evaluating the models?**
 
-Its the [spearman ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html).
+Its the [spearman ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html) X 100.
 
 
 

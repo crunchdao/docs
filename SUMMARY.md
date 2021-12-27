@@ -5,7 +5,7 @@
 ## Tournament
 
 * [🐥 Getting Started](tournament/getting-started.md)
-* [⛏ Submitting your work](tournament/submitting-your-work.md)
+* [⛏ Submissions](tournament/submitting-your-work.md)
 * [🧙♂ API](tournament/api/README.md)
   * [API Key](tournament/api/api-key.md)
 * [❓ FAQ](tournament/faq.md)

@@ -1,22 +1,26 @@
-# ⛏ Submitting your work
+# ⛏ Submissions
 
-If you want to submit your work, please make sure that the order of the rows is kept and that the 3 targets are correctly labeled:
+## Time to submit
 
-* "target\_r"
-* "target\_g"
-* "target\_b"
+A new `round` starts every week at `Friday at 18:00 UTC` and new tournament data is released. To participate in the round, you must submit your latest predictions by the deadline on `Monday 9:00 UTC`.
+
+## Before submitting
+
+Before submitting make sure your prediction file includes the right column labels `target_r`_,_ `target_g`, `target_b` as shown in this example:
+
+![Example of prediction file](<../.gitbook/assets/image (20).png>)
 
 ### How to submit
 
 #### From the website
 
-On the [main page](http://tournament.datacrunch.com), there is a button to submit your work.
+On the [main page](http://tournament.datacrunch.com), you can click on this button to submit your work:
 
 ![](<../.gitbook/assets/image (1).png>)
 
-#### From the API
+#### From the API - recommended
 
-Uploading by hand your work can be a hassle, especially if you have to download it first from a notebook (like Google Colab). To counter this problem, an API endpoint is available.
+To upload your submission directly from your pipeline you can use this API endpoint:
 
 {% swagger baseUrl="https://api.tournament.datacrunch.com/v2/submissions" path="" method="post" summary="/v2/submissions" %}
 {% swagger-description %}
@@ -86,9 +90,15 @@ If the probleme persist, contact a crew member.
 {% endswagger-response %}
 {% endswagger %}
 
-### Submission Limit
+Check the example Notebooks to see how to call the API:
 
-The current limit of submission per round is 10.
+{% embed url="https://github.com/datacrunch-com/datacrunch-notebooks" %}
+DataCrunch Github repository
+{% endembed %}
+
+## Submission Limit
+
+The Tournament is limited to 10 submissions per round.
 
 This value can be incremented by referring some people. Each level will get you one more submission.
 
@@ -100,12 +110,10 @@ This value can be incremented by referring some people. Each level will get you 
 | 8              | 1                |
 | 10             | 1                |
 
-If you are experiencing a problem due to a bug from datacrunch's side, the team sometimes give (round limited) extra submission bonus. This is of course exceptional and only if a problem is preventing you to properly participate to the tournament.
+Before the end of the round you will have to select your best submission. If not we will automatically consider the submission with the best score on the test set.
 
-### How and when are the score calculated?
+### Scoring
 
-The score are being computed every 5 minutes.
+Your score is calculated based on the Mean [Spearman Ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html) correlation between your predictions and the targets.
 
-If you try to re-submit in the same crunch, your submission will override the previously uploaded one. This allow you a margin of error but is not a live-saver however, please think before trying to submit your work.
-
-The scores are being computed using the [Spearman Ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html).
+_**Need more inputs from Jean on scoring functions/method**_
