@@ -1,3 +1,7 @@
+---
+description: How to submit step-by-step guide
+---
+
 # ⛏ Submissions
 
 ## Time to submit
@@ -8,7 +12,7 @@ A new `round` starts every week at `Friday at 18:00 UTC` and new tournament data
 
 Before submitting make sure your prediction file includes the right column labels `target_r`_,_ `target_g`, `target_b` as shown in this example:
 
-![Example of prediction file](<../.gitbook/assets/image (20).png>)
+![Example of prediction file](<../.gitbook/assets/image (29).png>)
 
 ### How to submit
 
@@ -27,11 +31,11 @@ To upload your submission directly from your pipeline you can use this API endpo
 Submit your work
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="apiKey" type="string" %}
+{% swagger-parameter in="query" name="apiKey" type="string" required="false" %}
 Your API Key
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="file" type="string" %}
+{% swagger-parameter in="body" name="file" type="string" required="false" %}
 File content
 {% endswagger-parameter %}
 
@@ -100,7 +104,7 @@ DataCrunch Github repository
 
 The Tournament is limited to 10 submissions per round.
 
-This value can be incremented by referring some people. Each level will get you one more submission.
+This value can be incremented by referring some people. Each level will get you one additional submission.
 
 | Referred Count | Bonus Submission |
 | -------------- | ---------------- |
@@ -114,6 +118,10 @@ Before the end of the round you will have to select your best submission. If not
 
 ### Scoring
 
+##
+
 Your score is calculated based on the Mean [Spearman Ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html) correlation between your predictions and the targets.
+
+
 
 _**Need more inputs from Jean on scoring functions/method**_

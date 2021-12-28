@@ -5,11 +5,17 @@
 ## Tournament
 
 * [🐥 Getting Started](tournament/getting-started.md)
+* [🗃 Data](tournament/data.md)
+* [🤖 Model](tournament/model.md)
 * [⛏ Submissions](tournament/submitting-your-work.md)
-* [🧙♂ API](tournament/api/README.md)
+* [🏎 Leaderboard - Payout](tournament/leaderboard-payout.md)
+* [🧙♂ 🧙♂ API](tournament/api/README.md)
   * [API Key](tournament/api/api-key.md)
-* [❓ FAQ](tournament/faq.md)
+* [🙎 Profile Page](tournament/profile-page.md)
+* [Forum](tournament/forum.md)
 * [🌟 Avatar Credit](tournament/avatar-credit.md)
+* [❓ FAQ](tournament/faq.md)
+* [🤚 Support](tournament/support.md)
 
 ## CRUNCH Token
 

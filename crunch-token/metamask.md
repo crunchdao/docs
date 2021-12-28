@@ -1,14 +1,14 @@
 # 👛 Your Wallet (MetaMask)
 
-## Installing it
+## Installation
 
-If you want to interact with the CRUNCH token, the easiest way is to use [MetaMask](https://metamask.io).
+To interact with the $CRUNCH token, the easiest way is to use [MetaMask](https://metamask.io).
 
-To install it, you must go on their [website](https://metamask.io) and simply follow the instructions.
+To install your wallet simply follow the instruction from their [website](https://metamask.io) .
 
-## Using it
+## Interaction
 
-### DataCrunch Tournament
+### CrunchDAO Tournament
 
 Click on the button `CONNECT WITH METAMASK` available on your [profile](https://tournament.datacrunch.com/profile).
 
@@ -22,7 +22,6 @@ Then `Connect`.
 
 ![](<../.gitbook/assets/image (6).png>)
 
-And if everything went well, you should be able to see your CRUNCH balance. (clicking on it will refresh it)
+Now you should be able to see your $CRUNCH balance. (clicking on it will refresh it)
 
 ![](<../.gitbook/assets/image (7).png>)
-
