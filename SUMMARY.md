@@ -1,10 +1,8 @@
 # Table of contents
 
-* [👋 Hello](README.md)
-
 ## Tournament
 
-* [🐥 Getting Started](tournament/getting-started.md)
+* [🐥 Getting Started](README.md)
 * [🗃 Data](tournament/data.md)
 * [🤖 Model](tournament/model.md)
 * [⛏ Submissions](tournament/submitting-your-work.md)
