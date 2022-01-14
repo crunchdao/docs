@@ -118,10 +118,8 @@ Before the end of the round you will have to select your best submission. If not
 
 ### Scoring
 
-##
-
 Your score is calculated based on the Mean [Spearman Ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html) correlation between your predictions and the targets.
 
 
 
-_**Need more inputs from Jean on scoring functions/method**_
+_**Need more inputs from @**_jeheran _**on scoring functions/method**_

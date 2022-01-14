@@ -4,7 +4,7 @@
 
 To interact with the $CRUNCH token, the easiest way is to use [MetaMask](https://metamask.io).
 
-To install your wallet simply follow the instruction from their [website](https://metamask.io) .
+To install your wallet simply follow the instruction from their [website](https://metamask.io).
 
 ## Interaction
 

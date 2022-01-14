@@ -6,14 +6,15 @@ description: Leaderboards - Payout description
 
 ### Round Leaderboard
 
-You can access your weekly Round[ Leaderboard here](https://tournament.crunchdao.com/leaderboard)
+You can access your weekly [Round Leaderboard here](https://tournament.crunchdao.com/leaderboard).
 
 ![Example of Round LB](<../.gitbook/assets/image (20).png>)
 
 Your Round LB score is calculated based on the Mean [Spearman Ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html) correlation between your predictions and the targets.
 
-```
-// from scipy.stats import spearmanr
+```python
+from scipy.stats import spearmanr
+
 def spearman(y_true, y_pred): 
     return spearmanr(y_pred, y_true).correlation * 100
 ```
@@ -24,7 +25,7 @@ The Round LB scoring is only here to give you feedback on hold out data and will
 
 ## Global Leaderboard
 
-You can acces the [Global Leaderboard here](https://tournament.crunchdao.com/global-leaderboard/)
+You can acces the [Global Leaderboard here](https://tournament.crunchdao.com/global-leaderboard/).
 
 ![Example of Global Leaderboard](<../.gitbook/assets/image (23).png>)
 

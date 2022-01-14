@@ -13,7 +13,7 @@ You will also find Notebooks on the official CrunchDAO Github repository and Goo
 * Baseline Pipeline
 * Exploratory Data Analysis EDA
 * Feature Engineering
-* Cross Validation methods
+* Cross Validation Methods
 
 {% embed url="https://github.com/datacrunch-com/datacrunch-notebooks" %}
 CrunchDAO Notebooks
