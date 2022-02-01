@@ -28,42 +28,22 @@ Update the submission's comment.
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="The update has been applied." %}
-```javascript
-{
-    // Response
-}
-```
+
 {% endswagger-response %}
 
 {% swagger-response status="403: Forbidden" description="You do not have the permission to update this submission." %}
-```javascript
-{
-    // Response
-}
-```
+
 {% endswagger-response %}
 
 {% swagger-response status="404: Not Found" description="The submission hasn't been found." %}
-```javascript
-{
-    // Response
-}
-```
+
 {% endswagger-response %}
 
 {% swagger-response status="423: Locked" description="Too much submission has been selected for this round." %}
-```javascript
-{
-    // Response
-}
-```
+
 {% endswagger-response %}
 
 {% swagger-response status="423: Locked" description="The round is closed and no more modification is allowed." %}
-```javascript
-{
-    // Response
-}
-```
+
 {% endswagger-response %}
 {% endswagger %}
