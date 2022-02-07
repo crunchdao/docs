@@ -25,7 +25,7 @@ The `y_train` file contains 3 targets `target_r`, `target_g`, `target_b` that co
 
 The frequency of the `Moons`, `target_r`, `target_g` and `target_b` can be found here: [https://tournament.crunchdao.com/inspect](https://tournament.crunchdao.com/inspect).
 
-![Here is an example of Dataset gordon-geeko with a frequency of 1 month between Moons and performance of targets R/G/B over 30 days, 60 days and 90 days respectively](<../.gitbook/assets/image (28).png>)
+![Here is an example of Dataset gordon-geeko with a frequency of 1 month between Moons and performance of targets R/G/B over 30 days, 60 days and 90 days respectively](<../.gitbook/assets/image (28) (1).png>)
 
 {% hint style="warning" %}
 &#x20;Files might be big (200+MB) so make sure to have enough space before downloading.
