@@ -2,7 +2,7 @@
 description: How to get started with the CrunchDAO Tournament
 ---
 
-# 🐥 Getting Started
+# Getting Started
 
 ## Introduction
 
@@ -10,7 +10,13 @@ description: How to get started with the CrunchDAO Tournament
 
 The CrunchDAO Tournament is where you predict the stock market using machine learning on financial data. Your models will earn rewards based on performance on live financial data.
 
-## Summary
+
+
+## Jump right in
+
+This Google Colab will put you right in the middle of it fomr&#x20;
+
+## In a few steps
 
 1. Sign up at [https://tournament.crunchdao.com/](https://tournament.crunchdao.com).
 2. Download the dataset on a **weekly** basis.

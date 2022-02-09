@@ -12,7 +12,7 @@ A new `round` starts every week at `Friday at 18:00 UTC` and new tournament data
 
 Before submitting make sure your prediction file includes the right column labels `target_r`_,_ `target_g`, `target_b` as shown in this example:
 
-![Example of prediction file](<../../.gitbook/assets/image (29).png>)
+![Example of prediction file](<../.gitbook/assets/image (29).png>)
 
 ### How to submit
 
@@ -20,7 +20,7 @@ Before submitting make sure your prediction file includes the right column label
 
 On the [main page](http://tournament.datacrunch.com), you can click on this button to submit your work:
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1).png>)
 
 #### From the API - recommended
 

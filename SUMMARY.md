@@ -2,10 +2,10 @@
 
 ## Tournament
 
-* [🐥 Getting Started](README.md)
+* [Getting Started](README.md)
 * [🗃 Data](tournament/data.md)
 * [🤖 Model](tournament/model.md)
-* [⛏ Submissions](tournament/submitting-your-work/README.md)
+* [⛏ Submissions](tournament/submitting-your-work.md)
   * [🤖 API](tournament/submitting-your-work/api.md)
 * [🏎 Leaderboard - Payout](tournament/leaderboard-payout.md)
 * [🧙♂ API](tournament/api/README.md)
