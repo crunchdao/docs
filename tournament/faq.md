@@ -1,8 +1,8 @@
-# ❓ FAQ
+# FAQ
 
 ## **When is my work checked?**
 
-Every 5 minutes**.**
+Every 5 minutes\*\*.\*\*
 
 ## I got `null` score, what happened?
 
@@ -16,5 +16,6 @@ There is several common reason:
 
 Its the [spearman ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html) X 100.
 
+## What does mean \`_This round is an inception_\`
 
-
+It's a legacy term. Before we were not able to update the strategy as fast as it was played. So it happened that we were playing the exact same data without updating for couple of weeks. Dataset are now always inceptions.
