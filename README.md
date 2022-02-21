@@ -14,7 +14,7 @@ The CrunchDAO Tournament is where you predict the stock market using machine lea
 
 ## Jump right in
 
-This Google Colab will put you right in the middle of it fomr&#x20;
+This Google Colab will put you right in the middle of a working pipeline that make anyone able to predict very simple default prediction. Allowing anyone to participate!&#x20;
 
 ## In a few steps
 
