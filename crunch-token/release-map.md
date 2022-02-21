@@ -1,4 +1,16 @@
-# 🏁 Release Map
+# Release Map
+
+## 2022-02-18
+
+### CrunchMultiVesting
+
+* Deployed Multi Vesting smart contract. [(code)](https://github.com/datacrunch-com/datacrunch-contracts/blob/master/contracts/CrunchMultiVesting.sol) [(address)](https://etherscan.io/address/0xe469f12f4746b5ae105a1b888bff5a1b9e27fee5)
+
+## 2022-01-24
+
+### CrunchSelling
+
+* Deployed Selling smart contract. [(code)](https://github.com/datacrunch-com/datacrunch-contracts/blob/master/contracts/CrunchSelling.sol) [(address)](https://etherscan.io/address/0x22525935cb0f5c27ae025fe5a403bc7a0eb9c857)
 
 ## 2021-10-19
 
@@ -33,4 +45,3 @@
 ### CrunchToken
 
 * Deployed the CRUNCH Token. [(code)](https://github.com/datacrunch-com/datacrunch/blob/master/contracts/CrunchToken.sol) [(address)](https://etherscan.io/token/0x74451d2240ef9e86b3cea815378af61566b81856)
-
