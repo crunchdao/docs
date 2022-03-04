@@ -2,7 +2,7 @@
 description: Leaderboards - Payout description
 ---
 
-# 🏎 Leaderboard - Payout
+# Leaderboard & Payout
 
 ### Round Leaderboard
 

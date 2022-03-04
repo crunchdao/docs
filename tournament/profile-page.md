@@ -2,7 +2,7 @@
 description: Description of profile page sections
 ---
 
-# 🙎 Profile Page
+# Profile Page
 
 ## Profile
 

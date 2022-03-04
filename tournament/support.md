@@ -2,7 +2,7 @@
 description: Support page
 ---
 
-# 🤚 Support
+# Support
 
 We are here to help.
 

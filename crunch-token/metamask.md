@@ -1,4 +1,4 @@
-# 👛 Your Wallet (MetaMask)
+# Your Wallet (MetaMask)
 
 ## Installation
 

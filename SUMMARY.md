@@ -7,7 +7,7 @@
 * [Model](tournament/model.md)
 * [Submissions](tournament/submitting-your-work/README.md)
   * [API](tournament/submitting-your-work/api.md)
-* [Leaderboard - Payout](tournament/leaderboard-payout.md)
+* [Leaderboard & Payout](tournament/leaderboard-and-payout.md)
 * [API](tournament/api/README.md)
   * [API Key](tournament/api/api-key.md)
 * [Profile Page](tournament/profile-page.md)

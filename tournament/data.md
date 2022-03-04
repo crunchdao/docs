@@ -2,7 +2,7 @@
 description: Data page description
 ---
 
-# 🗃 Data
+# Data
 
 ## Dataset
 
@@ -10,7 +10,7 @@ CrunchDAO provides its data scientist community free curated, high quality and o
 
 There are - at the time of writing - 6 datasets currently in use in the Tournament
 
-| X\_train | [/data/X\_train.csv](https://tournament.datacrunch.com/data/y\_train.csv) |
+| X\_train | [/data/X\_train.csv](https://tournament.datacrunch.com/data/X\_train.csv) |
 | -------- | ------------------------------------------------------------------------- |
 | y\_train | [/data/y\_train.csv](https://tournament.datacrunch.com/data/y\_train.csv) |
 | X\_test  | [/data/X\_test.csv](https://tournament.datacrunch.com/data/X\_test.csv)   |

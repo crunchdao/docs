@@ -2,7 +2,7 @@
 description: How to submit step-by-step guide
 ---
 
-# ⛏ Submissions
+# Submissions
 
 ## Time to submit
 

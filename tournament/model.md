@@ -2,7 +2,7 @@
 description: Model Page description
 ---
 
-# 🤖 Model
+# Model
 
 ## Modeling
 

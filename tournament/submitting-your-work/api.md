@@ -2,7 +2,7 @@
 description: Change some submission properties by using the API.
 ---
 
-# 🤖 API
+# API
 
 To change some properties of a submission, you need to do a PATCH request to your resource's endpoint.
 
