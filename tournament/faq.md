@@ -2,7 +2,7 @@
 
 ## **When is my work checked?**
 
-Every 5 minutes\*\*.\*\*
+Every 5 minutes.
 
 ## I got `null` score, what happened?
 
