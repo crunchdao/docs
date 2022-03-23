@@ -114,7 +114,9 @@ This value can be incremented by referring some people. Each level will get you 
 | 8              | 1                |
 | 10             | 1                |
 
-Before the end of the round you will have to select your best submission. If not we will automatically consider the submission with the best score on the test set.
+### Selection
+
+Before the end of the round you will have to select your best submission. If you didn't or forget the system will automatically select the submission with the best score on the test set.
 
 ### Scoring
 
