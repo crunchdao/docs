@@ -53,7 +53,7 @@ The [Referees Section](https://tournament.crunchdao.com/profile/referees) will d
 
 This [Achievements Section](https://tournament.crunchdao.com/profile/achievements) list all your badges
 
-![Example of achievements](<../.gitbook/assets/image (19).png>)
+![Example of achievements](<../.gitbook/assets/image (19) (1).png>)
 
 ## Payouts
 

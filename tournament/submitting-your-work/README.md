@@ -12,7 +12,7 @@ A new `round` starts every week at `Friday at 18:00 UTC` and new tournament data
 
 Before submitting make sure your prediction file includes the right column labels `target_r`_,_ `target_g`, `target_b` as shown in this example:
 
-![Example of prediction file](<../../.gitbook/assets/image (29).png>)
+![Example of prediction file](<../../.gitbook/assets/image (29) (1).png>)
 
 ### How to submit
 

@@ -27,7 +27,7 @@ The Round LB scoring is only here to give you feedback on hold out data and will
 
 You can acces the [Global Leaderboard here](https://tournament.crunchdao.com/global-leaderboard/).
 
-![Example of Global Leaderboard](<../.gitbook/assets/image (23) (1).png>)
+![Example of Global Leaderboard](<../.gitbook/assets/image (23) (1) (1).png>)
 
 {% hint style="warning" %}
 **Only the Global LB** based on live data **will be used for payout**.
@@ -57,7 +57,7 @@ Payout happens after month completion.
 
 Payouts are computed based on global ranks and distributed as an exponential function to the global live leaderboard positions.
 
-![% of the monthly reward distributed by position on the live leaderboard](<../.gitbook/assets/image (23).png>)
+![% of the monthly reward distributed by position on the live leaderboard](<../.gitbook/assets/image (23) (1).png>)
 
 This proposal has been done by @correlator and has been voted by the community.
 
