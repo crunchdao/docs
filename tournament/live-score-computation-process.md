@@ -24,7 +24,7 @@ For each primary submission, the scorer will compute the spearman correlation sc
 
 ### Mean by dataset
 
-For each dataset you live score for this dataset is the mean of your last two participation at this dataset.
+For each dataset your live score for this dataset is the mean of your last two participation at this dataset.
 
 ### Mean of mean
 
@@ -32,7 +32,7 @@ Global mean score is the mean of all your live scores over the universe of strat
 
 ### Normalization
 
-Since December all rounds score are normalized to avoid some rounds to be more weighted in the overall score: [https://discord.com/channels/770586873260933120/770586873260933124/905097810502910033](https://discord.com/channels/770586873260933120/770586873260933124/905097810502910033)
+Since December, all round' scores are normalized to avoid some rounds to be more weighted in the overall score: [https://discord.com/channels/770586873260933120/770586873260933124/905097810502910033](https://discord.com/channels/770586873260933120/770586873260933124/905097810502910033)
 
 ### Computing global leaderboard
 
