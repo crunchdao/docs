@@ -36,4 +36,4 @@ Since December, all round' scores are normalized to avoid some rounds to be more
 
 ### Computing global leaderboard
 
-The global leaderboard positions are determined by the global correlation mean.
+Crunchers are ranked by their mean live spearman correlation score normalized over all strategies.
