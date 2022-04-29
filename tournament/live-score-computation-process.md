@@ -4,10 +4,6 @@ Computing the live score each weeks is a very computationally intensive process.
 
 Targets computer have to be made to make sure everything works as expected.
 
-Here is a schema on how the process is working internally:
-
-![internal schema](../.gitbook/assets/live-computer.drawio.svg)
-
 ### Active datasets lookup
 
 ![](<../.gitbook/assets/image (23).png>)
@@ -37,3 +33,9 @@ Since December, all round' scores are normalized to avoid some rounds to be more
 ### Computing global leaderboard
 
 Crunchers are ranked by their mean live spearman correlation score normalized over all strategies.
+
+### Internal Schema
+
+Here is a schema on how the process is working internally:
+
+![internal schema](../.gitbook/assets/live-computer.drawio.svg)
