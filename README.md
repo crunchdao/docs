@@ -20,7 +20,7 @@ This Google Colab will put you right in the middle of a working pipeline that ma
 2. Download the dataset on a **weekly** basis.
 3. Build your model and submit your predictions.
 4. Get your **monthly $CRUNCH reward** based on the [Global Leaderboard](https://tournament.crunchdao.com/global-leaderboard).
-5. Don't forgot to join the [working community on Discord!](https://discord.gg/veAtzsYn3M)
+5. Don't forget to join the [working community on Discord!](https://discord.gg/veAtzsYn3M)
 
 ## Example Google Colab Notebook
 
