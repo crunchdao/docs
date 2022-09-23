@@ -10,8 +10,6 @@ description: How to get started with the CrunchDAO Tournament
 
 The CrunchDAO Tournament is where you predict the stock market using machine learning on financial data. Your models will earn rewards based on performance on live financial data.
 
-## Jump right in
-
 This Google Colab will put you right in the middle of a working pipeline that make anyone able to predict very simple default prediction. Allowing anyone to participate!&#x20;
 
 ## In a few steps
