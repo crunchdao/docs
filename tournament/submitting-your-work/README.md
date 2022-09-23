@@ -33,16 +33,12 @@ To upload your submission directly from your pipeline you can use this API endpo
 Submit your work
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="apiKey" type="string" required="true" %}
+{% swagger-parameter in="query" name="apiKey" type="string" required="false" %}
 Your API Key
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="file" type="file" required="true" %}
+{% swagger-parameter in="body" name="file" type="string" required="false" %}
 File content
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="comment" type="string" %}
-Optional comment
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Submission Submitted" %}

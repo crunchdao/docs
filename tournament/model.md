@@ -8,7 +8,7 @@ description: Model Page description
 
 Your objective is to build a model to predict future targets using live features that correspond to the current stock market.
 
-You will find Notebooks on the official CrunchDAO Github repository and Google Colaboratory including examples of:
+You will also find Notebooks on the official CrunchDAO Github repository and Google Colaboratory including examples of:
 
 * Baseline Pipeline
 * Exploratory Data Analysis EDA
