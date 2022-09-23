@@ -6,13 +6,15 @@ description: How to submit step-by-step guide
 
 ## Time to submit
 
-A new `round` starts every week at `Friday at 18:00 UTC` and new tournament data is released. To participate in the round, you must submit your latest predictions by the deadline on `Monday 9:00 UTC`.
+A new `round` starts every week at `Friday at 18:00 UTC` and new tournament data is released. To participate in the round, you must submit your prediction file by the deadline on `Tuesday 9:00 UTC`.
 
 ## Before submitting
 
 Before submitting make sure your prediction file includes the right column labels `target_r`_,_ `target_g`, `target_b` as shown in this example:
 
 ![Example of prediction file](<../../.gitbook/assets/image (29) (1).png>)
+
+Your prediction must also match the number of lines you have in X\_test.
 
 ### How to submit
 
@@ -99,12 +101,6 @@ Check the example Notebooks to see how to call the API:
 {% embed url="https://github.com/datacrunch-com/datacrunch-notebooks" %}
 DataCrunch Github repository
 {% endembed %}
-
-## Submission Limit
-
-The Tournament is limited to 10 submissions per round.
-
-This value can be incremented by referring some people. Each level will get you one additional submission.
 
 | Referred Count | Bonus Submission |
 | -------------- | ---------------- |
