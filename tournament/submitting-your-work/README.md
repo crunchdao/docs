@@ -14,6 +14,8 @@ Before submitting make sure your prediction file includes the right column label
 
 ![Example of prediction file](<../../.gitbook/assets/image (29) (1).png>)
 
+Be also aware that the number of rows in your submission file must match the number of rows in X\_test.
+
 Your prediction must also match the number of lines you have in X\_test.
 
 ### How to submit
@@ -33,12 +35,16 @@ To upload your submission directly from your pipeline you can use this API endpo
 Submit your work
 {% endswagger-description %}
 
-{% swagger-parameter in="query" name="apiKey" type="string" required="false" %}
+{% swagger-parameter in="query" name="apiKey" type="string" required="true" %}
 Your API Key
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="file" type="string" required="false" %}
+{% swagger-parameter in="body" name="file" type="file" required="true" %}
 File content
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="comment" type="string" %}
+Optional comment
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Submission Submitted" %}
@@ -96,11 +102,9 @@ If the probleme persist, contact a crew member.
 {% endswagger-response %}
 {% endswagger %}
 
-Check the example Notebooks to see how to call the API:
+A functional example can be found in the quickstart:
 
-{% embed url="https://github.com/datacrunch-com/datacrunch-notebooks" %}
-DataCrunch Github repository
-{% endembed %}
+{% embed url="https://colab.research.google.com/drive/1ZXARI_CQMbCWs-C_aXEtWPIDZVW61KJ4?usp=sharing" %}
 
 | Referred Count | Bonus Submission |
 | -------------- | ---------------- |
@@ -113,7 +117,3 @@ DataCrunch Github repository
 ### Selection
 
 Before the end of the round you will have to select your best submission. If you didn't or forget the system will automatically select the submission with the best score on the test set.
-
-### Scoring
-
-Your score is calculated based on the Mean [Spearman Ratio](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html) correlation between your predictions and the targets.
