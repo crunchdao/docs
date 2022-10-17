@@ -1,5 +1,11 @@
 # Release Map
 
+## 2022-07-25
+
+### CrunchMultiVestingV2
+
+* Deployed Multi Vesting V2 smart contract. [(code)](https://github.com/crunchdao/contracts/blob/master/contracts/CrunchMultiVestingV2.sol) [(address)](https://etherscan.io/address/0xf3b262b8623aa8eaf302bd46a393179df0ed13c5)
+
 ## 2022-02-18
 
 ### CrunchMultiVesting
