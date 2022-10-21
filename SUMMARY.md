@@ -11,6 +11,7 @@
 * [Leaderboard & Payout](tournament/leaderboard-payout.md)
 * [API](tournament/api/README.md)
   * [API Key](tournament/api/api-key.md)
+  * [Endpoint Deprecation](tournament/api/endpoint-deprecation.md)
 * [Profile Page](tournament/profile-page.md)
 * [Forum](tournament/forum.md)
 * [Avatar Credit](tournament/avatar-credit.md)
