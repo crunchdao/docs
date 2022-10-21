@@ -2,6 +2,8 @@
 
 The following endpoint will be deprecated on January the 1st, 2023.
 
+If you have any question or query, don't hesitate to ask _<mark style="color:purple;">@cruncher\_enzo</mark>_ on our official [Discord Server](https://discord.gg/veAtzsYn3M).
+
 | Line Request                                                                              | Alternative                                                                |
 | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | <mark style="color:yellow;">`POST`</mark>`/submission`                                    | <mark style="color:yellow;">`POST`</mark>`/v2/submissions`                 |
