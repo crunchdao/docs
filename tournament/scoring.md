@@ -2,7 +2,7 @@
 
 ### Spearman correlation score
 
-Once you have submitted, your prediction will be confronted to what is happening on the market. It will be scored weekly using the spearman rank metric.&#x20;
+Once you have submitted, your prediction will be confronted to what is happening on the market. It will be scored daily using the spearman rank metric.&#x20;
 
 
 
@@ -10,8 +10,8 @@ Once you have submitted, your prediction will be confronted to what is happening
 
 * The last two rounds on each dataset are taken into account
 * Non-submissions in any round get a score of -5. (Incentivises long-term participation.)
-* Scores are normalized (between range \[-1,1]) per round. Then both rounds are averaged.
-* Once averaged, users scoring above the 90th percentile get the same score of +1. (This is to disincentivize overfit models as anyone above a threshold gets the same score).
+* Scores are normalized (between range \[-1,1]) per round.
+* Users scoring above the 90th percentile get the same score of +1. (This is to disincentivize overfit models as anyone above a threshold gets the same score).
 * Finally, the scores for all rounds are averaged.
 
 
