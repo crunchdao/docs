@@ -6,17 +6,13 @@ Since the $CRUNCH Token is an ERC20 Token, it must be added manually to MetaMask
 
 A button will allow you to add the $CRUNCH Token.
 
-Go on your [profile](https://tournament.datacrunch.com/profile), and click `ADD TOKEN TO METAMASK`.
+Go to your [profile](https://tournament.datacrunch.com/profile), and click `ADD TOKEN TO METAMASK`.
 
 ![](<../.gitbook/assets/image (14).png>)
 
-A confirmation windows will pop-up, just click `Add Token`.
+A confirmation window will pop-up, just click `Add Token`.
 
-![](<../.gitbook/assets/image (15).png>)
-
-Done! You successfully added the !CRUNCH Token to your MetaMask wallet.
-
-![](<../.gitbook/assets/image (16).png>)
+Done! You successfully added the $CRUNCH Token to your MetaMask wallet.
 
 ### Manually
 

@@ -22,7 +22,7 @@ Your prediction must also match the number of lines you have in X\_test.
 
 #### From the website
 
-On the [main page](http://tournament.datacrunch.com), you can click on this button to submit your work:
+On the [main page](https://tournament.crunchdao.com/), you can click on this button to submit your work:
 
 ![](<../../.gitbook/assets/image (1).png>)
 
@@ -30,90 +30,9 @@ On the [main page](http://tournament.datacrunch.com), you can click on this butt
 
 To upload your submission directly from your pipeline you can use this API endpoint:
 
-{% swagger baseUrl="https://api.tournament.datacrunch.com/v2/submissions" path="" method="post" summary="/v2/submissions" %}
-{% swagger-description %}
-Submit your work
-{% endswagger-description %}
-
-{% swagger-parameter in="query" name="apiKey" type="string" required="true" %}
-Your API Key
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="file" type="file" required="true" %}
-File content
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="comment" type="string" %}
-Optional comment
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Submission Submitted" %}
-```
-:)
-```
-{% endswagger-response %}
-
-{% swagger-response status="400" description="File content is empty" %}
-```
-The submitted file content is empty.
-```
-{% endswagger-response %}
-
-{% swagger-response status="401" description="Email not verified" %}
-```
-Please verify your email or contact a crew member.
-```
-{% endswagger-response %}
-
-{% swagger-response status="404" description="Unkown API Key" %}
-```
-You should check if the provided API Key is valid.
-```
-{% endswagger-response %}
-
-{% swagger-response status="409" description="Duplicate submission" %}
-```
-Your work has already been submitted with the same exact results.
-If you think that this a false positive, contact a cruncher.
-
-MD5 collision probability: 1/2^128 (source: https://stackoverflow.com/a/288519/7292958)
-```
-{% endswagger-response %}
-
-{% swagger-response status="423" description="Submissions are close" %}
-```
-You can only submit during rounds.
-Or the server is currently busy crunching the submitted files, please wait some time before retrying.
-```
-{% endswagger-response %}
-
-{% swagger-response status="429" description="Too many submission" %}
-```
-You run out of submissions.
-```
-{% endswagger-response %}
-
-{% swagger-response status="500" description="The server returned an error." %}
-```
-Ouch!
-It seems that we were not expecting this kind of result from the server.
-If the probleme persist, contact a crew member.
-```
-{% endswagger-response %}
-{% endswagger %}
-
 A functional example can be found in the quickstart:
 
 {% embed url="https://colab.research.google.com/drive/1ZXARI_CQMbCWs-C_aXEtWPIDZVW61KJ4?usp=sharing" %}
+How to submit notebook
+{% endembed %}
 
-| Referred Count | Bonus Submission |
-| -------------- | ---------------- |
-| 1              | 1                |
-| 3              | 1                |
-| 5              | 1                |
-| 8              | 1                |
-| 10             | 1                |
-
-### Selection
-
-Before the end of the round you will have to select your best submission. If you didn't or forget the system will automatically select the submission with the best score on the test set.

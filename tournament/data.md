@@ -6,9 +6,9 @@ description: Data page description
 
 ## Dataset
 
-CrunchDAO provides its data scientist community free curated, high quality and obfuscated data.
+CrunchDAO provides its data scientist community with free curated, high-quality but obfuscated data. This obfuscation is the only way to allow the community to work on institutional data.
 
-There are - at the time of writing - 6 datasets currently in use in the Tournament
+There are - at the time of writing - 6 datasets currently in use in the Tournament.
 
 | X\_train | [/data/X\_train.csv](https://tournament.datacrunch.com/data/X\_train.csv) |
 | -------- | ------------------------------------------------------------------------- |
@@ -17,15 +17,34 @@ There are - at the time of writing - 6 datasets currently in use in the Tourname
 
 ![Sample of X\_train dataset output](<../.gitbook/assets/image (22).png>)
 
-Each `id` in `X_train` corresponds to a stock at a specific time `Moons`. The `Features` describe specific attributes of the stock at the time.
+### ID
+
+Each `id` in `X_train and X_test` corresponds to a stock at a specific time `Moons`.&#x20;
+
+### Moons
+
+The frequency of the `Moons depends on the dataset :`&#x20;
+
+* gordon-geeko : 30 days interval between each moon
+* dolly : 90 days interval&#x20;
+* e-kinetic : 7 days interval&#x20;
+* c-mechanics : 7 days interval
+* b-volatility : 7 days interval
+* 3b1-signal : 7 days interval
+
+### Features
+
+The `features` describe specific attributes of a stock at a point in time.
+
+### Targets
 
 ![Sample of y\_train targets](<../.gitbook/assets/image (25).png>)
 
-The `y_train` file contains 3 targets `target_r`, `target_g`, `target_b` that correspond to the performance of the stock over 3 time horizons.
+The `y_train` file contains 3 targets `target_r`, `target_g`, `target_b` that correspond to the idiosyncratic return of the stock over 3-time horizons: 30, 60, and 90 days respectively.
 
-The frequency of the `Moons`, `target_r`, `target_g` and `target_b` can be found here: [https://tournament.crunchdao.com/inspect](https://tournament.crunchdao.com/inspect).
+### Split
 
-![Here is an example of Dataset gordon-geeko with a frequency of 1 month between Moons and performance of targets R/G/B over 30 days, 60 days and 90 days respectively](<../.gitbook/assets/image (28) (1).png>)
+The overall dataset is split in two: train and test. The test set starts one moon after the last moon of X\_train.
 
 {% hint style="warning" %}
 &#x20;Files might be big (200+MB) so make sure to have enough space before downloading.

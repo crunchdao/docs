@@ -45,9 +45,7 @@ Visit the [Staking Section](https://tournament.crunchdao.com/profile/staking) in
 
 ## Referees
 
-The [Referees Section](https://tournament.crunchdao.com/profile/referees) will display your referrals:
-
-![Example of referrals](<../.gitbook/assets/image (30).png>)
+The [Referees Section](https://tournament.crunchdao.com/profile/referees) will display your referrals.
 
 ## Achievements
 

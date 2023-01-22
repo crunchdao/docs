@@ -1,27 +1,34 @@
 ---
-description: How to get started with the CrunchDAO Tournament
+description: >-
+  How to get set up and become a member of the CrunchDAO Tournaments (10
+  minutes)
 ---
 
 # Getting Started
 
 ## Introduction
 
-**CrunchDAO is the first DAO-powered market neutral fund**.
+CrunchDAO is a research team leveraging the power of collective intelligence and Web3 to produce next-generation financial predictions.
 
-The CrunchDAO Tournament is where you predict the stock market using machine learning on financial data. Your models will earn rewards based on performance on live financial data.
+As a participant, you will be asked to build machine-learning models on the DAO's datasets.
 
-This Google Colab will put you right in the middle of a working pipeline that make anyone able to predict very simple default prediction. Allowing anyone to participate!&#x20;
+Members are remunerated in $CRUNCH according to the correlation of their predictions with the stock market over the following 90 days.
 
-## In a few steps
+The CrunchDAO's customers are paying the DAO for its financial forecasts.
+
+The data crunchers receive this payment according to their position on the leaderboards.
+
+## Main steps
 
 1. Sign up at [https://tournament.crunchdao.com/](https://tournament.crunchdao.com).
 2. Download the dataset on a **weekly** basis.
-3. Build your model and submit your predictions.
+3. Build your model and submit your predictions every week.
 4. Get your **monthly $CRUNCH reward** based on the [Global Leaderboard](https://tournament.crunchdao.com/global-leaderboard).
 5. Don't forget to join the [working community on Discord!](https://discord.gg/veAtzsYn3M)
+6. Engage in the governance of the DAO by joining our [voting platform](https://snapshot.org/#/datacrunch.eth)!
 
-## Example Google Colab Notebook
+## Get started now
 
-To get you started, CrunchDAO provide a simple yet powerful Google Colab Notebook to help new participants to quickly have a working version that they can tweak at their will.
+To get you started, CrunchDAO provides a simple yet powerful Google Colab Notebook to help new participants quickly have a working version that they can tweak at their will.
 
-[https://colab.research.google.com/drive/1ZXARI\_CQMbCWs-C\_aXEtWPIDZVW61KJ4?usp=sharing](https://colab.research.google.com/drive/1ZXARI\_CQMbCWs-C\_aXEtWPIDZVW61KJ4?usp=sharing)
+{% embed url="https://colab.research.google.com/drive/1ZXARI_CQMbCWs-C_aXEtWPIDZVW61KJ4?usp=sharing" %}
