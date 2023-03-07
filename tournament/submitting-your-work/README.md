@@ -24,7 +24,7 @@ Your prediction must also match the number of lines you have in X\_test.
 
 On the [main page](https://tournament.crunchdao.com/), you can click on this button to submit your work:
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (1) (1).png>)
 
 #### From the API - recommended
 

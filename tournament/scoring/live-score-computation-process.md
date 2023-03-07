@@ -4,7 +4,7 @@ Computing the live score of each day is a very computationally intensive process
 
 ### Active datasets lookup
 
-![](<../../.gitbook/assets/image (23).png>)
+![](<../../.gitbook/assets/image (23) (2).png>)
 
 This board allows you to visualize which dataset is currently active and scored against live data.
 

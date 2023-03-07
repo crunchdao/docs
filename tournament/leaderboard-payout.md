@@ -24,15 +24,15 @@ Payout happens after month completion.
 
 ## Payouts calculation
 
-Payouts are computed based on global ranks and distributed as an exponential function to the global live leaderboard positions.
+Payouts are computed based on global scores and distributed as an exponential function to the global live leaderboard scores.
 
-![% of the monthly reward distributed by position on the live leaderboard](<../.gitbook/assets/image (23) (1).png>)
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Cumulative distribution of rewards (2023-03-03 leaderboard)</p></figcaption></figure>
 
 This proposal has been done by @correlator and has been voted by the community.
 
-After downloading the live leaderboard as CSV, you can run this google Colab to re-compute the payouts and/or propose a new payout function:
+You can check the computation of the scaled scores and payouts in the following notebook.
 
-{% embed url="https://colab.research.google.com/drive/15ZyqG2wo0bspyD0LTameN8xsRfD4wKe8?usp=sharing" %}
-Payout computation notebook
+{% embed url="https://colab.research.google.com/drive/1voVXek92rSvKp-r_4dtvBMuj-Jia4fhd#scrollTo=aMRNhq2sKwei" %}
+Scores and payouts computation notebook
 {% endembed %}
 
