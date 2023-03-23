@@ -17,7 +17,7 @@ You will find Notebooks on the official CrunchDAO GitHub repository and Google C
 CrunchDAO Notebook example
 {% endembed %}
 
-{% embed url="https://colab.research.google.com/drive/1ZXARI_CQMbCWs-C_aXEtWPIDZVW61KJ4?usp=sharing" %}
+{% embed url="https://colab.research.google.com/drive/1y-014Hz--erBxSzTxgXIdv5Pc3UTqFeK#scrollTo=s27mjZWMmQms" %}
 Colab Getting Started Baseline Notebook
 {% endembed %}
 

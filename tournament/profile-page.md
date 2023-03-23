@@ -58,9 +58,3 @@ This [Achievements Section](https://tournament.crunchdao.com/profile/achievement
 You can retrieve your Payouts history in the [Payouts Section](https://tournament.crunchdao.com/profile/payouts)
 
 ![](<../.gitbook/assets/image (17).png>)
-
-## Airdrop
-
-[This Section](https://tournament.crunchdao.com/profile/airdrop) lists all the airdrops. More to come...
-
-![](<../.gitbook/assets/image (18).png>)

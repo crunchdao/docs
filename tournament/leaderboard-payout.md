@@ -26,7 +26,7 @@ Payout happens after month completion.
 
 Payouts are computed based on global scores and distributed as an exponential function to the global live leaderboard scores.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Cumulative distribution of rewards (2023-03-03 leaderboard)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Cumulative distribution of rewards (2023-03-03 leaderboard)</p></figcaption></figure>
 
 This proposal has been done by @correlator and has been voted by the community.
 

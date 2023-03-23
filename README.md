@@ -10,13 +10,13 @@ description: >-
 
 CrunchDAO is a research team leveraging the power of collective intelligence and Web3 to produce next-generation financial predictions.
 
-As a participant, you will be asked to build machine-learning models on the DAO's datasets.
+As a participant, you will be asked to build machine-learning models on the DAO's dataset.
 
 Members are remunerated in $CRUNCH according to the correlation of their predictions with the stock market over the following 90 days.
 
 The CrunchDAO's customers are paying the DAO for its financial forecasts.
 
-The data crunchers receive this payment according to their position on the leaderboards.
+The data crunchers receive payments according to their position on the leaderboards.
 
 ## Main steps
 
@@ -31,4 +31,6 @@ The data crunchers receive this payment according to their position on the leade
 
 To get you started, CrunchDAO provides a simple yet powerful Google Colab Notebook to help new participants quickly have a working version that they can tweak at their will.
 
-{% embed url="https://colab.research.google.com/drive/1ZXARI_CQMbCWs-C_aXEtWPIDZVW61KJ4?usp=sharing" %}
+{% embed url="https://colab.research.google.com/drive/1y-014Hz--erBxSzTxgXIdv5Pc3UTqFeK#scrollTo=l8E9WujWnOoi" %}
+CrunchDAO quickstarter notebook&#x20;
+{% endembed %}

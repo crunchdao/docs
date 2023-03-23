@@ -10,13 +10,11 @@ A new `round` starts every week at `Friday at 18:00 UTC` and new tournament data
 
 ## Before submitting
 
-Before submitting make sure your prediction file includes the right column labels `target_r`_,_ `target_g`, `target_b` as shown in this example:
+Before submitting make sure your prediction file includes the right column labels `id`, `Moons`, `target_w`, `target_r`_,_ `target_g`, `target_b` as shown in this example:
 
-![Example of prediction file](<../../.gitbook/assets/image (29) (1).png>)
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Example of prediction file</p></figcaption></figure>
 
-Be also aware that the number of rows in your submission file must match the number of rows in X\_test.
-
-Your prediction must also match the number of lines you have in X\_test.
+Be aware that your sumbission file must contain the same `Moons` and the same `ids` in each `moon` than X\_test.
 
 ### How to submit
 
@@ -24,7 +22,7 @@ Your prediction must also match the number of lines you have in X\_test.
 
 On the [main page](https://tournament.crunchdao.com/), you can click on this button to submit your work:
 
-![](<../../.gitbook/assets/image (1) (1).png>)
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 #### From the API - recommended
 
@@ -32,7 +30,6 @@ To upload your submission directly from your pipeline you can use this API endpo
 
 A functional example can be found in the quickstart:
 
-{% embed url="https://colab.research.google.com/drive/1ZXARI_CQMbCWs-C_aXEtWPIDZVW61KJ4?usp=sharing" %}
+{% embed url="https://colab.research.google.com/drive/1y-014Hz--erBxSzTxgXIdv5Pc3UTqFeK#scrollTo=s27mjZWMmQms" %}
 How to submit notebook
 {% endembed %}
-

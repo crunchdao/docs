@@ -4,15 +4,15 @@
 
 Once you have submitted, your prediction will be confronted with what is happening on the market. It will be scored daily using spearman rank correlation.&#x20;
 
-
-
 ### Post-processing ranking (scaled leaderboard)
 
-* The last two rounds on each dataset are taken into account
+* The last two rounds on each dataset are taken into account.&#x20;
 * Non-submissions in any round get a score of -5%. (Incentivises consistency)
 * Scores are normalized (between range \[-1,1]) per round.
 * Users scoring above the 90th percentile get the same score of +1. (This is to disincentivize overfit models as anyone above a threshold gets the same score).
-* Finally, the scores for all rounds are averaged.
+* Finally, the scores for all rounds are averaged.&#x20;
+
+Note: The datasets are currently being merged into one. The former scoring system will continue until may, 17th. Afterward, the scores will be an average of the last 12 weeks on the unique dataset being played.&#x20;
 
 
 
