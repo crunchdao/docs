@@ -4,15 +4,11 @@ description: Leaderboards - Payout description
 
 # Leaderboard & Payout
 
-## Global Leaderboard
+## Leaderboard
 
-You can access the [Global Leaderboard here](https://tournament.crunchdao.com/global-leaderboard/).
+You can access the [Leaderboard here](https://tournament.crunchdao.com/global-leaderboard/).
 
 ![Example of Global Leaderboard](<../.gitbook/assets/image (23) (1) (1).png>)
-
-{% hint style="warning" %}
-**Only the Global LB** based on live data **will be used for payout**.
-{% endhint %}
 
 ## Payouts
 

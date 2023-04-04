@@ -26,7 +26,24 @@ On the [main page](https://tournament.crunchdao.com/), you can click on this but
 
 #### From the API - recommended
 
-To upload your submission directly from your pipeline you can use this API endpoint:
+To upload your submission directly from your pipeline you can use this API endpoint:&#x20;
+
+````python
+```python3
+r = requests.post(
+            f"https://api.tournament.crunchdao.com/v2/submissions",
+            params={
+                "apiKey": API_KEY, # <- Your API key
+            },
+            files = {
+                "file": ("x", prediction_dataframe.to_csv(index=False).encode('ascii'))
+            },
+            data = {
+                "comment": "" # Write a comment about your model here
+            },
+        )
+```
+````
 
 A functional example can be found in the quickstart:
 
