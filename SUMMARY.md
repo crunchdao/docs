@@ -3,7 +3,8 @@
 ## Tournament
 
 * [Getting Started](README.md)
-* [Data](tournament/data.md)
+* [Data](tournament/data/README.md)
+  * [Versioning](tournament/data/versioning.md)
 * [Model](tournament/model.md)
 * [Submissions](tournament/submitting-your-work/README.md)
   * [API](tournament/submitting-your-work/api.md)
