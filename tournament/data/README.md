@@ -10,13 +10,14 @@ CrunchDAO provides its data scientist community with free curated, high-quality 
 
 
 
-| Name                | CSV links                                                                                      | Parquet links                                                                                          | Comment                           |
-| ------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------- |
-| X\_train            | [/data/X\_train.csv](https://tournament.datacrunch.com/data/X\_train.csv)                      | [/data/X\_train.parquet](https://tournament.crunchdao.com/data/X\_train.parquet)                       |                                   |
-| X\_train\_full      | [/data/X\_train\_full.csv](https://tournament.crunchdao.com/data/X\_train.csv)                 | [/data\_X\_train\_full.parquet](https://tournament.crunchdao.com/data/X\_train.parquet)                | Train set with unresolved targets |
-| y\_train            | [/data/y\_train.csv](https://tournament.datacrunch.com/data/y\_train.csv)                      | [/data/y\_train.parquet](https://tournament.crunchdao.com/data/y\_train.parquet)                       |                                   |
-| X\_test             | [/data/X\_test.csv](https://tournament.datacrunch.com/data/X\_test.csv)                        | [/data/X\_test.parquet](https://tournament.crunchdao.com/data/X\_test.parquet)                         |                                   |
-| example\_submission | [/data/example\_submission.csv](https://tournament.crunchdao.com/data/example\_submission.csv) | [/data/example\_submission.parquet](https://tournament.crunchdao.com/data/example\_submission.parquet) |                                   |
+| Name                | CSV links                                                                                      | Parquet links                                                                                          | Comment                              |
+| ------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------ |
+| X\_train            | [/data/X\_train.csv](https://tournament.datacrunch.com/data/X\_train.csv)                      | [/data/X\_train.parquet](https://tournament.crunchdao.com/data/X\_train.parquet)                       |                                      |
+| y\_train            | [/data/y\_train.csv](https://tournament.datacrunch.com/data/y\_train.csv)                      | [/data/y\_train.parquet](https://tournament.crunchdao.com/data/y\_train.parquet)                       |                                      |
+| X\_test             | [/data/X\_test.csv](https://tournament.datacrunch.com/data/X\_test.csv)                        | [/data/X\_test.parquet](https://tournament.crunchdao.com/data/X\_test.parquet)                         |                                      |
+| X\_train\_full      | [/data/X\_train\_full.csv](https://tournament.crunchdao.com/data/X\_train\_full.csv)           | [/data/X\_train\_full.parquet](https://tournament.crunchdao.com/data/X\_train\_full.parquet)           | X\_train set with unresolved targets |
+| y\_train\_full      | [/data/y\_train\_full.csv](https://tournament.crunchdao.com/data/y\_train\_full.csv)           | [/data\_y\_train\_full.parquet](https://tournament.crunchdao.com/data/y\_train\_full.parquet)          | y\_train set with unresolved targets |
+| example\_submission | [/data/example\_submission.csv](https://tournament.crunchdao.com/data/example\_submission.csv) | [/data/example\_submission.parquet](https://tournament.crunchdao.com/data/example\_submission.parquet) |                                      |
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Sample of X_train dataset output</p></figcaption></figure>
 
