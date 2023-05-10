@@ -14,7 +14,7 @@ You will find Notebooks on the official CrunchDAO GitHub repository and Google C
 * Cross Validation Methods
 
 {% embed url="https://github.com/crunchdao/notebooks" %}
-CrunchDAO Notebook example
+CrunchDAO Notebooks
 {% endembed %}
 
 {% embed url="https://colab.research.google.com/drive/1y-014Hz--erBxSzTxgXIdv5Pc3UTqFeK#scrollTo=s27mjZWMmQms" %}

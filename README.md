@@ -31,6 +31,6 @@ The data crunchers receive payments according to their position on the leaderboa
 
 To get you started, CrunchDAO provides a simple yet powerful Google Colab Notebook to help new participants quickly have a working version that they can tweak at their will.
 
-{% embed url="https://colab.research.google.com/drive/1y-014Hz--erBxSzTxgXIdv5Pc3UTqFeK#scrollTo=l8E9WujWnOoi" %}
-CrunchDAO quickstarter notebook&#x20;
+{% embed url="https://colab.research.google.com/github/crunchdao/datacrunch-notebooks/blob/master/python/quickstarter_notebook.ipynb" %}
+QuickStarter for the DataCrunch tournament&#x20;
 {% endembed %}
