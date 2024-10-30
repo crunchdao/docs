@@ -1,36 +1,36 @@
----
-description: >-
-  How to get set up and become a member of the CrunchDAO Tournaments (10
-  minutes)
----
+# The Crunch-Hub
 
-# Getting Started
+## The Tournament Selector
 
-## Introduction
+Select [the competition](https://hub.crunchdao.com/home) you want to join. We highly recommend that you join as many competitions as you can to maximise your earnings.
 
-CrunchDAO is a research team leveraging the power of collective intelligence and Web3 to produce next-generation financial predictions.
+<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption><p>Dataset on the platform</p></figcaption></figure>
 
-As a participant, you will be asked to build machine-learning models on the DAO's dataset.
+## The Civilian's Duty
 
-Members are remunerated in $CRUNCH according to the correlation of their predictions with the stock market over the following 90 days.
+Every engagement on the DAO's channels will be logged on this graph.
 
-The CrunchDAO's customers are paying the DAO for its financial forecasts.
+Civilians' duties include but are not limited to:
 
-The data crunchers receive payments according to their position on the leaderboards.
+* Engage in Discord's channels
+* Engage in the governance votes
+* Complete some quests
+* Submit to the competitions/rallies
 
-## Main steps
+<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-1. Sign up at [https://tournament.crunchdao.com/](https://tournament.crunchdao.com).
-2. Download the dataset on a **weekly** basis.
-3. Build your model and submit your predictions every week.
-4. Get your **monthly $CRUNCH reward** based on the [Global Leaderboard](https://tournament.crunchdao.com/global-leaderboard).
-5. Don't forget to join the [working community on Discord!](https://discord.gg/veAtzsYn3M)
-6. Engage in the governance of the DAO by joining our [voting platform](https://snapshot.org/#/datacrunch.eth)!
+{% hint style="info" %}
+Having a full civilian duties graph for a year has been completed only by a very few members. Part of these few legends is cruncher\_enzo.
+{% endhint %}
 
-## Get started now
+## Quests
 
-To get you started, CrunchDAO provides a simple yet powerful Google Colab Notebook to help new participants quickly have a working version that they can tweak at their will.
+Quests are duties remunerated in $CRUNCH.
 
-{% embed url="https://colab.research.google.com/github/crunchdao/datacrunch-notebooks/blob/master/python/quickstarter_notebook.ipynb" %}
-QuickStarter for the DataCrunch tournament&#x20;
-{% endembed %}
+<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption><p>Our quest board</p></figcaption></figure>
+
+## Governance
+
+All important decisions are taken by the community. It's actually part of your duty to make sure that this community stays on the right track for you, and the general interest of its members. You are expected to take governance very seriously.&#x20;
+
+<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption><p>Votes</p></figcaption></figure>
