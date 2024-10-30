@@ -18,7 +18,6 @@
     * [Crunch 3 – Dec 9 to Jan 31 – Identifying Gene](competitions/competitions/broad-institute-autoimmune-disease/crunch-3.md)
     * [Full Specifications](competitions/competitions/broad-institute-autoimmune-disease/full-specifications.md)
     * [Lectures](competitions/competitions/broad-institute-autoimmune-disease/lectures.md)
-  * [Page](competitions/competitions/page.md)
   * [🔒 ADIA Lab Market Prediction Competition](competitions/competitions/adia-lab-market-prediction-competition.md)
 * [Rallies](competitions/rallies/README.md)
   * [Mid+One](competitions/rallies/mid+one.md)
