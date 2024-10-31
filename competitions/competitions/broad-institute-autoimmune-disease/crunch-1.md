@@ -28,7 +28,7 @@ In **Crunch 1**, you will train an algorithm to predict **spatial transcriptomic
 
 <figure><img src="../../../.gitbook/assets/Capture d’écran 2024-10-28 à 17.20.50.png" alt=""><figcaption></figcaption></figure>
 
-* **Y (Output)**:
+* **Y**:
   * **`anucleus`**: This file contains the **aggregated gene expression data** for each nucleus. It is log1p-normalized and stores the gene expression profiles for 460 genes per nucleus. This is the primary target (**Y**) for your model.
 
 <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Anucleus – gene expression for each nucleus</p></figcaption></figure>
