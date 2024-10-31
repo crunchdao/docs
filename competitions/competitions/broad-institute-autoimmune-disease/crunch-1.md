@@ -93,14 +93,19 @@ In the minimum version of the data provided for crunch1 (in crunch1\_min.tar), o
 
 ## Expected Output
 
-For each tissue sample, provide gene expression predictions for each held-out nucleus (both validation and test tissue regions) as a table rounded to 2 decimal points as a csv file with nucleus IDs as row names and 460 gene features as column names.
+The output consists of four columns:
+
+* **cell\_id**: contains the held-out nuclei (both validation and test tissue regions).
+* **gene**: the gene among the 460 genes to be predicted.
+* **prediction**: the gene expression value, rounded to two decimal places.
+* **sample**: the tissue sample among the 8 samples to process.
 
 {% hint style="success" %}
 Make sure your predictions are log1p-normalized as in anucleus.X.
-
-Also, make sure your file can be read in using the pandas command pd.read\_csv(FILENAME, header=0, index\_col=0).
-
-We also provide example output files for each tissue sample in validation-test-example-crunch1.zip.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2024-10-24 at 20.23.41.png" alt=""><figcaption><p>Example of expected output</p></figcaption></figure>
+<div align="center" data-full-width="true">
+
+<figure><img src="../../../.gitbook/assets/predictions_example.png" alt=""><figcaption></figcaption></figure>
+
+</div>
