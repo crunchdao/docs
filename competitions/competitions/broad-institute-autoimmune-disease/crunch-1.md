@@ -109,3 +109,16 @@ Make sure your predictions are log1p-normalized as in anucleus.X.
 <figure><img src="../../../.gitbook/assets/predictions_example.png" alt=""><figcaption></figcaption></figure>
 
 </div>
+
+## Submit
+
+To build a valid submission, your model need to be coded within the infer function, effectively respecting the crunch code submission interface.
+
+{% hint style="info" %}
+See how to submit through the [quickstarter](https://github.com/crunchdao/quickstarters/blob/master/competitions/broad-1/quickstarters/random-submission/random-submission.ipynb)
+{% endhint %}
+
+{% hint style="info" %}
+Learn about crunch code [interface](../../code-interface.md)
+{% endhint %}
+
