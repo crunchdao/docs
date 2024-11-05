@@ -32,13 +32,13 @@ Autoimmune diseases arise when the immune system mistakenly targets healthy cell
 Pathologists rely on **gut tissue images** to diagnose and treat IBD, guiding decisions on the most suitable drug treatments and predicting cancer risk. These tissue images, combined with recent advances in **genomics**, offer a valuable dataset for machine learning models to revolutionize IBD diagnosis and treatment.
 
 {% hint style="info" %}
-Read the full competition specifications[ ](https://desci.crunchdao.com/projects/broad-institute/autoimmune-disease-machine-learning-challenge)[here](full-specifications.md).
+[Read the full competition specifications here.](full-specifications.md)
 {% endhint %}
 
 This challenge is meant for everyone! We have created a three-lecture crash course that provides background on the biology, technology, and data in the three crunches. You do not need a background in biology or medicine to participate.
 
 {% hint style="info" %}
-Find the lecture crash course [here](https://www.youtube.com/watch?v=9OTvuvr81R0\&list=PLlMMtlgw6qNhqMxU8C2V\_zsuhlqIgpW6y).
+[Find the lecture crash course here.](https://www.youtube.com/watch?v=9OTvuvr81R0\&list=PLlMMtlgw6qNhqMxU8C2V\_zsuhlqIgpW6y)
 {% endhint %}
 
 ## Phases
