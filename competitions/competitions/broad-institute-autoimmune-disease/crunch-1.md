@@ -124,3 +124,31 @@ To build a valid submission, your model need to be coded within the infer functi
 {% hint style="info" %}
 [Learn about crunch code interface.](../../code-interface.md)
 {% endhint %}
+
+## Data Variants
+
+Due to the large size of the datasets, Crunch provides both a small and a large version.
+
+Depending on your local setup and goals within Crunch, you can choose either one.
+
+By default, the small dataset is downloaded.
+
+To access the larger dataset, specify it explicitly with a different CLI command:
+
+```bash
+# setup with the large data
+crunch setup --size large broad-1 my-model ...
+
+# setup with the small data
+crunch setup broad-1 my-model ...
+```
+
+The larger version contain the Xenium transcriptomic data. It allow you to know both the gene expression and the coordinate (x, y, z) of the position of the gene in the Cells.
+
+More details about the gene transcriptomic data in the full documentation.
+
+{% hint style="warning" %}
+The large variant is for local use only.
+
+The Cloud Environment will always use the small dataset.
+{% endhint %}

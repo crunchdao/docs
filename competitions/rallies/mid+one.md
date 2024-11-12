@@ -1,6 +1,11 @@
 ---
 description: Attacking together, make us stronger.
+cover: ../../.gitbook/assets/MidOne.jpg
+coverY: 0
 layout:
+  cover:
+    visible: true
+    size: full
   title:
     visible: true
   description:
@@ -15,8 +20,6 @@ layout:
 
 # Mid+One
 
-<figure><img src="../../.gitbook/assets/image (123).png" alt=""><figcaption></figcaption></figure>
-
 Welcome to Mid+One! Dive into the world of martingales and market dynamics. Spot tiny shifts in high-frequency time-series, to predict where prices are heading. It's all about finding that elusive mid-price, one minute into the future.
 
 Ready to attack?
@@ -30,7 +33,7 @@ With Mid+One Crunch has found another opportunity: Thousands of banks are consum
 * Determine when a time-series will rise or fall.
 * A "buy and hold" strategy is applied for each prediction over the next 30 time steps.
 * The goal is to maximize profit after accounting for the transaction costs.
-* [Quicktarter](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/mean\_reversion\_attacker/mean\_reversion\_attacker.ipynb) notebook.
+* [Quicktarter notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/quickstarters/mean\_reversion\_attacker/mean\_reversion\_attacker.ipynb).
 {% endhint %}
 
 ## Problem Statement
@@ -101,7 +104,7 @@ Live Crunch refers to "in Production" mode where Crunch and the submitted models
 During the [Submission Phase](../../other/glossary.md#submission-phase) the Crunchers are required to submit valid Notebooks or Python files. This submission need to "run" successfully on the Crunch hub in order to receive to be triggered in [Out-of-Sample Phase](../../other/glossary.md#out-of-sample-phase) and receive live data.
 
 {% hint style="info" %}
-[Get started quickly with a Quickstarter!](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/mean\_reversion\_attacker/mean\_reversion\_attacker.ipynb)
+[Get started quickly with a Quickstarter!](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/quickstarters/mean\_reversion\_attacker/mean\_reversion\_attacker.ipynb)
 {% endhint %}
 
 ### **Out-of-Sample Phase**
