@@ -27,6 +27,7 @@
 * [Teams](competitions/teams/README.md)
   * [Referendums](competitions/teams/referendums.md)
   * [Leaderboard](competitions/teams/leaderboard.md)
+  * [Rewards](competitions/teams/rewards.md)
 * [Data](competitions/data.md)
 * [Code Interface](competitions/code-interface.md)
 * [Scoring](competitions/scoring.md)

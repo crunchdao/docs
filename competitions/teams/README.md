@@ -2,11 +2,7 @@
 
 Teams can be composed of one person, and up to 5.
 
-Being part of a team means sharing the rewards for all members equally.
-
-{% hint style="warning" %}
-No exceptions will be made. If a member is unreachable or refuses his share, **it will be considered as lost and will not be rewarded**. Choose your teammates wisely.
-{% endhint %}
+Being part of a team means sharing the rewards for all members equally. [Learn more about how rewards are distributed...](rewards.md)
 
 ## Modifications
 

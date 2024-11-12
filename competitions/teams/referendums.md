@@ -12,7 +12,7 @@ Once all members have voted `FOR`, the referendum is considered as `APPROVED`.
 
 ## Expiration
 
-Polls only have a window of 3 days before they are considered EXPIRED.\
+Polls only have a window of 3 days before they are considered `EXPIRED`.\
 \
 After that, no new votes will be accepted.
 
@@ -31,6 +31,10 @@ Once the decision has been made, the target user will receive an invitation.
 * The target user must not already be invited
 * The target user must not be in a team
 * The new team size must be under 5
+
+{% hint style="warning" %}
+An invitation cannot be cancelled by the team.
+{% endhint %}
 
 ### Kicking a user
 
@@ -59,7 +63,13 @@ Teams that advertise for new team members can receive requests for people to joi
 
 ### Disbanding a team
 
-<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
+Teams can be deleted by disbanding them.
+
+<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption><p>Disband a team form</p></figcaption></figure>
+
+{% hint style="danger" %}
+The deletion of a team cannot be undone.
+{% endhint %}
 
 ## Voting
 

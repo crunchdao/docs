@@ -32,12 +32,3 @@ Anyone can see a team's statistics.
 
 * The team score
 * The team rank on the competition-level leaderboard
-
-## Team Reward
-
-The team reward is equal to the sum of the rewards of all its members and is equally distributed between the team members.
-
-{% hint style="info" %}
-For a team of 3 members. Each member will receive 1/3 of the total team reward.
-{% endhint %}
-
