@@ -2,7 +2,7 @@
 
 ## Strict Rules
 
-The team reward is equal to the first member's reward, **divided equally** between the team members.
+The team reward is equal to the sum of the rewards of all its members, **divided equally** between the team members.
 
 {% hint style="warning" %}
 No exceptions will be made. If a member is unreachable or refuses his share, **it will be considered as lost and will not be rewarded**. Choose your teammates wisely.
