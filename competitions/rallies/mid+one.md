@@ -33,7 +33,7 @@ With Mid+One Crunch has found another opportunity: Thousands of banks are consum
 * Determine when a time-series will rise or fall.
 * A "buy and hold" strategy is applied for each prediction over the next 30 time steps.
 * The goal is to maximize profit after accounting for the transaction costs.
-* [Quicktarter notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/quickstarters/mean\_reversion\_attacker/mean\_reversion\_attacker.ipynb).
+* [Quickstarter notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/quickstarters/mean\_reversion\_attacker/mean\_reversion\_attacker.ipynb).
 {% endhint %}
 
 ## Problem Statement
