@@ -147,7 +147,7 @@ $ pip install --upgrade midone
 
 * `Attacker` is a Python class that consume a univariate sequence of numerical data points (such as stock prices, bond prices, or any time series) `x1`, `x2`, …`xt` and attempts to predict its future movement.
 * `Tick` is a method from the `Attacker` class that allows the consumption of incoming data points.
-* `Predict` is a method from the `Attacker` class that take a decision base on previous datapoints.
+* `Predict` is a method from the `Attacker` class that take a decision base on previous data points.
 * `Tick&Predict` is a method from the `Attacker` class that do `Tick` and `Predict` in a single function call.
 * `Accounting` handle tracking and logging the profit and loss (PnL) for decisions made by an `Attacker`.
 
