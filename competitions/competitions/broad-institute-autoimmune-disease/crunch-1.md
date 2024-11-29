@@ -39,7 +39,7 @@ Steps to align X and Y:
 
 * **Step 1: Identify nuclei in the H\&E image**
   * Use the **nucleus segmentation masks**:
-    * **H\&E nucleus segmentation (`HE_nuc_original`)**: This mask identifies the location of nuclei in the **original H\&E image** **(**i.e. **HE\_original)**.
+    * **H\&E nucleus segmentation (`HE_nuc_original`)**: This mask identifies the location of nuclei in the **original H\&E image** **(**&#x69;.e. **HE\_original)**.
 * **Step 2: Link gene expression to H\&E images**
   * For each nucleus in the **H\&E image**, use the **`anucleus`** file to get the corresponding gene expression profile (Y) for that nucleus.
   * The **`anucleus`** file provides the gene expression data, where each row corresponds to a nucleus (cell) and each column corresponds to a gene.
@@ -104,14 +104,10 @@ The output consists of four columns:
 * **sample**: the tissue sample among the 8 samples to process.
 
 {% hint style="success" %}
-Make sure your predictions are `log1p-normalized` as in `anucleus.X`.
+Make sure your predictions are `log1p-normalized` with a scale factor of 100 as in `anucleus.X`
 {% endhint %}
 
-<div align="center" data-full-width="true">
-
-<figure><img src="../../../.gitbook/assets/predictions_example.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="center" data-full-width="true"><figure><img src="../../../.gitbook/assets/predictions_example.png" alt=""><figcaption></figcaption></figure></div>
 
 ## Submit
 
