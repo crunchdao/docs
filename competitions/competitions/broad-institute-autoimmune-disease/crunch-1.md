@@ -16,7 +16,7 @@ There will be multiple validation checkpoints:
 * **Checkpoint 2** - December 16th (Eastern Time 17:59)
 * **Checkpoint 3** - December 30th (Eastern Time 17:59)
 * **Checkpoint 4** - January 13th (Eastern Time 17:59)
-* **Checkpoint 5** - January 30th (Eastern Time 17:59)
+* **Checkpoint 5** - January 27th (Eastern Time 17:59)
 * **Last submission -** January 31st (Eastern Time 17:59)
 
 ## Overview
