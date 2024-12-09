@@ -2,6 +2,22 @@
 description: >-
   Predict gene expression in spatial transcriptomics data from matched pathology
   images
+cover: ../../../.gitbook/assets/banner (2).png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Crunch 1 – Oct 28 to Jan 31 – Predict gene expression

@@ -123,6 +123,24 @@ import castle.algorithms
 import torch
 ```
 
+#### Embed Files
+
+Additional files can be embedded in cells to be submitted with the Notebook. In order for the system to recognize a cell as an Embed File, the following syntax must be followed:
+
+```markdown
+---
+file: <file_name>.md
+---
+
+<!-- File content goes here -->
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Aenean rutrum condimentum ornare.
+```
+
+Submitting multiple cells with the same file name will be rejected.
+
+While the focus is on Markdown files, any text file will be accepted. Including but not limited to: `.txt`, `.yaml`, `.json`, ...
+
 ### Python Script
 
 Script users can use the Quickstarters provided by CrunchDAO to know what the structure should be.

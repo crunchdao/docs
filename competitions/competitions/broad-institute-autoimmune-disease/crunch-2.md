@@ -1,3 +1,22 @@
+---
+cover: ../../../.gitbook/assets/banner (1).png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Crunch 2 – Nov 18 to Jan 31 – Predicting Unseen Genes
 
 ## Overview
@@ -13,11 +32,7 @@ In **Crunch 2**, your task is to predict the expression levels of genes that wer
 
 * **Gene Expression Predictions**: The expression levels of **2,000 genes**.
 
-<div data-full-width="false">
-
-<figure><img src="../../../.gitbook/assets/Capture d’écran 2024-11-18 à 19.47.47.png" alt=""><figcaption><p>Example of 2,000 genes expressions with random values.</p></figcaption></figure>
-
-</div>
+<div data-full-width="false"><figure><img src="../../../.gitbook/assets/Capture d’écran 2024-11-18 à 19.47.47.png" alt=""><figcaption><p>Example of 2,000 genes expressions with random values.</p></figcaption></figure></div>
 
 ## The single-cell transcriptomic datasets
 
@@ -50,11 +65,7 @@ Provided as an [AnnData object](https://anndata.readthedocs.io/en/latest/) store
 
 Original raw counts per cell are divided by the sum of counts per cell, multiplied by **10,000**, and then `log1p`-transformed.
 
-<div data-full-width="false">
-
-<figure><img src="../../../.gitbook/assets/ScRNA-Seq X (2).png" alt="Compressed Sparse Row (CSR) Matrix of scRNAseq.X as DataFrame"><figcaption></figcaption></figure>
-
-</div>
+<div data-full-width="false"><figure><img src="../../../.gitbook/assets/ScRNA-Seq X (2).png" alt="Compressed Sparse Row (CSR) Matrix of scRNAseq.X as DataFrame"><figcaption></figcaption></figure></div>
 
 This representation displays the `scRNAseq.X` matrix in **DataFrame** format to clarify the structure of the CSR matrix.
 
