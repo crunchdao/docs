@@ -93,7 +93,7 @@ Your submission should include the following.
 * **Hard Requirement**: A submission will be rejected outright if the file is missing:
   * If you are submitting via the CLI, just create a README.md in the root of your submission.
   * If you are submitting via a Notebook, you must write it a Markdown Cell.\
-    [Learn more about Embed FIles.](../../participate.md#embed-files)
+    [Learn more about Embed Files.](../../participate.md#embed-files)
   * Only non-empty and non-comment lines are considered.\
     This is an example of what is expected:
 
