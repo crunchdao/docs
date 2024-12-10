@@ -163,5 +163,5 @@ More details about the gene transcriptomic data in the full documentation.
 {% hint style="warning" %}
 The large variant is for local use only.
 
-The Cloud Environment will always use the small dataset.
+The Cloud Environment will always use the default dataset.
 {% endhint %}
