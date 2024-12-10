@@ -140,7 +140,7 @@ To build a valid submission, your model need to be coded within the infer functi
 
 ## Data Variants
 
-Due to the large size of the datasets, Crunch provides both a small and a large version.
+Due to the large size of the datasets, Crunch provides both a small (aka. default) and a large version.
 
 Depending on your local setup and goals within Crunch, you can choose either one.
 
