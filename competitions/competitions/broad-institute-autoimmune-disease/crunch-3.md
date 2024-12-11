@@ -118,7 +118,8 @@ Nam et sem sit amet nisi vestibulum semper bibendum et libero.
 ```
 
 {% hint style="warning" %}
-Once your Notebook has been submitted to the platform, the report cannot be changed.
+The report is attached to the submission.\
+To modify the `REPORT.md`, you must resubmit with the modified content.
 {% endhint %}
 
 ## Peer Review
