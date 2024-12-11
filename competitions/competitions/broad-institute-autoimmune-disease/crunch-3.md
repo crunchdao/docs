@@ -91,8 +91,8 @@ Your submission should include the following.
   * **Data and Resources Used**: Specify the datasets and any other resources utilized. (5-10 sentences)
 * **References**: May be included (not counted toward the page limit).
 * **Hard Requirement**: A submission will be rejected outright if the file is missing:
-  * If you are submitting via the CLI, just create a README.md in the root of your submission.
-  * If you are submitting via a Notebook, you must write it a Markdown Cell.\
+  * If you are submitting via the CLI, just create a `REPORT.md` at the root of your submission.
+  * If you are submitting via a Notebook, you must write it in a Markdown Cell.\
     [Learn more about Embed Files.](../../participate.md#embed-files)
   * Only non-empty and non-comment lines are considered.\
     This is an example of what is expected:
