@@ -20,7 +20,7 @@ Civilians' duties include but are not limited to:
 <figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Having a full civilian duties graph for a year has been completed only by a very few members. Part of these few legends is cruncher\_enzo.
+Understand how activities are counted [here](crunch-hub/the-crunch-hub/activity-graphs.md).
 {% endhint %}
 
 ## Quests

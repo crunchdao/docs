@@ -3,6 +3,7 @@
 ## Crunch Hub
 
 * [The Crunch-Hub](README.md)
+  * [Activity Graphs](crunch-hub/the-crunch-hub/activity-graphs.md)
 * [The Submission Code Interface](crunch-hub/the-submission-code-interface.md)
 * [How To Participate](crunch-hub/how-to-participate.md)
 * [Teams](crunch-hub/teams.md)
