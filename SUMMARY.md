@@ -31,6 +31,7 @@
   * [Rewards](competitions/teams/rewards.md)
 * [Data](competitions/data.md)
 * [Code Interface](competitions/code-interface.md)
+* [Leaderboard](competitions/leaderboard.md)
 * [Scoring](competitions/scoring.md)
 * [Resources Limit](competitions/resources-limit.md)
 * [Whitelisted Libraries](competitions/whitelisted-libraries.md)

@@ -33,7 +33,8 @@ With Mid+One Crunch has found another opportunity: Thousands of banks are consum
 * Determine when a time-series will rise or fall.
 * A "buy and hold" strategy is applied for each prediction over the next 30 time steps.
 * The goal is to maximize profit after accounting for the transaction costs.
-* [Quickstarter notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/quickstarters/mean\_reversion\_attacker/mean\_reversion\_attacker.ipynb).
+* Only one attacker can be selected for OOS and Reward
+* [Quickstarter notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/quickstarters/mean_reversion_attacker/mean_reversion_attacker.ipynb).
 {% endhint %}
 
 ## Problem Statement
@@ -66,6 +67,16 @@ If the value rises by `0.50` over the next 30 periods; the profit will be `0.50`
 
 Similarly, should the price fall by `0.20` then the net profit would be `-0.2025`.&#x20;
 
+### Only one Model on the Leaderboard
+
+In the second Rally, you have to choose which model will appear on the leaderboard.
+
+You can still play with 4 different models.
+
+{% hint style="info" %}
+[Learn more how to select your model...](../leaderboard.md#only-one-model-on-the-leaderboard)
+{% endhint %}
+
 ### Time constraints
 
 {% hint style="danger" %}
@@ -90,13 +101,16 @@ Keep in mind that gains in Production will be much higher than during the Rally.
 
 ## Timeline
 
-Mid+One is likely to evolve into a live Crunch. We will go through a first 2 months test phase called "Rally" in order to ensure both problem statement, data and models integrity.&#x20;
+Mid+One is going to evolve into a live Crunch. We went through a first 2 months test phase called "Rally" in order to ensure both problem statement, data and models integrity.&#x20;
 
-* **Friday Oct 18, 2024, 09:00 AM CET** - Submission open
-* **Wednesday Dec 18 , 2024, 09:00 AM CET** - Out-of-Sample start (live data)
+* **Friday Oct 18, 2024, 09:00 AM CET** - First rally open
+* **Wednesday Dec 18 , 2024, 09:00 AM CET** - First Out-of-Sample scoring
+* **Wednesday Jan 8, 2025, 09:00 AM CET** - Submission re-open - Second Rally
+* **Saturday Feb 8, 2025, 09:00 AM CET** - Out-of-Sample - Second Rally
+* Live is soon to be announced
 
 {% hint style="info" %}
-Live Crunch refers to "in Production" mode where Crunch and the submitted models actively serve real-world end customers.
+**Live** refers to "in Production" mode where Crunch and the submitted models actively serve real-world end customers.
 {% endhint %}
 
 ### Submission Phase
@@ -104,7 +118,7 @@ Live Crunch refers to "in Production" mode where Crunch and the submitted models
 During the [Submission Phase](../../other/glossary.md#submission-phase) the Crunchers are required to submit valid Notebooks or Python files. This submission need to "run" successfully on the Crunch hub in order to receive to be triggered in [Out-of-Sample Phase](../../other/glossary.md#out-of-sample-phase) and receive live data.
 
 {% hint style="info" %}
-[Get started quickly with a Quickstarter!](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/quickstarters/mean\_reversion\_attacker/mean\_reversion\_attacker.ipynb)
+[Get started quickly with a Quickstarter!](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/mid-one/quickstarters/mean_reversion_attacker/mean_reversion_attacker.ipynb)
 {% endhint %}
 
 ### **Out-of-Sample Phase**
@@ -165,4 +179,9 @@ Some common questions have already been answered in the [FAQ.md](https://github.
 
 ## Prizes
 
-In the initial phase the top ten performers judged by profit and loss will share in $10,000 in proportion to their profit in the out of sample period. [An example is available here.](https://github.com/microprediction/midone/blob/main/PRIZES.md)
+* In the first Rally, the top ten performers judged by profit and loss will share $10,000 in proportion to their profit in the out of sample period. (done)
+* In the second Rally, the top 50 performers with positive profit and loss will share $10,000 in proportion to their profit in the out of sample period.
+
+{% hint style="info" %}
+[An example is available here.](https://github.com/microprediction/midone/blob/main/PRIZES.md)
+{% endhint %}

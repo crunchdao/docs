@@ -15,3 +15,7 @@ Similar to a Git commit, a submission represents a frozen version of a user's co
 ## Run
 
 Similar to GitHub Actions, a run is when a user's code is executed in the cloud environment. The environment is heavily restricted. The user's code must follow the [code-interface.md](../competitions/code-interface.md "mention") in order to run properly.
+
+## Prediction
+
+A prediction is the output of a [Run](glossary.md#run).
