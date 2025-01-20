@@ -32,7 +32,8 @@ There will be multiple validation checkpoints:
 * **Checkpoint 2** - December 16th (Eastern Time 17:59)
 * **Checkpoint 3** - December 30th (Eastern Time 17:59)
 * **Checkpoint 4** - January 13th (Eastern Time 17:59)
-* **Checkpoint 5** - January 27th (Eastern Time 17:59)
+* ~~**Checkpoint 5** - January 27th (Eastern Time 17:59)~~
+* **Continuous Public Leaderboard** - January 20th
 * **Last submission -** January 31st (Eastern Time 17:59)
 
 ## Overview
@@ -125,6 +126,16 @@ Make sure your predictions are `log1p-normalized` with a scale factor of 100 as 
 {% endhint %}
 
 <div align="center" data-full-width="true"><figure><img src="../../../.gitbook/assets/predictions_example.png" alt=""><figcaption></figcaption></figure></div>
+
+### Scoring
+
+The scoring metric is a cell-wise Spearman correlation.
+
+A Mean Squared Error metric is also computed, the value must be below 0.2. Since the baseline is 0.1, a model with an MSE that is too high is not considered viable and will not be eligible for rewarded.
+
+{% hint style="info" %}
+[The evaluation code is available on GitHub.](https://github.com/crunchdao/competitions/blob/master/competitions/broad-1/scoring/scoring.py)
+{% endhint %}
 
 ## Submit
 
