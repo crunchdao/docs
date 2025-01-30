@@ -20,7 +20,7 @@ layout:
     visible: true
 ---
 
-# Crunch 1 – Oct 28 to Jan 31 – Predict gene expression
+# Crunch 1 – Oct 28 to Feb 7 – Predict gene expression
 
 ## Evaluation Phases
 
@@ -34,7 +34,7 @@ There will be multiple validation checkpoints:
 * **Checkpoint 4** - January 13th (Eastern Time 17:59)
 * ~~**Checkpoint 5** - January 27th (Eastern Time 17:59)~~
 * **Continuous Public Leaderboard** - January 20th
-* **Last submission -** January 31st (Eastern Time 17:59)
+* **Last submission -** February 7th (Eastern Time 17:59)
 
 ## Overview
 

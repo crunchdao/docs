@@ -38,22 +38,22 @@ Pathologists rely on **gut tissue images** to diagnose and treat IBD, guiding de
 This challenge is meant for everyone! We have created a three-lecture crash course that provides background on the biology, technology, and data in the three crunches. You do not need a background in biology or medicine to participate.
 
 {% hint style="info" %}
-[Find the lecture crash course here.](https://www.youtube.com/watch?v=9OTvuvr81R0\&list=PLlMMtlgw6qNhqMxU8C2V\_zsuhlqIgpW6y)
+[Find the lecture crash course here.](https://www.youtube.com/watch?v=9OTvuvr81R0\&list=PLlMMtlgw6qNhqMxU8C2V_zsuhlqIgpW6y)
 {% endhint %}
 
 ## Phases
 
 The challenge is broken down into three Crunches, ordered by increasing complexity.
 
-### **Crunch 1 –** Oct 28 to Jan 31 – **P**redict gene expression in spatial transcriptomics data from matched pathology images
+### **Crunch 1 –** Oct 28 to Feb 7 – **P**redict gene expression in spatial transcriptomics data from matched pathology images
 
 Crunchers will build a model to predict the expression of 460 genes in held-out patches of colon tissue using **H\&E pathology images** and **Xenium spatial transcriptomics** training data. Hematoxylin and Eosin (H\&E) images provide insight into cell organization, while Xenium data add information on gene expression and cellular pathways of disease.
 
-### **Crunch 2 – Nov 18 to Jan 31 – Predicting Unseen Genes**
+### **Crunch 2 – Nov 18 to Mar 21 – Predicting Unseen Genes**
 
 In this phase, participants will predict the expression of all protein-coding genes, including those that were not measured in the spatial training data, using **single-cell RNA-seq** data as support. This Crunch focuses on leveraging cell transcriptional profiles to enhance the predictive model’s ability to infer the expression of unknown genes in spatial contexts.
 
-### **Crunch 3 – Dec 9 to Jan 31 (submission deadline) / Feb 14 (peer review deadline) – Identifying Gene Markers for Pre-cancerous Regions**
+### **Crunch 3 – Dec 9 to Apr 18 (submission deadline) / Apr 30 (peer review deadline) – Identifying Gene Markers for Pre-cancerous Regions**
 
 Participants will rank genes by their ability to distinguish between dysplasia (pre-cancerous) regions and noncancerous tissue in IBD patients, increasing our ability to detect cancer early. The final gene panel will be chosen based on participant performance in Crunch 2 and on peer review of participants' methods taking place after the submission deadline. The gene panel will be experimentally validated in a new colon tissue with dysplasia, and all participants' ranked gene lists will be scored.
 
