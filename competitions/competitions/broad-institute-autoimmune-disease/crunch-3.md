@@ -17,7 +17,7 @@ layout:
     visible: true
 ---
 
-# Crunch 3 – Dec 9 to Jan 31 – Identifying Gene
+# Crunch 3 – Dec 9 to Apr 18 – Identifying Gene
 
 ## Overview
 

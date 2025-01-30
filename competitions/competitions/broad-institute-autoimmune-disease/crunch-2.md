@@ -17,7 +17,7 @@ layout:
     visible: true
 ---
 
-# Crunch 2 – Nov 18 to Jan 31 – Predicting Unseen Genes
+# Crunch 2 – Nov 18 to Mar 21 – Predicting Unseen Genes
 
 ## Overview
 
@@ -105,4 +105,4 @@ Your predictions are evaluated on the **20 held-out genes** using **Spearman’s
 
 ## Evaluation Phases
 
-In **Crunch 2**, there will be **no validation checkpoints** to assess your performance during the challenge. You are required to submit all predictions for the validation and test set regions by **January 31st (Eastern Time 17:59)**.
+In **Crunch 2**, there will be **no validation checkpoints** to assess your performance during the challenge. You are required to submit all predictions for the validation and test set regions by **March 21th (Eastern Time 17:59)**.
