@@ -258,7 +258,7 @@ The `requirements.txt` file must be updated manually.
 {% endhint %}
 
 {% hint style="info" %}
-[Package version freezes](participate.md#package-version-freezing) are still being done in the background.s
+[Package version freezes](participate.md#package-version-freezing) are still being done in the background.
 {% endhint %}
 
 ### Setup Tokens
