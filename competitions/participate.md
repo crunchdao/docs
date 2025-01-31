@@ -213,6 +213,29 @@ $ crunch push --message "hello world"
 Remember to include all your dependencies in a `requirements.txt` file.
 {% endhint %}
 
+#### Package version freezes
+
+Before submitting, the CLI does a `pip freeze` in the background to find out what version you are using locally. These versions are then used to freeze the `requirements.txt` on the server.
+
+This is to ensure that if your code works locally with the exact same versions, it should _theoretically_ work the same on the server.
+
+However, this behavior may result in your packages not being installed because:
+
+* you are using custom/externally installed package versions,
+* you have installed some packages by force, but PyPI considers them incompatible,
+* the architecture is different and the package is platform-specific.
+
+If you want to disable this behavior, use the `--no-pip-freeze` flag.
+
+```bash
+$ crunch push --no-pip-freeze --message "hello world"
+```
+
+{% hint style="info" %}
+Your original requirements will always be preserved.\
+Don't hesitate to reach out to us on [Discord](https://discord.gg/veAtzsYn3M) or the [Forum](https://forum.crunchdao.com/) for help.
+{% endhint %}
+
 ### Hybrid
 
 For some complex setups, users may need to use the CLI to submit a Jupyter Notebook. This can happen if they want to submit with a large pre-trained model, or they want to include non-PyPI packages.
@@ -224,12 +247,19 @@ It will be very similar to the Python Script setup:
 * Move your notebook to the project directory and name it `main.ipynb`.
 
 {% hint style="info" %}
-The `main` name can be changed by using the `--main-file <new_file_name>.py` option.
+The `main` name can be changed by using the `--main-file <new_file_name>.py` option. (keep the `.py` at the end)
 {% endhint %}
 
 If done correctly, before each crunch push, the CLI will first convert the notebook to a script file before sending it.
 
-Note that [package version specifiers](participate.md#specifying-package-versions) will not work and the `requirements.txt` file must be updated manually.
+{% hint style="warning" %}
+[Package version specifiers](participate.md#specifying-package-versions) will not work.\
+The `requirements.txt` file must be updated manually.
+{% endhint %}
+
+{% hint style="info" %}
+[Package version freezes](participate.md#package-version-freezing) are still being done in the background.s
+{% endhint %}
 
 ### Setup Tokens
 
