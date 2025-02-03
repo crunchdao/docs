@@ -25,8 +25,8 @@ The first model created is always retained to be deterministic. Other models are
 
 e.g.:
 
-* If <mark style="color:blue;">A</mark> & <mark style="color:purple;">B</mark> are considered duplicates, and <mark style="color:orange;">C</mark> & <mark style="color:red;">D</mark> are also considered duplicates, then <mark style="color:blue;">A</mark> and <mark style="color:orange;">C</mark> will be kept and <mark style="color:purple;">B</mark> and <mark style="color:red;">D</mark> will have the duplicate badge.
-* However, if <mark style="color:purple;">B</mark> & <mark style="color:orange;">C</mark> are also considered duplicates, then only <mark style="color:blue;">A</mark> will be retained. <mark style="color:purple;">B</mark>, <mark style="color:orange;">C</mark>, <mark style="color:red;">D</mark> will have the duplicate badge.
+* If <mark style="color:blue;">A</mark> & <mark style="color:purple;">B</mark> are considered duplicates, and <mark style="color:orange;">C</mark> & <mark style="color:yellow;">D</mark> are also considered duplicates, then <mark style="color:blue;">A</mark> and <mark style="color:orange;">C</mark> will be kept and <mark style="color:purple;">B</mark> and <mark style="color:yellow;">D</mark> will have the duplicate badge.
+* However, if <mark style="color:purple;">B</mark> & <mark style="color:orange;">C</mark> are also considered duplicates, then only <mark style="color:blue;">A</mark> will be retained. <mark style="color:purple;">B</mark>, <mark style="color:orange;">C</mark>, <mark style="color:yellow;">D</mark> will have the duplicate badge.
 
 
 
