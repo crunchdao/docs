@@ -74,7 +74,7 @@ In the second Rally, you have to choose which model will appear on the leaderboa
 You can still play with 4 different models.
 
 {% hint style="info" %}
-[Learn more how to select your model...](../leaderboard.md#only-one-model-on-the-leaderboard)
+[Learn more how to select your model...](../leaderboard/#only-one-model-on-the-leaderboard)
 {% endhint %}
 
 ### Time constraints
