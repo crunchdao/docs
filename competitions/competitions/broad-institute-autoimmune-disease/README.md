@@ -45,7 +45,7 @@ This challenge is meant for everyone! We have created a three-lecture crash cour
 
 The challenge is broken down into three Crunches, ordered by increasing complexity.
 
-### **Crunch 1 –** Oct 28 to Feb 7 – **P**redict gene expression in spatial transcriptomics data from matched pathology images
+### **Crunch 1 –** Oct 28 to Feb 9 – **P**redict gene expression in spatial transcriptomics data from matched pathology images
 
 Crunchers will build a model to predict the expression of 460 genes in held-out patches of colon tissue using **H\&E pathology images** and **Xenium spatial transcriptomics** training data. Hematoxylin and Eosin (H\&E) images provide insight into cell organization, while Xenium data add information on gene expression and cellular pathways of disease.
 
