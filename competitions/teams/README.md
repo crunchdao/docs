@@ -1,4 +1,10 @@
+---
+description: A TLDR about the team feature.
+---
+
 # Teams
+
+## Overview
 
 Teams can be composed of one person, and up to 5 (some competition may allow more).
 
@@ -12,8 +18,12 @@ If a team is looking for teammates, [anyone can ask to join](referendums.md#acce
 
 ## Participate
 
-Each member of a team can only participate individually.
-
-Each member will have a ranking on the leaderboard.
+You cannot submit as a team directly, each member of a team can only participate individually and each member will have a ranking on the leaderboard.
 
 [Rewards will be shared equally among all members.](./#rewards)
+
+***
+
+{% hint style="info" %}
+To learn more about the Team feature, please read the following pages.
+{% endhint %}
