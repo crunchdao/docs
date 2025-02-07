@@ -26,6 +26,7 @@
   * [🔒 X-Alpha Rally](competitions/rallies/x-alpha-rally.md)
 * [Participate](competitions/participate.md)
 * [Teams](competitions/teams/README.md)
+  * [Managing](competitions/teams/managing.md)
   * [Referendums](competitions/teams/referendums.md)
   * [Leaderboard](competitions/teams/leaderboard.md)
   * [Rewards](competitions/teams/rewards.md)

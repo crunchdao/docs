@@ -1,3 +1,7 @@
+---
+description: How are rewards distributed within a team?
+---
+
 # Rewards
 
 ## Strict Rules
