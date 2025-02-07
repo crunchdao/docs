@@ -39,3 +39,9 @@ Team edition can be done by any member at anytime (only during the [Submission P
 <figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption><p>Team edition form</p></figcaption></figure>
 
 The fields are the same as for creating a new team.
+
+### Looking for Teammates
+
+If a team is looking for teammates, users who are looking for one can ask to join via the <img src="../../.gitbook/assets/image.png" alt="" data-size="line"> button.
+
+The team receives an [Accepting a user](referendums.md#accepting-a-user) referendum, which the members must accept.
