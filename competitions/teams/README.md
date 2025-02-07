@@ -25,5 +25,5 @@ You cannot submit as a team directly, each member of a team can only participate
 ***
 
 {% hint style="info" %}
-To learn more about the Team feature, please read the following pages.
+To learn more about the team feature, please read the following pages.
 {% endhint %}
