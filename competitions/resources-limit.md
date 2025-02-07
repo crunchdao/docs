@@ -14,23 +14,23 @@ If you are debugging, we can **exceptionally** allow you more. [Please contact @
 
 ## Runs
 
-For a run to be considered valid, the following conditions must be met:
+In order for a run to be considered valid, a prediction must be made within the following:
 
-### Submission Phase
+### **Resources**
 
-* CPU RAM ≤ 64Gb
-* GPU RAM ≤ 120Gb
-* Runtime quota reset every week
+<table><thead><tr><th width="181">Runner Specs</th><th>CPU</th><th>GPU (g4dn.8xlarge)</th></tr></thead><tbody><tr><td>CPU Core</td><td>16 vCPU</td><td>32 vCPU</td></tr><tr><td>RAM</td><td>64 Gb</td><td>128 Gb</td></tr><tr><td>Disk</td><td>40 Gb</td><td>300 Gb</td></tr></tbody></table>
 
-### Out-of-Sample Phase
+### Time constraints
 
-* CPU RAM ≤ 64Gb
-* GPU RAM ≤ 120Gb
-* Runtime quota does not reset every week
+* During the [Submission Phase](../other/glossary.md#submission-phase): **the runtime quota reset every week**
+* During the [Out-of-Sample Phase](../other/glossary.md#out-of-sample-phase): **the runtime quota does not reset every week**
 
 The time limits are different per competition, you must read the competition page to know the value.
 
 {% hint style="info" %}
-You can control your resource consumption under the **my submission** tab.
+The quota are different per competition. Read the overview to know the value.
 {% endhint %}
 
+{% hint style="info" %}
+You can control your quota under the **my submission** tab.
+{% endhint %}
