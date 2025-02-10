@@ -23,9 +23,18 @@ layout:
 
 In **Crunch 2**, your task is to predict the expression levels of genes that were **not measured** in a spatial transcriptomics dataset. You will use both spatial data and single-cell RNA sequencing (scRNA-Seq) data from similar colon tissue samples to make these predictions.
 
+## Evaluation Phases
+
+In Crunch 2, you will have the opportunity to evaluate your model’s predictive performance on a validation dataset, before submission of your test dataset predictions.
+
+There will be checkpoints every:
+
+* **Friday** — to get your scores before the weekend
+* **Monday** — to see how your weekend work stacks up
+
 ### **X (Inputs Data)**
 
-* **Spatial Data**: The `.zarr` data provided in [**Crunch 1**](crunch-1.md#linking-the-h-and-e-image-to-spatial-transcriptomics).&#x20;
+* **Spatial Data**: The `.zarr` data provided in [**Crunch 1**](crunch-1.md#linking-the-h-and-e-image-to-spatial-transcriptomics).
 * **scRNA-Seq Data**: The `Crunch2_scRNAseq.h5ad` file contains gene expression data for **18,615 protein-coding genes**, including the **460 genes** in the Spatial Data object.
 
 ### **Y (Targets)**
@@ -96,7 +105,7 @@ The output must be provided as a DataFrame with the following structure:
 * Predictions must be **log1p-normalized** and rounded to **2 decimal points**.
 
 {% hint style="info" %}
-Refer to the [`random-submission.ipynb`](https://github.com/crunchdao/competitions/blob/master/competitions/broad-2/quickstarters/random-submission/random-submission.ipynb) notebook  for an example of how to format your submission.
+Refer to the [`random-submission.ipynb`](https://github.com/crunchdao/competitions/blob/master/competitions/broad-2/quickstarters/random-submission/random-submission.ipynb) notebook for an example of how to format your submission.
 {% endhint %}
 
 ## Evaluation
