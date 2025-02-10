@@ -12,12 +12,8 @@ The team reward is equal to the sum of the rewards of all its members, **divided
 No exceptions will be made. If a member is unreachable or refuses his share, **it will be considered as lost and will not be rewarded**. Choose your teammates wisely.
 {% endhint %}
 
-{% hint style="info" %}
-e.g.:
-
-&#x20;   For a team of 3 members.&#x20;
-
-&#x20;   Each member will receive 1/3 of the total team reward.
+{% hint style="success" %}
+i.e., in a team of three, each member receives 1/3 of the total reward.
 {% endhint %}
 
 ## Disqualification

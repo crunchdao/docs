@@ -20,7 +20,7 @@ If a team is looking for teammates, [anyone can ask to join](referendums.md#acce
 
 You cannot submit as a team directly, each member of a team can only participate individually and each member will have a ranking on the leaderboard.
 
-[Rewards will be shared equally among all members.](./#rewards)
+[Rewards will be shared equally among all members.](rewards.md)
 
 ***
 
