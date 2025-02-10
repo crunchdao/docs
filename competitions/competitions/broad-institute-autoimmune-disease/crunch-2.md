@@ -23,19 +23,6 @@ layout:
 
 In **Crunch 2**, your task is to predict the expression levels of genes that were **not measured** in a spatial transcriptomics dataset. You will use both spatial data and single-cell RNA sequencing (scRNA-Seq) data from similar colon tissue samples to make these predictions.
 
-## Evaluation Phases
-
-In Crunch 2, you will have the opportunity to evaluate your model’s predictive performance on a validation dataset, before submission of your test dataset predictions.
-
-There will be checkpoints every:
-
-* **Friday** — to get your scores before the weekend
-* **Monday** — to see how your weekend work stacks up
-
-The final submission must be submitted by **March 21th (Eastern Time 17:59)**.
-
-## Data
-
 ### **X (Inputs Data)**
 
 * **Spatial Data**: The `.zarr` data provided in [**Crunch 1**](crunch-1.md#linking-the-h-and-e-image-to-spatial-transcriptomics).
@@ -46,6 +33,17 @@ The final submission must be submitted by **March 21th (Eastern Time 17:59)**.
 * **Gene Expression Predictions**: The expression levels of **2,000 genes**.
 
 <div data-full-width="false"><figure><img src="../../../.gitbook/assets/Capture d’écran 2024-11-18 à 19.47.47.png" alt=""><figcaption><p>Example of 2,000 genes expressions with random values.</p></figcaption></figure></div>
+
+## Evaluation Phases
+
+In Crunch 2, you will have the opportunity to evaluate your model’s predictive performance on a validation dataset, before submission of your test dataset predictions.
+
+There will be checkpoints every:
+
+* **Friday** — to get your scores before the weekend
+* **Monday** — to see how your weekend work stacks up
+
+The final submission must be submitted by **March 21th (Eastern Time 17:59)**.
 
 ## The single-cell transcriptomic datasets
 
