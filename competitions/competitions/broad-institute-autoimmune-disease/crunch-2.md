@@ -32,6 +32,10 @@ There will be checkpoints every:
 * **Friday** — to get your scores before the weekend
 * **Monday** — to see how your weekend work stacks up
 
+The final submission must be submitted by **March 21th (Eastern Time 17:59)**.
+
+## Data
+
 ### **X (Inputs Data)**
 
 * **Spatial Data**: The `.zarr` data provided in [**Crunch 1**](crunch-1.md#linking-the-h-and-e-image-to-spatial-transcriptomics).
@@ -111,7 +115,3 @@ Refer to the [`random-submission.ipynb`](https://github.com/crunchdao/competitio
 ## Evaluation
 
 Your predictions are evaluated on the **20 held-out genes** using **Spearman’s rank correlation** for cells with non-zero expression. For cells with zero expression, a separate metric applies. Scores combine predictions across **global and local regions** for a balanced final score.
-
-## Evaluation Phases
-
-In **Crunch 2**, there will be **no validation checkpoints** to assess your performance during the challenge. You are required to submit all predictions for the validation and test set regions by **March 21th (Eastern Time 17:59)**.
