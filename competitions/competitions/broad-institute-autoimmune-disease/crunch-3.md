@@ -1,5 +1,5 @@
 ---
-cover: ../../../.gitbook/assets/banner.png
+cover: ../../../.gitbook/assets/banner (4).webp
 coverY: 0
 layout:
   cover:
@@ -79,7 +79,7 @@ Your submission should include the following.
 * **Format**: A DataFrame returned by your `infer` function.
 * **Structure**:
   * **Index (Rank)**: Unique integers from **1** (best discriminator) to **18,615** (worst).
-  * **Column (Gene Name)**:  Gene symbols matching those provided in the dataset.
+  * **Column (Gene Name)**: Gene symbols matching those provided in the dataset.
 
 ### Justification Report
 

@@ -1,6 +1,6 @@
 ---
 description: Attacking together, make us stronger.
-cover: ../../.gitbook/assets/MidOne.jpg
+cover: ../../.gitbook/assets/banner (6).webp
 coverY: 0
 layout:
   cover:

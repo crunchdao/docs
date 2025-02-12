@@ -1,9 +1,25 @@
 ---
-cover: ../../.gitbook/assets/1_Fi1AZPZLrGf-6wM_wTSPQw (1).png
-coverY: 136
+cover: ../../.gitbook/assets/banner (1).webp
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # ADIA Lab Causal Discovery
+
+
 
 {% embed url="https://youtu.be/AVBE5HLDUIw" %}
 

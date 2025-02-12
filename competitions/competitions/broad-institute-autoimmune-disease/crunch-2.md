@@ -1,5 +1,5 @@
 ---
-cover: ../../../.gitbook/assets/banner (1).png
+cover: ../../../.gitbook/assets/banner (3).webp
 coverY: 0
 layout:
   cover:

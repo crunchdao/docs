@@ -2,13 +2,29 @@
 description: >-
   CrunchDAO & X Alpha offer this first of a series of $10,000 Bounty to build
   the most Powerful, Robust and Unbiased AI-Driven VC algorithm.
+cover: ../../.gitbook/assets/banner (8).webp
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # 🔒 X-Alpha Rally
 
 ## Overview
 
-The evolving landscape of [Venture Capital](https://en.wikipedia.org/wiki/Venture\_capital) is marked by the automation of both data and investment funds, including Micro VC and solo general partners. This trend is leading to a comprehensive decentralization within the venture class. Against this backdrop, investors and Limited Partners are increasingly in need of a systematic approach to maximize returns across diverse asset classes.
+The evolving landscape of [Venture Capital](https://en.wikipedia.org/wiki/Venture_capital) is marked by the automation of both data and investment funds, including Micro VC and solo general partners. This trend is leading to a comprehensive decentralization within the venture class. Against this backdrop, investors and Limited Partners are increasingly in need of a systematic approach to maximize returns across diverse asset classes.
 
 In response to this need, the CrunchDAO is crunching the data of more than 2 million startups and 28 million founders, in order to discover the hidden patterns and relationships that will fuel the next wave of venture capitalism.
 

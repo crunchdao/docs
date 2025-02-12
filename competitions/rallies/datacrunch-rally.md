@@ -1,10 +1,10 @@
 ---
-cover: ../../.gitbook/assets/code.jpg
-coverY: 600.7746617100371
+cover: ../../.gitbook/assets/banner (7).webp
+coverY: 0
 layout:
   cover:
     visible: true
-    size: hero
+    size: full
   title:
     visible: true
   description:
@@ -25,7 +25,7 @@ DataCrunch uses the quantitative research of the CrunchDAO to manage its systema
 
 The long-term strategic goal of the fund is capital appreciation by capturing idiosyncratic return at low volatility.
 
-In order to achieve this goal, DataCrunch needs the community to assess the relative performance of all assets in a subset of the [Russell 3000](https://www.investopedia.com/terms/r/russell\_3000.asp) universe. In other words, DataCrunch is expecting your model to rank the constituent of its investment universe.
+In order to achieve this goal, DataCrunch needs the community to assess the relative performance of all assets in a subset of the [Russell 3000](https://www.investopedia.com/terms/r/russell_3000.asp) universe. In other words, DataCrunch is expecting your model to rank the constituent of its investment universe.
 
 This rally is a new iteration on DataCrunch's dataset called master-v3.
 

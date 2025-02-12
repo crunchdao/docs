@@ -1,6 +1,23 @@
-# 🔒 ADIA Lab Market Prediction Competition
+---
+cover: ../../.gitbook/assets/banner (5).webp
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-<figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FfKvHQp0gfJ0KWp7aVZQP%2Fuploads%2F9N9v0C9S1XmCMOT51y3g%2Fadiaxcrunch.svg?alt=media&#x26;token=aec19792-1d8c-4d6c-9b67-1c6617fc2a36" alt=""><figcaption></figcaption></figure>
+# 🔒 ADIA Lab Market Prediction Competition
 
 ## **A cross-section forecast problem** <a href="#the-cross-section-forecast-problem" id="the-cross-section-forecast-problem"></a>
 
@@ -24,7 +41,7 @@ In the first phase, participants are required to submit either a Python notebook
 
 From **August 16, 2023, 00:00 PM CET** to **November 16, 2023, 00:00 PM CET**.
 
-In the second phase, also called [Out-of-Sample](https://en.wikipedia.org/wiki/Cross-validation\_\(statistics\)) (OOS), the participant's code will be automatically run by the platform on live market data and evaluated. In this phase, the participants won't be able to modify their code.
+In the second phase, also called [Out-of-Sample](https://en.wikipedia.org/wiki/Cross-validation_\(statistics\)) (OOS), the participant's code will be automatically run by the platform on live market data and evaluated. In this phase, the participants won't be able to modify their code.
 
 ### Why the two-phase approach?
 
@@ -46,7 +63,7 @@ This doesn't require estimating the exact target value for each investment; rath
 
 ### The scoring metric
 
-This competition is evaluated on [Spearman Rank Correlation](https://en.wikipedia.org/wiki/Spearman's\_rank\_correlation\_coefficient).&#x20;
+This competition is evaluated on [Spearman Rank Correlation](https://en.wikipedia.org/wiki/Spearman's_rank_correlation_coefficient).&#x20;
 
 Each row in the test set represents the predictions (X) associated with a stock of the universe at a given date and its target (Y).
 

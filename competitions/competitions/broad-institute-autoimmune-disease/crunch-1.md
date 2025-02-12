@@ -2,7 +2,7 @@
 description: >-
   Predict gene expression in spatial transcriptomics data from matched pathology
   images
-cover: ../../../.gitbook/assets/banner (2).png
+cover: ../../../.gitbook/assets/banner (2).webp
 coverY: 0
 layout:
   cover:
