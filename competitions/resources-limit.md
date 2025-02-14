@@ -18,7 +18,13 @@ In order for a run to be considered valid, a prediction must be made within the 
 
 ### **Resources**
 
-<table><thead><tr><th width="181">Runner Specs</th><th>CPU</th><th>GPU (g4dn.8xlarge)</th></tr></thead><tbody><tr><td>CPU Core</td><td>16 vCPU</td><td>32 vCPU</td></tr><tr><td>RAM</td><td>64 Gb</td><td>128 Gb</td></tr><tr><td>Disk</td><td>40 Gb</td><td>300 Gb</td></tr></tbody></table>
+<table><thead><tr><th width="219">Runner Specs</th><th>CPU</th><th>GPU (g4dn.8xlarge)</th></tr></thead><tbody><tr><td>CPU Core</td><td>16 vCPU</td><td>32 vCPU</td></tr><tr><td>RAM</td><td>64 Gb</td><td>128 Gb</td></tr><tr><td>Disk</td><td>40 Gb</td><td>300 Gb</td></tr><tr><td>Network</td><td>Any <a href="https://en.wikipedia.org/wiki/Network_socket">socket</a> related <a href="https://man7.org/linux/man-pages/man2/socketcall.2.html">operations</a> are not permitted</td><td>No internet</td></tr><tr><td>Shared Memory (SHM)</td><td>10 Gb</td><td>10 Gb</td></tr></tbody></table>
+
+{% hint style="warning" %}
+If you are using a multiprocessing library that relies on socket for local communication, they will not work on CPU runs.
+
+Please use a GPU run instead, even if you do not need a GPU.
+{% endhint %}
 
 ### Time constraints
 
