@@ -6,7 +6,7 @@ description: How are rewards distributed within a team?
 
 ## Strict Rules
 
-The team reward is equal to the sum of the rewards of all its members, **divided equally** between the team members.
+The team is rewarded based on the best reward of all its members' models, **divided equally** among the team members.
 
 {% hint style="warning" %}
 No exceptions will be made. If a member is unreachable or refuses his share, **it will be considered as lost and will not be rewarded**. Choose your teammates wisely.
