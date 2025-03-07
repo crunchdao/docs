@@ -8,6 +8,13 @@
 * [How To Participate](crunch-hub/how-to-participate.md)
 * [Teams](crunch-hub/teams.md)
 
+## Real-time Competitions
+
+* [Solana Blockchain](real-time-competitions/solana-blockchain.md)
+* [Competitions](real-time-competitions/competitions/README.md)
+  * [Bird Game](real-time-competitions/competitions/bird-game.md)
+* [Participate](real-time-competitions/participate.md)
+
 ## Competitions
 
 * [Competitions](competitions/competitions/README.md)
