@@ -106,7 +106,7 @@ Mid+One is going to evolve into a live Crunch. We went through a first 2 months 
 * **Friday Oct 18, 2024, 09:00 AM CET** - First rally open
 * **Wednesday Dec 18 , 2024, 09:00 AM CET** - First Out-of-Sample scoring
 * **Wednesday Jan 8, 2025, 09:00 AM CET** - Submission re-open - Second Rally
-* **Saturday Feb 8, 2025, 09:00 AM CET** - Out-of-Sample - Second Rally
+* **Sunday Feb 16, 2025, 11:59 PM CET** - Out-of-Sample - Second Rally
 * Live is soon to be announced
 
 {% hint style="info" %}
