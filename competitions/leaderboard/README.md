@@ -52,6 +52,8 @@ The reward is distributed equally among the tied models, calculated as the sum o
 
 #### Example
 
+For a prize pool that rewards the top 10 models:
+
 * If the <mark style="color:blue;">1st</mark>, <mark style="color:purple;">2nd</mark>, and <mark style="color:orange;">3rd</mark> place models are tied, they will all be ranked <mark style="color:blue;">1st</mark>.\
   The next model will be ranked <mark style="color:green;">4th</mark>.\
   Their total reward will be: (<mark style="color:blue;">1st place prize</mark> + <mark style="color:purple;">2nd place prize</mark> + <mark style="color:orange;">3rd place prize</mark>) / 3.
