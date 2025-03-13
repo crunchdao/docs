@@ -34,10 +34,27 @@ If the crunch allows more than one model, the model name is displayed right afte
 
 ### Only one Model on the Leaderboard
 
-Some competition (like Mid+One) allow more than one model, but only ONE can be displayed on the leaderboard at any given time.
+Some competitions (like Mid+One) allow more than one model, but only ONE can be displayed on the leaderboard at any given time.
 
 The selection can be made during the [Submission Phase](../../other/glossary.md#submission-phase). After that, the <img src="../../.gitbook/assets/image (132).png" alt="" data-size="line"> button will no longer be available.
 
 <figure><img src="../../.gitbook/assets/image (130).png" alt=""><figcaption><p>The model will be displayed on the leaderboard and will be eligible for rewards.</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption><p>The model will NOT be displayed on the leaderboard and will NOT be eligible for rewards.</p></figcaption></figure>
+
+## Ties
+
+Some competitions (such as Broad #2) allow ties when models achieve the same scores, meaning they receive the same rank.
+
+The rank assigned to all tied models is the first rank of the tie.
+
+The reward is distributed equally among the tied models, calculated as the sum of the rewards for the tied models divided by the number of models in the tie.
+
+#### Example
+
+* If the <mark style="color:blue;">1st</mark>, <mark style="color:purple;">2nd</mark>, and <mark style="color:orange;">3rd</mark> place models are tied, they will all be ranked <mark style="color:blue;">1st</mark>.\
+  The next model will be ranked <mark style="color:green;">4th</mark>.\
+  Their total reward will be: (<mark style="color:blue;">1st place prize</mark> + <mark style="color:purple;">2nd place prize</mark> + <mark style="color:orange;">3rd place prize</mark>) / 3.
+* If the <mark style="color:blue;">8th</mark>, <mark style="color:purple;">9th</mark>, <mark style="color:orange;">10th</mark>, <mark style="color:red;">11th</mark> and <mark style="color:yellow;">12th</mark> place models are tied, they will all be ranked <mark style="color:blue;">8th</mark>.\
+  The next model will be ranked <mark style="color:green;">13th</mark>.\
+  Their total reward will be: (<mark style="color:blue;">8th place prize</mark> + <mark style="color:purple;">9th place prize</mark> + <mark style="color:orange;">10th place prize</mark>) / 5.
