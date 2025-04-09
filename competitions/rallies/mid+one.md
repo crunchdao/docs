@@ -1,5 +1,6 @@
 ---
 description: Attacking together, make us stronger.
+icon: lock
 cover: ../../.gitbook/assets/banner (6).webp
 coverY: 0
 layout:

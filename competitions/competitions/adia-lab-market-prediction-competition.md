@@ -1,4 +1,5 @@
 ---
+icon: lock
 cover: ../../.gitbook/assets/banner (5).webp
 coverY: 0
 layout:
@@ -17,7 +18,7 @@ layout:
     visible: true
 ---
 
-# 🔒 ADIA Lab Market Prediction Competition
+# ADIA Lab Market Prediction Competition
 
 ## **A cross-section forecast problem** <a href="#the-cross-section-forecast-problem" id="the-cross-section-forecast-problem"></a>
 

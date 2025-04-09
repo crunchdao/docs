@@ -1,4 +1,5 @@
 ---
+icon: lock
 cover: ../../.gitbook/assets/banner (7).webp
 coverY: 0
 layout:
@@ -17,7 +18,7 @@ layout:
     visible: true
 ---
 
-# 🔓 DataCrunch Rally
+# DataCrunch Rally
 
 ## Overview
 

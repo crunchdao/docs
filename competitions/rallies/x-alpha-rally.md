@@ -2,6 +2,7 @@
 description: >-
   CrunchDAO & X Alpha offer this first of a series of $10,000 Bounty to build
   the most Powerful, Robust and Unbiased AI-Driven VC algorithm.
+icon: lock
 cover: ../../.gitbook/assets/banner (8).webp
 coverY: 0
 layout:
@@ -20,7 +21,7 @@ layout:
     visible: true
 ---
 
-# 🔒 X-Alpha Rally
+# X-Alpha Rally
 
 ## Overview
 

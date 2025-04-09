@@ -1,4 +1,5 @@
 ---
+icon: lock
 cover: ../../.gitbook/assets/banner (1).webp
 coverY: 0
 layout:
