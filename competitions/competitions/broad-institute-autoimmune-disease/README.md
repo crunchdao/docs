@@ -53,7 +53,7 @@ Crunchers will build a model to predict the expression of 460 genes in held-out 
 
 In this phase, participants will predict the expression of all protein-coding genes, including those that were not measured in the spatial training data, using **single-cell RNA-seq** data as support. This Crunch focuses on leveraging cell transcriptional profiles to enhance the predictive model’s ability to infer the expression of unknown genes in spatial contexts.
 
-### **Crunch 3 – Dec 9 to Apr 18 (submission deadline) / Apr 30 (peer review deadline) – Identifying Gene Markers for Pre-cancerous Regions**
+### **Crunch 3 – Dec 9 to Apr 30 (submission deadline) / May 15 (peer review deadline) – Identifying Gene Markers for Pre-cancerous Regions**
 
 Participants will rank genes by their ability to distinguish between dysplasia (pre-cancerous) regions and noncancerous tissue in IBD patients, increasing our ability to detect cancer early. The final gene panel will be chosen based on participant performance in Crunch 2 and on peer review of participants' methods taking place after the submission deadline. The gene panel will be experimentally validated in a new colon tissue with dysplasia, and all participants' ranked gene lists will be scored.
 

@@ -15,7 +15,7 @@
   * [Broad Institute Autoimmune Disease](competitions/competitions/broad-institute-autoimmune-disease/README.md)
     * [Crunch 1 – Oct 28 to Feb 9 – Predict gene expression](competitions/competitions/broad-institute-autoimmune-disease/crunch-1.md)
     * [Crunch 2 – Nov 18 to Mar 21 – Predicting Unseen Genes](competitions/competitions/broad-institute-autoimmune-disease/crunch-2.md)
-    * [Crunch 3 – Dec 9 to Apr 18 – Identifying Gene](competitions/competitions/broad-institute-autoimmune-disease/crunch-3.md)
+    * [Crunch 3 – Dec 9 to Apr 30 – Identifying Gene](competitions/competitions/broad-institute-autoimmune-disease/crunch-3.md)
     * [Full Specifications](competitions/competitions/broad-institute-autoimmune-disease/full-specifications.md)
     * [Lectures](competitions/competitions/broad-institute-autoimmune-disease/lectures.md)
   * [ADIA Lab Causal Discovery](competitions/competitions/adia-lab-causal-discovery.md)
