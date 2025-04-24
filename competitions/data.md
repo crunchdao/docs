@@ -4,10 +4,10 @@ In all Crunchs, the crunchers can access our datasets as follow:
 
 ## Splited datasets
 
-### x\_train, y\_train, x\_test
+### X\_train, y\_train, X\_test
 
-1. `x_train`, `y_train`: Labeled training dataset;
-2. `x_test`, `y_test`: Small portion of the test set that can be used to [run local test](participate.md#local-testing).
+1. `X_train`, `y_train`: Labeled training dataset;
+2. `X_test`, `y_test`: Small portion of the test set that can be used to [run local test](participate.md#local-testing).
 
 {% hint style="info" %}
 In Crunches, crunchers submit code or models in the form of notebooks or Python files. These submissions are then run on testing or live data by the system. As a result, crunchers never have direct access to the testing data.&#x20;
@@ -40,11 +40,11 @@ Participant can access the name of the columns (the features) with [parameters o
 Loading the data from a notebook is really easy, the load\_data function will make sure that the latest version of the data is available locally, or download it if necessary, and return 3 dataframes.
 
 ```python
-# x_train: pandas.DataFrame
+# X_train: pandas.DataFrame
 # y_train: pandas.DataFrame
-#  x_test: pandas.DataFrame
+#  X_test: pandas.DataFrame
 
-x_train, y_train, x_test = crunch.load_data()
+X_train, y_train, X_test = crunch.load_data()
 ```
 
 #### Examples from the DataCrunch competition
@@ -68,11 +68,11 @@ There should be one column per target.
 #### How to load the data?
 
 ```python
-# x_train: typing.Dict[str, pandas.DataFrame]
+# X_train: typing.Dict[str, pandas.DataFrame]
 # y_train: typing.Dict[str, pandas.DataFrame]
-#  x_test: typing.Dict[str, pandas.DataFrame]
+#  X_test: typing.Dict[str, pandas.DataFrame]
 
-x_train, y_train, x_test = crunch.load_data()
+X_train, y_train, X_test = crunch.load_data()
 ```
 
 #### Examples from the ADIA Lab Causality Discovery competition
@@ -97,10 +97,10 @@ Crunch's Streams are iterator object that allows you to traverse through all the
 #### How to load the data?
 
 ```python
-# x_train: typing.List[typing.Iterator[dict]]
-#  x_test: typing.List[typing.Iterator[dict]]
+# X_train: typing.List[typing.Iterator[dict]]
+#  X_test: typing.List[typing.Iterator[dict]]
 
-x_train, x_test = crunch.load_streams()
+X_train, X_test = crunch.load_streams()
 ```
 
 #### Examples from the Mid+One competition
