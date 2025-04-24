@@ -31,7 +31,7 @@ Notebook users can use the Quickstarters provided by CrunchDAO to quickly experi
 
 Before trying to execute any cell, users must set up their environment by copying the command available on the competition page:
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>The "Submit a Notebook" tab from the "Submit" page of a competition</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>The "Submit a Notebook" tab from the "Submit" page of a competition</p></figcaption></figure>
 
 Run the commands to set up your environment and download the data to be ready to go:
 
@@ -77,7 +77,7 @@ After testing the code, users need to have access to the `.ipynb` file.
 
 Then submit on the **Submit a Notebook** page:
 
-<figure><img src="../.gitbook/assets/image (9).png" alt="" width="312"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt="" width="312"><figcaption></figcaption></figure>
 
 Some model files can also be uploaded along with the notebook, which will be stored in the `resources/` directory.
 
@@ -151,7 +151,7 @@ A mandatory main.py is required to have both functions (`train` and `infer`) in 
 
 Before starting to work, users must setup their environment which will be similar to a git repository.
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>The "Submit via CLI" tab from the "Submit" page of a competition</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>The "Submit via CLI" tab from the "Submit" page of a competition</p></figcaption></figure>
 
 Run the commands to set up your environment and download the data to be ready to go:
 

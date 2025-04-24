@@ -42,6 +42,6 @@ The fields are the same as for creating a new team.
 
 ### Looking for Teammates
 
-If a team is looking for teammates, users who are looking for one can ask to join via the <img src="../../.gitbook/assets/image.png" alt="" data-size="line"> button.
+If a team is looking for teammates, users who are looking for one can ask to join via the <img src="../../.gitbook/assets/image (11).png" alt="" data-size="line"> button.
 
 The team receives an [Accepting a user](referendums.md#accepting-a-user) referendum, which the members must accept.

@@ -49,7 +49,7 @@ In **Crunch 1**, you will train an algorithm to predict **spatial transcriptomic
 * **Y**:
   * **`anucleus`**: This file contains the **aggregated gene expression data** for each nucleus. It is log1p-normalized and stores the gene expression profiles for 460 genes per nucleus. This is the primary target (**Y**) for your model.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Anucleus – gene expression for each nucleus</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Anucleus – gene expression for each nucleus</p></figcaption></figure>
 
 ## Linking the H\&E image to spatial transcriptomics
 
@@ -63,7 +63,7 @@ Steps to align X and Y:
   * The **`anucleus`** file provides the gene expression data, where each row corresponds to a nucleus (cell) and each column corresponds to a gene.
   * The nuclei IDs from the segmentation masks (e.g., from **`HE_nuc_original`**) will match the IDs used in the **`anucleus`** file.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Matched  crop H&#x26;E image and its corresponding Gene Expression Heatmap</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Matched  crop H&#x26;E image and its corresponding Gene Expression Heatmap</p></figcaption></figure>
 
 {% hint style="info" %}
 If you open the image HE\_nuc\_original,&#x20;

@@ -16,6 +16,8 @@ Team can [invite someone to a team](referendums.md#inviting-a-user), the invitee
 
 If a team is looking for teammates, [anyone can ask to join](referendums.md#accepting-a-user).
 
+Some competitions require a team leader to represent the team on the leaderboard. By default, this is the original team member, [but can be changed by vote](referendums.md#promoting-a-leader).
+
 ## Participate
 
 You cannot submit as a team directly, each member of a team can only participate individually and each member will have a ranking on the leaderboard.

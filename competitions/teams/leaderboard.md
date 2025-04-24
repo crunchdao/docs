@@ -1,6 +1,8 @@
 # Leaderboard
 
-## Competition-level leaderboard
+## Competition-level
+
+### Leaderboard
 
 The team name will appear next to the usernames on the leaderboard.
 
@@ -8,13 +10,11 @@ Members keep their individual submission rank.
 
 <figure><img src="../../.gitbook/assets/image (107).png" alt=""><figcaption><p>Team liverpool</p></figcaption></figure>
 
-## Team-level leaderboard
+{% hint style="info" %}
+If the team has a leader, only the leader will have a rank.
+{% endhint %}
 
-Teams also have a dedicated leaderboard.
-
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption><p>A dummy team leaderboard</p></figcaption></figure>
-
-## Competition-level statistics
+### Statistics
 
 The overview now displays your statistics vs your team statistics.
 
@@ -24,7 +24,15 @@ The overview now displays your statistics vs your team statistics.
 * Your team score
 * Your team rank on the competition-level leaderboard
 
-## Team-level statistics
+## Team-level
+
+### Leaderboard
+
+Teams also have a dedicated leaderboard.
+
+<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption><p>A dummy team leaderboard</p></figcaption></figure>
+
+### Statistics
 
 Anyone can see a team's statistics.
 
