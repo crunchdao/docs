@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Your Wallet (MetaMask)
 
 ## Installation

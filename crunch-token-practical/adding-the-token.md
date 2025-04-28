@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Adding the Token
 
 Since the $CRUNCH Token is an ERC20 Token, it must be added manually to MetaMask.

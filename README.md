@@ -22,15 +22,3 @@ Civilians' duties include but are not limited to:
 {% hint style="info" %}
 Understand how activities are counted [here](crunch-hub/the-crunch-hub/activity-graphs.md).
 {% endhint %}
-
-## Quests
-
-Quests are duties remunerated in $CRUNCH.
-
-<figure><img src=".gitbook/assets/image (23).png" alt=""><figcaption><p>Our quest board</p></figcaption></figure>
-
-## Governance
-
-All important decisions are taken by the community. It's actually part of your duty to make sure that this community stays on the right track for you, and the general interest of its members. You are expected to take governance very seriously.&#x20;
-
-<figure><img src=".gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Votes</p></figcaption></figure>
