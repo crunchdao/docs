@@ -113,3 +113,19 @@ Methods such as change point detection algorithms, tests for equality of distrib
 Careful preprocessing of the time series data is an essential step in developing robust detection models.
 
 The ultimate goal is to develop reliable algorithms for detecting structural breaks in time series data across various domains where such changes have significant implications for decision-making and risk management.
+
+## Prize
+
+| Winners’ rank | Prize value |
+| ------------- | ----------- |
+| 1st place     | $40,000 USD |
+| 2nd place     | $20,000 USD |
+| 3rd place     | $10,000 USD |
+| 4th place     | $5,000 USD  |
+| 5th place     | $5,000 USD  |
+| 6th place     | $5,000 USD  |
+| 7th place     | $5,000 USD  |
+| 8th place     | $3,500 USD  |
+| 9th place     | $3,500 USD  |
+| 10th place    | $3,000 USD  |
+
