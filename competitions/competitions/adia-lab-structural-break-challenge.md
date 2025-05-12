@@ -3,7 +3,7 @@ description: Detect structural changes in time series data for accurate insights
 hidden: true
 ---
 
-# ADIA Lab Structural Break Prediction
+# ADIA Lab Structural Break Challenge
 
 ## Overview
 
@@ -57,9 +57,9 @@ Your submitted code will be executed on the competition platform and automatical
 
 ### Submission Requirements
 
-* Your main solution file should follow the template provided by the competition host at [https://colab.research.google.com/github/crunchdao/competitions/blob/structural-break/competitions/structural-break/quickstarters/random-submission/random-submission.ipynb](https://colab.research.google.com/github/crunchdao/competitions/blob/structural-break/competitions/structural-break/quickstarters/random-submission/random-submission.ipynb);
+* Your main solution file should follow the template provided by the competition host [here](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/structural-break/quickstarters/baseline/baseline.ipynb);
 * Your solution must include `train()` and `infer()` functions. The first one is meant to train your model on the training set, in case your model needs that, otherwise it can be left empty. The second one takes the test data as input and returns predictions;
-* The execution time of your solution should not exceed the platform's time limits.
+* The execution time of your solution should not exceed the platform's time limits: 15 hours per week.
 
 ## Dataset Description
 
