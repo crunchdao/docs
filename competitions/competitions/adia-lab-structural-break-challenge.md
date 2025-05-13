@@ -63,7 +63,7 @@ Your submitted code will be executed on the competition platform and automatical
 
 ## Dataset Description
 
-The dataset for this competition comprises tens of thousands of synthetic univariate time series, each containing approximately 5,000 to 10,000 values with a designated boundary point. For each training time series, a label (`True` for break, `False` for no break) indicates whether a structural break occurred at this boundary point.
+The dataset for this competition comprises tens of thousands of synthetic univariate time series, each containing approximately 1,000 to 5,000 values with a designated boundary point. For each training time series, a label (`True` for break, `False` for no break) indicates whether a structural break occurred at this boundary point.
 
 The time series in this competition are designed to represent various real-world scenarios where structural breaks may occur, with different levels of difficulty in detection. This includes scenarios similar to those found in financial markets, climate data, industrial sensor readings, and biomedical signals, among others. The challenge is to develop algorithms that can generalize across these scenarios and accurately detect structural breaks in new, unseen data.
 
