@@ -1,6 +1,5 @@
 ---
 description: Detect structural changes in time series data for accurate insights.
-hidden: true
 ---
 
 # ADIA Lab Structural Break Challenge
@@ -26,7 +25,7 @@ The challenge lies in predicting structural breaks by relying on the empirical p
 
 ### Competition Timeline
 
-* Start Date: May 14, 2025 at 2:00 PM CET
+* Start Date: May 14, 2025 at 10:00 AM CET
 * End Date: September 15, 2025 at 4:59 PM CET
 * Final Evaluation: November 1, 2025 at 2:00 PM CET
 * Winners Announcement: November 14, 2025 at 5:00 PM CET
