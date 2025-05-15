@@ -86,7 +86,7 @@ Your tick and predict must run in less then 20ms!
 
 In Mid+One, delivering value to the customer quickly is crucial. Crunch aims to tackle increasingly lower frequencies.&#x20;
 
-As a result, in the infer function, your code must not take more than 20ms from receiving the message to returning the result. If your average inference time exceeds this limit, your position on the leaderboard will be marked with an <img src="../../.gitbook/assets/image (122).png" alt="out of range badge" data-size="line"> badge.
+As a result, in the infer function, your code must not take more than 20ms from receiving the message to returning the result. If your average inference time exceeds this limit, your position on the leaderboard will be marked with an "Out-Of-Range" badge.
 
 ### Out-of-Range badge
 

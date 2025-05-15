@@ -80,7 +80,7 @@ A Spearman rank correlation will be computed against the live targets.&#x20;
 
 All reward are computed on the leaderboards.
 
-<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Reward Scheme.png" alt=""><figcaption></figcaption></figure>
 
 The **Hist**orical **Rewards** are the sum of every payout you have received from the DataCrunch competition.
 
@@ -92,7 +92,7 @@ Payouts are computed based on your the rank of your prediction for each target. 
 
 The payouts are distributed according to an exponential function of your position on the leaderboards, as shown in the graph below, the top 20 crunchers earn approximately 30% of the total rewards.
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption><p>Cumulative distribution of rewards (2023-03-03 leaderboard)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Payouts Calculation.png" alt=""><figcaption><p>Cumulative distribution of rewards (2023-03-03 leaderboard)</p></figcaption></figure>
 
 ## Computing Resources
 
@@ -106,7 +106,7 @@ During the `SUBMISSION`  phase, you are entitled to 10 hours of GPU or CPU compu
 
 A Quickstarter notebook is available below so you can get familiar with what is expected from you.
 
-{% embed url="https://github.com/crunchdao/quickstarters/tree/master/competitions/datacrunch-rally" %}
+{% embed url="https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/datacrunch/quickstarters/quickstarter/quickstarter.ipynb" %}
 
 ## Legacy Endpoints
 

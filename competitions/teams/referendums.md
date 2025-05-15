@@ -24,7 +24,7 @@ You can invite other users to join your team.&#x20;
 
 Once the decision has been made, the target user will receive an invitation.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Invite a user form</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Inviting a User.png" alt=""><figcaption><p>Invite a user form</p></figcaption></figure>
 
 #### Conditions
 
@@ -42,7 +42,7 @@ A user can only be kicked from the team if he or she accepts the kick.
 
 This is the only way someone can leave a team. (apart from [disbanding](referendums.md#disbanding-a-team)).
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Kick a member form</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Kicking a User.png" alt=""><figcaption><p>Kick a member form</p></figcaption></figure>
 
 #### Conditions
 
@@ -55,7 +55,7 @@ Only the team leader will have a rank on the leaderboard.
 
 Other members can still participate and appear on the leaderboard; they will just not be ranked.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Promote a leader form</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Promoting a Leader.png" alt=""><figcaption><p>Promote a leader form</p></figcaption></figure>
 
 #### Conditions
 
@@ -70,9 +70,9 @@ Not all competitions are using leaders to represent teams.
 
 Teams that advertise for new team members can receive requests for people to join their team. When a user makes a request, it triggers a referendum.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>View of a user searching for a team</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Accepting a User - 1.png" alt=""><figcaption><p>View of a user searching for a team</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Request to join form</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Accepting a User - 2.png" alt=""><figcaption><p>Request to join form</p></figcaption></figure>
 
 #### Conditions
 
@@ -88,7 +88,7 @@ Some competitions allow for larger teams.
 
 Teams can be deleted by disbanding them.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Disband a team form</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Disbanding a Team.png" alt=""><figcaption><p>Disband a team form</p></figcaption></figure>
 
 {% hint style="danger" %}
 **The deletion of a team cannot be undone.**
@@ -96,7 +96,7 @@ Teams can be deleted by disbanding them.
 
 ## Voting
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Voting to invite happy-mike</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Voting.png" alt=""><figcaption><p>Voting to invite happy-mike</p></figcaption></figure>
 
 ## Post-vote failure
 

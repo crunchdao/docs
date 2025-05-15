@@ -31,7 +31,7 @@ Notebook users can use the Quickstarters provided by CrunchDAO to quickly experi
 
 Before trying to execute any cell, users must set up their environment by copying the command available on the competition page:
 
-<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>The "Submit a Notebook" tab from the "Submit" page of a competition</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Jupyter Notebook - 1.png" alt=""><figcaption><p>The "Submit a Notebook" tab from the "Submit" page of a competition</p></figcaption></figure>
 
 Run the commands to set up your environment and download the data to be ready to go:
 
@@ -77,7 +77,7 @@ After testing the code, users need to have access to the `.ipynb` file.
 
 Then submit on the **Submit a Notebook** page:
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt="" width="312"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Jupyter Notebook - 2.png" alt=""><figcaption></figcaption></figure>
 
 Some model files can also be uploaded along with the notebook, which will be stored in the `resources/` directory.
 
@@ -151,7 +151,7 @@ A mandatory main.py is required to have both functions (`train` and `infer`) in 
 
 Before starting to work, users must setup their environment which will be similar to a git repository.
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>The "Submit via CLI" tab from the "Submit" page of a competition</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Python Script.png" alt=""><figcaption><p>The "Submit via CLI" tab from the "Submit" page of a competition</p></figcaption></figure>
 
 Run the commands to set up your environment and download the data to be ready to go:
 
@@ -273,21 +273,21 @@ This token allows the CLI to download the data and submit your submission on you
 
 #### Checking your submission
 
-<figure><img src="../.gitbook/assets/image (80).png" alt=""><figcaption><p>A successful submission.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Checking your Submission - 1.png" alt=""><figcaption><p>A successful submission.</p></figcaption></figure>
 
 The system parses your work to retrieve the code of the interface functions (`train()` and `infer()`) and their dependencies. By clicking on the right arrow, you can access the contents of your submission.
 
-<figure><img src="../.gitbook/assets/image (82).png" alt=""><figcaption><p>The view of a submission once properly uploaded</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Checking your Submission - 2.png" alt=""><figcaption><p>The view of a submission once properly uploaded</p></figcaption></figure>
 
 #### Running in the Cloud
 
 Once you've submitted, it's time to make sure your model can run in the cloud environment. Click on a submission and then click the **Run in the Cloud** button.
 
-<figure><img src="../.gitbook/assets/image (84).png" alt="" width="356"><figcaption><p>Click Run in the Cloud to start your run</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Running in the Cloud - 1.png" alt=""><figcaption><p>Click Run in the Cloud to start your run</p></figcaption></figure>
 
 Your code is fed a standard epoch of data and the system simulates an inference.
 
-<figure><img src="../.gitbook/assets/image (85).png" alt=""><figcaption><p>If your submission ran properly, you'll see the status as successful.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Running in the Cloud - 2.png" alt=""><figcaption><p>If your submission ran properly, you'll see the status as successful.</p></figcaption></figure>
 
 {% hint style="info" %}
 A successful run means that the system will be able to call your code on new data to produce the inferences for that customer.
@@ -297,9 +297,9 @@ A successful run means that the system will be able to call your code on new dat
 
 If your run crashes or you want to better understand how your code behaved, you can review the logs.
 
-<figure><img src="../.gitbook/assets/image (86).png" alt="" width="375"><figcaption><p>How to check your execution logs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Debugging With the Logs - 1.png" alt=""><figcaption><p>How to check your execution logs</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (87).png" alt=""><figcaption><p>Logs of a run</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Debugging With the Logs - 2.png" alt=""><figcaption><p>Logs of a run</p></figcaption></figure>
 
 {% hint style="warning" %}
 Due to abuse, only the first 1,500 lines of a user's code logs will be displayed.
