@@ -79,7 +79,7 @@ Then submit on the **Submit a Notebook** page:
 
 <figure><img src="../.gitbook/assets/Jupyter Notebook - 2.png" alt=""><figcaption></figcaption></figure>
 
-Some model files can also be uploaded along with the notebook, which will be stored in the `resources/` directory.
+Some model files can also be uploaded along with the notebook, which will be stored in the `resources/` directory. [Read more about the file selection dialog.](participate.md#file-selection-dialog)
 
 {% hint style="info" %}
 The notebook is automatically converted to a Python script, keeping only the functions, imports, and classes. Everything else will be commented out.
@@ -166,26 +166,22 @@ $ crunch setup <competition name> <model name> --token <token> [directory]
 $ cd <directory>
 ```
 
-{% hint style="info" %}
-[Learn more about how setup tokens work and if it is safe to leak them.](participate.md#setup-tokens)
-{% endhint %}
+[Read more about how setup tokens work and why it is safe to (accidentally) "leak" them.](participate.md#setup-tokens)
 
 #### Directory Layouts
 
 ```bash
 # Example of a folder structure.
 # The data files may change depending on the competition.
-$ tree
 .
-├── data
+├── data/
 │   ├── X_test.parquet
 │   ├── X_train.parquet
 │   └── y_train.parquet
 ├── main.py
 ├── requirements.txt
-└── resources
-
-3 directories, 5 files
+└── resources/
+    └── model.joblib
 ```
 
 <table><thead><tr><th width="215">File / Directory</th><th>Reason</th></tr></thead><tbody><tr><td><code>data/</code></td><td>Directory containing the data of the competition, should never be modified by the user. Always kept up to date by the CLI.</td></tr><tr><td><code>main.py</code></td><td>Code entry point. Must contain the <code>train()</code> and <code>infer()</code> function. Can import other files if necessary. <a href="code-interface.md">Learn more...</a></td></tr><tr><td><code>requirements.txt</code></td><td>List of packages used by your code. They are installed before your code is invoked.</td></tr><tr><td><code>resources/</code></td><td>Directory where your model should be stored. The content is persisted across runs during the transition between the <a href="../other/glossary.md#submission-phase">Submission</a> and <a href="../other/glossary.md#out-of-sample-phase">Out-of-Sample</a> phases.</td></tr></tbody></table>
@@ -259,6 +255,42 @@ The `requirements.txt` file must be updated manually.
 
 {% hint style="info" %}
 [Package version freezes](participate.md#package-version-freezing) are still being done in the background.
+{% endhint %}
+
+### Files
+
+If you do not want to use the CLI and did not use a notebook to write your code, you can submit files directly. This is an advanced feature that requires preparation.
+
+The directory layout must be the same as [the CLI directory layout](participate.md#directory-layouts).
+
+#### File Selection Dialog
+
+To add files you can:
+
+* select multiple files by clicking on the "Add file(s)" button
+* or select the contents of an entire directory by clicking on the "Add directory" button
+
+<figure><img src="../.gitbook/assets/Files - 1.png" alt=""><figcaption><p>Files selection dialog</p></figcaption></figure>
+
+{% hint style="info" %}
+If no files have been selected yet and you add a directory, that directory will be used as the root.
+{% endhint %}
+
+{% hint style="info" %}
+Due to a limitation of web browsers, it is not possible to select a directory via the "Add file(s)" button or add multiple directories via the "Add directory" button.
+
+To achieve this, either:
+
+* add multiple directories
+* or place your submission in a directory and add the directory once.
+{% endhint %}
+
+Once added, files can be disabled if you add too many, or renamed if the name is incorrect.
+
+<figure><img src="../.gitbook/assets/Files - 2.png" alt=""><figcaption><p>A model is selected</p></figcaption></figure>
+
+{% hint style="warning" %}
+You need to submit the `requirements.txt` yourself.
 {% endhint %}
 
 ### Setup Tokens
