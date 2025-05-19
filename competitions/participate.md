@@ -123,6 +123,21 @@ import castle.algorithms
 import torch
 ```
 
+#### Global Variables
+
+If you want to have global variables in your notebook and you do not want them to be commented out, please put them in a class:
+
+```python
+class Constants:
+
+    TRAIN_DEPTH = 42
+    IMPORTANT_FEATURES = [ "a", "b", "c" ]
+
+def infer():
+    print(Constants.TRAIN_DEPTH)
+    # 42
+```
+
 #### Embed Files
 
 Additional files can be embedded in cells to be submitted with the Notebook. In order for the system to recognize a cell as an Embed File, the following syntax must be followed:

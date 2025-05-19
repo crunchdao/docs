@@ -4,21 +4,6 @@ description: A list of known problem and how to solve them.
 
 # Known Issues
 
-## Global variables
-
-If you want to have global variables in your notebook and you do not want them to be commented out, please put them in a class:
-
-```python
-class Constants:
-
-    TRAIN_DEPTH = 42
-    IMPORTANT_FEATURES = [ "a", "b", "c" ]
-
-def infer():
-    print(Constants.TRAIN_DEPTH)
-    # 42
-```
-
 ## `NaN` in the Cloud, but none locally
 
 The `index` might not always be the same in the Cloud and locally as the data that is shared **is** different.
@@ -58,7 +43,7 @@ final_ensemble += (X_test.loc[:, 'some_colomn'] * 2)
 ## CatBoostError: Can't create train working dir: catboost\_info error <a href="#catboosterror-cant-create-train-working-dir-catboost_info-error" id="catboosterror-cant-create-train-working-dir-catboost_info-error"></a>
 
 {% hint style="success" %}
-[This issue should be fixed automatically (by monkey patching the catboost library). ](https://github.com/crunchdao/crunch-cli/blob/5f91ecb9d041b12e940947f6214cc64d12bf37ad/crunch/monkey\_patches.py#L117)
+[This issue should be fixed automatically (by monkey patching the catboost library). ](https://github.com/crunchdao/crunch-cli/blob/5f91ecb9d041b12e940947f6214cc64d12bf37ad/crunch/monkey_patches.py#L117)
 {% endhint %}
 
 CatBoost create a directory for persisting his state. But the Run does not allow you to create file anywhere.
