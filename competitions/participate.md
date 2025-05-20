@@ -35,6 +35,7 @@ Before trying to execute any cell, users must set up their environment by copyin
 
 Run the commands to set up your environment and download the data to be ready to go:
 
+{% code title="Python Notebook Cell" %}
 ```python
 # Upgrade the Crunch-CLI to the latest version
 %pip install crunch-cli --upgrade
@@ -42,6 +43,7 @@ Run the commands to set up your environment and download the data to be ready to
 # Authenticates yourself, it will downloads your last submission and the data
 !crunch setup <competition name> <model name> --notebook --token <token>
 ```
+{% endcode %}
 
 {% hint style="info" %}
 [Learn more about how setup tokens work and if it is safe to leak them.](participate.md#setup-tokens)
@@ -49,6 +51,7 @@ Run the commands to set up your environment and download the data to be ready to
 
 Users can now load the data locally:
 
+{% code title="Python Notebook Cell" %}
 ```python
 # Load the notebook, run me once
 import crunch
@@ -57,15 +60,18 @@ crunch = crunch.load_notebook()
 # Load the data, re-run me if you corrupt the dataframes
 X_train, y_train, X_test = crunch.load_data()
 ```
+{% endcode %}
 
 #### Local Testing
 
 When users are satisfied with their work, they can easily test their implementation:
 
+{% code title="Python Notebook Cell" %}
 ```python
 # Run a local test
 crunch.test()
 ```
+{% endcode %}
 
 #### Submitting your Notebook
 
@@ -81,52 +87,11 @@ Then submit on the **Submit a Notebook** page:
 
 Some model files can also be uploaded along with the notebook, which will be stored in the `resources/` directory. [Read more about the file selection dialog.](participate.md#file-selection-dialog)
 
-{% hint style="info" %}
-The notebook is automatically converted to a Python script, keeping only the functions, imports, and classes. Everything else will be commented out.
-{% endhint %}
+#### Global variables
 
-#### Specifying package versions
+If you want to use global variables in your notebook, put them in a class, this will improves the readability of your code:
 
-Since submitting a notebook does not include a `requirements.txt`, users can instead specify the version of a package using import-level [requirement specifiers](https://pip.pypa.io/en/stable/reference/requirement-specifiers/#examples) in a comment on the same line.
-
-```python
-# Valid statements
-import pandas # == 1.3
-import sklearn # >= 1.2, < 2.0
-import tqdm # [foo, bar]
-import scikit # ~= 1.4.2
-from requests import Session # == 1.5
-```
-
-Specifying multiple times will cause the submission to be rejected if they are different.
-
-```python
-# Inconsistant versions will be rejected
-import pandas # == 1.3
-import pandas # == 1.5
-```
-
-Specifying versions on standard libraries does nothing (but they will still be rejected if there is an inconsistent version).
-
-```python
-# Will be ignored
-import os # == 1.3
-import sys # == 1.5
-```
-
-If an optional dependency is required for the code to work properly, an import statement must be added, even if the code does not use it directly.
-
-```python
-import castle.algorithms
-
-# Keep me, I am needed by castle
-import torch
-```
-
-#### Global Variables
-
-If you want to have global variables in your notebook and you do not want them to be commented out, please put them in a class:
-
+{% code title="Python Notebook Cell" %}
 ```python
 class Constants:
 
@@ -137,11 +102,113 @@ def infer():
     print(Constants.TRAIN_DEPTH)
     # 42
 ```
+{% endcode %}
+
+#### Automatic line commenting
+
+The notebook is automatically converted into a Python script that only includes the functions, imports, and classes.
+
+Everything else is commented out to prevent side effects when your code is loaded into the cloud environment. (e.g. when you're exploring the data, debugging your algorithm, or doing visualizating using Matplotlib, etc.)
+
+You can prevent this behavior by using special comments to tell the system to keep part of your code:
+
+* To start a section that you want to keep, write: `@crunch/keep:on`
+* To end the section, write: `@crunch/keep:off`
+
+{% code title="Python Notebook Cell (before)" %}
+```python
+# @crunch/keep:on
+
+# keep global initialization
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# keep constants
+TRAIN_DEPTH = 42
+IMPORTANT_FEATURES = [ "a", "b", "c" ]
+
+# @crunch/keep:off
+
+# this will be ignored
+x, y = crunch.load_data()
+
+def train(...):
+    ...
+```
+{% endcode %}
+
+The result will be:
+
+{% code title="Python Notebook Cell (after)" %}
+```python
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+TRAIN_DEPTH = 42
+IMPORTANT_FEATURES = [ "a", "b", "c" ]
+
+#x, y = crunch.load_data()
+
+def train(...):
+    ...
+```
+{% endcode %}
+
+The command does not affect comments, functions, classes, or imports.
+
+{% hint style="info" %}
+You can put a `@crunch/keep:on` at the top of the cell and never close it to keep everything.
+{% endhint %}
+
+#### Specifying package versions
+
+Since submitting a notebook does not include a `requirements.txt`, users can instead specify the version of a package using import-level [requirement specifiers](https://pip.pypa.io/en/stable/reference/requirement-specifiers/#examples) in a comment on the same line.
+
+{% code title="Python Notebook Cell" %}
+```python
+# Valid statements
+import pandas # == 1.3
+import sklearn # >= 1.2, < 2.0
+import tqdm # [foo, bar]
+import scikit # ~= 1.4.2
+from requests import Session # == 1.5
+```
+{% endcode %}
+
+Specifying multiple times will cause the submission to be rejected if they are different.
+
+{% code title="Python Notebook Cell" %}
+```python
+# Inconsistant versions will be rejected
+import pandas # == 1.3
+import pandas # == 1.5
+```
+{% endcode %}
+
+Specifying versions on standard libraries does nothing (but they will still be rejected if there is an inconsistent version).
+
+{% code title="Python Notebook Cell" %}
+```python
+# Will be ignored
+import os # == 1.3
+import sys # == 1.5
+```
+{% endcode %}
+
+If an optional dependency is required for the code to work properly, an import statement must be added, even if the code does not use it directly.
+
+{% code title="Python Notebook Cell" %}
+```python
+import castle.algorithms
+
+# Keep me, I am needed by castle
+import torch
+```
+{% endcode %}
 
 #### Embed Files
 
 Additional files can be embedded in cells to be submitted with the Notebook. In order for the system to recognize a cell as an Embed File, the following syntax must be followed:
 
+{% code title="Markdown Notebook Cell" %}
 ```markdown
 ---
 file: <file_name>.md
@@ -151,6 +218,7 @@ file: <file_name>.md
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Aenean rutrum condimentum ornare.
 ```
+{% endcode %}
 
 Submitting multiple cells with the same file name will be rejected.
 
@@ -170,6 +238,7 @@ Before starting to work, users must setup their environment which will be simila
 
 Run the commands to set up your environment and download the data to be ready to go:
 
+{% code title="Terminal" %}
 ```bash
 # Upgrade the Crunch-CLI to the latest version
 $ pip install crunch-cli --upgrade
@@ -180,11 +249,13 @@ $ crunch setup <competition name> <model name> --token <token> [directory]
 # Change the directory to the configured environment
 $ cd <directory>
 ```
+{% endcode %}
 
 [Read more about how setup tokens work and why it is safe to (accidentally) "leak" them.](participate.md#setup-tokens)
 
 #### Directory Layouts
 
+{% code title="File Explorer" %}
 ```bash
 # Example of a folder structure.
 # The data files may change depending on the competition.
@@ -198,6 +269,7 @@ $ cd <directory>
 └── resources/
     └── model.joblib
 ```
+{% endcode %}
 
 <table><thead><tr><th width="215">File / Directory</th><th>Reason</th></tr></thead><tbody><tr><td><code>data/</code></td><td>Directory containing the data of the competition, should never be modified by the user. Always kept up to date by the CLI.</td></tr><tr><td><code>main.py</code></td><td>Code entry point. Must contain the <code>train()</code> and <code>infer()</code> function. Can import other files if necessary. <a href="code-interface.md">Learn more...</a></td></tr><tr><td><code>requirements.txt</code></td><td>List of packages used by your code. They are installed before your code is invoked.</td></tr><tr><td><code>resources/</code></td><td>Directory where your model should be stored. The content is persisted across runs during the transition between the <a href="../other/glossary.md#submission-phase">Submission</a> and <a href="../other/glossary.md#out-of-sample-phase">Out-of-Sample</a> phases.</td></tr></tbody></table>
 
@@ -205,10 +277,12 @@ $ cd <directory>
 
 When users are satisfied with their work, they can easily test their implementation:
 
+{% code title="Terminal" %}
 ```bash
 # Run a local test using a shell command
 $ crunch test
 ```
+{% endcode %}
 
 #### Pushing your Code
 
@@ -216,9 +290,11 @@ After the code has been tested, the submission needs to be uploaded to the serve
 
 The message is optional and is just a label for users to know what they did.
 
+{% code title="Terminal" %}
 ```bash
 $ crunch push --message "hello world"
 ```
+{% endcode %}
 
 {% hint style="info" %}
 Remember to include all your dependencies in a `requirements.txt` file.
@@ -238,9 +314,11 @@ However, this behavior may result in your packages not being installed because:
 
 If you want to disable this behavior, use the `--no-pip-freeze` flag.
 
+{% code title="" %}
 ```bash
 $ crunch push --no-pip-freeze --message "hello world"
 ```
+{% endcode %}
 
 {% hint style="info" %}
 Your original requirements will always be preserved.\
