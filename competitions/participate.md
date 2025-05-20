@@ -314,7 +314,7 @@ However, this behavior may result in your packages not being installed because:
 
 If you want to disable this behavior, use the `--no-pip-freeze` flag.
 
-{% code title="" %}
+{% code title="Terminal" %}
 ```bash
 $ crunch push --no-pip-freeze --message "hello world"
 ```
