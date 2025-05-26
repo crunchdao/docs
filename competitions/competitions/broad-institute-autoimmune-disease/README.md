@@ -3,6 +3,7 @@ description: >-
   Crunch Foundation, The Eric and Wendy Schmidt Center, and The Klarman Cell
   Observatory invite you to join the Autoimmune Disease ML Challenge to design
   algorithms to help millions of people.
+icon: lock
 cover: ../../../.gitbook/assets/banner (2).webp
 coverY: 0
 layout:
