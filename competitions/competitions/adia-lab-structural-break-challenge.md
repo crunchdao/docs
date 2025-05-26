@@ -113,7 +113,27 @@ Careful preprocessing of the time series data is an essential step in developing
 
 The ultimate goal is to develop reliable algorithms for detecting structural breaks in time series data across various domains where such changes have significant implications for decision-making and risk management.
 
-## Prize
+## Definitions
+
+### What is a Structural Break?
+
+A structural break in a time series can be defined explicitly as an alteration in the underlying [data-generating process (DGP)](adia-lab-structural-break-challenge.md#intervention-on-the-data-generating-process-dgp), or implicitly through illustrative examples of series exhibiting structural breaks versus those that do not.
+
+#### Intervention on the Data-Generating Process (DGP)
+
+Formally, a structural break occurs at a specific time point when the characteristics of the DGP governing a time series change. For instance, consider a random walk characterized by parameters such as drift `μ` and volatility `σ`. A structural break is said to occur at the moment one or more of these parameters experience a change - for example, volatility `σ` changing from `1.0` to `2.0` at a certain point in time.
+
+Structural breaks need not always involve explicit mathematical equations or parameter adjustments. Another scenario might involve constructing a single time series by combining segments with inherently different behaviors or data sources - for instance, measuring daily temperature changes with one thermometer initially, then switching to a different thermometer after a specified breakpoint.
+
+In short, a structural break is explicitly characterized by a change in the fundamental nature or parameters of the DGP. This change can be either abrupt or smooth and could manifest as parameter changes, functional form changes, regime transitions, or combinations thereof. If no such change occurs, the series does not contain a structural break.
+
+#### Implicit Definition via Examples
+
+An alternative approach involves implicitly defining a structural break through examples. Under this approach, a substantial and diverse collection of time series, some exhibiting structural breaks and others remaining stable, can implicitly define the concept.
+
+Such example-based definitions are particularly useful in machine learning and statistical inference contexts, where explicit parameter-level descriptions might not be directly available or practical. This is especially relevant when working with real-world data, where the underlying data generation process is typically unknown. Importantly, failing to account for structural breaks in time series analysis can lead to misleading results, including inaccurate forecasts and invalid statistical inferences.
+
+## Prizes
 
 | Winners’ rank | Prize value |
 | ------------- | ----------- |
