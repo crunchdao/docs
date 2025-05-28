@@ -1,20 +1,31 @@
 # Whitelisted Libraries
 
-To ensure that the users are not using malicious packages on the competition's infrastructure, a series of Python packages have been whitelisted.
+To prevent users from using malicious packages on the competition's infrastructure, a series of Python packages has been whitelisted.
 
-{% hint style="info" %}
-You can search the whitelisted library in the Submit section of each competition.
-{% endhint %}
+The whitelist is also used when converting notebooks because some libraries have different names when imported than on PyPI. For example, `scikit-learn` is `sklearn`.
+
+You can search the whitelisted library in the **Resources > Whitelisted Libraries** section of each competition.
 
 ## Requesting a package
 
-Packages can be requested to be whitelisted by sending a message to [**@cruncher\_enzo** on Discord](https://discord.com/invite/veAtzsYn3M). To make it easier, please include some of the following in your message:
+You can request to whitelist packages via the "**Request whitelisting**" button in the "**Resources > Whitelisted Libraries**" section of each competition.
 
-* The link to the PyPI page.
-* Whether it requires a GPU or not.
-*   If the package is imported under a name other than the package name
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Request to whitelist a library form</p></figcaption></figure>
 
-    (e.g. `scikit-learn` is `sklearn`).
+Administrators need some information to find the package on PyPI and approve it.
+
+* The **Name** is the package name on PyPI.\
+  e.g.: `scikit-learn`
+* The **Alias** is the name used in the Python code to access the package.\
+  e.g.: `sklearn`
+* The **GPU Requirement** is the hardware requirement to use the package:
+  * If you are unsure, select **I don't know**.
+  * If the package does not require a GPU at all, select **Useless for this library**.
+  * If a GPU can be used but is not required, select **Can be useful for this library**.
+  * If the package requires a GPU, select **Required for this library**.
+* You can leave **Additional Details** if the package requires special attention, so the administrators can better understand why.
+
+### Requirements
 
 However, there are a number of requirements (pun intended) that must be met:
 
@@ -22,7 +33,7 @@ However, there are a number of requirements (pun intended) that must be met:
 * The package must have a good readme/documentation.
 * The package must not be new (more than 6 months old).
 * The package must have many downloads (e.g. [pandas](https://pypistats.org/packages/pandas)).
-* The package must have [verified details](https://docs.pypi.org/project\_metadata/) (by PyPI).
+* The package must have [verified details](https://docs.pypi.org/project_metadata/) (by PyPI).
 
 {% hint style="info" %}
 We reserve the right to refuse a package if it looks suspicious.
