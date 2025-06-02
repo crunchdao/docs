@@ -10,7 +10,7 @@ You can search the whitelisted library in the **Resources > Whitelisted Librarie
 
 You can request to whitelist packages via the "**Request whitelisting**" button in the "**Resources > Whitelisted Libraries**" section of each competition.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Request to whitelist a library form</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Requesting_a_Package.png" alt=""><figcaption><p>Request to whitelist a library form</p></figcaption></figure>
 
 Administrators need some information to find the package on PyPI and approve it.
 
