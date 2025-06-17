@@ -204,6 +204,18 @@ import torch
 ```
 {% endcode %}
 
+It is possible for multiple import names to resolve to different libraries on PyPI. If this happens, you must specify which one you want. If you do not want a specific version, you can use `@latest`, as without this, we cannot distinguish between commented code and version specifiers.
+
+{% code title="Python Notebook Cell" %}
+```python
+# Prefer https://pypi.org/project/EMD-signal/
+import pyemd # EMD-signal @latest
+
+# Prefer https://pypi.org/project/pyemd/
+import pyemd # pyemd @latest
+```
+{% endcode %}
+
 #### Embed Files
 
 Additional files can be embedded in cells to be submitted with the Notebook. In order for the system to recognize a cell as an Embed File, the following syntax must be followed:
