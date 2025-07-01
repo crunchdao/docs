@@ -50,10 +50,7 @@
 * [Adding the Token](crunch-token-practical/adding-the-token.md)
 * [Release Map](crunch-token-practical/release-map.md)
 
-## Credits
-
-* [Avatar](credits/avatar.md)
-
 ## Other
 
 * [Glossary](other/glossary.md)
+* [Credits](other/avatar.md)

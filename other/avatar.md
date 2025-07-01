@@ -1,8 +1,6 @@
----
-description: Avatar credit page
----
+# Credits
 
-# Avatar
+## Profile Pictures
 
 The default avatars come from NASA's [Astronomy Picture of the Day Archive](https://apod.nasa.gov/apod/archivepix.html).
 
