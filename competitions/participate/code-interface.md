@@ -130,4 +130,4 @@ The system has a lot of hidden parameters that the user can use.
 
 ## Global variables
 
-[Global variables being commented out is a known issue.](../../faq/known-issues.md#global-variables)
+[Global variables being commented out is a known issue.](../../faqs/known-issues.md#global-variables)

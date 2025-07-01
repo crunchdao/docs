@@ -41,8 +41,8 @@
 
 ***
 
-* [FAQ](faq/README.md)
-  * [Known Issues](faq/known-issues.md)
+* [FAQs](faqs/README.md)
+  * [Known Issues](faqs/known-issues.md)
 
 ## CRUNCH Token practical
 
