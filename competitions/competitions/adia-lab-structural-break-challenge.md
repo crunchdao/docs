@@ -110,7 +110,7 @@ The `DataFrame` has the following structure:
   * `time`: The timestep within each time series
 * The columns include:
   * `value`: The actual time series value at that timestep;
-  * `period`: A binary indicator where `0` represents the period before the boundary point, and `1` represents the period after the boundary point
+  * `period`: A binary indicator where `0` represents the period before the boundary point, and `1` represents the period after the boundary point. The structural break occurs at the change in value, but it may take some time (values) to become detectable/apparent.
 
 The `y` variable is a boolean `pandas.Series`, with `id` as index, indicating whether a structural break\
 occurred at the boundary point for that time series (`True` if there was a break, `False` otherwise).
