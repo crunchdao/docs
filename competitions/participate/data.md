@@ -7,7 +7,7 @@ In all Crunchs, the crunchers can access our datasets as follow:
 ### X\_train, y\_train, X\_test
 
 1. `X_train`, `y_train`: Labeled training dataset;
-2. `X_test`, `y_test`: Small portion of the test set that can be used to [run local test](participate.md#local-testing).
+2. `X_test`, `y_test`: Small portion of the test set that can be used to [run local test](./#local-testing).
 
 {% hint style="info" %}
 In Crunches, crunchers submit code or models in the form of notebooks or Python files. These submissions are then run on testing or live data by the system. As a result, crunchers never have direct access to the testing data.&#x20;
@@ -49,9 +49,9 @@ X_train, y_train, X_test = crunch.load_data()
 
 #### Examples from the DataCrunch competition
 
-<figure><img src="../.gitbook/assets/datacrunch X_train.parquet.png" alt=""><figcaption><p>DataCrunch's <code>X_train.parquet</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/datacrunch X_train.parquet.png" alt=""><figcaption><p>DataCrunch's <code>X_train.parquet</code></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/datacrunch y_train.parquet.png" alt=""><figcaption><p>DataCrunch's <code>y_train.parquet</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/datacrunch y_train.parquet.png" alt=""><figcaption><p>DataCrunch's <code>y_train.parquet</code></p></figcaption></figure>
 
 #### Prediction's format
 
@@ -59,7 +59,7 @@ X_train, y_train, X_test = crunch.load_data()
 There should be one column per target.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/datacrunch example_prediction_reduced.parquet.png" alt=""><figcaption><p>DataCrunch's <code>example_prediction_reduced.parquet</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/datacrunch example_prediction_reduced.parquet.png" alt=""><figcaption><p>DataCrunch's <code>example_prediction_reduced.parquet</code></p></figcaption></figure>
 
 ### DAG
 
@@ -77,9 +77,9 @@ X_train, y_train, X_test = crunch.load_data()
 
 #### Examples from the ADIA Lab Causality Discovery competition
 
-<figure><img src="../.gitbook/assets/causality discovery X_train.pickle.png" alt=""><figcaption><p>Causality Discovery's <code>X_train.pickle</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/causality discovery X_train.pickle.png" alt=""><figcaption><p>Causality Discovery's <code>X_train.pickle</code></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/causality discovery y_train.pickle.png" alt=""><figcaption><p>Causality Discovery's <code>y_train.pickle</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/causality discovery y_train.pickle.png" alt=""><figcaption><p>Causality Discovery's <code>y_train.pickle</code></p></figcaption></figure>
 
 #### Prediction's format
 
@@ -88,7 +88,7 @@ The main column is `example_id`, formatted as follows:
 <pre><code><strong>&#x3C;dataset_id>_&#x3C;from_node>_&#x3C;to_node>
 </strong></code></pre>
 
-<figure><img src="../.gitbook/assets/causality discovery example_prediction_reduced.parquet.png" alt=""><figcaption><p>Causality Discovery's <code>example_prediction_reduced.parquet</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/causality discovery example_prediction_reduced.parquet.png" alt=""><figcaption><p>Causality Discovery's <code>example_prediction_reduced.parquet</code></p></figcaption></figure>
 
 ### Stream
 
@@ -105,9 +105,9 @@ X_train, X_test = crunch.load_streams()
 
 #### Examples from the Mid+One competition
 
-<figure><img src="../.gitbook/assets/mid one X_train.parquet.png" alt=""><figcaption><p>Mid-One's <code>X_train.parquet</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mid one X_train.parquet.png" alt=""><figcaption><p>Mid-One's <code>X_train.parquet</code></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/mid one y_train.parquet.png" alt=""><figcaption><p>Mid-One's <code>y_train.parquet</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mid one y_train.parquet.png" alt=""><figcaption><p>Mid-One's <code>y_train.parquet</code></p></figcaption></figure>
 
 #### Prediction's format
 
@@ -115,5 +115,5 @@ X_train, X_test = crunch.load_streams()
 Stream competition have a different way of submitting the result. Please follow the [Stream Code Interface](code-interface.md#stream) instead.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/mid one example_prediction_reduced.parquet.png" alt=""><figcaption><p>Mid-One's <code>example_prediction_reduced.parquet</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mid one example_prediction_reduced.parquet.png" alt=""><figcaption><p>Mid-One's <code>example_prediction_reduced.parquet</code></p></figcaption></figure>
 

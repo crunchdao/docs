@@ -17,5 +17,5 @@ layout:
 # The Submission Code Interface
 
 {% hint style="info" %}
-This page has been moved to: [code-interface.md](../competitions/code-interface.md "mention")
+This page has been moved to: [code-interface.md](../competitions/participate/code-interface.md "mention")
 {% endhint %}

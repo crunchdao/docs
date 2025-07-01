@@ -17,6 +17,6 @@ layout:
 # How To Participate
 
 {% hint style="info" %}
-This page has been moved to: [participate.md](../competitions/participate.md "mention")
+This page has been moved to: [participate](../competitions/participate/ "mention")
 {% endhint %}
 

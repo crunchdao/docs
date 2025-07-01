@@ -128,7 +128,7 @@ Once the [Out-of-Sample Phase](../../other/glossary.md#out-of-sample-phase) star
 
 ## Data
 
-In Mid+One, participants are facing univariate time-series called [Streams](../data.md#stream). Crunch's Streams are iterator objects that allow you to traverse all elements of a time-series, one at a time.
+In Mid+One, participants are facing univariate time-series called [Streams](../participate/data.md#stream). Crunch's Streams are iterator objects that allow you to traverse all elements of a time-series, one at a time.
 
 ```python
 # Print the first x_train time-serie's content

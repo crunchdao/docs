@@ -2,7 +2,7 @@
 
 ## Submissions
 
-You can only submit during the [Submission Phase](../other/glossary.md#submission-phase).
+You can only submit during the [Submission Phase](../../other/glossary.md#submission-phase).
 
 You can only submit up to 5 times per day. (some competition may allow more)
 
@@ -28,8 +28,8 @@ Please use a GPU run instead, even if you do not need a GPU.
 
 ### Time constraints
 
-* During the [Submission Phase](../other/glossary.md#submission-phase): **the runtime quota reset every week**
-* During the [Out-of-Sample Phase](../other/glossary.md#out-of-sample-phase): **the runtime quota does not reset every week**
+* During the [Submission Phase](../../other/glossary.md#submission-phase): **the runtime quota reset every week**
+* During the [Out-of-Sample Phase](../../other/glossary.md#out-of-sample-phase): **the runtime quota does not reset every week**
 
 The time limits are different per competition, you must read the competition page to know the value.
 

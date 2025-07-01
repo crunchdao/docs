@@ -31,7 +31,7 @@ Notebook users can use the Quickstarters provided by CrunchDAO to quickly experi
 
 Before trying to execute any cell, users must set up their environment by copying the command available on the competition page:
 
-<figure><img src="../.gitbook/assets/Jupyter Notebook - 1.png" alt=""><figcaption><p>The "Submit a Notebook" tab from the "Submit" page of a competition</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Jupyter Notebook - 1.png" alt=""><figcaption><p>The "Submit a Notebook" tab from the "Submit" page of a competition</p></figcaption></figure>
 
 Run the commands to set up your environment and download the data to be ready to go:
 
@@ -46,7 +46,7 @@ Run the commands to set up your environment and download the data to be ready to
 {% endcode %}
 
 {% hint style="info" %}
-[Learn more about how setup tokens work and if it is safe to leak them.](participate.md#setup-tokens)
+[Learn more about how setup tokens work and if it is safe to leak them.](./#setup-tokens)
 {% endhint %}
 
 Users can now load the data locally:
@@ -83,158 +83,25 @@ After testing the code, users need to have access to the `.ipynb` file.
 
 Then submit on the **Submit a Notebook** page:
 
-<figure><img src="../.gitbook/assets/Jupyter Notebook - 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Jupyter Notebook - 2.png" alt=""><figcaption></figcaption></figure>
 
-Some model files can also be uploaded along with the notebook, which will be stored in the `resources/` directory. [Read more about the file selection dialog.](participate.md#file-selection-dialog)
-
-#### Global variables
-
-If you want to use global variables in your notebook, put them in a class, this will improves the readability of your code:
-
-{% code title="Python Notebook Cell" %}
-```python
-class Constants:
-
-    TRAIN_DEPTH = 42
-    IMPORTANT_FEATURES = [ "a", "b", "c" ]
-
-def infer():
-    print(Constants.TRAIN_DEPTH)
-    # 42
-```
-{% endcode %}
+Some model files can also be uploaded along with the notebook, which will be stored in the `resources/` directory. [Read more about the file selection dialog.](./#file-selection-dialog)
 
 #### Automatic line commenting
 
-The notebook is automatically converted into a Python script that only includes the functions, imports, and classes.
+[Learn why and how your code is commented in your notebook when you submit it.](notebook-processor.md#automatic-line-commenting)
 
-Everything else is commented out to prevent side effects when your code is loaded into the cloud environment. (e.g. when you're exploring the data, debugging your algorithm, or doing visualizating using Matplotlib, etc.)
+#### Global variables
 
-You can prevent this behavior by using special comments to tell the system to keep part of your code:
-
-* To start a section that you want to keep, write: `@crunch/keep:on`
-* To end the section, write: `@crunch/keep:off`
-
-{% code title="Python Notebook Cell (before)" %}
-```python
-# @crunch/keep:on
-
-# keep global initialization
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-# keep constants
-TRAIN_DEPTH = 42
-IMPORTANT_FEATURES = [ "a", "b", "c" ]
-
-# @crunch/keep:off
-
-# this will be ignored
-x, y = crunch.load_data()
-
-def train(...):
-    ...
-```
-{% endcode %}
-
-The result will be:
-
-{% code title="Python Notebook Cell (after)" %}
-```python
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-TRAIN_DEPTH = 42
-IMPORTANT_FEATURES = [ "a", "b", "c" ]
-
-#x, y = crunch.load_data()
-
-def train(...):
-    ...
-```
-{% endcode %}
-
-The command does not affect comments, functions, classes, or imports.
-
-{% hint style="info" %}
-You can put a `@crunch/keep:on` at the top of the cell and never close it to keep everything.
-{% endhint %}
+[Learn how to use global variables in your notebook.](notebook-processor.md#global-variables)
 
 #### Specifying package versions
 
-Since submitting a notebook does not include a `requirements.txt`, users can instead specify the version of a package using import-level [requirement specifiers](https://pip.pypa.io/en/stable/reference/requirement-specifiers/#examples) in a comment on the same line.
-
-{% code title="Python Notebook Cell" %}
-```python
-# Valid statements
-import pandas # == 1.3
-import sklearn # >= 1.2, < 2.0
-import tqdm # [foo, bar]
-import scikit # ~= 1.4.2
-from requests import Session # == 1.5
-```
-{% endcode %}
-
-Specifying multiple times will cause the submission to be rejected if they are different.
-
-{% code title="Python Notebook Cell" %}
-```python
-# Inconsistant versions will be rejected
-import pandas # == 1.3
-import pandas # == 1.5
-```
-{% endcode %}
-
-Specifying versions on standard libraries does nothing (but they will still be rejected if there is an inconsistent version).
-
-{% code title="Python Notebook Cell" %}
-```python
-# Will be ignored
-import os # == 1.3
-import sys # == 1.5
-```
-{% endcode %}
-
-If an optional dependency is required for the code to work properly, an import statement must be added, even if the code does not use it directly.
-
-{% code title="Python Notebook Cell" %}
-```python
-import castle.algorithms
-
-# Keep me, I am needed by castle
-import torch
-```
-{% endcode %}
-
-It is possible for multiple import names to resolve to different libraries on PyPI. If this happens, you must specify which one you want. If you do not want a specific version, you can use `@latest`, as without this, we cannot distinguish between commented code and version specifiers.
-
-{% code title="Python Notebook Cell" %}
-```python
-# Prefer https://pypi.org/project/EMD-signal/
-import pyemd # EMD-signal @latest
-
-# Prefer https://pypi.org/project/pyemd/
-import pyemd # pyemd @latest
-```
-{% endcode %}
+[Learn how to specify package versions (requirements.txt) directly within your notebook.](notebook-processor.md#specifying-package-versions)
 
 #### Embed Files
 
-Additional files can be embedded in cells to be submitted with the Notebook. In order for the system to recognize a cell as an Embed File, the following syntax must be followed:
-
-{% code title="Markdown Notebook Cell" %}
-```markdown
----
-file: <file_name>.md
----
-
-<!-- File content goes here -->
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Aenean rutrum condimentum ornare.
-```
-{% endcode %}
-
-Submitting multiple cells with the same file name will be rejected.
-
-While the focus is on Markdown files, any text file will be accepted. Including but not limited to: `.txt`, `.yaml`, `.json`, ...
+[Learn how to submit additional files with your notebook.](notebook-processor.md#embed-files)
 
 ### Python Script
 
@@ -246,7 +113,7 @@ A mandatory main.py is required to have both functions (`train` and `infer`) in 
 
 Before starting to work, users must setup their environment which will be similar to a git repository.
 
-<figure><img src="../.gitbook/assets/Python Script.png" alt=""><figcaption><p>The "Submit via CLI" tab from the "Submit" page of a competition</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Python Script.png" alt=""><figcaption><p>The "Submit via CLI" tab from the "Submit" page of a competition</p></figcaption></figure>
 
 Run the commands to set up your environment and download the data to be ready to go:
 
@@ -263,7 +130,7 @@ $ cd <directory>
 ```
 {% endcode %}
 
-[Read more about how setup tokens work and why it is safe to (accidentally) "leak" them.](participate.md#setup-tokens)
+[Read more about how setup tokens work and why it is safe to (accidentally) "leak" them.](./#setup-tokens)
 
 #### Directory Layouts
 
@@ -283,7 +150,7 @@ $ cd <directory>
 ```
 {% endcode %}
 
-<table><thead><tr><th width="215">File / Directory</th><th>Reason</th></tr></thead><tbody><tr><td><code>data/</code></td><td>Directory containing the data of the competition, should never be modified by the user. Always kept up to date by the CLI.</td></tr><tr><td><code>main.py</code></td><td>Code entry point. Must contain the <code>train()</code> and <code>infer()</code> function. Can import other files if necessary. <a href="code-interface.md">Learn more...</a></td></tr><tr><td><code>requirements.txt</code></td><td>List of packages used by your code. They are installed before your code is invoked.</td></tr><tr><td><code>resources/</code></td><td>Directory where your model should be stored. The content is persisted across runs during the transition between the <a href="../other/glossary.md#submission-phase">Submission</a> and <a href="../other/glossary.md#out-of-sample-phase">Out-of-Sample</a> phases.</td></tr></tbody></table>
+<table><thead><tr><th width="215">File / Directory</th><th>Reason</th></tr></thead><tbody><tr><td><code>data/</code></td><td>Directory containing the data of the competition, should never be modified by the user. Always kept up to date by the CLI.</td></tr><tr><td><code>main.py</code></td><td>Code entry point. Must contain the <code>train()</code> and <code>infer()</code> function. Can import other files if necessary. <a href="code-interface.md">Learn more...</a></td></tr><tr><td><code>requirements.txt</code></td><td>List of packages used by your code. They are installed before your code is invoked.</td></tr><tr><td><code>resources/</code></td><td>Directory where your model should be stored. The content is persisted across runs during the transition between the <a href="../../other/glossary.md#submission-phase">Submission</a> and <a href="../../other/glossary.md#out-of-sample-phase">Out-of-Sample</a> phases.</td></tr></tbody></table>
 
 #### Local Testing
 
@@ -343,7 +210,7 @@ For some complex setups, users may need to use the CLI to submit a Jupyter Noteb
 
 It will be very similar to the Python Script setup:
 
-* [#setting-the-environment-1](participate.md#setting-the-environment-1 "mention"), like for a Python Script.
+* [#setting-the-environment-1](./#setting-the-environment-1 "mention"), like for a Python Script.
 * Remove the `main.py`.
 * Move your notebook to the project directory and name it `main.ipynb`.
 
@@ -354,19 +221,19 @@ The `main` name can be changed by using the `--main-file <new_file_name>.py` opt
 If done correctly, before each crunch push, the CLI will first convert the notebook to a script file before sending it.
 
 {% hint style="warning" %}
-[Package version specifiers](participate.md#specifying-package-versions) will not work.\
+[Package version specifiers](./#specifying-package-versions) will not work.\
 The `requirements.txt` file must be updated manually.
 {% endhint %}
 
 {% hint style="info" %}
-[Package version freezes](participate.md#package-version-freezing) are still being done in the background.
+[Package version freezes](./#package-version-freezing) are still being done in the background.
 {% endhint %}
 
 ### Files
 
 If you do not want to use the CLI and did not use a notebook to write your code, you can submit files directly. This is an advanced feature that requires preparation.
 
-The directory layout must be the same as [the CLI directory layout](participate.md#directory-layouts).
+The directory layout must be the same as [the CLI directory layout](./#directory-layouts).
 
 #### File Selection Dialog
 
@@ -375,7 +242,7 @@ To add files you can:
 * select multiple files by clicking on the "Add file(s)" button
 * or select the contents of an entire directory by clicking on the "Add directory" button
 
-<figure><img src="../.gitbook/assets/Files - 1.png" alt=""><figcaption><p>Files selection dialog</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Files - 1.png" alt=""><figcaption><p>Files selection dialog</p></figcaption></figure>
 
 {% hint style="info" %}
 If no files have been selected yet and you add a directory, that directory will be used as the root.
@@ -392,7 +259,7 @@ To achieve this, either:
 
 Once added, files can be disabled if you add too many, or renamed if the name is incorrect.
 
-<figure><img src="../.gitbook/assets/Files - 2.png" alt=""><figcaption><p>A model is selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Files - 2.png" alt=""><figcaption><p>A model is selected</p></figcaption></figure>
 
 {% hint style="warning" %}
 You need to submit the `requirements.txt` yourself.
@@ -410,21 +277,21 @@ This token allows the CLI to download the data and submit your submission on you
 
 #### Checking your submission
 
-<figure><img src="../.gitbook/assets/Checking your Submission - 1.png" alt=""><figcaption><p>A successful submission.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Checking your Submission - 1.png" alt=""><figcaption><p>A successful submission.</p></figcaption></figure>
 
 The system parses your work to retrieve the code of the interface functions (`train()` and `infer()`) and their dependencies. By clicking on the right arrow, you can access the contents of your submission.
 
-<figure><img src="../.gitbook/assets/Checking your Submission - 2.png" alt=""><figcaption><p>The view of a submission once properly uploaded</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Checking your Submission - 2.png" alt=""><figcaption><p>The view of a submission once properly uploaded</p></figcaption></figure>
 
 #### Running in the Cloud
 
 Once you've submitted, it's time to make sure your model can run in the cloud environment. Click on a submission and then click the **Run in the Cloud** button.
 
-<figure><img src="../.gitbook/assets/Running in the Cloud - 1.png" alt=""><figcaption><p>Click Run in the Cloud to start your run</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Running in the Cloud - 1.png" alt=""><figcaption><p>Click Run in the Cloud to start your run</p></figcaption></figure>
 
 Your code is fed a standard epoch of data and the system simulates an inference.
 
-<figure><img src="../.gitbook/assets/Running in the Cloud - 2.png" alt=""><figcaption><p>If your submission ran properly, you'll see the status as successful.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Running in the Cloud - 2.png" alt=""><figcaption><p>If your submission ran properly, you'll see the status as successful.</p></figcaption></figure>
 
 {% hint style="info" %}
 A successful run means that the system will be able to call your code on new data to produce the inferences for that customer.
@@ -434,9 +301,9 @@ A successful run means that the system will be able to call your code on new dat
 
 If your run crashes or you want to better understand how your code behaved, you can review the logs.
 
-<figure><img src="../.gitbook/assets/Debugging With the Logs - 1.png" alt=""><figcaption><p>How to check your execution logs</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Debugging With the Logs - 1.png" alt=""><figcaption><p>How to check your execution logs</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Debugging With the Logs - 2.png" alt=""><figcaption><p>Logs of a run</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Debugging With the Logs - 2.png" alt=""><figcaption><p>Logs of a run</p></figcaption></figure>
 
 {% hint style="warning" %}
 Due to abuse, only the first 1,500 lines of a user's code logs will be displayed.

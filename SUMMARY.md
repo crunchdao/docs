@@ -25,20 +25,24 @@
   * [Mid+One](competitions/rallies/mid+one.md)
   * [DataCrunch Rally](competitions/rallies/datacrunch-rally.md)
   * [X-Alpha Rally](competitions/rallies/x-alpha-rally.md)
-* [Participate](competitions/participate.md)
+* [Participate](competitions/participate/README.md)
+  * [Notebook Processor](competitions/participate/notebook-processor.md)
+  * [Code Interface](competitions/participate/code-interface.md)
+  * [Data](competitions/participate/data.md)
+  * [Whitelisted Libraries](competitions/participate/whitelisted-libraries.md)
+  * [Resources Limit](competitions/participate/resources-limit.md)
 * [Teams](competitions/teams/README.md)
   * [Managing](competitions/teams/managing.md)
   * [Referendums](competitions/teams/referendums.md)
   * [Leaderboard](competitions/teams/leaderboard.md)
   * [Rewards](competitions/teams/rewards.md)
-* [Data](competitions/data.md)
-* [Code Interface](competitions/code-interface.md)
 * [Leaderboard](competitions/leaderboard/README.md)
   * [Duplicate Predictions](competitions/leaderboard/duplicate-predictions.md)
-* [Scoring](competitions/scoring.md)
-* [Resources Limit](competitions/resources-limit.md)
-* [Whitelisted Libraries](competitions/whitelisted-libraries.md)
-* [Known Issues](competitions/known-issues.md)
+
+***
+
+* [FAQ](faq/README.md)
+  * [Known Issues](faq/known-issues.md)
 
 ## CRUNCH Token practical
 

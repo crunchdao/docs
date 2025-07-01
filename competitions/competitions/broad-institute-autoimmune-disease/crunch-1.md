@@ -146,7 +146,7 @@ To build a valid submission, your model need to be coded within the infer functi
 {% endhint %}
 
 {% hint style="info" %}
-[Learn about crunch code interface.](../../code-interface.md)
+[Learn about crunch code interface.](../../participate/code-interface.md)
 {% endhint %}
 
 ## Data Variants
