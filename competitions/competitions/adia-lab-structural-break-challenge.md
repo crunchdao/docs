@@ -3,20 +3,6 @@ description: Detect structural changes in time series data for accurate insights
 cover: >-
   https://raw.githubusercontent.com/crunchdao/competitions/refs/heads/master/competitions/structural-break/assets/banner.webp
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # ADIA Lab Structural Break Challenge
@@ -44,8 +30,8 @@ The challenge lies in predicting structural breaks by relying on the empirical p
 
 * Start Date: May 14, 2025 at 10:00 AM CET
 * End Date: September 15, 2025 at 4:59 PM CET
-* Final Evaluation: November 1, 2025 at 2:00 PM CET
-* Winners Announcement: November 14, 2025 at 5:00 PM CET
+* Final Evaluation: End of October, 2025
+* Winners Announcement: [During the ADIA Lab 2025 Symposium](https://www.adialab.ae/upcoming-events/adia-lab-2025-symposium) (27–29 October)
 
 ## Evaluation
 
