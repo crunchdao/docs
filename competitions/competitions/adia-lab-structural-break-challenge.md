@@ -101,7 +101,7 @@ The `DataFrame` has the following structure:
 The `y` variable is a boolean `pandas.Series`, with `id` as index, indicating whether a structural break\
 occurred at the boundary point for that time series (`True` if there was a break, `False` otherwise).
 
-The test data will follow the same format but will not include the`breakpoint` column. Your code will need to process these time series and generate predictions of the likelihood of a structural break for each unique time series ID.
+The test data will follow the same format. Your code will need to process these time series and generate predictions of the likelihood of a structural break for each unique time series ID.
 
 ## Methodology Suggestions
 
