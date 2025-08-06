@@ -4,6 +4,12 @@ description: A list of known problem and how to solve them.
 
 # Known Issues
 
+## Terminated Run never finish
+
+Depending on the timing, a run may become unresponsive to further action and get stuck in an infinite "running" state.
+
+If that happens, please contact an administrator on [Discord](https://discord.com/invite/veAtzsYn3M) or the [Forum](https://forum.crunchdao.com/).
+
 ## `SCIPY_ARRAY_API` before importing `sklearn` or `scipy`
 
 Since the [SciPy array API](https://docs.scipy.org/doc/scipy/dev/api-dev/array_api.html) is experimental, models that need it must enable it.
