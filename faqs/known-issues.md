@@ -4,7 +4,7 @@ description: A list of known problem and how to solve them.
 
 # Known Issues
 
-## Terminated Run never finish
+## Terminated Run never finishes
 
 Depending on the timing, a run may become unresponsive to further action and get stuck in an infinite "running" state.
 
