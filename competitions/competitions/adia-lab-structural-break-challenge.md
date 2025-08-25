@@ -28,8 +28,8 @@ The challenge lies in predicting structural breaks by relying on the empirical p
 
 ### Competition Timeline
 
-* Start Date: May 14, 2025 at 10:00 AM CET
-* End Date: September 15, 2025 at 4:59 PM CET
+* Start Date: May 14th, 2025 at 10:00 AM CET
+* End Date: September 30th, 2025 at 6:00 PM CET
 * Final Evaluation: End of October, 2025
 * Winners Announcement: [During the ADIA Lab 2025 Symposium](https://www.adialab.ae/upcoming-events/adia-lab-2025-symposium) (27–29 October)
 
