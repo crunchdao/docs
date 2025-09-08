@@ -20,6 +20,56 @@ Files generated in the cloud environment (e.g., trained models) cannot be extrac
 
 This ensures that data accessible only there cannot be exfiltrated.
 
+## I get a `NameError` on my constant
 
+If you receive the following error:
+
+<pre><code><strong>NameError: name ‘MY_CONSTANT’ is not defined
+</strong></code></pre>
+
+This happened because your constant was commented out during the submission process. You can avoid this by doing one of the following:
+
+* Use the `# @crunch/keep:on` and `# @crunch/keep:off` commands to wrap the declaration of your constant:
+
+{% code title="Python Notebook Cell" %}
+```python
+# @crunch/keep:on
+MY_CONSTANT = true
+# @crunch/keep:off
+
+if MY_CONSTANT:
+    ...
+```
+{% endcode %}
+
+* Move your constants into a dedicated cell, then place `# @crunch/keep:on` at the very top:
+
+{% code title="Python Notebook Cell" %}
+```python
+# @crunch/keep:on
+MY_CONSTANT = true
+```
+{% endcode %}
+
+{% code title="Python Notebook Cell" %}
+```python
+if MY_CONSTANT:
+    ...
+```
+{% endcode %}
+
+* Declare them in a class:
+
+{% code title="Python Notebook Cell" %}
+```python
+class Constants:
+    MY_CONSTANT = true
+
+if Constants.MY_CONSTANT:
+    ...
+```
+{% endcode %}
+
+For more details, see [the Notebook Processor page](../competitions/participate/notebook-processor.md#automatic-line-commenting).
 
 [^1]: They can be decided late in the competition.
