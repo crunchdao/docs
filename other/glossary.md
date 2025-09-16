@@ -4,9 +4,13 @@
 
 Part of the competition while submission is allowed. The data does not change and the quota is regularly reset.
 
+It is also known as the public leaderboard.
+
 ## Out-of-Sample Phase
 
 Part of the competition while scoring is happening on an out-of-sample phase. The data does change regularly, and no modification is allowed to your code or selection.
+
+It is also known as the private leaderboard.
 
 ## Submission
 

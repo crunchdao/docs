@@ -103,6 +103,16 @@ occurred at the boundary point for that time series (`True` if there was a break
 
 The test data will follow the same format. Your code will need to process these time series and generate predictions of the likelihood of a structural break for each unique time series ID.
 
+### Data Size
+
+The training set consists of 10,000 datasets.
+
+There will also be another 10,000 new datasets for both the [public](../../other/glossary.md#submission-phase) and [private](../../other/glossary.md#out-of-sample-phase) test sets.
+
+The testing data provided for local usage only consists of 100 datasets. Participants must consider that their code will run on **100 times more** datasets, with a maximum limit of 15 hours of computing time.
+
+Inference must be performed sequentially. It is not possible to read the entire `X_test` dataset and predict everything at once. Therefore, the code must be optimized to consume one dataset at a time within the limited computing time.
+
 ## Methodology Suggestions
 
 Methods such as change point detection algorithms, tests for equality of distributions, anomaly detection, or supervised learning models can be utilized to recognize patterns associated with structural breaks. Some approaches to consider include:
