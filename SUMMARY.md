@@ -31,6 +31,7 @@
   * [Data](competitions/participate/data.md)
   * [Whitelisted Libraries](competitions/participate/whitelisted-libraries.md)
   * [Resources Limit](competitions/participate/resources-limit.md)
+  * [R Usage](competitions/participate/r-usage.md)
 * [Teams](competitions/teams/README.md)
   * [Managing](competitions/teams/managing.md)
   * [Referendums](competitions/teams/referendums.md)
