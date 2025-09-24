@@ -39,11 +39,12 @@
   * [Rewards](competitions/teams/rewards.md)
 * [Leaderboard](competitions/leaderboard/README.md)
   * [Duplicate Predictions](competitions/leaderboard/duplicate-predictions.md)
+* [FAQs](competitions/faqs/README.md)
+  * [Known Issues](competitions/faqs/known-issues.md)
 
-***
+## Technical
 
-* [FAQs](faqs/README.md)
-  * [Known Issues](faqs/known-issues.md)
+* [Tournament API](technical/tournament-api.md)
 
 ## CRUNCH Token practical
 

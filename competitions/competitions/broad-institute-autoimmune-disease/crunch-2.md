@@ -1,20 +1,6 @@
 ---
 cover: ../../../.gitbook/assets/banner (3).webp
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Crunch 2 – Nov 18 to Mar 21 – Predicting Unseen Genes

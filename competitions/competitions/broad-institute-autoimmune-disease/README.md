@@ -6,20 +6,6 @@ description: >-
 icon: lock
 cover: ../../../.gitbook/assets/banner (2).webp
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Broad Institute Autoimmune Disease

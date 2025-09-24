@@ -12,7 +12,7 @@ We understand that training some models requires significant resources and compu
 
 For these models, we recommend training locally but including the training code in a separate file or commenting it out.
 
-If you do not submit your training code, you [might miss the opportunity](#user-content-fn-1)[^1] to retrain with more data during the [Out-of-Sample Phase](../other/glossary.md#out-of-sample-phase), as we have done in past competitions.
+If you do not submit your training code, you [might miss the opportunity](#user-content-fn-1)[^1] to retrain with more data during the [Out-of-Sample Phase](../../other/glossary.md#out-of-sample-phase), as we have done in past competitions.
 
 ## How can I get the output of a Run?
 
@@ -70,6 +70,6 @@ if Constants.MY_CONSTANT:
 ```
 {% endcode %}
 
-For more details, see [the Notebook Processor page](../competitions/participate/notebook-processor.md#automatic-line-commenting).
+For more details, see [the Notebook Processor page](../participate/notebook-processor.md#automatic-line-commenting).
 
 [^1]: They can be decided late in the competition.
