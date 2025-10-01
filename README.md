@@ -1,55 +1,65 @@
 ---
-description: The gateway to the Crunch ecosystem, where it all begins.
+description: Welcome to the global collective intelligence network.
 ---
 
-# The Crunch-Hub
+# Welcome
 
-## Dashboard
+## What is Crunch?
 
-A single place to consolidates the latest news, crunches, and your model's performance to provide a quick overview of current activity.
+At its core, Crunch is a collective intelligence protocol that distributes machine learning workloads across a global community.
 
-### The Event Calendar
+* 10,000+ ML engineers and 1,200+ PhDs contribute models.
+* Participants span 100+ countries, each bringing unique perspectives and methods.
+* The protocol structures this effort into Crunches, prediction challenges with clear rules, rewards, and evaluation criteria.
 
-To stay informed about upcoming events, CrunchDAO maintains a calendar widget that displays:
+This system has already delivered results for world-class institutions:
 
-* Your activities
-* Upcoming crunches
-* Times when you joined a crunch
-* Upcoming events (webinars, physical meetings, conferences, etc.).
+* [ADIA Lab (research arm of the Abu Dhabi Investment Authority)](https://www.adialab.ae/) – achieved double-digit improvements in financial forecasting.
+* [Broad Institute of MIT & Harvard](https://www.broadinstitute.org/) – outperformed internal benchmarks in cancer research using predictive genomics.
 
-<figure><img src=".gitbook/assets/Calendar.png" alt=""><figcaption><p>The calendar widget</p></figcaption></figure>
+## Why Crunch?
 
-### The Contribution Graph
+Traditional predictive modeling is limited by silos. Large in-house teams face bottlenecks, while independent researchers lack resources and exposure. Crunch solves this by:
 
-Similar to GitHub, it tracks your activity within the CrunchDAO ecosystem.
+* **Lowering barriers**: Anyone with skill can compete, regardless of geography or institutional backing.
+* **Unlocking diversity**: A network of independent approaches outperforms centralized teams stuck in single modes of thinking.
+* **Ensuring security**: Trusted Execution Environments (TEEs) guarantee models remain private, verifiable, and fully owned by their creators.
+* **Delivering results**: Aggregated predictions (ensembles, composites, mixtures of experts) are continuously tested, updated, and deployed in real-world environments.
 
-The deeper the colors, the more invested you are!
+With Crunch, you focus on building the best model. We handle infrastructure, evaluation, and reward distribution
 
-<figure><img src=".gitbook/assets/Contributions - 1.png" alt=""><figcaption><p>The contributions widget</p></figcaption></figure>
+## Who can Participate?
 
-{% hint style="info" %}
-[Understand how activities are counted](crunch-hub/the-crunch-hub/activity-graphs.md)
-{% endhint %}
+Everyone. Crunch is open and permissionless.
 
-### The Rewards Graph
+* **Machine Learning engineers**: Submit models, earn rewards, and prove your expertise.
+* **Researchers and students**: Gain access to real-world data challenges and contribute fresh perspectives.
+* **Institutions and coordinators**: Launch Crunches to harness global intelligence for finance, science, and beyond.
 
-Track how much CrunchDAO gave to the community via leaderboard prizes.
+Python knowledge helps, but Quickstarter notebooks and community resources make onboarding fast and accessible.
 
-To ensure full transparency regarding the rewards given to the community, all transactions are made on the blockchain and are accessible via the [payouts page](https://hub.crunchdao.com/account/payouts).
+## How it works?
 
-<figure><img src=".gitbook/assets/Total Amounts.png" alt=""><figcaption><p>The rewards widget</p></figcaption></figure>
+1. [**Create an account**](https://hub.crunchdao.com/signup) – and explore active Crunches.
+2. [**Join a Crunch**](https://hub.crunchdao.com/competitions) – each challenge has structured rules, data, and a prize pool.
+3. **Build & submit models** – start with Quickstarters or bring your own innovation.
+4. **Evaluation & rewards** – models are tested against live outcomes, ranked, and rewarded in USDC.
+5. Scale & repeat – high-performing models can be aggregated into prediction feeds, securing long-term impact and recognition
 
-### The Competition Summary Card
+## When Can You Crunch?
 
-Take a quick look at how your models are performing in the crunches you have joined that are currently active.
+Crunches are always live. From financial markets to biomedical research, you’ll find competitions suited to your expertise and curiosity. New challenges are continuously published, offering opportunities to contribute, learn, and earn.
 
-<figure><img src=".gitbook/assets/Active Crunches (1).png" alt=""><figcaption></figcaption></figure>
+## The Future with Crunch
 
-## Currently Ongoing Crunches
+Crunch aims to be the bridge for humans and machines to collectively reduce uncertainty about the future.
 
-You can find a directory of available crunches. We encourage users to explore a variety of crunches to expand their knowledge.
+By participating, you join a growing movement to:
 
-If you are curious, you can also consult previous crunches that have already ended.
+* Democratize predictive intelligence.
+* Align incentives between researchers, institutions, and innovators.
+* Create a resilient, transparent, and global marketplace for models.
 
-<figure><img src=".gitbook/assets/Other Crunches (1).png" alt=""><figcaption><p>Currently open crunches</p></figcaption></figure>
+***
 
+<p align="center"><strong>Welcome to Crunch. The future of predictive intelligence is collective.</strong></p>
