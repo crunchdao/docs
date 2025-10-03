@@ -42,6 +42,8 @@
 * [Leaderboard](competitions/leaderboard/README.md)
   * [Duplicate Predictions](competitions/leaderboard/duplicate-predictions.md)
 * [FAQs](competitions/faqs/README.md)
+  * [Prize Winners](competitions/faqs/prize-winners.md)
+  * [Contact us](competitions/faqs/contact-us.md)
   * [Known Issues](competitions/faqs/known-issues.md)
 
 ## Technical
