@@ -68,6 +68,29 @@ This is also why we are contacting N participants:
 * To not reveal the leaderboard too early.
 * To make sure that we have enough winners in case someone refuses their prize.
 
+#### Write up
+
+While waiting for the private leaderboard, we encourage all participants to write a description of their submission, research, and reasoning process on their preferred platform so that others can learn from it!
+
+The following platforms are often used:
+
+* [Notion.site](https://www.notion.com/product/sites)
+* [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) (code could also be included)
+* [Medium](https://medium.com)
+
+You can find examples from previous competitions:
+
+* [smoggy-mahcih's write up (ADIA Lab Causal Discovery Challenge)](https://thetourney.github.io/adia-report/)
+* [mutian-hong's write up (ADIA Lab Causal Discovery Challenge)](https://stream-physician-14c.notion.site/ADIA-Lab-Causal-Discovery-Challenge-Rank3-Solution-1397f010c9428099aa82e4503cad1c20#1457f010c94280cfb541c60cc9f55b97)
+* [semantic-alexander's write up (ADIA Lab Causal Discovery Challenge)](https://medium.com/@alexkiechlecornish/4th-place-solution-100k-causal-discovery-challenge-adia-lab-x-crunchdao-e0f88c9eda8e)
+* [hi-cdoz's write up (ADIA Lab Causal Discovery Challenge)](https://medium.com/@htnu/the-5th-place-solution-to-the-adia-causal-discovery-challenge-2024-236d5036e03a)
+* [datatech team's write up (ADIA Lab Structural Break Challenge)](https://messy-plain-a65.notion.site/ADIA25-211402a1a1b780428471eaed714e285b)
+* [farukcan-saglam's write up (ADIA Lab Structural Break Challenge)](adia-lab-structural-break-challenge.md)
+
+When you're ready to share your write-up, specify the URL in the model settings:
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>The Model Settings dialog is available by clicking the Edit button on your model page.</p></figcaption></figure>
+
 ### 4. The Reveal
 
 The reveal will happen at the very end, after the private leaderboard is published.
