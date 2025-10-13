@@ -91,6 +91,11 @@ When you're ready to share your write-up, specify the URL in the model settings:
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>The Model Settings dialog is available by clicking the Edit button on your model page.</p></figcaption></figure>
 
+{% hint style="danger" %}
+Data cannot be shared directly, whether in file format or as visualizations.\
+Only your work should be explained, and the visualizations should focus on your model.
+{% endhint %}
+
 ### 4. The Reveal
 
 The reveal will happen at the very end, after the private leaderboard is published.
