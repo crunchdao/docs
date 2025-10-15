@@ -10,6 +10,12 @@
 * [How To Participate](crunch-hub/how-to-participate.md)
 * [Teams](crunch-hub/teams.md)
 
+## Real-time Competitions
+
+* [Competitions](real-time-competitions/competitions/README.md)
+  * [Falcon: The Collective Pricing Engine](real-time-competitions/competitions/falcon.md)
+* [Participate](real-time-competitions/participate.md)
+
 ## Competitions
 
 * [Competitions](competitions/competitions/README.md)
