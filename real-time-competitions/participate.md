@@ -6,10 +6,6 @@ description: >-
 
 # Participate
 
-{% hint style="info" %}
-Currently in staging phase, please use [https://hub.crunchdao.io/](https://hub.crunchdao.io/) instead of [https://hub.crunchdao.com](https://hub.crunchdao.com).
-{% endhint %}
-
 ## Create your Solana Wallet
 
 Before you can participate in CrunchDAO's real-time competitions, you'll need to set up a Solana wallet. We recommend using the Phantom wallet for its ease of use and robust features.
