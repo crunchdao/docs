@@ -43,7 +43,7 @@ As the game relies on real-time data occasional outages may occur. During these 
 ### Start
 
 * Each player begins with a starting wealth of **1000**.
-* The game opens with a **warmup phase** where predictions are scored, but wealth is reset at the beginning of each week—this is for players to calibrate their models. This phase will last for **2 weeks, until end of October.**
+* The game opens with a **warmup phase** where predictions are scored, but wealth is reset at the beginning of each day —this is for players to calibrate their models. This phase will last for **2 weeks, until end of October.**
 * Players can enter and exit the game at any time.
 * Players have a single active model they can update at any time.
 
