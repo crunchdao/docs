@@ -52,7 +52,7 @@ As the game relies on real-time data occasional outages may occur. During these 
 * For each prediction round, players automatically invest a **fraction of their active wealth** into the pot.
 * This amount is subtracted from their active wealth.
 * The total pot is **inflated** slightly by a game-defined **inflation rate**.
-* The model must **generate predictions in under 50** Milliseconds.
+* The model must **generate predictions in under 50 Milliseconds**.
 
 ### Scoring & Distribution
 
