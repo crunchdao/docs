@@ -1,5 +1,6 @@
 ---
 description: Detect structural changes in time series data for accurate insights.
+icon: lock
 cover: >-
   https://raw.githubusercontent.com/crunchdao/competitions/refs/heads/master/competitions/structural-break/assets/banner.webp
 coverY: 0
