@@ -29,7 +29,7 @@ You can transfer it from your Exchange account, but there is an easier method. S
 To withdraw funds faster into a fiat currency, use your exchange's "Receive USDC" wallet. This will ensure that the funds appear directly in your account without you having to buy ETH to cover the transfer fees.
 
 {% hint style="warning" %}
-Make absolutely sure that you can convert the 1 UDSC test back to fiat.
+Make absolutely sure that you **can convert the 1 UDSC test back to fiat**, as some exchanges have a minimum amount policy (e.g., [Kraken](https://support.kraken.com/articles/360000292886-cryptocurrency-deposit-fees-and-minimums)).
 
 Once we send the full amount, you are responsible for the tokens.
 {% endhint %}
@@ -41,6 +41,10 @@ If your exchange asks you about the origin of the tokens, tell them the followin
 * Exchange Name: Bitstamp.
 
 If they request more information, don't hesitate to [contact us](contact-us.md#help-with-the-crytocurrencies).
+{% endhint %}
+
+{% hint style="danger" %}
+We do not recommand Kraken as they have a&#x20;
 {% endhint %}
 
 ## Why cryptocurrencies?
