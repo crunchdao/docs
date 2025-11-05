@@ -42,8 +42,9 @@ As the game relies on real-time data occasional outages may occur. During these 
 
 ### Start
 
-* Each player begins with a starting wealth of **1000**.
-* The game opens with a **warmup phase** where predictions are scored, but wealth is reset at the beginning of each day —this is for players to calibrate their models. This phase will last for **2 weeks, until end of October.**
+* Each player begins with a starting **wealth of 1000**.
+* The game opens with a **warm-up phase** where predictions are scored, but wealth is reset at the beginning of each day so players can calibrate their models.
+* This phase **will last until November 17**, giving players additional time to refine and test their approaches.
 * Players can enter and exit the game at any time.
 * Players have a single active model they can update at any time.
 
@@ -75,7 +76,9 @@ As the game relies on real-time data occasional outages may occur. During these 
 
 ### Game Duration
 
-* After the 2-week warmup, the initial season runs for 3 months of live play. At the end, the winner is announced and a new season begins. Rules and mechanics may evolve with player feedback, especially after the first season.&#x20;
+* After the warm-up phase ends on November 17, the official game begins with real rewards.
+* The initial season **will run for 3 months of live play**, followed by the announcement of the winner and the start of a new season.
+* Rules and mechanics may evolve with player feedback, especially after the first season.
 
 ### Winning
 
