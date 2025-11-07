@@ -61,8 +61,7 @@ As the game relies on real-time data occasional outages may occur. During these 
 * The pot is then distributed **proportionally** based on these likelihood scores.
 * More accurate predictions earn a **larger share** of the pot.
 * Player wealth will never go below 0.
-* Players can skip predictions. Doing so means they cannot lose or gain wealth, as they are not participating in prize distribution. However, skipping has consequences:\
-  their likelihood vintage resets to 0 and their likelihood is reset.
+* Players can skip predictions. Doing so means they cannot lose or gain wealth, as they are not participating in prize distribution.&#x20;
 
 ### Payouts
 
