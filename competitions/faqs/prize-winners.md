@@ -43,10 +43,6 @@ If your exchange asks you about the origin of the tokens, tell them the followin
 If they request more information, don't hesitate to [contact us](contact-us.md#help-with-the-crytocurrencies).
 {% endhint %}
 
-{% hint style="danger" %}
-We do not recommand Kraken as they have a&#x20;
-{% endhint %}
-
 ## Why cryptocurrencies?
 
 To avoid the need for international transfers, all prizes are paid in cryptocurrencies.

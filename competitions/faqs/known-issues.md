@@ -14,7 +14,7 @@ If that happens, please contact an administrator on [Discord](https://discord.co
 
 Since the [SciPy array API](https://docs.scipy.org/doc/scipy/dev/api-dev/array_api.html) is experimental, models that need it must enable it.
 
-In a **dedicated cell** at the **very top**—even **before the imports**—and **without changing anything**, write the following:
+In a **dedicated cell** at the **very top**—even **before the other imports**—and **without changing anything**, write the following:
 
 {% code title="Notebook Cell (Python)" %}
 ```python
