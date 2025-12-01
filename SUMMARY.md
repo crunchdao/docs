@@ -19,6 +19,10 @@
 ## Competitions
 
 * [Competitions](competitions/competitions/README.md)
+  * [Obesity ML Competition: Tackling Metabolic Diseases](competitions/competitions/broad-obesity/README.md)
+    * [Crunch 1 – Predicting the effect of held-out single-gene perturbations](competitions/competitions/broad-obesity/crunch-1.md)
+    * [Full Specifications](competitions/competitions/broad-obesity/full-specifications.md)
+    * [Crash Course](competitions/competitions/broad-obesity/crash-course.md)
   * [DataCrunch Competition](competitions/competitions/datacrunch-competition.md)
   * [ADIA Lab Structural Break Challenge](competitions/competitions/adia-lab-structural-break-challenge.md)
   * [Broad Institute Autoimmune Disease](competitions/competitions/broad-institute-autoimmune-disease/README.md)

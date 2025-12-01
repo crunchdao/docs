@@ -1,5 +1,5 @@
 ---
-cover: ../../.gitbook/assets/banner.webp
+cover: ../../.gitbook/assets/banner (1).webp
 coverY: 0
 ---
 

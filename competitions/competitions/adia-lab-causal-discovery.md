@@ -1,6 +1,6 @@
 ---
 icon: lock
-cover: ../../.gitbook/assets/banner (1).webp
+cover: ../../.gitbook/assets/banner (1) (1).webp
 coverY: 0
 ---
 
