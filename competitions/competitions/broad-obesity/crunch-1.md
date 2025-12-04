@@ -34,7 +34,7 @@ The dataset includes perturbations targeting 157 genes, of which 150 are [transc
 The layout is as follow:
 
 * The dataset is provided in [AnnData format (.h5ad)](https://anndata.readthedocs.io/en/stable/) as `obesity_challenge_1.h5ad`.
-* Normalized gene expression values are stored in `adata.X` after per-cell total count normalization followed by $$log_2(1+x)$$ transformation (standard single-cell RNA-seq normalization; see [lecture 2 of the crash course](crash-course.md#lecture-2)).
+* Normalized gene expression values are stored in `adata.X`. Raw counts were normalized to a target sum of 100,000 per cell, followed by a $$log_2(1+x)$$ transformation (standard single-cell RNA-seq normalization; see [lecture 2 of the crash course](crash-course.md#lecture-2)).
 * Raw gene expression counts prior to normalization are stored in `adata.layers['counts']` for reproducibility and alternative preprocessing.
 * The perturbation target gene information is provided in `adata.obs['gene']`, with values corresponding to either “NC” for control cells or to the target gene name if the cell is perturbed. Control cells receive a perturbation that has no effect on the cell’s RNA-Seq profile.
 * Cell state/program enrichment information is provided in .obs, with columns `pre_adipo`, `adipo`, `lipo`, and `other` indicating whether each cell was enriched for pre-adipocyte, adipocyte, or lipogenic programs. `other` was defined as cells that were not enriched for either pre-adipocyte or adipocyte programs. Program enrichment assignments were based on expert-curated canonical signature genes, and the list of signature genes is provided in `signature_genes.csv`.
