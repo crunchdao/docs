@@ -158,6 +158,12 @@ def train(
 ```
 {% endcode %}
 
+{% hint style="warning" %}
+We recommend training locally and submitting weights because the dataset is large and cloud resources are limited.
+
+Make sure that the [`Method description.md`](crunch-1.md#file-method-description.md) file properly documents your model, so that the Broad Institute team can reference your work in their publications.
+{% endhint %}
+
 {% code title="Python Notebook Cell" %}
 ```python
 def infer(
