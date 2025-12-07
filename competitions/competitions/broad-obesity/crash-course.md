@@ -16,9 +16,20 @@ Each lecture guides participants through data handling, model training, and algo
 
 {% embed url="https://www.youtube.com/watch?v=pIDK0Ga8F0k" %}
 
+## Lecture 1
+
+{% embed url="https://www.youtube.com/watch?v=eBsCT8BZaiw" %}
+Part A - Biology - What is Adipose Tissue?
+{% endembed %}
+
+{% embed url="https://www.youtube.com/watch?v=ytT4ks5GExw" %}
+Part B - Biology - Adipose Tissue and Metabolic Diseases
+{% endembed %}
+
+{% embed url="https://www.youtube.com/watch?v=4ZGuYPANmng" %}
+Part C - Biology - How is Adipose Tissue Formed?
+{% endembed %}
+
 ## Lecture 2
 
 The video will be available soon.
-
-
-
