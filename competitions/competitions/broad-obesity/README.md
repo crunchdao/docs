@@ -103,9 +103,9 @@ More details about this challenge will be announced soon!
 ## Timeline
 
 * **December 2025:** Beginning of Crunch 1
-* **February 2026:** Beginning of Crunch 2
-* **March 2026:** Beginning of Crunch 3
-* **End of April 2026:** Closing of all Crunches
+* **February 2026:** Closing of Crunch 1 & Beginning of Crunch 2
+* **March 2026:** Closing of Crunch 2 & Beginning of Crunch 3
+* **April 2026:** Closing of Crunch 3
 
 ## Evaluation Criteria
 

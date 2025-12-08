@@ -14,8 +14,8 @@ There will be multiple validation checkpoints, with one occurring every Monday a
 
 * Checkpoint 1 - December 15th
 * Checkpoint n - every Monday
-* Last checkpoint - April 27th
-* Last submission - May 1st
+* Last checkpoint - February 23th
+* Last submission - February 28th
 
 {% hint style="info" %}
 You can still submit and run your code multiple times onto the platform.
@@ -40,11 +40,34 @@ The layout is as follow:
 * Cell state/program enrichment information is provided in .obs, with columns `pre_adipo`, `adipo`, `lipo`, and `other` indicating whether each cell was enriched for pre-adipocyte, adipocyte, or lipogenic programs. `other` was defined as cells that were not enriched for either pre-adipocyte or adipocyte programs. Program enrichment assignments were based on expert-curated canonical signature genes, and the list of signature genes is provided in `signature_genes.csv`.
   * We provide the cell state proportion for each of the perturbations in a separate file `program_proportion.csv`.
 * During preprocessing, standard single-cell quality control (QC) was applied to remove low-quality cells and cell doublets based on sequencing library complexity, gene detection rate, and mitochondrial gene content. The dataset was then restricted to cells with a single confident guide assignment to a perturbation, and guides represented by fewer than 10 cells were excluded. Genes detected in fewer than 10 cells were removed, and known signature genes from `signature_genes.csv` were subsequently re-introduced.
-* Top 5000 highly variable genes: In our evaluation, we only compute the evaluation metrics over the highly variable genes (wherever applicable). We provide the list of the highly variable genes in the file `hvg_gene.csv`.
 
 ## Expected Output
 
 Participants must submit three outputs:
+
+### File: `prediction.h5ad`
+
+An [AnnData](https://anndata.readthedocs.io/en/stable/) file containing predicted gene expression profiles normalized and log-transformed post-perturbation for 2,863 gene perturbations indicated in [`predict_perturbations.txt`](#user-content-fn-2)[^2].
+
+Predictions should be stored in `adata.X` matrix with the corresponding perturbation identity recorded in `adata.obs['gene']`.
+
+The set of genes (columns) included in the prediction is defined explicitly by `genes_to_predict` provided at inference time and the columns of `adata.X` must follow this order.
+
+Note that the `genes_to_predict` list may change between validation and test phases, and your model must generate predictions for whichever set of genes is supplied. The maximum number of genes that could be included in `genes_to_predict` is 21,592 corresponding to the total number of genes in the dataset.
+
+For each gene perturbation, we ask you to predict the gene expression profiles for 100 cells to quantify the distribution of each perturbation prediction. With N = len(genes\_to\_predict), the final prediction file is therefore required to have dimensions: \[286,300 × N] (cells × genes\_to\_predict).
+
+### File: `predict_program_proportion.csv`
+
+A [CSV](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_parquet.html) file reporting the predicted proportion of cells with enriched programs for each gene perturbation listed in `predict_perturbations.txt`.
+
+The file should contain one row per perturbation with the following columns:
+
+* `gene`: should contain the perturbation name,
+* `pre_adipo`, `adipo`, `lipo`, and `other`: should specify the predicted proportion of cells in each corresponding state for that perturbation,
+* `lipo_adipo`: should be the ratio of `lipo` to `adipo` (representing the proportion of adipocytes with enriched lipogenic programs).
+
+This file should thus have 2,863 rows and [6 columns](#user-content-fn-3)[^3]. An example is available in the `data/` directory.
 
 ### File: `Method description.md`
 
@@ -61,7 +84,7 @@ The document should be organized into three sections, represented as titles in a
 **Notes:**
 
 * A human will validate the content at the end of the competition.\
-  Work deemed insatisfactory may be disqualified.
+  Work deemed unsatisfactory may be disqualified.
 * This file must be **provided during submission**.\
   If content needs to be changed, you **must re-submit with the new version**.
 * The name must be `Method Description.md`; case does not matter.&#x20;
@@ -97,36 +120,19 @@ If there's an obvious issue regarding the format, you'll receive an immediate no
 Notebook users are required to use [embedded files](../../participate/notebook-processor.md#embed-files).
 {% endhint %}
 
-### File: `prediction.h5ad`
-
-An [AnnData](https://anndata.readthedocs.io/en/stable/) file containing predicted gene expression profiles normalized and log-transformed post-perturbation for 2,864 gene perturbations indicated in [`predict_perturbations.txt`](#user-content-fn-2)[^2].
-
-Predictions should be stored in `adata.X` matrix with the corresponding perturbation identity recorded in `adata.obs['gene']`.
-
-For each gene perturbation, we ask you to predict the gene expression profiles for 100 cells to quantify the distribution of each perturbation prediction. The file with predictions should have dimensions \[286,400 × 21,590] (cells × genes).
-
-### File: `predict_program_proportion.csv`
-
-A [CSV](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_parquet.html) file reporting the predicted proportion of cells with enriched programs for each gene perturbation listed in `predict_perturbations.txt`.
-
-The file should contain one row per perturbation with the following columns:
-
-* `gene`: should contain the perturbation name,
-* `pre_adipo`, `adipo`, `lipo`, and `other`: should specify the predicted proportion of cells in each corresponding state for that perturbation,
-* `lipo_adipo`: should be the ratio of `lipo` to `adipo` (representing the proportion of adipocytes with enriched lipogenic programs).
-
-This file should thus have 2,864 rows and [6 columns](#user-content-fn-3)[^3]. An example is available in the `data/` directory.
-
 ## Scoring
 
 Each metric will be displayed in a different leaderboard. Each will have a different ranking and opportunity for a prize.
 
 The metrics are classed into 2 categories:
 
-* Transcriptome-wide metrics that will be computed using top 5000 highly variable genes (HVG) genes for each perturbation, which are:
-  * **Pearson Delta** between predicted and observed perturbation effects relative to perturbed mean.
-  * **Maximum mean discrepancy (MMD)** between predicted and observed distributions of single-cell profiles.
-* and a Program-level metric that will evaluate whether models capture meaningful biological outcomes, which is:
+* Transcriptome-wide metrics that will be computed computed using **a subset of genes** (i.e., the columns of the predicted matrix) for each perturbation.
+  * Metrics include:
+    * **Pearson Delta** between predicted and observed perturbation effects relative to perturbed mean.
+    * **Maximum mean discrepancy (MMD)** between predicted and observed distributions of single-cell profiles.
+  * **Public leaderboard / validation** (updated weekly): Evaluation uses **1,000 hidden genes**.
+  * **Private leaderboard / test phase**: Both the **number** and **identity** of scoring genes will remain unknown.
+* A Program-level metric that will evaluate whether models capture meaningful biological outcomes, which is:
   * **L1-distance** between predicted and observed four cell state proportions for each perturbation (i.e. pre-adipogenic, adipogenic, lipogenic, and other)
 
 {% hint style="info" %}
@@ -148,10 +154,12 @@ def train(
     model_directory_path: str,
 ) -> None:
     """
+    Train a perturbation prediction model.
+
     Parameters:
       data_directory_path: Directory where the data is located.
       model_directory_path: Directory where your model state should be persisted (usually named `resources/`).
-      
+    
     Return:
       None: Returned value is ignored.
     """
@@ -168,21 +176,33 @@ Make sure that the [`Method description.md`](crunch-1.md#file-method-description
 ```python
 def infer(
     data_directory_path: str,
-    model_directory_path: str,
     prediction_directory_path: str,
-) -> None:
+    prediction_h5ad_file_path: str,
+    program_proportion_csv_file_path: str,
+    model_directory_path: str,
+    predict_perturbations: list[str],
+    genes_to_predict: list[str],
+):
     """
+    Run inference for a set of perturbations.
+
     Parameters:
-      data_directory_path: Directory where the data is located.
-      model_directory_path: Directory where your model state should be persisted (usually named `resources/`).
-      prediction_directory_path: Directory where your prediction files should be saved.
-      
+      data_directory_path: Path to the training AnnData file.
+      prediction_directory_path: Directory where prediction files can be written.
+      prediction_h5ad_file_path: Direct path where to write the `prediction.h5ad` file.
+      program_proportion_csv_file_path: Direct path where to write the `predict_program_proportion.csv` file.
+      model_directory_path: Directory containing your persisted model files.
+      predict_perturbations: The perturbations for which to generate predictions.
+      genes_to_predict: List of gene names (columns) to include in the prediction.h5ad AnnData object.
+
     Return:
       None: Returned value is ignored.
-    
-    Outputed files:
-      prediction.h5ad: Predicted gene expression profiles for 2,864 gene perturbations.
-      predict_program_proportion.csv: Predicted proportion of cells with enriched programs for each gene perturbation.
+
+    Expected files:
+      prediction_directory_path / "prediction.h5ad": anndata.AnnData
+            AnnData matrix of size (n_perturbations * cells_per_perturbation, n_genes_to_predict), containing the predicted gene expression values.
+      prediction_directory_path / "predict_program_proportion.csv": pd.DataFrame
+            DataFrame (index=False) containing estimated cell-type proportions for each perturbation.
     """
 ```
 {% endcode %}
