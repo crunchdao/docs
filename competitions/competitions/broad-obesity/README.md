@@ -8,7 +8,7 @@ coverY: 0
 
 # Obesity ML Competition: Tackling Metabolic Diseases
 
-You will get to work with cutting-edge biological data collected in partnership with the [**Broad Institute**](https://www.broadinstitute.org/), the [**Broad Diabetes Initiative**](https://www.broadinstitute.org/diabetes/diabetes-genetics-initiative), [**Massachusetts General Hospital**](https://www.massgeneral.org/), and [**Beth Israel Deaconess Medical Center**](https://www.bidmc.org/). Your algorithms could directly guide biological discoveries in obesity!
+You will get to work with cutting-edge biological data collected in partnership with the [**Eric and Wendy Schmidt Center at the Broad Institute**](https://www.broadinstitute.org/), the [**Broad Diabetes Initiative**](https://www.broadinstitute.org/diabetes/diabetes-genetics-initiative), [**Massachusetts General Hospital**](https://www.massgeneral.org/), and [**Beth Israel Deaconess Medical Center**](https://www.bidmc.org/). Your algorithms could directly guide biological discoveries in obesity!
 
 ## Quick TL;DR
 
