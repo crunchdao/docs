@@ -138,7 +138,7 @@ The metrics are classed into 2 categories:
 {% hint style="info" %}
 The evaluation code is available [on GitHub](https://github.com/crunchdao/competitions/blob/master/competitions/broad-obesity-1/scoring/scoring.py).
 
-Code for local scoring will be available in the quickstarter.
+Code for local scoring will be available in the [quickstarter](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/broad-obesity-1/quickstarters/perturbed-mean-baseline/perturbed-mean-baseline.ipynb).
 
 For more details about how the metrics formulas, please consult the [Full Specifications](full-specifications.md).
 {% endhint %}
@@ -208,7 +208,7 @@ def infer(
 {% endcode %}
 
 {% hint style="info" %}
-An example is available in the quickstarter.
+An example is available in the [quickstarter](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/broad-obesity-1/quickstarters/perturbed-mean-baseline/perturbed-mean-baseline.ipynb).
 {% endhint %}
 
 [^1]: A transcription factor (TF) is a protein that controls the rate of transcription of genetic information from DNA to messenger RNA, by binding to a specific DNA sequence. (source [Wikipedia](https://en.wikipedia.org/wiki/Transcription_factor))
