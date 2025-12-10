@@ -1,6 +1,6 @@
 # Crash Course
 
-The following videos dive into the concepts underlying the Broad Institute Challenge and how machine learning can help diabetes research.
+The following videos dive into the concepts underlying the Obesity ML Competition and how machine learning can help diabetes research.
 
 Each lecture guides participants through data handling, model training, and algorithm testing, emphasizing practical applications for advancing diagnosis, treatment prediction, and patient outcomes in autoimmune diseases. It’s ideal for those participating in the challenge or interested in applying AI solutions in medical research.
 

@@ -1,6 +1,6 @@
 # Full Specifications
 
-This specification document comes directly from the Broad Institute team.
+This specification document comes directly from the Eric and Wendy Schmidt Center team.
 
 A careful reading of it may provide more detailed answers than the simplified information available on the overview pages.
 
