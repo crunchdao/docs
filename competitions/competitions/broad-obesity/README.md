@@ -76,6 +76,12 @@ Normally, these precursor cells differentiate into specific types of fat cells. 
 Explore the [full specifications](full-specifications.md) for in-depth details.
 {% endhint %}
 
+### Crash Course
+
+Similar to last year, the Eric and Wendy Schmidt Center team [prepared an 80-minute lecture series](https://www.youtube.com/playlist?list=PLlMMtlgw6qNi-WSkY-UiJMvO2TTa0T4Ga) containing a biology overview needed for this challenge.
+
+{% embed url="https://www.youtube.com/playlist?list=PLlMMtlgw6qNi-WSkY-UiJMvO2TTa0T4Ga" %}
+
 ## Phases
 
 The challenge is broken down into three Crunches.
