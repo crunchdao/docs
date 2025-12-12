@@ -12,7 +12,7 @@ In Crunch 1, you will have the opportunity to evaluate the predictive performanc
 
 There will be multiple validation checkpoints, with one occurring every Monday at 6:00 p.m. UTC:
 
-* Checkpoint 1 - December 15th
+* Checkpoint 1 - December 22th
 * Checkpoint n - every Monday
 * Last checkpoint - February 23th
 * Last submission - February 28th
