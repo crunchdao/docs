@@ -54,7 +54,7 @@ Predictions should be stored in `adata.X` matrix with the corresponding perturba
 
 The set of genes (columns) included in the prediction is defined explicitly by `genes_to_predict` provided at inference time and the columns of `adata.X` must follow this order.
 
-Note that the `genes_to_predict` list may change between validation and test phases, and your model must generate predictions for whichever set of genes is supplied. The maximum number of genes that could be included in `genes_to_predict` is 21,592 corresponding to the total number of genes in the dataset.
+Note that the `genes_to_predict` list may change between validation (N=10,237) and test phases, and your model must generate predictions for whichever set of genes is supplied. The maximum number of genes that could be included in `genes_to_predict` is 21,592 corresponding to the total number of genes in the dataset.
 
 For each gene perturbation, we ask you to predict the gene expression profiles for 100 cells to quantify the distribution of each perturbation prediction. With N = len(genes\_to\_predict), the final prediction file is therefore required to have dimensions: \[286,300 × N] (cells × genes\_to\_predict).
 
