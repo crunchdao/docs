@@ -1,5 +1,6 @@
 ---
 description: Where Data Meets Trading Edge.
+hidden: true
 cover: ../../.gitbook/assets/banner (9).webp
 coverY: 0
 ---
