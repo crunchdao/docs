@@ -37,10 +37,26 @@ The layout is as follow:
 * Normalized gene expression values are stored in `adata.X`. Raw counts were normalized to a target sum of 100,000 per cell, followed by a $$log_2(1+x)$$ transformation (standard single-cell RNA-seq normalization; see [lecture 2 of the crash course](crash-course.md#lecture-2)).
 * Raw gene expression counts prior to normalization are stored in `adata.layers['counts']` for reproducibility and alternative preprocessing.
 * The perturbation target gene information is provided in `adata.obs['gene']`, with values corresponding to either “NC” for control cells or to the target gene name if the cell is perturbed. Control cells receive a perturbation that has no effect on the cell’s RNA-Seq profile.
-* Cell state/program enrichment information is provided in .obs, with columns `pre_adipo`, `adipo`, `lipo`, and `other` indicating whether each cell was enriched for pre-adipocyte, adipocyte, or lipogenic programs. `other` was defined as cells that were not enriched for either pre-adipocyte or adipocyte programs. Program enrichment assignments were based on expert-curated canonical signature genes, and the list of signature genes is provided in `signature_genes.csv`.
+* Cell state/program enrichment information is provided in `.obs`, with columns `pre_adipo`, `adipo`, `lipo`, and `other` indicating whether each cell was enriched for pre-adipocyte, adipocyte, or lipogenic programs. `other` was defined as cells that were not enriched for either pre-adipocyte or adipocyte programs. Program enrichment assignments were based on expert-curated canonical signature genes, and the list of signature genes is provided in `signature_genes.csv`.
   * The full analysis workflow used to determine program enrichment is provided in the [accompanying notebook (in R)](https://github.com/julielaffy/obesity-broad-ml-competition-2025?tab=readme-ov-file), which can be consulted for additional methodological details.
   * We provide the cell state proportion for each of the perturbations in a separate file `program_proportion.csv`.
 * During preprocessing, standard single-cell quality control (QC) was applied to remove low-quality cells and cell doublets based on sequencing library complexity, gene detection rate, and mitochondrial gene content. The dataset was then restricted to cells with a single confident guide assignment to a perturbation, and guides represented by fewer than 10 cells were excluded. Genes detected in fewer than 10 cells were removed, and known signature genes from `signature_genes.csv` were subsequently re-introduced.
+
+The `.obs` columns are defined as:
+
+* `orig.ident`: The original sample ID.
+* `nCount_RNA:` The number of UMIs detected per cell.
+* `nFeature_RNA`: The number of genes detected per cell.
+* `nCount_guide`: The number of sgRNA UMIs detected per cell.
+* `nFeature_guide`: The number of sgRNAs detected per cell.
+* `percent.mt`: The fraction of UMIs per cell that map to mitochondrial transcripts.
+* `SampleID`: The sample ID.
+* `Day`: The day of sample collection.
+* `num_features`: The number of guides per cell (for low MOI data, after qc, only the cells with 1 guide are kept).
+* `feature_call`: The guide assignment of each cell.
+* `num_umis`: The number of guide umis per cell.
+* `gene`: The perturbation target gene (or perturbation identity).
+* `positive_control`: Whether the perturbation is one of the positive controls.
 
 ## Expected Output
 
@@ -211,6 +227,28 @@ def infer(
 {% hint style="info" %}
 An example is available in the [quickstarter](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/broad-obesity-1/quickstarters/perturbed-mean-baseline/perturbed-mean-baseline.ipynb).
 {% endhint %}
+
+## FAQ
+
+<details>
+
+<summary>I missed a checkpoint, can I participate to the next one?</summary>
+
+Yes.
+
+There are checkpoints every Monday, and missing one will not affect your final ranking. Once your model is ready, submit it!
+
+</details>
+
+<details>
+
+<summary>Why must external resources be published or in the public domain?</summary>
+
+While releasing the full model is encouraged, it is not strictly required if the weights are sufficient for reproducibility.
+
+When constraints limit what can be released, we ask that the methods and training procedures be clearly documented. These cases can be reviewed individually to ensure transparency and fairness.
+
+</details>
 
 [^1]: A transcription factor (TF) is a protein that controls the rate of transcription of genetic information from DNA to messenger RNA, by binding to a specific DNA sequence. (source [Wikipedia](https://en.wikipedia.org/wiki/Transcription_factor))
 
