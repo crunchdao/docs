@@ -65,10 +65,10 @@ Each time series consists of two segments separated by a known boundary. The tas
 ## Timeline
 
 * **Opening of the new competition**: December 18, 2025
-* **Quarterly Out-of-Sample**:  March 31, 2026
-* **Quarterly Out-of-Sample**:  June 30, 2026
-* **Quarterly Out-of-Sample**:  September 30, 2026
-* **Quarterly Out-of-Sample**:  December 31, 2026
+* **Quarterly Out-of-Sample**: March 31, 2026
+* **Quarterly Out-of-Sample**: June 30, 2026
+* **Quarterly Out-of-Sample**: September 30, 2026
+* **Quarterly Out-of-Sample**: December 31, 2026
 
 {% hint style="info" %}
 A downtime of one week will be necessary to compute the Out-of-Sample score.
@@ -151,9 +151,9 @@ The test data will follow the same format. Your code will need to process these 
 
 ### Data Size
 
-The training set consists of 10,000 datasets.
+The training set consists of 10,000 datasets and is the same as last year's.
 
-There will also be another 10,000 new datasets for both the [public](../../other/glossary.md#submission-phase) and [private](../../other/glossary.md#out-of-sample-phase) test sets.
+There will also be another 10,000 new datasets for each of the [public](../../other/glossary.md#submission-phase) and [private](../../other/glossary.md#out-of-sample-phase) test sets.
 
 The testing data provided for local usage only consists of 100 datasets. Participants must consider that their code will run on **100 times more** datasets, with a maximum limit of 15 hours of computing time.
 
@@ -161,7 +161,7 @@ A determinism check will re-run the infer function on 30% of the data (3,000 dat
 
 ### Comparison against the Top 10
 
-The participants with the highest scores in the [original challenge](https://hub.crunchdao.com/competitions/structural-break/leaderboard) will be used as fixed reference points. These participants will only be used as a baseline for benchmarking purposes and will not be eligible for prizes.
+The participants with the highest scores in the [original challenge](https://hub.crunchdao.com/competitions/structural-break/leaderboard) will be used as fixed reference points. These models will only be used as a baseline for benchmarking purposes and will not be eligible for prizes.
 
 | Leaderboard Rank | Cruncher(s)                                                                                                                                                                                                                                                                                                            | ROC AUC Score |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
@@ -201,9 +201,9 @@ The ultimate goal is to develop reliable algorithms for detecting structural bre
 
 | Winners’ rank | Prize value per quarter |
 | ------------- | ----------------------- |
-| 1st place     | $2,000 USD              |
-| 2nd place     | $1,500 USD              |
-| 3rd place     | $1,500 USD              |
+| 1st place     | $3,000 USD              |
+| 2nd place     | $2,000 USD              |
+| 3rd place     | $1,000 USD              |
 
 Scoring occurs at the end of each calendar quarter, starting with Q1 2026.
 
