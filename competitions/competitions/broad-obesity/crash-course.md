@@ -8,6 +8,10 @@ Each lecture guides participants through data handling, model training, and algo
 [The full playlist is available here.](https://www.youtube.com/playlist?list=PLlMMtlgw6qNi-WSkY-UiJMvO2TTa0T4Ga)
 {% endhint %}
 
+{% hint style="success" %}
+Even if YouTube is unavailable in your country, [you can still watch all the videos via this link.](https://videos.crunchdao.com/broad-obesity-1/)
+{% endhint %}
+
 ## Overview
 
 {% embed url="https://www.youtube.com/watch?v=5ywe76CT4J4" %}
