@@ -76,7 +76,7 @@ For each gene perturbation, we ask you to predict the gene expression profiles f
 
 ### File: `predict_program_proportion.csv`
 
-A [CSV](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_parquet.html) file reporting the predicted proportion of cells with enriched programs for each gene perturbation listed in `predict_perturbations.txt`.
+A [CSV](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html) file reporting the predicted proportion of cells with enriched programs for each gene perturbation listed in `predict_perturbations.txt`.
 
 The file should contain one row per perturbation with the following columns:
 
