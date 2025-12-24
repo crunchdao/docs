@@ -16,8 +16,6 @@ You will get to work with cutting-edge biological data collected in partnership 
 * **The Data Science**: You will be given Single-Cell RNA sequencing (scRNA-seq) data from cells where specific genes have been knocked out (turned off) using CRISPR/Cas9.
 * **The Challenge**: Build a model to predict how a cell’s behavior and development change when a new, unseen gene is turned off.
 
-{% embed url="https://videos.crunchdao.com/broad-obesity-1/?crunchdao:height=550&crunchdao:showInIframe=true&crunchdao:width=100%" %}
-
 ## Introduction
 
 ### The Biology: Storing Energy vs. Burning Energy
