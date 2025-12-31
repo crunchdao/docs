@@ -66,7 +66,7 @@ Your code will have access to the entire dataset when running in the cloud.
 
 ### Submission Cut-off
 
-The window to submit and lock your model is removed. You can submit your code / model whenever you want. If the run completes before Sunday 12PM, it will be accepted for the following week. <mark style="background-color:$danger;">Any run that finishes after this time will be considered for the next week.</mark>
+The window to submit and lock your model is removed. You can submit your code / model whenever you want. If the run completes before Sunday 12pm UTC, it will be taken into account for the week. Otherwise, the run will be terminated and ignored for the week.
 
 The prediction target takes 1 day + 4 weeks to be fully resolved, so the score for a model submitted in week #1 will be available and published in week #6.
 
@@ -110,7 +110,7 @@ Participants will be allocated a specified quantity of computing resources withi
 
 Participants are entitled to **15 hours** of GPU or CPU compute time per week. The competition being weekly, you will have to manage your weekly computing resources consumption to comply with this constraint.
 
-Quota will be reset each Sunday at 12 PM.
+Quota will be reset each Sunday at 12pm UTC.
 
 ## Staking is Coming
 
