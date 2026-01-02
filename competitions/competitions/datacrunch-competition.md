@@ -1,4 +1,7 @@
 ---
+description: >-
+  This weekly prediction contrast ranks 3000 most liquid US equities for
+  DataCrunch's Hedge Fund.
 cover: ../../.gitbook/assets/banner (1).webp
 coverY: 0
 ---

@@ -1,27 +1,55 @@
 ---
-description: Where Data Meets Trading Edge.
+description: >-
+  This weekly cross-sectional problem target the expected returns of the 3000
+  most liquid US equities.
 hidden: true
-cover: ../../.gitbook/assets/banner (9).webp
+cover: ../../../.gitbook/assets/banner (9).webp
 coverY: 0
 ---
 
-# DataCrunch #2
+# DataCrunch Equity Market Neutral #2
 
-DataCrunch operates as a market-neutral hedge fund strategy trading within the Russell 3000 universe, and the dataset is designed to support weekly prediction signals that can be deployed in a real portfolio environment.
+[DataCrunch](https://datacrunch.com/) uses the quantitative research of the CrunchDAO to manage its systematic market-neutral portfolio.
 
-## Live Trading Performance Context
+The long-term strategic goal of the fund is capital appreciation by capturing idiosyncratic return at low volatility.
 
-**Why is the dataset evolving?** After 3 years of analytics and building our strategy while collecting your prediction we learned a ton. This new dataset is packed with alpha. Our internal Benchmark has returned a Sharpe ratio of 2.05 over the past year. We believe that your algorithm can bring that to another level.
+In order to achieve this goal, DataCrunch needs the community to assess the relative performance of all assets in a subset of the [Russell 3000](https://www.investopedia.com/terms/r/russell_3000.asp) universe. In other words, DataCrunch is expecting your model to predict the performance of the constituent of its investment universe.
 
-## What’s New in Alpha-Hunt
+This dataset is the new of the original DataCrunch dataset that can be found [here](https://hub.crunchdao.com/competitions/datacrunch).
 
-Alpha-Hunt introduces several structural improvements:
+To read more about the evolutions between #1 and #2 of the DataCrunch datasets, please [read the full article](./#from-v1-to-v2).
 
-* Extended historical coverage, increasing regime diversity across training and validation
-* Bigger cross-sectional universe
-* Refined features
-* A new target derived from the 28 days forward returns
-* A stronger reward scheme towards the top performers
+## Reward Scheme
+
+As a bootstrapping reward, and waiting for the fund's launch, DataCrunch is distributing 2,000 USDC every weeks.
+
+The reward scheme is calculated as follows for both metrics:
+
+{% code title="Pseudo code (Python flavored)" %}
+```python
+# Reward Calculation
+weekly_rewards = 2000
+
+# 0 = worst, 1 = best
+percentile_rank = your_rank / nb_participants
+
+if percentile_rank <= 0.5:
+    reward = 0
+else:
+    # excess above median, scaled 0–1
+    e = 2 * (percentile_rank - 0.5)
+    weight = e ** 20
+    reward = weekly_rewards * (weight / sum(participants_weights))
+```
+{% endcode %}
+
+<figure><img src="../../../.gitbook/assets/image2.png" alt=""><figcaption></figcaption></figure>
+
+All rewards are computed on the leaderboards.
+
+The Historical Rewards are the sum of every payout you have received from DataCrunch.
+
+The Projected Rewards are the current estimated rewards yet to be distributed.
 
 ## Dataset
 
@@ -74,36 +102,6 @@ The prediction target takes 1 day + 4 weeks to be fully resolved, so the score f
 
 Participants are evaluated using the [Pearson correlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) between their predictions and the target on the last date of the dataset.
 
-## Reward Scheme
-
-The reward scheme is calculated as follows for both metrics:
-
-{% code title="Pseudo code (Python flavored)" %}
-```python
-# Reward Calculation
-weekly_rewards = 2000
-
-# 0 = worst, 1 = best
-percentile_rank = your_rank / nb_participants
-
-if percentile_rank <= 0.5:
-    reward = 0
-else:
-    # excess above median, scaled 0–1
-    e = 2 * (percentile_rank - 0.5)
-    weight = e ** 20
-    reward = weekly_rewards * (weight / sum(participants_weights))
-```
-{% endcode %}
-
-<figure><img src="../../.gitbook/assets/image2.png" alt=""><figcaption></figcaption></figure>
-
-All rewards are computed on the leaderboards.
-
-The Historical Rewards are the sum of every payout you have received from DataCrunch.
-
-The Projected Rewards are the current estimated rewards yet to be distributed.
-
 ## Computing Resources
 
 Participants will be allocated a specified quantity of computing resources within the cloud environment for the execution of their code.
@@ -111,14 +109,6 @@ Participants will be allocated a specified quantity of computing resources withi
 Participants are entitled to **15 hours** of GPU or CPU compute time per week. The competition being weekly, you will have to manage your weekly computing resources consumption to comply with this constraint.
 
 Quota will be reset each Sunday at 12pm UTC.
-
-## Staking is Coming
-
-Staking will be introduced in Q1 2026.
-
-Participants will be able to **stake tokens on their models**, aligning economic exposure with signal conviction. Further details on mechanics will be communicated down the road.
-
-In order to trust the models with more capital, this skin-in-the-game mechanism is essential.
 
 ## Getting Started
 

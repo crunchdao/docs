@@ -19,7 +19,8 @@
 ## Competitions
 
 * [Competitions](competitions/competitions/README.md)
-  * [DataCrunch #2](competitions/competitions/datacrunch-2.md)
+  * [DataCrunch Equity Market Neutral #2](competitions/competitions/datacrunch-2/README.md)
+    * [From Dataset #1 to Dataset #2](competitions/competitions/datacrunch-2/from-dataset-1-to-dataset-2.md)
   * [ADIA Lab Structural Break Open Benchmark Challenge](competitions/competitions/structural-break-open-benchmark.md)
   * [Obesity ML Competition: Tackling Metabolic Diseases](competitions/competitions/broad-obesity/README.md)
     * [Crunch 1 – Predicting the effect of held-out single-gene perturbations](competitions/competitions/broad-obesity/crunch-1.md)
