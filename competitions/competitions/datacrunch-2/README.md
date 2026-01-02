@@ -17,7 +17,7 @@ In order to achieve this goal, DataCrunch needs the community to assess the rela
 
 This dataset is the new of the original DataCrunch dataset that can be found [here](https://hub.crunchdao.com/competitions/datacrunch).
 
-To read more about the evolutions between #1 and #2 of the DataCrunch datasets, please [read the full article](./#from-v1-to-v2).
+To read more about the evolutions between #1 and #2 of the DataCrunch datasets, please [read the full article](https://docs.crunchdao.com/competitions/competitions/datacrunch-2/from-dataset-1-to-dataset-2#one-target-survived-28-day-forward-returns).
 
 ## Reward Scheme
 
