@@ -21,7 +21,7 @@ To read more about the evolutions between #1 and #2 of the DataCrunch datasets, 
 
 ## Reward Scheme
 
-As a bootstrapping reward, and waiting for the fund's launch, DataCrunch is distributing 2,000 USDC every weeks.
+DataCrunch is distributing 2,000 USDC every weeks.
 
 The reward scheme is calculated as follows for both metrics:
 
