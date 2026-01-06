@@ -20,14 +20,14 @@ To read more about the evolutions between #1 and #2 of the DataCrunch datasets, 
 
 ## Reward Scheme
 
-DataCrunch is distributing 2,000 USDC every weeks.
+DataCrunch is distributing 1,000 USDC every weeks.
 
 The reward scheme is calculated as follows for both metrics:
 
 {% code title="Pseudo code (Python flavored)" %}
 ```python
 # Reward Calculation
-weekly_rewards = 2000
+weekly_rewards = 1000
 
 # 0 = worst, 1 = best
 percentile_rank = your_rank / nb_participants
