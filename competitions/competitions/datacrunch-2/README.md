@@ -2,7 +2,7 @@
 description: >-
   This weekly cross-sectional problem target the expected returns of the 3000
   most liquid US equities.
-cover: ../../../.gitbook/assets/banner (9).webp
+cover: ../../../.gitbook/assets/banner (10).webp
 coverY: 0
 ---
 
@@ -166,5 +166,9 @@ def infer(
 {% endcode %}
 
 {% hint style="info" %}
-Running a local test will validate your API. If it passes locally, it will also pass in the cloud environment.
+Running a local test will validate your API.
+
+All parameters are optional and be commented if not needed.
+
+If the test passes locally, it will also pass in the cloud environment.
 {% endhint %}
