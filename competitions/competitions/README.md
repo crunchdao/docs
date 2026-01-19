@@ -89,7 +89,7 @@ You can find examples from previous competitions:
 
 When you're ready to share your write-up, specify the URL in the model settings:
 
-<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>The Model Settings dialog is available by clicking the Edit button on your model page.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption><p>The Model Settings dialog is available by clicking the Edit button on your model page.</p></figcaption></figure>
 
 {% hint style="danger" %}
 Data cannot be shared directly, whether in file format or as visualizations.\

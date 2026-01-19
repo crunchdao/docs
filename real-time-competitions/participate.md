@@ -57,21 +57,21 @@ To submit your code, go to the "**Submit**" page.
 
 Select your preferred submission method. [The submission process is the same as for other competitions.](../competitions/participate/#submit)
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ## Deploy your Submission
 
 Submission is just as easy. Go to your models page where you'll find a new entry in the "**Submissions**" section. Simply click the "**Deploy**" button and follow Phantom's instructions to record the transaction on the blockchain.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 By default, your deployment will appear under the "**Model Runner**" section as "**On**". You can adjust this status at any time by simply toggling the switch.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 Once the deployment is complete, a new entry is added to the "**Deployments**" section where you can monitor and manage your deployed models. From there, you'll also have access to Model Runner logs to track performance and troubleshoot if necessary.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 ## Check your Runner/Builder Logs
 
@@ -80,7 +80,7 @@ The logs are divided into two sections:
 * **Builder**: the logs generated while building the image of your model
 * **Runner**: the logs of your model running live
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Only the last 100 lines are available.

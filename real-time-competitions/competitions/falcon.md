@@ -24,7 +24,7 @@ Each record provides:
 * `falcon_id`: The falcon identity;
 * `falcon_wingspan`: A figurative measure of dexterity, precision and aggression whose utility or lack thereof is up to you to decide;
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 The falcon locations are shown as colored dots on the figure above. Some falcons may provide useful information as to (track) the future location of the dove, or the uncertainty of the same, whereas others may not. Their utility, or otherwise, is for you to determine.
 
