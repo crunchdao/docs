@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Synth: Synthetic Price Data
 
 ## Overview
