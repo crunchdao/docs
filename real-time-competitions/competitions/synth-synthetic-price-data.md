@@ -22,11 +22,11 @@ Enter Synth and submit full return density forecasts for selected assets.
 * Apple tokenized stock (AAPLX)
 * Alphabet tokenized stock (GOOGLX)
 
-## Rewards
+## Phases
 
-* \[Period 1] - 1-month warmup period before Live Trading
-* \[Period 2] - 3 months live with a fixed $30,000 USDC prize pool
-* \[Period 3] - Rewards pools will be generated from mining Synth subnet and may be higher.
+* \[Phase 1] - 1-month warmup period before Live Trading
+* \[Phase 2] - 3 months live with a fixed $30,000 USDC prize pool
+* \[Phase 3] - Rewards pools will be generated from mining Synth subnet and may be higher.
 
 ## Prediction Targets
 
@@ -77,7 +77,8 @@ Here is the **return forecast mapped into price space**:
 #### Start <a href="#start" id="start"></a>
 
 * The game begins with a **model calibration /** **warm-up phase of 4 weeks,** where predictions are scored but **not rewarded.**
-* A player must wait **7 days** to get a meaningful ranking, since the leaderboard is based on a **7-day rolling average** of CRPS scores.
+* Leaderboard is based on **7-day rolling average** of CRPS scores.
+* A player must wait **7 days** to get a meaningful ranking.
 * Players may **enter or exit the game at any time**.
 * Each player may run **two active models**, which can be updated at any time.
 
@@ -88,7 +89,7 @@ In each prediction round, players must submit **a set of** **density forecasts**
 A **prediction round** is defined by **one asset**, **one forecast horizon** and **one or more step resolutions**.
 
 * A **24-hour horizon** forecast&#x20;
-  * Triggered **hourly** for each asset
+  * Triggered **every 1 hour** for each asset
   * Step resolutions: **{5-minute, 1-hour, 6-hour, 24-hour}**
   *   Supported assets:
 
@@ -106,13 +107,15 @@ A **prediction round** is defined by **one asset**, **one forecast horizon** and
 
 All required forecasts for a prediction round must be generated **within 40 seconds**.
 
+{% hint style="info" %}
+Don't submit models that needs more than 40 seconds to infer!
+{% endhint %}
+
 #### Scoring <a href="#scoring" id="scoring"></a>
 
-* Once the full horizon has passed, each prediction is scored using a **CRPS scoring function**.
+* Once the full horizon has passed, each prediction is scored using a [**CRPS**](https://en.wikipedia.org/wiki/Scoring_rule) **scoring function**.
 * A lower **CRPS score** reflects more accurate predictions.
-* Players cannot skip predictions. Missing or invalid predictions receive the **worst CRPS score of the round**.
-
-#### Relative Scoring <a href="#scoring" id="scoring"></a>
+* Missing or invalid predictions receive the **worst CRPS score of the round**.
 
 Leaderboard ranking is based on a **7-day rolling average** of CRPS scores across **all assets and horizons**, evaluated **relative to other participants**, for each prediction round:
 
@@ -124,24 +127,25 @@ Leaderboard ranking is based on a **7-day rolling average** of CRPS scores acros
 
 The leaderboard displays several **relative performance indicators**, computed across **all assets and horizons**:
 
-* **Anchor CRPS (7 days):** Rolling relative CRPS average over the past 7 days (primary ranking metric).
-* **Steady CRPS (3 days):** Rolling relative CRPS average over the past 3 days.
-* **Recent CRPS (24 hours):** Rolling relative CRPS average over the past 24 hours.
+* **Primary Metric**
+  * **Anchor CRPS (7 days):** Rolling relative CRPS average over the past 7 days.
+* **Secondary Metrics**
+  * **Steady CRPS (3 days):** Rolling relative CRPS average over the past 3 days.
+  * **Recent CRPS (24 hours):** Rolling relative CRPS average over the past 24 hours.
 
 #### Payouts <a href="#payouts" id="payouts"></a>
 
-* Rewards are distributed **weekly** and a fixed reward pool is allocated for each payout period.
-* Rewards are distributed **proportionally to each model’s Anchor score** among **eligible models only**.
-* **Eligibility condition:**\
-  Only models that **outperform the benchmark model (synth:benchmarktracker) at the time of the payout** are considered for rewards.
-  * Models with an Anchor score **below or equal to the benchmark at payout time** are included in calculations but receive no payout, leaving any fraction of the pool tied to lower-performing models undistributed.
-  * The benchmark model is a reference model provided by the game and may evolve over time
+* $30K over the first 4 months followed by real mining rewards from Synth Miners (up to 50K / months)
+* Rewards are distributed at target resolution + 24h (every 7 + 1 days)
+* Fixed reward pool is allocated for each payout period.
+* the top 10 participants receive 100% of the pot.
+* Only models **outperforming the benchmark model (synth:benchmarktracker)** are rewarded.
+* Models with a score **below or equal to the benchmark at payout time** are included in calculations but receive no payout, leaving any fraction of the pool tied to lower-performing models undistributed.
+* The benchmark model is a reference model provided by the game in order to reward community outperformance over internal Benchmark and may evolve over time.
 
-#### Game Duration <a href="#game-duration" id="game-duration"></a>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-01-19 at 5.35.02 PM.png" alt=""><figcaption><p>Example of reward distribution when 7 people beat the Benchmark.</p></figcaption></figure>
 
-* After the warm-up phase of **4 weeks** ends on **mid-February**, the official game begins with real rewards.
-* The initial season will run for **3 months of live play** and the start of a new season.
-* Game rules and mechanics may evolve with player feedback, particularly during the warm-up and the first season.
+<figure><img src="../../.gitbook/assets/Screenshot 2026-01-19 at 5.35.13 PM.png" alt=""><figcaption><p>In this example, only 7 participants outperform the benchmark and receive approximately 70% of the weekly rewards. The remaining 30% is retained in the rewards pool.</p></figcaption></figure>
 
 ## Probabilistic Forecasting
 
