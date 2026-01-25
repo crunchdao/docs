@@ -96,6 +96,16 @@ from requests import Session # == 1.5
 ```
 {% endcode %}
 
+{% hint style="warning" %}
+Importing at a level other than the very top level will not work.
+
+Wrapping it in a `try-except` or `if-else` statement will generate a warning. The import will be ignored.
+
+Imports in functions are also ignored but do not generate warnings.
+{% endhint %}
+
+### Inconsistent versions
+
 Specifying multiple times will cause the submission to be rejected if they are different.
 
 {% code title="Python Notebook Cell" %}
@@ -105,6 +115,8 @@ import pandas # == 1.3
 import pandas # == 1.5
 ```
 {% endcode %}
+
+### Standard libraries
 
 Specifying versions on standard libraries does nothing (but they will still be rejected if there is an inconsistent version).
 
@@ -116,6 +128,8 @@ import sys # == 1.5
 ```
 {% endcode %}
 
+### Optional dependencies
+
 If an optional dependency is required for the code to work properly, an import statement must be added, even if the code does not use it directly.
 
 {% code title="Python Notebook Cell" %}
@@ -126,6 +140,8 @@ import castle.algorithms
 import torch
 ```
 {% endcode %}
+
+### Name conflicts
 
 It is possible for multiple import names to resolve to different libraries on PyPI. If this happens, you must specify which one you want. If you do not want a specific version, you can use `@latest`, as without this, we cannot distinguish between commented code and version specifiers.
 
@@ -141,7 +157,7 @@ import pyemd # pyemd @latest
 
 ## Embed Files
 
-Additional files can be embedded in cells to be submitted with the Notebook. In order for the system to recognize a cell as an Embed File, the following syntax must be followed:
+Additional files can be embedded in markdown cells to be submitted with the Notebook. In order for the system to recognize a cell as an Embed File, the following syntax must be followed:
 
 {% code title="Markdown Notebook Cell" %}
 ```markdown
