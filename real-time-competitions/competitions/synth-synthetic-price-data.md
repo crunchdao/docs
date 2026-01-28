@@ -2,6 +2,12 @@
 
 ## Overview
 
+[Synth](https://www.synthdata.co/) is a decentralized prediction subnet on Bittensor that forecasts crypto and financial asset prices through probabilistic modeling. Instead of predicting a single price, participants build models that output probability distributions, capturing not just where an asset might go, but the range of possibilities and their likelihoods. This approach helps model real market behavior like volatility clustering and tail risks that traditional forecasts often miss.
+
+This competition challenges you to build probabilistic forecasting models for Bitcoin, Ethereum, Solana, Tether Gold, and tokenized stocks (Apple, Nvidia, Tesla, Alphabet, S\&P 500). Your models will predict over 1-hour and 24-hour price distributions scored on statistical accuracy. The best-performing models will be aggregated into an ensemble forecast that captures collective intelligence from our community.
+
+## How to participate
+
 Enter Synth and submit full return density forecasts for selected assets.
 
 **Trackers (models)** must generate returns density predictions, not single predictions and maximize accuracy overall forecasts. See open-source Crunch framewor&#x6B;**:** [Crunch-Synth](https://github.com/crunchdao/crunch-synth)
@@ -131,7 +137,7 @@ The leaderboard displays several **relative performance indicators**, computed a
 
 #### Payouts <a href="#payouts" id="payouts"></a>
 
-* $30K over the first 4 months followed by real mining rewards from Synth Miners (up to 50K / months)
+* $30K over the first 4 months followed by real mining rewards from Synth Miners (currently up to 50K / months)
 * Rewards are distributed at target resolution + 24h (every 7 + 1 days)
 * Fixed reward pool is allocated for each payout period.
 * the top 10 participants receive 100% of the pot.
