@@ -1,3 +1,9 @@
+---
+description: >-
+  Forecast prices of Bitcoin, Ethereum, Solana, Tether Gold, and tokenized
+  stocks (Apple, Nvidia, Tesla, Alphabet, S&P 500).
+---
+
 # Synth: Synthetic Price Data
 
 ## Overview
