@@ -14,7 +14,7 @@
 
 * [Competitions](real-time-competitions/competitions/README.md)
   * [Falcon: The Collective Pricing Engine](real-time-competitions/competitions/falcon.md)
-  * [Synth: Synthetic Price Data](real-time-competitions/competitions/synth-synthetic-price-data.md)
+  * [Synth: Synthetic Price Data](real-time-competitions/competitions/synth.md)
 * [Participate](real-time-competitions/participate.md)
 
 ## Competitions
