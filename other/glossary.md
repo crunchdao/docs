@@ -1,4 +1,22 @@
+---
+description: Technical definitions of platform concepts.
+---
+
 # Glossary
+
+## Competition
+
+A structured, (often) time-bound, incentive-driven challenge where participants (typically data scientists) compete to solve a specific problem or achieve a defined objective using data, algorithms, or machine learning models.
+
+## Crunch
+
+A period during which the leaderboard can be updated and compute quotas can be refreshed.
+
+This period usually lasts for a week, but it can be arbitrary.
+
+{% hint style="info" %}
+Crunch is the technical term. It is also used by marketers to refer to a [Competition](glossary.md#competition).
+{% endhint %}
 
 ## Submission Phase
 
