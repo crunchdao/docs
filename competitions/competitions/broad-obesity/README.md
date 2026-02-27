@@ -88,11 +88,11 @@ The challenge is broken down into three Crunches.
 
 ### Crunch 1 – Predicting the effect of held-out single-gene perturbations
 
-From Dec 8 to May 1, Crunchers will build a model to predict the single-cell transcriptomic response to unseen single-gene perturbations.
+From Dec 8 to Feb 28, Crunchers will build a model to predict the single-cell transcriptomic response to unseen single-gene perturbations.
 
 ### Crunch 2 – Predicting the effect of held-out double-gene perturbations
 
-From Feb 28 to May 1, Crunchers will build a model to predict the single-cell transcriptomic response to unseen double-gene perturbations. It will be very similar to the Crunch 1, so we highly encorage participation to both!
+From Feb 28 to April 13, Crunchers will build a model to predict the single-cell transcriptomic response to unseen double-gene perturbations. It will be very similar to the Crunch 1, so we highly encorage participation to both!
 
 {% hint style="success" %}
 More details about this challenge will be announced soon!
