@@ -1,6 +1,5 @@
 ---
 description: Predict the single-cell transcriptomic response to double-gene perturbations.
-hidden: true
 ---
 
 # Crunch 2 – Predicting the effect of held-out double-gene perturbations
@@ -13,10 +12,10 @@ There will be multiple validation checkpoints, with one occurring every Monday a
 
 * Checkpoint 1 - March 9th
 * Checkpoint n - every Monday
-* Last checkpoint - April 13th
-* Last submission - April 20th
+* Last checkpoint - April 6th
+* Last submission - April 13th
   * Start of the selection period
-* End of the selection period - April 24th
+* End of the selection period - April 17th
 
 {% hint style="info" %}
 You can still submit and run your code multiple times onto the platform.
