@@ -80,6 +80,16 @@ The quota resets every week during the [Submission Phase](../../other/glossary.m
 
 It only resets once at the beginning of the [Out-of-Sample Phase](../../other/glossary.md#out-of-sample-phase). Most competitions are unaffected by this, as they run the models on the entire dataset at once. However, some competitions run models on small sections of the dataset over several weeks.
 
+#### Extras
+
+Whenever you create a run, the timeout is set 30 minutes after your quota.
+
+This allows you to still have a chance of completing the run if you only have a few minutes left.
+
+This also covers the time necessary to set up the environment, such as downloading the data and installing the libraries. This is valuable time during which your model is not running, but which is necessary for the system.
+
+But those minutes do not count towards your quota! If you exceed your quota -for example, if you use 15 hours and 30 seconds but your quota is 15 hours- you will not be able to create a new run.
+
 ### Security
 
 Your model runs with the lowest possible level of privilege.
