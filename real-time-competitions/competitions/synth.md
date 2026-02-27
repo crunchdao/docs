@@ -53,7 +53,7 @@ Incremental returns capture the _relative_ change in price and produce a station
 
 Below is an example of a **density forecast over incremental returns for the next 24h at 5-minute intervals**:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Below is a minimal example showing what your tracker might return:
 

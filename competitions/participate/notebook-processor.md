@@ -1,10 +1,10 @@
 # Notebook Processor
 
-When a notebook is submitted, it is first processed to extract the requirements and concatenate all the cells into a single Python file.
+When a notebook is submitted, it is first processed to extract the requirements and concatenate all the cells into a single Python file. This processing involves a lot and sometimes comments too much code. You can provide hints to help the processor better understand your intentions.
 
-This processing involves a lot and sometimes comments too much code.
+The source code for the tool is available on GitHub:
 
-You can provide hints to help the processor better understand your intentions.
+{% embed url="https://github.com/crunchdao/crunch-convert" %}
 
 ## Automatic line commenting
 

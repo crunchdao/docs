@@ -308,3 +308,43 @@ If your run crashes or you want to better understand how your code behaved, you 
 {% hint style="warning" %}
 Due to abuse, only the first 1,500 lines of a user's code logs will be displayed.
 {% endhint %}
+
+## Select
+
+You will be given a few days after the end of the competition to select the run which will be used for running on the [Out-of-Sample Phase](../../other/glossary.md#out-of-sample-phase).
+
+This time is used for participants that started a run at the very last second and need to wait for the results before making their selection.
+
+If you do not select anything, the last successful run will be selected.
+
+Some competitions (like [DataCrunch 2](../competitions/datacrunch-2/)) do not offer this grace period, and even terminate still running runs when the [Submission Phase](../../other/glossary.md#submission-phase) ends, because they are too time sensitive to afford to wait for all runs to finish.
+
+### Why a Run and not a Submission?
+
+You can submit a pre-trained model with your submission, but this does not guarantee that your code will run properly in the cloud environment. You must [run it at least once to confirm its validity](resources-limit.md#runs).
+
+Runs also carry the new version of your model, allowing you to train it using a larger dataset that is not accessible locally.
+
+```mermaid
+graph LR
+  Submission -- No model --> Run1[Run 1]
+  Run1 -- Trained model --> Run2
+  Run2 -- Re-trained model --> Run3
+  Submission --> Run2[Run 2]
+  Submission --> Run3[Run 3]
+```
+
+This can be seen as a "chain" of runs, where they are all linked together by using an iterative version of your model to continue the work of the previous one. It resets if you decide to create a run during the submission phase and select it.
+
+## Repeat
+
+Once you have had a successful run, you can start trying to improve your model up until the end of the competition.
+
+A new submission is required for each new attempt, as previous submissions cannot be altered or deleted for reasons of reproducibility.
+
+You only need to retry setting up your environment in two cases:
+
+* If you are reopening your notebook and the runtime has been reset,
+* If you have changed computers.
+
+In most cases, running a local test will ensure that you have the latest version of the data.
