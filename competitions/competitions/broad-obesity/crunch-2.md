@@ -1,23 +1,22 @@
 ---
-description: >-
-  Predict the single-cell transcriptomic response to unseen single-gene
-  perturbations.
+description: Predict the single-cell transcriptomic response to double-gene perturbations.
+hidden: true
 ---
 
-# Crunch 1 – Predicting the effect of held-out single-gene perturbations
+# Crunch 2 – Predicting the effect of held-out double-gene perturbations
 
 ## Evaluation Phases
 
-In Crunch 1, you will have the opportunity to evaluate the predictive performance of your model on a validation dataset.
+In Crunch 2, you will have the opportunity to evaluate the predictive performance of your model on a validation dataset.
 
 There will be multiple validation checkpoints, with one occurring every Monday at 6:00 p.m. UTC:
 
-* Checkpoint 1 - December 22th
+* Checkpoint 1 - March 9th
 * Checkpoint n - every Monday
-* Last checkpoint - February 23th
-* Last submission - February 28th
+* Last checkpoint - April 13th
+* Last submission - April 20th
   * Start of the selection period
-* End of the selection period - March 4th
+* End of the selection period - April 24th
 
 {% hint style="info" %}
 You can still submit and run your code multiple times onto the platform.
@@ -28,24 +27,43 @@ Predictions will also be scored at the beginning of the selection period.
 
 ## Overview
 
-In Crunch 1, we will explore how well we can predict the single-cell transcriptomic response to single-gene perturbations that were not measured and provided in the training dataset.
+In this Crunch, we will explore how well we can predict the single-cell transcriptomic response to double-gene perturbations that were not provided in the training dataset.
 
 ## Dataset
 
-The dataset includes perturbations targeting 157 genes, of which 150 are [transcription factors (TFs)](#user-content-fn-1)[^1]. For each perturbation, we provide single-cell gene expression (RNA-seq) profiles measured at the day 14 of [adipocyte differentiation](https://pubmed.ncbi.nlm.nih.gov/9674695/), annotated with gene perturbation identity, quality control (QC) metrics, and cell metadata. The training dataset contains a subset of these perturbations, while a distinct set of single-gene perturbations is held out for validation and test.
+This dataset contains single-gene and pairwise perturbations targeting a curated set of 18 genes. This includes a set of:
+
+* 153 heterotypic perturbations (i.e., Gene A+Gene B)
+* 18 homotypic perturbations (i.e., Gene A+Gene A);
+* and 18 monogenic perturbations (i.e., Gene A+NC).
+
+Each cell receives either 1 guide RNA (resulting in a single genetic perturbation, similar to [Crunch #1](crunch-1.md) or two guide RNAs (leading to heterotypic, homotypic, or monogenic perturbations).
+
+Importantly, the number of guides received by a cell has an effect on its underlying transcriptomic distribution:
+
+* two non-targeting guides (NC+NC) may have a different effect from a single non-targeting guide (NC);
+* similarly, Gene A+NC may have a different effect from Gene A alone.
+
+Although the dataset includes some cells that received three guides, the evaluation in this Crunch focuses exclusively on cells that received a single guide or two guides. For each cell, we provide its single-cell gene expression (RNA-seq) profile measured at day 14 of adipocyte differentiation, annotated with the identity of the perturbed genes, quality control (QC) metrics, and cell metadata.
+
+The training dataset contains a subset of these perturbations, while a distinct set of perturbations is held out for validation and test.
 
 The layout is as follow:
 
-* The dataset is provided in [AnnData format (.h5ad)](https://anndata.readthedocs.io/en/stable/) as `obesity_challenge_1.h5ad`.
+* The dataset is provided in [AnnData format (.h5ad)](https://anndata.readthedocs.io/en/stable/) as `obesity_challenge_2.h5ad`.
 * Normalized gene expression values are stored in `adata.X`. Raw counts were normalized to a target sum of 100,000 per cell, followed by a $$log_2(1+x)$$ transformation (standard single-cell RNA-seq normalization; see [lecture 2 of the crash course](crash-course.md#lecture-2)).
 * Raw gene expression counts prior to normalization are stored in `adata.layers['counts']` for reproducibility and alternative preprocessing.
-* The perturbation target gene information is provided in `adata.obs['gene']`, with values corresponding to either “NC” for control cells or to the target gene name if the cell is perturbed. Control cells receive a perturbation that has no effect on the cell’s RNA-Seq profile.
+* We provide data for cells that received single-guide, double-guide or three-guide perturbation. The perturbation target information for each cell is provided in `adata.obs['gene']`. Control cells, which receive perturbations with minimal transcriptomic effect, are labeled as `"NC"` (single-guide) or `"NC+NC"` (double-guide).
+  * For perturbed cells, single-guide perturbations are indicated simply by the target gene name (e.g., 'Gene A').
+  * All double-guide perturbations are denoted using a '+' format, which includes heterotypic gene pairs ('Gene A+Gene B'), homotypic pairs ('Gene A+Gene A'), and monogenic double-guide perturbations ('Gene A+NC').
+  * Similarly, three-guide perturbations extend this format by linking three targets separated by a '+' (e.g., 'Gene A+Gene B+Gene C').
 * Cell state/program enrichment information is provided in `.obs`, with columns `pre_adipo`, `adipo`, `lipo`, and `other` indicating whether each cell was enriched for pre-adipocyte, adipocyte, or lipogenic programs. `other` was defined as cells that were not enriched for either pre-adipocyte or adipocyte programs. Program enrichment assignments were based on expert-curated canonical signature genes, and the list of signature genes is provided in `signature_genes.csv`.
-  * The full analysis workflow used to determine program enrichment is provided in the [accompanying notebook (in R)](https://github.com/julielaffy/obesity-broad-ml-competition-2025?tab=readme-ov-file), which can be consulted for additional methodological details.
   * We provide the cell state proportion for each of the perturbations in a separate file `program_proportion.csv`.
-* During preprocessing, standard single-cell quality control (QC) was applied to remove low-quality cells and cell doublets based on sequencing library complexity, gene detection rate, and mitochondrial gene content. The dataset was then restricted to cells with a single confident guide assignment to a perturbation, and guides represented by fewer than 10 cells were excluded. Genes detected in fewer than 10 cells were removed, and known signature genes from `signature_genes.csv` were subsequently re-introduced.
+* During preprocessing, standard single-cell quality control (QC) was applied to remove low-quality cells and cell doublets based on sequencing library complexity, gene detection rate, and mitochondrial gene content.
 
-The `.obs` columns are defined as:
+<details>
+
+<summary>Definitions of the columns in <code>adata.obs</code></summary>
 
 * `orig.ident`: The original sample ID.
 * `nCount_RNA:` The number of UMIs detected per cell.
@@ -61,21 +79,23 @@ The `.obs` columns are defined as:
 * `gene`: The perturbation target gene (or perturbation identity).
 * `positive_control`: Whether the perturbation is one of the positive controls.
 
+</details>
+
 ## Expected Output
 
 Participants must submit three outputs:
 
 ### File: `prediction.h5ad`
 
-An [AnnData](https://anndata.readthedocs.io/en/stable/) file containing predicted gene expression profiles normalized and log-transformed post-perturbation for 2,863 gene perturbations indicated in [`predict_perturbations.txt`](#user-content-fn-2)[^2].
+An [AnnData](https://anndata.readthedocs.io/en/stable/) file containing predicted gene expression profiles normalized and log-transformed post-perturbation for 62 gene perturbations indicated in [`predict_perturbations_2.txt`](#user-content-fn-1)[^1]. across 36,601 genes listed in [`predict_genes_2.txt`](#user-content-fn-2)[^2].
 
 Predictions should be stored in `adata.X` matrix with the corresponding perturbation identity recorded in `adata.obs['gene']`.
 
 The set of genes (columns) included in the prediction is defined explicitly by `genes_to_predict` provided at inference time and the columns of `adata.X` must follow this order.
 
-Note that the `genes_to_predict` list may change between validation (N=10,237) and test phases, and your model must generate predictions for whichever set of genes is supplied. The maximum number of genes that could be included in `genes_to_predict` is 21,592 corresponding to the total number of genes in the dataset.
+Note that the `predict_genes_2.txt` list may change between validation and test phases, and your model must generate predictions for whichever set of genes is supplied. The maximum number of genes that could be included in `genes_to_predict` is 36,601 corresponding to the total number of genes in the dataset.
 
-For each gene perturbation, we ask you to predict the gene expression profiles for 100 cells to quantify the distribution of each perturbation prediction. With N = len(genes\_to\_predict), the final prediction file is therefore required to have dimensions: \[286,300 × N] (cells × genes\_to\_predict).
+For each gene perturbation, we ask you to predict the gene expression profiles for 100 cells to quantify the distribution of each perturbation prediction. With `N = len(predict_genes)`, the final prediction file is therefore required to have dimensions: \[6,200 × N] (cells × genes\_to\_predict).
 
 ### File: `predict_program_proportion.csv`
 
@@ -87,7 +107,7 @@ The file should contain one row per perturbation with the following columns:
 * `pre_adipo`, `adipo`, `lipo`, and `other`: should specify the predicted proportion of cells in each corresponding state for that perturbation,
 * `lipo_adipo`: should be the ratio of `lipo` to `adipo` (representing the proportion of adipocytes with enriched lipogenic programs).
 
-This file should thus have 2,863 rows and [6 columns](#user-content-fn-3)[^3]. An example is available in the `data/` directory.
+This file should thus have 62 rows and [6 columns](#user-content-fn-3)[^3]. An example is available in the `data/` directory.
 
 ### File: `Method description.md`
 
@@ -156,9 +176,9 @@ The metrics are classed into 2 categories:
   * **L1-distance** between predicted and observed four cell state proportions for each perturbation (i.e. pre-adipogenic, adipogenic, lipogenic, and other)
 
 {% hint style="info" %}
-The evaluation code is available [on GitHub](https://github.com/crunchdao/competitions/blob/master/competitions/broad-obesity-1/scoring/scoring.py).
+The evaluation code is available [on GitHub](https://github.com/crunchdao/competitions/blob/master/competitions/broad-obesity-2/scoring/scoring.py).
 
-Code for local scoring will be available in the [quickstarter](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/broad-obesity-1/quickstarters/perturbed-mean-baseline/perturbed-mean-baseline.ipynb).
+Code for local scoring will be available in the [quickstarter](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/broad-obesity-2/quickstarters/perturbed-mean-baseline/perturbed-mean-baseline.ipynb).
 
 For more details about how the metrics formulas, please consult the [Full Specifications](full-specifications.md).
 {% endhint %}
@@ -167,7 +187,7 @@ For more details about how the metrics formulas, please consult the [Full Specif
 
 To build a valid submission, your model needs to be coded within the infer function, effectively respecting the crunch code submission interface.
 
-{% code title="Python Notebook Cell" %}
+{% code title="Python Notebook Cell" expandable="true" %}
 ```python
 def train(
     data_directory_path: str,
@@ -189,10 +209,10 @@ def train(
 {% hint style="warning" %}
 We recommend training locally and submitting weights because the dataset is large and cloud resources are limited.
 
-Make sure that the [`Method description.md`](crunch-1.md#file-method-description.md) file properly documents your model, so that the Eric and Wendy Schmidt Center team can reference your work in their publications.
+Make sure that the [`Method description.md`](crunch-2.md#file-method-description.md) file properly documents your model, so that the Eric and Wendy Schmidt Center team can reference your work in their publications.
 {% endhint %}
 
-{% code title="Python Notebook Cell" %}
+{% code title="Python Notebook Cell" expandable="true" %}
 ```python
 def infer(
     data_directory_path: str,
@@ -201,7 +221,7 @@ def infer(
     program_proportion_csv_file_path: str,
     model_directory_path: str,
     predict_perturbations: list[str],
-    genes_to_predict: list[str],
+    predict_genes: list[str],
 ):
     """
     Run inference for a set of perturbations.
@@ -213,7 +233,7 @@ def infer(
       program_proportion_csv_file_path: Direct path where to write the `predict_program_proportion.csv` file.
       model_directory_path: Directory containing your persisted model files.
       predict_perturbations: The perturbations for which to generate predictions.
-      genes_to_predict: List of gene names (columns) to include in the prediction.h5ad AnnData object.
+      predict_genes: List of gene names (columns) to include in the prediction.h5ad AnnData object.
 
     Return:
       None: Returned value is ignored.
@@ -228,10 +248,41 @@ def infer(
 {% endcode %}
 
 {% hint style="info" %}
-An example is available in the [quickstarter](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/broad-obesity-1/quickstarters/perturbed-mean-baseline/perturbed-mean-baseline.ipynb).
+An example is available in the [quickstarter](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/broad-obesity-2/quickstarters/perturbed-mean-baseline/perturbed-mean-baseline.ipynb).
 {% endhint %}
 
 ## FAQ
+
+<details>
+
+<summary>I missed Crunch 1, can I participate to this one?</summary>
+
+Yes.
+
+All crunches are unique. There is no requirement to have participated in the first one in order to participate in the others.
+
+</details>
+
+<details>
+
+<summary>I participated to Crunch 1, can my model be adapted?</summary>
+
+Yes.
+
+The model can be adapted with minimal modifications because:
+
+* Some file names have changed:
+  * The prefix `_2` has been added.
+  * They are now matching the specifications more closely:\
+    `perturbations_to_score.txt` is now `score_perturbations_2.txt`&#x20;
+* Some parameters have been renamed to reflect the file names.\
+  The old names are still available for convenience.
+* There are more masks (see the quickstarter):
+  * `single_perturb_mask`
+  * `double_perturb_mask`
+  * `overall_perturb_mask`
+
+</details>
 
 <details>
 
@@ -253,8 +304,8 @@ When constraints limit what can be released, we ask that the methods and trainin
 
 </details>
 
-[^1]: A transcription factor (TF) is a protein that controls the rate of transcription of genetic information from DNA to messenger RNA, by binding to a specific DNA sequence. (source [Wikipedia](https://en.wikipedia.org/wiki/Transcription_factor))
+[^1]: File is available in the `data/`  directory.
 
-[^2]: File is available in the `data/`  directory.
+[^2]: File is available in the `data/` directory.
 
 [^3]: Use `.to_csv(index=False)` when saving the file.
