@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Data
 
 In all Crunchs, the crunchers can access our datasets as follow:
