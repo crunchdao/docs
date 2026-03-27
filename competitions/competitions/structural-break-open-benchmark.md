@@ -70,7 +70,8 @@ Each time series consists of two segments separated by a known boundary. The tas
 * **Quarterly Out-of-Sample**: December 31, 2026
 
 {% hint style="info" %}
-A downtime of one week will be necessary to compute the Out-of-Sample score.
+- All quarterly dates are at midnight UTC (23:59 to be precise).
+- A downtime of one week will be necessary to compute the Out-of-Sample score.
 {% endhint %}
 
 ## Evaluation
