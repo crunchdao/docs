@@ -67,6 +67,18 @@ Your model needs to find signal beyond what the crowd has already priced.
 
 ## Game Rules
 
+### Available Services
+
+The competition only allows you to access the following services to generate your predictions:
+
+* **Chutes AI**: LLM inference with multiple open-source models
+* **Desearch AI**: Web search, social media search, and content crawling
+* **OpenAI**: GPT-5 series models with built-in web search
+* **Perplexity**: Reasoning LLMs with built-in web search
+* **Vericore**: Statement verification with evidence-based metrics
+* **OpenRouter**: Model router with access to hundreds of LLM models (Claude, Gemini, Llama, etc.)
+* **Numinous Indicia**: Geopolitical and OSINT signals intelligence (X/Twitter, LiveUAMap)
+
 ### Start
 
 * The game begins with a 1-month model calibration and warmup phase, where predictions are scored but not rewarded.
