@@ -13,6 +13,7 @@
 ## Real-time Competitions
 
 * [Competitions](real-time-competitions/competitions/README.md)
+  * [Numinous: Predictive Agents For Real World Outcome](real-time-competitions/competitions/numinous.md)
   * [Falcon: The Collective Pricing Engine](real-time-competitions/competitions/falcon.md)
   * [Synth: Synthetic Price Data](real-time-competitions/competitions/synth.md)
 * [Participate](real-time-competitions/participate.md)
