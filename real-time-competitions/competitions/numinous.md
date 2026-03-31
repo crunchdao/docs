@@ -168,6 +168,5 @@ The market price is your baseline. From there, a few directions have shown real 
 * **LLM-based reasoning**: Use GPT-4, Claude, or local models to analyze event descriptions and resolution criteria, then estimate how likely the described outcome is.
 * **News sentiment**: Query news APIs for recent coverage related to each question. A surge of negative headlines on a "Yes" question is a signal.
 * **Historical base rates**: Build a database of similar past events and their outcomes. Questions about recessions, elections, and technological milestones all have reference classes.
-* **Market microstructure**: Track `yes_price` movements and volume spikes over time. A price that has moved sharply in the last hour carries different information than one that has been stable for a week.
 * **Ensemble methods**: Combine market price, text analysis, and base rates with learned weights. No single signal holds up on its own.
 * **Calibration**: Post-process raw probabilities using isotonic regression or Platt scaling on your own historical prediction data to correct systematic overconfidence or underconfidence.
