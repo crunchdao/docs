@@ -22,7 +22,7 @@ Trackers (models) must return a probability between 0.0 and 1.0 for each event a
 ## Phases
 
 * **Phase 1:** 1-month model calibration and warmup phase, where predictions are scored but not rewarded.
-* **Phase 2**: 2 months with a $5,000 USDC or Alpha (SN6) tokens at the discretion of the Crunchers.
+* **Phase 2**: 2 months with $5,000 USDC.
 * **Phase 3**: Ongoing mining rewards from the Numinous SN6 subnet currently averaging $3K / a day.
 
 ## Prediction Target
