@@ -117,7 +117,7 @@ The `brier_72h` window is long enough to smooth noise from individual events, an
 
 ## Payouts
 
-* Minimum of $7,000 USDC or equivalent in Alpha (SN6)
+* Minimum of $5,000 USDC.
 * Rewards are distributed weekly, at the close of each 7-day scoring window.
 * The top 10 participants on the leaderboard share 100% of that week’s distribution.
 * Only models outperforming the `BaselineTracker` benchmark (Brier below \~0.250) are eligible.
