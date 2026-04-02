@@ -8,21 +8,13 @@ Your prize will be transferred to your Solana wallet, which is managed by [Privy
 
 All transactions are now processed through [the Solana network](https://solana.com/). **This is a significant change because wallets are incompatible with the Ethereum network**. We had to leave Ethereum due to its high barriers to entry and high fees.
 
-You will also receive an email with instructions for completing the KYC process, which is necessary in order to receive the funds. This helps us combat individuals with multiple accounts who attempt to exploit our system.
+### KYC
 
-### Ethereum Competitions
+If you took part in a major competition such as the Structural Break, you will receive an email with instructions on how to complete the KYC process.
 
-To ensure that users who prepared in advance did not do so in vain, competitions that began before our migration to Solana will still be paid on the Ethereum network.
+This is necessary in order for you to receive the funds. It helps us combat individuals with multiple accounts who try to exploit our system.
 
-To receive a prize, specify your wallet on your [account page](https://hub.crunchdao.com/account/settings). This wallet must be personal and able to receive [USDC](https://www.usdc.com/) on the Ethereum network. All transactions will happen onchain.
-
-Once everyone has completed the KYC process, we will send a 1 USDC test transaction. Then, we will email you to ask if you received it. The email will also contain a waiver in which you agree that, once we send the full amount, we are no longer responsible for it.
-
-CrunchDAO uses [Privy.io](https://www.privy.io/) to offer its users a ready-to-use wallet where they can receive and later transfer or cash out prizes.
-
-{% hint style="warning" %}
-We are leaving Ethereum. Users should not put their wallets there if they only expect to receive prizes for new competitions.
-{% endhint %}
+Refusing to comply is the same as refusing your prize.
 
 ### Managed Wallets
 
@@ -42,26 +34,12 @@ To secure this wallet, we strongly suggest that you [enable 2FA on your account]
 This step is necessary for exporting the private key.
 {% endhint %}
 
-### Self-custodial Wallets
-
-Due to their simplicity, we recommend using [Phantom](https://phantom.com/) (Any) or [MetaMask](https://metamask.io/) (Ethereum only).
-
-{% hint style="danger" %}
-Make sure you store the seed phrase in a safe place.
-
-Take every precaution to ensure that you are the sole owner of the wallet.
-{% endhint %}
-
-Whether you receive the test or the full amount as your prize, you'll need a small amount of currency to cover the transfer fees.
-
-Although you can transfer it to your Exchange account, there is an easier method. See below for details.
-
 ### Centralized Exchange Wallets
 
 To withdraw funds more quickly into a fiat currency, select the correct network and click the **`Receive USDC`** button on your exchange. This will ensure the funds appear directly in your account, so you won't need to cover the transfer fees.
 
 {% hint style="warning" %}
-Make absolutely sure that you **can convert the 1 UDSC test back to fiat**, as some exchanges have a minimum amount policy (e.g., [Kraken](https://support.kraken.com/articles/360000292886-cryptocurrency-deposit-fees-and-minimums)).
+Make absolutely sure that you **can convert the 1 UDSC test back to fiat first**, as some exchanges have a minimum amount policy (e.g., [Kraken](https://support.kraken.com/articles/360000292886-cryptocurrency-deposit-fees-and-minimums)).
 
 Once we send the full amount, you are responsible for the tokens.
 {% endhint %}
@@ -82,12 +60,6 @@ To eliminate the need for international transfers, all prizes are paid in crypto
 This rule will not be waived under any circumstances, including requests for a bank transfer or equivalent.
 
 This also ensures that transactions can be traced on the blockchain.
-
-{% hint style="warning" %}
-Network fees are determined by the currency network itself and are therefore outside of our control.
-
-For Ethereum, we recommend keeping a small amount of ETH in your wallet so that you can transfer your prizes at any time.
-{% endhint %}
 
 ## <mark style="color:red;">Be on alert for Scams!</mark>
 
