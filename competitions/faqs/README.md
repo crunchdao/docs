@@ -14,6 +14,19 @@ For these models, we recommend training locally but including the training code 
 
 If you do not submit your training code, you [might miss the opportunity](#user-content-fn-1)[^1] to retrain with more data during the [Out-of-Sample Phase](../../other/glossary.md#out-of-sample-phase), as we have done in past competitions.
 
+## `SCIPY_ARRAY_API`
+
+As this flag introduces changes that could be changed in the future and was only intended as a [temporary measure](https://docs.scipy.org/doc/scipy/dev/api-dev/array_api.html), you need to enable it manually.
+
+To achieve this, insert this cell before the one that imports SciPy for the first time.
+
+{% code title="Python Notebook Cell" expandable="true" %}
+```python
+import os
+os.environ["SCIPY_ARRAY_API"] = "1"
+```
+{% endcode %}
+
 ## How can I get the output of a Run?
 
 Files generated in the cloud environment (e.g., trained models) cannot be extracted or downloaded locally.
