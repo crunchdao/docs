@@ -29,6 +29,9 @@ Enter Synth and submit full return density forecasts for selected assets.
 * Tesla tokenized stock (TSLAX)
 * Apple tokenized stock (AAPLX)
 * Alphabet tokenized stock (GOOGLX)
+* Ripple (XRP)
+* Hyperliquid (HYPE)
+* Crude Oil WTI (WTIOIL)
 
 ## Phases
 
@@ -102,7 +105,7 @@ A **prediction round** is defined by **one asset**, **one forecast horizon** and
   *   Supported assets:
 
       ```python
-      ["BTC", "SOL", "ETH", "XAUT", "SPYX", "NVDAX", "TSLAX", "AAPLX", "GOOGLX"]
+      ["BTC", "SOL", "ETH", "XAUT", "SPYX", "NVDAX", "TSLAX", "AAPLX", "GOOGLX", "XRP", "HYPE", "WTIOIL"]
       ```
 * A **1-hour horizon** forecast&#x20;
   * Triggered **every 12 minutes** for each asset
@@ -110,7 +113,7 @@ A **prediction round** is defined by **one asset**, **one forecast horizon** and
   *   Supported assets:
 
       ```python
-      ["BTC", "SOL", "ETH", "XAUT"]
+      ["BTC", "SOL", "ETH", "XAUT", "HYPE"]
       ```
 
 All required forecasts for a prediction round must be generated **within 40 seconds**.
