@@ -15,7 +15,7 @@ There will be multiple validation checkpoints, with one occurring every Monday a
 * Last checkpoint - April 6th
 * Last submission - April 13th
   * Start of the selection period
-* End of the selection period - April 15th
+* End of the selection period - April 17th
 
 {% hint style="info" %}
 You can still submit and run your code multiple times onto the platform.
