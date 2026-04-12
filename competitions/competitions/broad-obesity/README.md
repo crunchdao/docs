@@ -113,10 +113,10 @@ More details about this challenge will be announced soon!
 * **February 2026:**
   * Closing of Crunch 1
   * Beginning of Crunch 2
-* **March 2026:**
+* **April 2026:**
   * Closing of Crunch 2
   * Beginning of Crunch 3
-* **April 2026:**
+* **??? 2026:**
   * Closing of Crunch 3
 
 ## Evaluation Criteria

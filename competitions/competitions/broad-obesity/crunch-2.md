@@ -15,13 +15,14 @@ There will be multiple validation checkpoints, with one occurring every Monday a
 * Last checkpoint - April 6th
 * Last submission - April 13th
   * Start of the selection period
-* End of the selection period - April 17th
+* End of the selection period - April 15th
 
 {% hint style="info" %}
 You can still submit and run your code multiple times onto the platform.
 
-At a checkpoint, all of your (non scored) predictions will be scored. \
-Predictions will also be scored at the beginning of the selection period.
+At a checkpoint, all of your (non scored) predictions will be scored, which also include the "last submission".
+
+Predictions will also be scored at the end of the selection period.
 {% endhint %}
 
 ## Overview
