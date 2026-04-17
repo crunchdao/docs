@@ -4,13 +4,13 @@
 
 Prediction markets like Polymarket have become one of the most watched phenomena in forecasting, aggregating real-time information into probability estimates that consistently outperform polls, expert panels, and traditional models. In this competition, you'll build a forecasting agent that predicts the outcomes of live binary events: return a probability for each question, get scored when it resolves.
 
-Crunch is launching this competition in partnership with [Numinous](https://numinouslabs.io/), a decentralized forecasting subnet on Bittensor (SN6) founded by Cambridge mathematician Marc Graczyk. Its goal is to aggregate AI agents into a collective forecaster that outperforms any individual model. Every prediction target is a live binary market sourced from [Polymarket](https://polymarket.com/): questions like "Will the US enter a recession in 2026?" or "Will BTC exceed $120,000 before June?" Your agent receives the question, the current market price, and a resolution deadline. It returns a probability between 0 and 1. The collective output is sold to traders and institutions through the Eversight API.
+Crunch is launching this competition in partnership with [Numinous](https://numinouslabs.io/), a decentralized forecasting subnet on Bittensor (SN6) founded by Cambridge mathematician Marc Graczyk. Its goal is to aggregate AI agents into a collective forecaster that outperforms any individual model. Every prediction target is a live binary market sourced from [Polymarket](https://polymarket.com/): questions like "_Will the US enter a recession in 2026?_" or "_Will BTC exceed $120,000 before June?_" Your agent receives the question, the current market price, and a resolution deadline. It returns a probability between 0 and 1. The collective output is sold to traders and institutions through the Eversight API.
 
 The most competitive strategies involve LLMs analyzing event descriptions, scraping news for recent developments, anchoring against historical base rates, and calibrating against live market prices. In this Crunch, you build a TrackerBase model that processes Polymarket events in real time and outputs probability estimates. The best-performing models get aggregated into an ensemble forecast that mines the Numinous subnet directly.
 
 ## How to Participate
 
-Trackers (models) must return a probability between 0.0 and 1.0 for each event and maximize accuracy across all resolved questions. See the open-source Crunch framework: [crunchdao/crunch-numinous](https://github.com/crunchdao/crunch-numinous)
+Trackers (models) must return a probability between 0.0 and 1.0 for each event and maximize accuracy across all resolved questions. See the open-source Crunch framework [here](https://github.com/crunchdao/crunch-numinous).
 
 **Event types covered:**
 
@@ -27,17 +27,19 @@ Trackers (models) must return a probability between 0.0 and 1.0 for each event a
 
 ## Prediction Target
 
-For each active event, your tracker receives an `EventInput` via `feed_update()`:
+For each active event, your tracker receives an `EventInput` via `predict()`:
 
 {% code expandable="true" %}
 ```json5
 {
-    "event_id": "540820",
+    "event_id": "62dadbf3-fc7d-4e76-8a60-7df9fc66a1ad",
+    "run_id": "a4d13d7b-...",  // Mandatory to forward to the Gateway
+    "track": "MAIN",           // Used to determine which endpoints you have access to
     "title": "Will the US enter a recession in 2026?",
     "description": "This market will resolve to 'Yes' if...",
     "cutoff": "2026-12-31T00:00:00Z",
     "source": "polymarket",
-    "yes_price": 0.525,       // current market probability
+    "yes_price": 0.525,       // Current market probability
     "volume_24h": 250000.0,   // 24h trading volume in USD
     "metadata": { ... }
 }
@@ -49,13 +51,14 @@ When called to predict, it returns a `ForecastOutput`:
 {% code expandable="true" %}
 ```json5
 {
-    "event_id": "540820",
-    "prediction": 0.72,       // 72% chance of Yes
+    "event_id": "62dadbf3-fc7d-4e76-8a60-7df9fc66a1ad",
+    "prediction": 0.72,               // 72% chance of Yes
+    "reasoning": "Its because ...",   // Reasoning behind the prediction, can be omitted
 }
 ```
 {% endcode %}
 
-Events are filtered to markets with balanced odds (yes\_price between 0.20 and 0.80), where genuine uncertainty exists and your model’s edge matters most. Predictions are clipped to \[0.01, 0.99] during scoring to prevent degenerate edge cases.
+Events are filtered to markets with balanced odds (`"yes_price"` between 0.20 and 0.80), where genuine uncertainty exists and your model’s edge matters most. Predictions are clipped to \[0.01, 0.99] during scoring to prevent degenerate edge cases.
 
 ## The Challenge
 
@@ -77,14 +80,21 @@ The competition only allows you to access the following services to generate you
 * **Perplexity**: Reasoning LLMs with built-in web search
 * **Vericore**: Statement verification with evidence-based metrics
 * **OpenRouter**: Model router with access to hundreds of LLM models (Claude, Gemini, Llama, etc.)
+* **LunarCrush**: Social media intelligence and sentiment data for any topic
 * **Numinous Indicia**: Geopolitical and OSINT signals intelligence (X/Twitter, LiveUAMap)
+* **Numinous Signals**: Event-relevant news signals scored by relevance and impact, causal driver graphs, and deep research reports
+* **Unusual Whales**: Financial news headlines with filtering by source, ticker, and sentiment
+* **Public Data Proxy**: Generic proxy any number of free public APIs across sports, economics, weather, finance, and more. No cost.
+
+{% hint style="info" %}
+[Read the official Numinous documentation to find out how to use them.](https://github.com/numinouslabs/numinous/blob/main/docs/gateway-guide.md)
+{% endhint %}
 
 ### Start
 
 * The game begins with a 1-month model calibration and warmup phase, where predictions are scored but not rewarded.
-* Leaderboard ranking is based on the 72-hour rolling Brier average (`brier_72h`).
-* A model must accumulate enough resolved predictions to receive a meaningful ranking.
-* Players may enter or exit the game at any time.
+* Leaderboard ranking is based on the 101 events rolling Brier average.
+* A model must accumulate enough (101) resolved predictions to receive a ranking.
 * Each player may run one active model, which can be updated at any time.
 
 ### Prediction Phase
@@ -99,7 +109,7 @@ $$
 brier\_score=(prediction-outcome)^2
 $$
 
-Where `outcome` is 1 (event happened) or 0 (event didn’t happen). Missing or invalid predictions receive the worst score of 1.0.
+Where `outcome` is 1 (event happened) or 0 (event didn’t happen). Missing, invalid or default (`0.5`) predictions will receive the score of `0.25`.
 
 The Brier score is strictly proper: the optimal strategy is to report your honest probability estimate, and no gaming is possible. Scores are bounded between 0.0 (perfect) and 1.0 (worst possible).
 
@@ -109,11 +119,9 @@ The leaderboard ranks in ascending order. Lower Brier is better.
 
 ## Leaderboard
 
-Three rolling windows give a complete picture of performance:
+The 101 events window is long enough to smooth noise from individual events, and short enough to reward models that adapt as new information arrives.
 
-<table><thead><tr><th width="160.1697998046875">Window</th><th>Description</th></tr></thead><tbody><tr><td><code>brier_24h</code></td><td>Average Brier score over the last 24 hours</td></tr><tr><td><code>brier_72h</code></td><td>Average Brier score over the last 72 hours (ranking metric)</td></tr><tr><td><code>brier_7d</code></td><td>Average Brier score over the last 7 days</td></tr></tbody></table>
-
-The `brier_72h` window is long enough to smooth noise from individual events, and short enough to reward models that adapt as new information arrives.
+Those who are still below the 101-event threshold will appear at the bottom of the leaderboard.
 
 ## Payouts
 
@@ -122,50 +130,87 @@ The `brier_72h` window is long enough to smooth noise from individual events, an
 * The top 10 participants on the leaderboard share 100% of that week’s distribution.
 * Only models outperforming the `BaselineTracker` benchmark (Brier below \~0.250) are eligible.
 * If fewer than 10 eligible participants beat the benchmark in a given week, their undistributed share is retained and not redistributed.
-* Ranking at each distribution is determined by the 72-hour rolling Brier average (`brier_72h`).
+* Ranking at each distribution is determined by the 101-events rolling Brier average.
 
 ## Build Your Tracker
 
 ### Code Interface
 
-Subclass `TrackerBase` from the [`numinous.tracker`](https://pypi.org/project/crunch-numinous/) module, and implement two methods:
+Subclass `TrackerBase` from the [`numinous.tracker`](https://pypi.org/project/crunch-numinous/) module, and implement the \``predict(event)` method, to return your probability estimate when called.
 
-* `feed_update()` to maintain state as events arrive,
-* and `_predict()` to return your probability estimate when called.
-
-{% code expandable="true" %}
+{% code title="Python Notebook Cell" expandable="true" %}
 ```python
 from numinous.tracker import TrackerBase
 
 class MyForecaster(TrackerBase):
     """Your binary event forecasting model."""
 
-    def _predict(self, subject: str):
+    def _predict(self, event: dict):
         """Return your probability estimate."""
 
-        data = self._get_data(subject)
-        if not isinstance(data, dict):
-            return {"event_id": subject, "prediction": 0.5}
+        event_id = event.get("event_id")
 
-        event_id = data.get("event_id", subject)
+        run_id = event.get("run_id")
+        track = event.get("track")
 
         # Your signal here: use NLP, LLMs, external data, etc.
-        prediction = your_forecasting_logic(data)
+        prediction = your_forecasting_logic(event)
 
         return {
             "event_id": event_id,
             "prediction": max(0.0, min(1.0, prediction)),
+            "reasoning": None,  # This can be omitted
         }
 ```
 {% endcode %}
 
 {% embed url="https://pypi.org/project/crunch-numinous/" %}
 
+### Authentication
+
+You need to authenticate via the event's `run_id` property, which you must forward with all web requests to your Gateway.
+
+Depending on the endpoint, you also need to provide the [necessary provider API key via the correct header.](https://github.com/crunchdao/crunch-numinous?tab=readme-ov-file#authentication) We recommend storing them in constants for reuse in your code.
+
+{% code title="Python Notebook Cell" expandable="true" %}
+```python
+import os
+import httpx
+
+# Specify your OpenAI's API Key
+OPENAI_API_KEY = ...
+
+# Get the URL of the Gateway
+GATEWAY_URL = os.environ.get("SANDBOX_PROXY_URL", "https://public-gateway.numinous.competition.crunchdao.com")
+
+def your_forecasting_logic(event: dict):
+    run_id = event.get("run_id")
+
+    response = httpx.post(
+        f"{GATEWAY_URL}/api/gateway/openai/responses",
+        json={
+            # IMPORTANT: Always forward the `run_id` to the Gateway otherwise the model will fail
+            "run_id": run_id,
+    
+            "model": "gpt-5-mini",
+            "input": [
+                { "role": "user", "content": "Will BTC hit 100k?" }
+            ],
+        },
+        headers={
+            # IMPORTANT: Send the API Key header to the Gateway
+            "x-openai-api-key": OPENAI_API_KEY,
+        },
+        timeout=30,
+    )
+```
+{% endcode %}
+
 ### Directions for Competitive Models
 
 The market price is your baseline. From there, a few directions have shown real edge:
 
-* **LLM-based reasoning**: Use GPT-4, Claude, or local models to analyze event descriptions and resolution criteria, then estimate how likely the described outcome is.
+* **LLM-based reasoning**: Use GPT-5, Claude, or local models to analyze event descriptions and resolution criteria, then estimate how likely the described outcome is.
 * **News sentiment**: Query news APIs for recent coverage related to each question. A surge of negative headlines on a "Yes" question is a signal.
 * **Historical base rates**: Build a database of similar past events and their outcomes. Questions about recessions, elections, and technological milestones all have reference classes.
 * **Ensemble methods**: Combine market price, text analysis, and base rates with learned weights. No single signal holds up on its own.
