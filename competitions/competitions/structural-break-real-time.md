@@ -31,9 +31,9 @@ This edition mirrors a realistic monitoring scenario: you watch a stream of data
 
 ## Competition Timeline
 
-* Start Date: May 4th, 2026 at 4:00 p.m. UTC
-* Quota Refresh: every Monday at 4:00 p.m. UTC
-* End Date: September 15th, 2026 at 4:00 p.m. UTC (Tuesday)[^1]
+* Start Date: May 6th, 2026 at 4:00 p.m. UTC
+* Quota Refresh: every Wednesday at 4:00 p.m. UTC
+* End Date: September 17th, 2026 at 4:00 p.m. UTC (Thursday)[^1]
 * Final Evaluation: End of October, 2026
 * Winners Announcement: [During the ADIA Lab 2026 Symposium](https://www.adialab.ae/upcoming-events/adia-lab-symposium-2026) (26–28 October)
 
@@ -122,7 +122,7 @@ Your submission should:
 1. Process and analyze the data;
 2. Output a score between `0` and `1` for each time series steps in the test set, representing the likelihood of a structural break;
 3. Your code must produce deterministic output, or it will be ineligible for any rewards;
-4. Only the team leader will be ranked on the leaderboard, and be eligible for a reward.
+4. If you participate as a team, only [the team leader](../teams/#leaders) will be ranked on the leaderboard, [rewards are split among all members](../teams/rewards.md).
 
 Your submitted code will be executed on the platform and automatically scored against a portion of the test set. Shortly after submission, your score will appear on the public leaderboard of the competition.
 
@@ -179,9 +179,9 @@ Rely on the testing tool to make sure your code is working as intended locally.
 
 Your solution must include two functions:
 
-* `train()`: which is meant to train your model on the training set.\
-  If you do not need it, you can left it empty.
-* `infer()`: The second one takes the test data as input and returns predictions.
+* `train()`: to train your model on the training set.\
+  [You must provide it if your model requires training](../faqs/#can-i-train-a-model-locally). If not, you can leave it empty.
+* `infer()`: to returns predictions on the test set.
 
 The execution time of your solution should not exceed the platform's time limits: **15 hours per week**.
 
@@ -225,6 +225,6 @@ Whatever approach you choose, the training set provides full supervision: the kn
 | 9th place     | $3,500 USD  |
 | 10th place    | $3,000 USD  |
 
-[^1]: Sept. 14 will be the last quota refresh.
+[^1]: Sept. 16 will be the last quota refresh.
 
 [^2]: Also known as Y train/test.
