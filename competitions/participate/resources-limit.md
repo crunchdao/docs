@@ -59,12 +59,7 @@ Using one provider instead of another should not affect your code. If you think 
 
 #### Networking
 
-Access to the internet in a cloud environment is not permitted, but is handled differently depending on the type of runtime:
-
-* For CPU: no [socket](https://en.wikipedia.org/wiki/Network_socket)-related [operations](https://man7.org/linux/man-pages/man2/socketcall.2.html) are not permitted.
-* For GPU: a local network is available, but is not configured to access the internet.
-
-This difference in behaviour is due to the fact that GPUs rely on sockets for communication. The same applies to multiprocessing libraries: you need to choose a runtime with a GPU to make them work, even if you don't need the GPU itself.
+Access to the internet in a cloud environment is not permitted. This is achieved by [only allowing local connections](https://linux.die.net/man/7/unix), which allows your favorite parallelization libraries to still take advantage of it.
 
 ### Quota
 
