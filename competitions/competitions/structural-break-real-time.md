@@ -1,0 +1,222 @@
+---
+description: Monitor time series in real time and detect when their behaviour changes.
+hidden: true
+---
+
+# ADIA Lab Structural Break Challenge: Real Time Edition
+
+## Overview
+
+Detecting structural changes in time series data in real time is a critical task across various scientific and engineering domains. In this competition, you monitor a stream of univariate time series data one observation at a time and, after each new observation, report how confident you are that a structural break has **already occurred** somewhere in the online segment up to and including the current step.
+
+## Description
+
+The task of this competition is **structural break detection**: your goal is to track a streaming time series and, at every new time step, output a confidence score that a break has already occurred. To help you calibrate or train your detection methods, we provide a large labeled training set with known break positions.
+
+Your detection algorithm must take as input a historical reference segment and the online observations seen so far, and output a score between `0` and `1` — where `0` means no break detected yet and `1` means a break has definitely already occurred.
+
+### Differences from the 2025 Edition
+
+If you participated in the 2025 edition, the core concept is the same, but the mechanics are fundamentally different:
+
+<table><thead><tr><th width="170.20770263671875"></th><th width="300.6795654296875">2025</th><th>2026 (this one)</th></tr></thead><tbody><tr><td>Data delivery</td><td>Both segments given at once</td><td>Online segment arrives <strong>one step at a time</strong></td></tr><tr><td>Break location</td><td>Always at the known boundary</td><td><strong>Unknown</strong> -- anywhere in the online segment</td></tr><tr><td>Output</td><td>One score per series</td><td><strong>One score per time step</strong></td></tr></tbody></table>
+
+This edition mirrors a realistic monitoring scenario: you watch a stream of data and, after each new observation, you report how confident you are that the process has already changed.
+
+## Competition Timeline
+
+* Start Date: May 4th, 2026 at 4:00 p.m. UTC
+* Quota Refresh: every Monday at 4:00 p.m. UTC
+* End Date: September 15th, 2026 at 4:00 p.m. UTC (Tuesday)[^1]
+* Final Evaluation: End of October, 2026
+* Winners Announcement: [During the ADIA Lab 2026 Symposium](https://www.adialab.ae/upcoming-events/adia-lab-symposium-2026) (26–28 October)
+
+## What is a Structural Break?
+
+A **structural break** occurs when the statistical behaviour of a time series changes permanently at some point in time. Before the break, the data follows one process; from the break onwards, it follows a different one.
+
+The figure below shows a simple example: the series has a constant mean before the break and a different mean after it. The dashed line marks the break time.
+
+<figure><img src="../../.gitbook/assets/dgp_example.png" alt="Example: a time series with a structural break. The dashed line marks the break."><figcaption><p>Example: a time series with a structural break.</p></figcaption></figure>
+
+Structural breaks appear in many domains:
+
+* **Climatology:** shifts in weather patterns that may signal climate anomalies or long-term change.
+* **Industry:** changes in machinery sensor readings that anticipate equipment failures or maintenance needs.
+* **Healthcare:** sudden changes in physiological signals that may indicate critical health events.
+* **Finance:** shifts in market or strategy behaviour relevant to risk management and portfolio decisions.
+
+## Dataset
+
+The dataset contains a large and diverse collection of univariate time series exhibiting many different kinds of structural breaks -- changes in mean, variance, distribution shape, correlation structure, and more. All series are pre-processed into a common z-scored format.
+
+Each series is split into two parts, a **historical segment** and an **online segment**.
+
+<figure><img src="../../.gitbook/assets/competition_overview.png" alt="Time series structure: historical segment (blue), online segment before the break (green), online segment after the break (red). The dashed vertical lines mark the start of the online segment and the break position."><figcaption><p>Time series structure</p></figcaption></figure>
+
+### **Historical segment**
+
+The **historical segment** is a long reference sequence provided to you in full at the start, typically between 1,000 and 5,000 observations. It represents the behaviour of the series before any potential break.
+
+### Online segment
+
+The **online segment** follows the historical segment and is revealed to you **one observation at a time,** typically between 10 and 1,000 observations long.
+
+After you submit your score for the current observation, the next one is released. There is no way to look ahead.
+
+Each series contains **at most one** structural break, and the historical segment is always break-free.
+
+Any break, if present, falls somewhere within the online segment:
+
+* With probability `0.5`, a break occurs at some unknown point within the online segment. You must infer its position from the data.
+* With probability `0.5`, no break occurs during the online segment at all.
+
+### Break position
+
+For the training set only, the **break position** `tau` is a 0-indexed position within the online segment at which the break occurs, or `None` if no break occurs.
+
+### Data Size
+
+The dataset is divided into multiple parts:
+
+| Split                         | Availability  | Number of series |
+| ----------------------------- | ------------- | ---------------- |
+| Public training set           | Local & Cloud | 10,000           |
+| Public **(reduced)** test set | Local         | 100              |
+| Public test set               | Cloud         | 10,000           |
+| Private test set              | Cloud         | 10,000           |
+
+[True values](#user-content-fn-2)[^2] are only available for the training set (both locally and in the cloud) and the reduced test set (only locally).
+
+## Scoring
+
+The competition uses a single metric: **Time-Stratified** [**AUC**](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html) **(TS-AUC)**.
+
+At each online time step $$t$$, the metric computes a standard AUC cross-sectionally across all series alive at that step:
+
+* A series is **positive** at step $$t$$, if the break has already occurred by that step (ideal score = `1`).
+* A series is **negative** at step $$t$$, otherwise (ideal score = `0`).
+
+The TS-AUC is the weighted average of these per-step AUCs, with weight $$w(t) = n_\text{pos}(t) \cdot n_\text{neg}(t)$$ (the number of positive-negative pairs at step $$t$$):
+
+$$
+\text{TS-AUC} = \frac{\sum_t w(t)\,\text{AUC}(t)}{\sum_t w(t)}
+$$
+
+* `0.5`: equivalent to random guessing.\
+  To score above 0.5, a predictor must use the content of the series: at every fixed $$t$$, the metric compares series against each other, so a score that does not depend on the series cannot discriminate.
+* `1.0`: perfect detection.
+
+## Code Submission
+
+This is a code competition where participants are required to submit their Python code (files or notebooks) directly to the Crunch Hub.
+
+Your submission should:
+
+1. Process and analyze the data;
+2. Output a score between `0` and `1` for each time series steps in the test set, representing the likelihood of a structural break;
+3. Your code must produce deterministic output, or it will be ineligible for any rewards;
+4. Only the team leader will be ranked on the leaderboard, and be eligible for a reward.
+
+Your submitted code will be executed on the platform and automatically scored against a portion of the test set. Shortly after submission, your score will appear on the public leaderboard of the competition.
+
+### Interface
+
+At each new online observation, produce a **score between `0` and `1`** representing your cumulative confidence that a structural break has **already occurred** somewhere in the online segment up to and including the current step:
+
+* **`0`**: no break detected so far.
+* **`1`**: a break has definitely already occurred.
+
+You produce one score per time step, so for a series with an online segment of length `T` you output `T` scores.
+
+<pre class="language-python" data-title="Python Notebook Cell" data-expandable="true"><code class="lang-python">def infer(
+    datasets: Iterable[Tuple[List[float], Iterable[float]]],
+    model_directory_path: str,
+):
+    """
+    Load your trained model, then use the `yield` keyword to indicate that it is ready.
+    Then iterate over the datasets and points to provide a result using `yield &#x3C;prediction>`.
+
+    Args:
+        datasets: the data object to iterate.
+        model_directory_path: the path to the directory where you model has been saved in the train function.
+    """
+
+    model = joblib.load(os.path.join(model_directory_path, 'model.joblib'))
+
+<strong>    # Mark as ready
+</strong><strong>    yield
+</strong>
+<strong>    for x_historical, x_online in datasets:
+</strong><strong>        for point in x_online:
+</strong>
+            # Consume the point (float)
+            result = model.consume(point)
+
+<strong>            # Provide your result, one at a time
+</strong><strong>            yield result
+</strong></code></pre>
+
+There are a few constraints on the data that will stop your code if you try to ignore them:
+
+* You must provide your result before you can get the next point from `x_online`.
+* The online segment cannot be read twice.
+* You must `yield` at each point.
+
+{% hint style="warning" %}
+Rely on the testing tool to make sure your code is working as intended locally.
+{% endhint %}
+
+### Requirements
+
+Your solution must include two functions:
+
+* `train()`: which is meant to train your model on the training set.\
+  If you do not need it, you can left it empty.
+* `infer()`: The second one takes the test data as input and returns predictions.
+
+The execution time of your solution should not exceed the platform's time limits: **15 hours per week**.
+
+#### What a good score sequence looks like
+
+The ideal score is a step function: it stays at `0` as long as no break has occurred, then jumps to `1` as soon as the break happens. If there is no break, the ideal score is `0` throughout.
+
+The figure below shows an example of a participant's score sequence (solid line) compared to the ideal (dashed step). The shaded area between them reflects how early and how cleanly the break was detected.
+
+<figure><img src="../../.gitbook/assets/evaluation_example.png" alt="Evaluation example: participant scores (solid) vs ideal step function (dashed). A good submission keeps the shaded area small."><figcaption><p>Evaluation example</p></figcaption></figure>
+
+### Computational note
+
+With 10,000 series and up to 1,000 online steps each, solutions that recompute everything from scratch at every step may run into time budget constraints.
+
+Incremental approaches, which are maintaining a compact running state and updating it with each new observation, are worth considering for efficiency, though any solution that fits within the time budget is acceptable.
+
+## Methodology Suggestions
+
+* **Statistical tests** comparing the distribution of the historical segment to the online observations seen so far (t-tests, KS tests, CUSUM).
+* **Change-point detection algorithms** designed for online or streaming data.
+* **Feature extraction** summarising the online window incrementally, fed into a trained classifier.
+* **Probabilistic and Bayesian models** tracking the likelihood of a change sequentially.
+* **Deep learning** models trained to score (series, time step) pairs using the labeled training data.
+* **Foundation models for time series** pre-trained on large corpora, used as feature extractors or fine-tuned on the labeled training data.
+
+Whatever approach you choose, the training set provides full supervision: the known break positions let you construct labeled (series, time step) pairs and apply standard binary classification training.
+
+## Prizes
+
+| Winners’ rank | Prize value |
+| ------------- | ----------- |
+| 1st place     | $40,000 USD |
+| 2nd place     | $20,000 USD |
+| 3rd place     | $10,000 USD |
+| 4th place     | $5,000 USD  |
+| 5th place     | $5,000 USD  |
+| 6th place     | $5,000 USD  |
+| 7th place     | $5,000 USD  |
+| 8th place     | $3,500 USD  |
+| 9th place     | $3,500 USD  |
+| 10th place    | $3,000 USD  |
+
+[^1]: Sept. 14 will be the last quota refresh.
+
+[^2]: Also known as Y train/test.

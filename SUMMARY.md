@@ -21,6 +21,7 @@
 ## Competitions
 
 * [Competitions](competitions/competitions/README.md)
+  * [ADIA Lab Structural Break Challenge: Real Time Edition](competitions/competitions/structural-break-real-time.md)
   * [DataCrunch Equity Market Neutral #2](competitions/competitions/datacrunch-2/README.md)
     * [From Dataset #1 to Dataset #2](competitions/competitions/datacrunch-2/from-dataset-1-to-dataset-2.md)
   * [ADIA Lab Structural Break Open Benchmark Challenge](competitions/competitions/structural-break-open-benchmark.md)
