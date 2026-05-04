@@ -120,6 +120,8 @@ Your submission should:
 
 Your submitted code will be executed on the platform and automatically scored against a portion of the test set. Shortly after submission, your score will appear on the public leaderboard of the competition.
 
+<figure><img src="../../.gitbook/assets/competition_animation.gif" alt=""><figcaption><p>Visual animation.</p></figcaption></figure>
+
 ### Interface
 
 At each new online observation, produce a **score between `0` and `1`** representing your cumulative confidence that a structural break has **already occurred** somewhere in the online segment up to and including the current step:
