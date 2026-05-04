@@ -9,11 +9,17 @@ hidden: true
 
 Detecting structural changes in time series data in real time is a critical task across various scientific and engineering domains. In this competition, you monitor a stream of univariate time series data one observation at a time and, after each new observation, report how confident you are that a structural break has **already occurred** somewhere in the online segment up to and including the current step.
 
-## Description
+## Problem Statement
 
-The task of this competition is **structural break detection**: your goal is to track a streaming time series and, at every new time step, output a confidence score that a break has already occurred. To help you calibrate or train your detection methods, we provide a large labeled training set with known break positions.
+The task of this competition is to **monitor a univariate time series in real time** and, at each new observation, quantify whether a permanent structural break has already occurred somewhere up to that point.
 
-Your detection algorithm must take as input a historical reference segment and the online observations seen so far, and output a score between `0` and `1` — where `0` means no break detected yet and `1` means a break has definitely already occurred.
+Each series is comprised of a long historical segment (1,000 to 5,000 observations, with no break), and an online segment (10 to 1,000 observations, possibly with a structural break).
+
+The observations in this online segment are revealed one at a time: after each of them, your detection algorithm must output a score between `0` and `1`, reflecting cumulative confidence that a structural break has already occurred — `0` if absolutely confident no break has occurred, `1` if absolutely confident a break has already occurred.
+
+The training data (with known structural break locations) combines a large collection of synthetic and real-world time series exhibiting a wide variety of break types — including changes in mean, variance, distributional shape, and dependence structure.
+
+Submissions are evaluated on an independent test set using the Time-Stratified AUC (`TS-AUC`): at each online time step, a standard AUC is computed cross-sectionally across all series, and the weighted average over time steps is the final score.
 
 ### Differences from the 2025 Edition
 
@@ -183,7 +189,7 @@ The execution time of your solution should not exceed the platform's time limits
 
 The ideal score is a step function: it stays at `0` as long as no break has occurred, then jumps to `1` as soon as the break happens. If there is no break, the ideal score is `0` throughout.
 
-The figure below shows an example of a participant's score sequence (solid line) compared to the ideal (dashed step). The shaded area between them reflects how early and how cleanly the break was detected.
+The figure below shows how your detection algorithm's score sequence (solid line) compares to the ideal sequence (dashed step). The shaded area between them reflects how early and how cleanly the break was detected.
 
 <figure><img src="../../.gitbook/assets/evaluation_example.png" alt="Evaluation example: participant scores (solid) vs ideal step function (dashed). A good submission keeps the shaded area small."><figcaption><p>Evaluation example</p></figcaption></figure>
 
