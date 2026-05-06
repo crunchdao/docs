@@ -1,6 +1,5 @@
 ---
 description: Monitor time series in real time and detect when their behaviour changes.
-hidden: true
 ---
 
 # ADIA Lab Structural Break Challenge: Real Time Edition
