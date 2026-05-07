@@ -14,18 +14,17 @@ Detecting structural changes in time series data is a critical task across vario
 
 <figure><img src="../../.gitbook/assets/image1.png" alt=""><figcaption><p>Structural Break Example</p></figcaption></figure>
 
-## Description
+## Problem Statement
 
-The task of this competition is structural break detection: your goal is to determine whether a structural break has occurred or not at a specified point in each time series you will be given. To help you in this endeavor, we provide a large number of example time series together with their corresponding labels — as the training set — so that you can calibrate your detection methods, or train your prediction models if you prefer a supervised approach. Your detection algorithm has to be designed to take as input a time series and output the likelihood (a score between `0` and `1`) of a structural break.
+The task of this competition is to determine whether a permanent structural break has occurred in a univariate time series at a specified point in time.
 
-This problem holds significant relevance in fields such as:
+Each series is comprised of two consecutive segments separated by an explicitly given boundary point: a pre-boundary segment, representing the reference behaviour, and a post-boundary segment, representing the period under scrutiny. Each series contains roughly 1,000 to 5,000 observations in total, and the boundary position is known to the participant.
 
-* Climatology, where identifying shifts in weather patterns can signal climate anomalies or long-term climate change;
-* Industrial settings, where detecting structural breaks in machinery sensor data can preemptively indicate equipment failures or maintenance needs;
-* Finance, where recognizing structural breaks in market data is crucial for modeling asset prices and managing financial risks;
-* Healthcare monitoring systems, where sudden changes in physiological signals may reflect critical health events requiring immediate attention.
+Both segments are given in full and simultaneously: there is no streaming and no hidden data. For each series, the code contributed by the participant must output a single score between `0` and `1`, reflecting the confidence that the data-generating process changed at the boundary - `0` if absolutely confident no break occurred, `1` if absolutely confident a break occurred.
 
-The challenge lies in predicting structural breaks by relying on the empirical patterns present in the labeled examples. The availability of a large labeled dataset enables the application of data-driven methodologies, such as machine learning algorithms, to model and anticipate these structural changes effectively.
+The training data combines a large collection (around 10,000 series) of synthetic time series with known break labels, exhibiting a wide variety of break types - including changes in mean, variance, distributional shape, dependence structure, and tail behaviour.
+
+Submissions are evaluated on an independent test set of comparable size using `ROC AUC` computed across all series: a single score per series is compared with the corresponding ground-truth label, and the area under the ROC curve is the final score.
 
 ### Competition Timeline
 

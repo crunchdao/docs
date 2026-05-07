@@ -14,6 +14,22 @@ The ADIA Lab Structural Break Open Benchmark Challenge is a continuation of the 
 
 The benchmark addresses the same scientific problem, uses data with the same structure and characteristics, and preserves the original evaluation philosophy. It extends the original challenge into a long lived, continuously evaluated public benchmark.
 
+## Problem Statement
+
+The Open Benchmark is a continuation of the 2025 ADIA Lab Structural Break Challenge, run in response to popular demand for additional time to test new ideas.
+
+Each series is comprised of two consecutive segments separated by an explicitly given boundary point: a pre-boundary segment, representing the reference behaviour, and a post-boundary segment, representing the period under scrutiny. Each series contains roughly 1,000 to 5,000 observations in total, and the boundary position is known to the participant.
+
+Both segments are given in full and simultaneously: there is no streaming and no hidden data. For each series, the code contributed by the participant must output a single score between `0` and `1`, reflecting the confidence that the data-generating process changed at the boundary - `0` if absolutely confident no break occurred, `1` if absolutely confident a break occurred.
+
+The training data combines a large collection (around 10,000 series) of synthetic time series with known break labels, exhibiting a wide variety of break types - including changes in mean, variance, distributional shape, dependence structure, and tail behaviour. The benchmark is drawn from the same data-generating distribution as the original competition, with newly generated, never-disclosed test sets (10,000 public and 10,000 private) so that it remains a fair Out-of-Sample evaluation.
+
+To preserve the value of the original leaderboard while still encouraging new submissions, a money prize is offered, the top ten models from the original competition are pinned to the leaderboard as fixed reference baselines, and an originality constraint rejects submissions too highly correlated with those reference models.
+
+Submissions are evaluated on the held-out test sets using `ROC AUC` computed across all series, with the final out-of-sample scoring carried out at the end of the benchmark period.
+
+<figure><img src="../../.gitbook/assets/image1.png" alt=""><figcaption><p>Structural Break Example</p></figcaption></figure>
+
 ## Scientific Continuity
 
 The open benchmark preserves:
@@ -25,7 +41,7 @@ The open benchmark preserves:
 
 The objective is not to reset the problem, but to extend it over time under comparable conditions.
 
-## Changes Introduced
+### Changes Introduced
 
 Originality Constraint:
 
@@ -42,7 +58,7 @@ Out of Sample Evaluation Schedule:
 * Scoring occurs at the end of each calendar quarter, starting with Q1 2026.  \
   The first official scoring date is March 31st, 2026.
 
-## Possible Use
+### Possible Use
 
 This benchmark is intended for:
 
@@ -51,16 +67,6 @@ This benchmark is intended for:
 * Long horizon robustness evaluation
 
 It is designed to remain open and relevant beyond a single competition cycle.
-
-## Problem Description
-
-Participants are asked to build models that determine whether a **structural break has occurred at a known breakpoint** in a univariate time series.
-
-A structural break corresponds to a change in the underlying data generating process. Such breaks are common in economic and financial time series and can significantly impact inference, forecasting, and decision making.
-
-Each time series consists of two segments separated by a known boundary. The task is to assess whether the statistical properties of the two segments differ in a way consistent with a structural break.
-
-<figure><img src="../../.gitbook/assets/image1.png" alt=""><figcaption><p>Structural Break Example</p></figcaption></figure>
 
 ## Timeline
 

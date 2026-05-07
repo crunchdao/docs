@@ -14,9 +14,9 @@ The task of this competition is to **monitor a univariate time series in real ti
 
 Each series is comprised of a long historical segment (1,000 to 5,000 observations, with no break), and an online segment (10 to 1,000 observations, possibly with a structural break).
 
-The observations in this online segment are revealed one at a time: after each of them, your detection algorithm must output a score between `0` and `1`, reflecting cumulative confidence that a structural break has already occurred — `0` if absolutely confident no break has occurred, `1` if absolutely confident a break has already occurred.
+The observations in this online segment are revealed one at a time: after each of them, your detection algorithm must output a score between `0` and `1`, reflecting cumulative confidence that a structural break has already occurred - `0` if absolutely confident no break has occurred, `1` if absolutely confident a break has already occurred.
 
-The training data (with known structural break locations) combines a large collection of synthetic and real-world time series exhibiting a wide variety of break types — including changes in mean, variance, distributional shape, and dependence structure.
+The training data (with known structural break locations) combines a large collection of synthetic and real-world time series exhibiting a wide variety of break types - including changes in mean, variance, distributional shape, and dependence structure.
 
 Submissions are evaluated on an independent test set using the Time-Stratified AUC (`TS-AUC`): at each online time step, a standard AUC is computed cross-sectionally across all series, and the weighted average over time steps is the final score.
 
@@ -24,7 +24,7 @@ Submissions are evaluated on an independent test set using the Time-Stratified A
 
 If you participated in the 2025 edition, the core concept is the same, but the mechanics are fundamentally different:
 
-<table><thead><tr><th width="170.20770263671875"></th><th width="300.6795654296875">2025</th><th>2026 (this one)</th></tr></thead><tbody><tr><td>Data delivery</td><td>Both segments given at once</td><td>Online segment arrives <strong>one step at a time</strong></td></tr><tr><td>Break location</td><td>Always at the known boundary</td><td><strong>Unknown</strong> -- anywhere in the online segment</td></tr><tr><td>Output</td><td>One score per series</td><td><strong>One score per time step</strong></td></tr></tbody></table>
+<table><thead><tr><th width="139.415283203125"></th><th width="300.6795654296875">2025</th><th>2026 (this one)</th></tr></thead><tbody><tr><td>Data delivery</td><td>Both segments given at once</td><td>Online segment arrives <strong>one step at a time</strong></td></tr><tr><td>Break location</td><td>Always at the known boundary</td><td><strong>Unknown</strong> -- anywhere in the online segment</td></tr><tr><td>Output</td><td>One score per series</td><td><strong>One score per time step</strong></td></tr></tbody></table>
 
 This edition mirrors a realistic monitoring scenario: you watch a stream of data and, after each new observation, you report how confident you are that the process has already changed.
 
