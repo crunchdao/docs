@@ -184,6 +184,8 @@ Your solution must include two functions:
 
 The execution time of your solution should not exceed the platform's time limits: **15 hours per week**.
 
+Your solution must be deterministic: when [**re-run on 30% of the data**](#user-content-fn-3)[^3], the predicted values should be the same (within a **tolerance of 1e-8**).
+
 #### What a good score sequence looks like
 
 The ideal score is a step function: it stays at `0` as long as no break has occurred, then jumps to `1` as soon as the break happens. If there is no break, the ideal score is `0` throughout.
@@ -227,3 +229,5 @@ Whatever approach you choose, the training set provides full supervision: the kn
 [^1]: Sept. 16 will be the last quota refresh.
 
 [^2]: Also known as Y train/test.
+
+[^3]: Only applies to inference, not training.
