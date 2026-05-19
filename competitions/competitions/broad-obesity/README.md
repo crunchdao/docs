@@ -115,8 +115,9 @@ More details about this challenge will be announced soon!
   * Beginning of Crunch 2
 * **April 2026:**
   * Closing of Crunch 2
+* **May 2026:**
   * Beginning of Crunch 3
-* **??? 2026:**
+* **July 2026:**
   * Closing of Crunch 3
 
 ## Evaluation Criteria
@@ -133,7 +134,7 @@ To avoid overfitting, Crunch will only publish the public leaderboard once each 
 
 ## Prizes
 
-Crunch 1 and Crunch 2 will use multiple metrics to rank participants. Your final prize will be the sum of the prizes for each metric that you or [your team](../../../crunch-hub/teams.md) ranks in.
+All parts will use multiple metrics to rank participants. Your final prize will be the sum of the prizes for each metric that you or [your team](../../../crunch-hub/teams.md) ranks in. Only those who achieve a score above the baseline will be eligible for a prize.
 
 All prizes are in [USDC](https://fr.usdc.com/), a cryptocurrency with the same value as the US dollar.
 
@@ -171,19 +172,19 @@ All prizes are in [USDC](https://fr.usdc.com/), a cryptocurrency with the same v
 
 ### Crunch 3
 
-| Winner's Rank | To be determined |
-| ------------- | ---------------- |
-| 1st place     | 7,000            |
-| 2nd place     | 6,500            |
-| 3rd place     | 5,000            |
-| 4th place     | 3,000            |
-| 5th place     | 1,000            |
-| 6th place     | 900              |
-| 7th place     | 800              |
-| 8th place     | 700              |
-| 9th place     | 600              |
-| 10th place    | 500              |
-| Total         | 26,000           |
+| Winner's Rank | Total Prize Pool | Evaluation 1 (10%) | Evaluation 2 (90%) |
+| ------------- | ---------------- | ------------------ | ------------------ |
+| 1st place     | 7,000            | 700                | 6,300              |
+| 2nd place     | 6,500            | 650                | 5,850              |
+| 3rd place     | 5,000            | 500                | 4,500              |
+| 4th place     | 3,000            | 300                | 2,700              |
+| 5th place     | 1,000            | 100                | 900                |
+| 6th place     | 900              | 90                 | 810                |
+| 7th place     | 800              | 80                 | 720                |
+| 8th place     | 700              | 70                 | 630                |
+| 9th place     | 600              | 60                 | 540                |
+| 10th place    | 500              | 50                 | 450                |
+| Total         | 26,000           | 2,600              | 23,400             |
 
 ## External Resources
 
