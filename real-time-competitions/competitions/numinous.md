@@ -38,9 +38,6 @@ For each active event, your tracker receives an `EventInput` via `predict()`:
     "title": "Will the US enter a recession in 2026?",
     "description": "This market will resolve to 'Yes' if...",
     "cutoff": "2026-12-31T00:00:00Z",
-    "source": "polymarket",
-    "yes_price": 0.525,       // Current market probability
-    "volume_24h": 250000.0,   // 24h trading volume in USD
     "metadata": { ... }
 }
 ```
@@ -58,11 +55,9 @@ When called to predict, it returns a `ForecastOutput`:
 ```
 {% endcode %}
 
-Events are filtered to markets with balanced odds (`"yes_price"` between 0.20 and 0.80), where genuine uncertainty exists and your model’s edge matters most. Predictions are clipped to \[0.01, 0.99] during scoring to prevent degenerate edge cases.
+Predictions are clipped to \[0.01, 0.99] during scoring to prevent degenerate edge cases.
 
 ## The Challenge
-
-`MarketTracker`, a model that simply echoes the Polymarket price, achieves a Brier score of \~0.160, because Polymarket prices are well-calibrated and incorporate most publicly available information.
 
 Beating it requires genuine alpha: information the market hasn’t priced in yet, faster reaction to breaking news, better long-run calibration, or reasoning that cuts through noise.
 
@@ -93,13 +88,17 @@ The competition only allows you to access the following services to generate you
 ### Start
 
 * The game begins with a 1-month model calibration and warmup phase, where predictions are scored but not rewarded.
-* Leaderboard ranking is based on the 101 events rolling Brier average.
-* A model must accumulate enough (101) resolved predictions to receive a ranking.
-* Each player may run one active model, which can be updated at any time.
+* Leaderboard ranking is based on a [weighted score](https://github.com/crunchdao/crunch-numinous#scoring).
+* A model must accumulate [enough resolved predictions](https://raw.githubusercontent.com/crunchdao/crunch-numinous/refs/heads/main/docs/emission-weights.png) to receive a ranking.
+* Each player may run up to two model, which can be updated at any time.
 
 ### Prediction Phase
 
-Events arrive from the Polymarket feed every 5 minutes. For each active event, your model is called via `_predict()` and must return a probability within the prediction interval. Only models registered before an event is broadcast can predict on it.
+Events are continuously arriving from the Polymarket feed.
+
+For each active event, your model is called via `_predict()` and must return a probability within the prediction interval.
+
+Only models registered before an event is broadcast can predict on it.
 
 ### Scoring
 
@@ -119,18 +118,22 @@ The leaderboard ranks in ascending order. Lower Brier is better.
 
 ## Leaderboard
 
-The 101 events window is long enough to smooth noise from individual events, and short enough to reward models that adapt as new information arrives.
+The events window is long enough to smooth noise from individual events, and short enough to reward models that adapt as new information arrives.
 
-Those who are still below the 101-event threshold will appear at the bottom of the leaderboard.
+Those who are still below the event threshold will appear at the bottom of the leaderboard.
 
 ## Payouts
 
-* Minimum of $5,000 USDC.
-* Rewards are distributed weekly, at the close of each 7-day scoring window.
-* The top 10 participants on the leaderboard share 100% of that week’s distribution.
-* Only models outperforming the `BaselineTracker` benchmark (Brier below \~0.250) are eligible.
-* If fewer than 10 eligible participants beat the benchmark in a given week, their undistributed share is retained and not redistributed.
-* Ranking at each distribution is determined by the 101-events rolling Brier average.
+The prize pool is $5,000 USDC, since we are in Phase 2.
+
+Rewards are calculated every Monday at 12 p.m. GMT and are then frozen for the distribution period. The first period begins on May 25, 2026.
+
+In order to be eligible for rewards, a model must:
+
+* Outperform the benchmark, which is available on the leaderboard as `enzo/benchmark`.
+* Rank in the top 10 based on your [weighted score](https://github.com/crunchdao/crunch-numinous#scoring) in **the Signal track**.\
+  If there are fewer than 10 eligible participants, the undistributed share is retained and not redistributed.
+* Have both **Global Brier** and **Geopolitics Brier** scores below `0.25`.
 
 ## Build Your Tracker
 
@@ -189,7 +192,7 @@ def your_forecasting_logic(event: dict):
     response = httpx.post(
         f"{GATEWAY_URL}/api/gateway/openai/responses",
         json={
-            # IMPORTANT: Always forward the `run_id` to the Gateway otherwise the model will fail
+            # IMPORTANT: Always forward the `run_id` to the Gateway otherwise the request will fail
             "run_id": run_id,
     
             "model": "gpt-5-mini",
