@@ -2,7 +2,6 @@
 description: >-
   Nominate combinatorial gene perturbations that are predicted to most strongly
   increase a target transcriptional program.
-hidden: true
 ---
 
 # Crunch 3 – Identifying combinatorial perturbations to drive adipocyte differentiation
