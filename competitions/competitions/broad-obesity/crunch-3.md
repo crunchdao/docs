@@ -78,7 +78,7 @@ The perturbation-level score for each perturbation is provided in [`{...}_Thermo
 * The signature columns (named according to the signature gene sets, 12 in total) contain the mean z-score across all cells belonging to that perturbation.&#x20;
 * The column `agg_top3_z` is the final aggregated score (the mean of the top 3 signature z-scores) used to rank perturbations.
 
-The signature gene sets used to define the score can be found in `thermogenic_signatures.csv`.
+The signature gene sets used to define the score can be found in `thermogenic_signatures.csv`. The notebook showing how the scoring procedure was derived and computed is [available here](https://julielaffy.github.io/obesity-broad-ml-competition-2025/program_analysis_py.html#Part-4:-Thermogenic-Scoring).
 
 ## Expected Output
 
