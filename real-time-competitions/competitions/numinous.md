@@ -34,7 +34,6 @@ For each active event, your tracker receives an `EventInput` via `predict()`:
 {
     "event_id": "62dadbf3-fc7d-4e76-8a60-7df9fc66a1ad",
     "run_id": "a4d13d7b-...",  // Mandatory to forward to the Gateway
-    "track": "MAIN",           // Used to determine which endpoints you have access to
     "title": "Will the US enter a recession in 2026?",
     "description": "This market will resolve to 'Yes' if...",
     "cutoff": "2026-12-31T00:00:00Z",
@@ -152,9 +151,7 @@ class MyForecaster(TrackerBase):
         """Return your probability estimate."""
 
         event_id = event.get("event_id")
-
         run_id = event.get("run_id")
-        track = event.get("track")
 
         # Your signal here: use NLP, LLMs, external data, etc.
         prediction = your_forecasting_logic(event)
