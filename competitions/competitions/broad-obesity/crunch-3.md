@@ -80,6 +80,12 @@ The perturbation-level score for each perturbation is provided in [`{...}_Thermo
 
 The signature gene sets used to define the score can be found in `thermogenic_signatures.csv`. The notebook showing how the scoring procedure was derived and computed is [available here](https://julielaffy.github.io/obesity-broad-ml-competition-2025/program_analysis_py.html#Part-4:-Thermogenic-Scoring).
 
+### Crunch 1 & 2 Training Data
+
+The Crunch 1 and Crunch 2 training datasets are available via the `TF150.h5ad` and `TF15_MOI2.h5ad` files, respectively. These are the same files provided in previous parts, just renamed for consistency with the thermo score files.
+
+Since the files are large, a smaller version of the data is available to make it easier and faster to get and load the data. In the cloud environment, only the "default" one will be available.
+
 ## Expected Output
 
 Your submission should include the following:
