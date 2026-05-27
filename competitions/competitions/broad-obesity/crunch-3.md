@@ -86,6 +86,8 @@ The Crunch 1 and Crunch 2 training datasets are available via the `TF150.h5ad` a
 
 Since the files are large, a smaller version of the data is available to make it easier and faster to get and load the data. In the cloud environment, only the "default" one will be available.
 
+You can find out more about the content of the training data for [Crunch 1 here](https://docs.crunchdao.com/competitions/competitions/broad-obesity/crunch-1#dataset) and for [Crunch 2 here](https://docs.crunchdao.com/competitions/competitions/broad-obesity/crunch-2#dataset).
+
 ## Expected Output
 
 Your submission should include the following:
