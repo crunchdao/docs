@@ -200,6 +200,40 @@ With 10,000 series and up to 1,000 online steps each, solutions that recompute e
 
 Incremental approaches, which are maintaining a compact running state and updating it with each new observation, are worth considering for efficiency, though any solution that fits within the time budget is acceptable.
 
+### Parallelism
+
+{% hint style="warning" %}
+This feature is still in the beta stage, so its behavior may change.
+
+We are collecting feedback to ensure that it can be used safely by everyone.
+{% endhint %}
+
+Infering so many points can be slow. That is why we offer a parallel approach, but **only at the time series level**. Your model **must still process each point separately**.
+
+Depending on your model's capacity, the dataset will be split into n equal parts. Your model will start n times **in different processes** [(not threads)](#user-content-fn-4)[^4], and each process will receive and fully process one part.
+
+#### How to use it
+
+To ensure optimal performance, your model must follow a few restrictions:
+
+* Because of the concurrency, your model should avoid writing any files.
+* Make sure the cloud environment can handle the RAM and CPU consumption of your model.
+  * If you want 6 processes and your model consumes 4 GB of RAM, the runtime must have 4 \* 6 = 12 GB of RAM plus some overhead.
+  * The same applies to CPU cores. Overallocation can actually decrease performance.
+
+You can enable parallel processing by simply specifying the number of workers you want via a global constant:
+
+{% code title="Python Cell" expandable="true" %}
+```python
+# @crunch/keep:on
+INFER_PARALLELISM = 4
+```
+{% endcode %}
+
+{% hint style="info" %}
+The [`@crunch/keep:on` command](https://docs.crunchdao.com/competitions/participate/notebook-processor#automatic-line-commenting) is only required for notebook users to prevent the line from being commented out. Keep the constant in a dedicated cell, or add `@crunch/keep:off` after the assignation.
+{% endhint %}
+
 ## Methodology Suggestions
 
 * **Statistical tests** comparing the distribution of the historical segment to the online observations seen so far (t-tests, KS tests, CUSUM).
@@ -231,3 +265,5 @@ Whatever approach you choose, the training set provides full supervision: the kn
 [^2]: Also known as Y train/test.
 
 [^3]: Only applies to inference, not training.
+
+[^4]: This means that memory is not shared. Your running model cannot communicate with other running models.
