@@ -203,9 +203,7 @@ Incremental approaches, which are maintaining a compact running state and updati
 ### Parallelism
 
 {% hint style="warning" %}
-This feature is still in the beta stage, so its behavior may change.
-
-We are collecting feedback to ensure that it can be used safely by everyone.
+This feature is still in the beta stage, so its behavior may change. We are collecting feedback to ensure that it can be used safely by everyone.
 {% endhint %}
 
 Infering so many points can be slow. That is why we offer a parallel approach, but **only at the time series level**. Your model **must still process each point separately**.
