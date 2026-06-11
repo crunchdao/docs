@@ -154,7 +154,7 @@ All prizes are in [USDC](https://fr.usdc.com/), a cryptocurrency with the same v
 | 10th place    | 80            | 80    | ~~80~~<sup>1</sup>  |
 | Total         | 4,000         | 4,000 | 3,640               |
 
-_Footnote 1: Ranks 8, 9 and 10 for the L1 distance metrics were not rewarded as they failed to beat the baseline._
+_Footnote 1: Ranks 8, 9 and 10 for the L1 Distance metrics were not rewarded as they did not managed to beat the baseline._
 
 ### Crunch 2
 
@@ -172,7 +172,7 @@ _Footnote 1: Ranks 8, 9 and 10 for the L1 distance metrics were not rewarded as 
 | 10th place    | 80            | 80    | ~~80~~<sup>2</sup>  |
 | Total         | 4,000         | 4,000 | 3,800               |
 
-_Footnote 2: Ranks 9 and 10 for the L1 distance metrics were not rewarded as they failed to beat the baseline._
+_Footnote 2: Ranks 9 and 10 for the L1 Distance metrics were not rewarded as they did not managed to beat the baseline._
 
 ### Crunch 3
 
