@@ -140,35 +140,39 @@ All prizes are in [USDC](https://fr.usdc.com/), a cryptocurrency with the same v
 
 ### Crunch 1
 
-| Winner's Rank | Pearson Delta | MMD   | L1 Distance |
-| ------------- | ------------- | ----- | ----------- |
-| 1st place     | 1,400         | 1,400 | 1,400       |
-| 2nd place     | 800           | 800   | 800         |
-| 3rd place     | 480           | 480   | 480         |
-| 4th place     | 320           | 320   | 320         |
-| 5th place     | 240           | 240   | 240         |
-| 6th place     | 200           | 200   | 200         |
-| 7th place     | 200           | 200   | 200         |
-| 8th place     | 160           | 160   | 160         |
-| 9th place     | 120           | 120   | 120         |
-| 10th place    | 80            | 80    | 80          |
-| Total         | 4,000         | 4,000 | 4,000       |
+| Winner's Rank | Pearson Delta | MMD   | L1 Distance         |
+| ------------- | ------------- | ----- | ------------------- |
+| 1st place     | 1,400         | 1,400 | 1,400               |
+| 2nd place     | 800           | 800   | 800                 |
+| 3rd place     | 480           | 480   | 480                 |
+| 4th place     | 320           | 320   | 320                 |
+| 5th place     | 240           | 240   | 240                 |
+| 6th place     | 200           | 200   | 200                 |
+| 7th place     | 200           | 200   | 200                 |
+| 8th place     | 160           | 160   | ~~160~~<sup>1</sup> |
+| 9th place     | 120           | 120   | ~~120~~<sup>1</sup> |
+| 10th place    | 80            | 80    | ~~80~~<sup>1</sup>  |
+| Total         | 4,000         | 4,000 | 3,640               |
+
+_Footnote 1: Ranks 8, 9 and 10 for the L1 distance metrics were not rewarded as they failed to beat the baseline._
 
 ### Crunch 2
 
-| Winner's Rank | Pearson Delta | MMD   | L1 Distance |
-| ------------- | ------------- | ----- | ----------- |
-| 1st place     | 1,400         | 1,400 | 1,400       |
-| 2nd place     | 800           | 800   | 800         |
-| 3rd place     | 480           | 480   | 480         |
-| 4th place     | 320           | 320   | 320         |
-| 5th place     | 240           | 240   | 240         |
-| 6th place     | 200           | 200   | 200         |
-| 7th place     | 200           | 200   | 200         |
-| 8th place     | 160           | 160   | 160         |
-| 9th place     | 120           | 120   | 120         |
-| 10th place    | 80            | 80    | 80          |
-| Total         | 4,000         | 4,000 | 4,000       |
+| Winner's Rank | Pearson Delta | MMD   | L1 Distance         |
+| ------------- | ------------- | ----- | ------------------- |
+| 1st place     | 1,400         | 1,400 | 1,400               |
+| 2nd place     | 800           | 800   | 800                 |
+| 3rd place     | 480           | 480   | 480                 |
+| 4th place     | 320           | 320   | 320                 |
+| 5th place     | 240           | 240   | 240                 |
+| 6th place     | 200           | 200   | 200                 |
+| 7th place     | 200           | 200   | 200                 |
+| 8th place     | 160           | 160   | 160                 |
+| 9th place     | 120           | 120   | ~~120~~<sup>2</sup> |
+| 10th place    | 80            | 80    | ~~80~~<sup>2</sup>  |
+| Total         | 4,000         | 4,000 | 3,800               |
+
+_Footnote 2: Ranks 9 and 10 for the L1 distance metrics were not rewarded as they failed to beat the baseline._
 
 ### Crunch 3
 
