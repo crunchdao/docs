@@ -232,6 +232,11 @@ INFER_PARALLELISM = 4
 The [`@crunch/keep:on` command](https://docs.crunchdao.com/competitions/participate/notebook-processor#automatic-line-commenting) is only required for notebook users to prevent the line from being commented out. Keep the constant in a dedicated cell, or add `@crunch/keep:off` after the assignation.
 {% endhint %}
 
+#### Known issues
+
+1. Exceptions and Crashes: When using multiple processes that all print to a single terminal, it is expected that lines will mix with each other. This makes errors harder to debug, as traces cannot be printed properly. We have made sure to report the first error trace, but subsequent errors will be ignored.
+2. CPU over-allocation: NumPy uses [OpenBLAS](https://github.com/OpenMathLib/OpenBLAS) behind the scenes to try to parallelize some computations which could potentially conflict with the parallelism mechanism. To help resolve this issue, we recommend using [threadpoolctl](https://pypi.org/project/threadpoolctl/) at the correct location(s). We are still gathering feedback on this issue.
+
 ## Methodology Suggestions
 
 * **Statistical tests** comparing the distribution of the historical segment to the online observations seen so far (t-tests, KS tests, CUSUM).
