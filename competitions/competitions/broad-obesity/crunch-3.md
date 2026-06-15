@@ -80,7 +80,7 @@ The perturbation-level score for each perturbation is provided in [`{...}_Thermo
 
 The datasets come from two separate experiments and were processed separately. Therefore, the absolute expression values may differ across the two datasets, even though they are z-normalized. When combining them, participants are free to decide how to combine or adjust them if needed.
 
-The datasets includes cells with more than two perturbations, but the new experiment mainly focuses on double perturbations. When computing the threshold to beat using the existing data, we require more than 16 adipocyte cells for a perturbation to receive a valid score.
+The datasets includes cells with more than two perturbations, but the new experiment mainly focuses on double perturbations. **When computing the threshold to beat using the existing data, we require more than 16 adipocyte cells for a perturbation to receive a valid score.**
 
 The signature gene sets used to define the score can be found in `thermogenic_signatures.csv`. The notebook showing how the scoring procedure was derived and computed is [available here](https://julielaffy.github.io/obesity-broad-ml-competition-2025/program_analysis_py.html#Part-4:-Thermogenic-Scoring).
 
