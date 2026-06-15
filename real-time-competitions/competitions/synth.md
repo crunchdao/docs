@@ -149,8 +149,8 @@ The leaderboard displays several **relative performance indicators**, computed a
 * $30K over the first 4 months followed by real mining rewards from Synth Miners (currently up to 50K / months)
 * Rewards are distributed at target resolution + 24h (every 7 + 1 days)
 * Fixed reward pool is allocated for each payout period.
-* the top 10 participants receive 100% of the pot.
-* Only models **outperforming the benchmark model (synth:benchmarktracker)** are rewarded.
+* The top 10 participants receive 100% of the pot.
+* Only models **outperforming the benchmark model (`synth/benchmarktracker`)** are rewarded.
 * Models with a score **below or equal to the benchmark at payout time** are included in calculations but receive no payout, leaving any fraction of the pool tied to lower-performing models undistributed.
 * The benchmark model is a reference model provided by the game in order to reward community outperformance over internal Benchmark and may evolve over time.
 

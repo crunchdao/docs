@@ -130,8 +130,9 @@ Rewards are calculated every Monday at 12 p.m. GMT and are then frozen for the d
 In order to be eligible for rewards, a model must:
 
 * Outperform the benchmark, which is available on the leaderboard as `enzo/benchmark`.
-* Rank in the top 10 based on your [weighted score](https://github.com/crunchdao/crunch-numinous#scoring) in **the Signal track**.\
-  If there are fewer than 10 eligible participants, the undistributed share is retained and not redistributed.
+* Rank in the top 10 based on your [weighted score](https://github.com/crunchdao/crunch-numinous#scoring) in **the Signal track**.
+  * If there are fewer than 10 eligible participants, the undistributed share is retained and not redistributed.
+  * Only the top model from each participant is rewarded.
 * Have both **Global Brier** and **Geopolitics Brier** scores below `0.25`.
 
 ## Build Your Tracker
