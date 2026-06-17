@@ -202,10 +202,6 @@ Incremental approaches, which are maintaining a compact running state and updati
 
 ### Parallelism
 
-{% hint style="warning" %}
-This feature is still in the beta stage, so its behavior may change. We are collecting feedback to ensure that it can be used safely by everyone.
-{% endhint %}
-
 Infering so many points can be slow. That is why we offer a parallel approach, but **only at the time series level**. Your model **must still process each point separately**.
 
 Depending on your model's capacity, the dataset will be split into n equal parts. Your model will start n times **in different processes** [(not threads)](#user-content-fn-4)[^4], and each process will receive and fully process one part.
@@ -235,7 +231,7 @@ The [`@crunch/keep:on` command](https://docs.crunchdao.com/competitions/particip
 #### Known issues
 
 1. Exceptions and Crashes: When using multiple processes that all print to a single terminal, it is expected that lines will mix with each other. This makes errors harder to debug, as traces cannot be printed properly. We have made sure to report the first error trace, but subsequent errors will be ignored.
-2. CPU over-allocation: NumPy uses [OpenBLAS](https://github.com/OpenMathLib/OpenBLAS) behind the scenes to try to parallelize some computations which could potentially conflict with the parallelism mechanism. To help resolve this issue, we recommend using [threadpoolctl](https://pypi.org/project/threadpoolctl/) at the correct location(s). We are still gathering feedback on this issue.
+2. CPU over-allocation: NumPy uses [OpenBLAS](https://github.com/OpenMathLib/OpenBLAS) behind the scenes to try to parallelize some computations which could potentially conflict with the parallelism mechanism. To help resolve this issue, we recommend using [threadpoolctl](https://pypi.org/project/threadpoolctl/) at the correct location(s).
 
 ## Methodology Suggestions
 
