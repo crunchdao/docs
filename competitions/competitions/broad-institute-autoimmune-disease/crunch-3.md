@@ -1,6 +1,27 @@
 ---
 cover: ../../../.gitbook/assets/banner (4).webp
 coverY: 0
+layout:
+  width: default
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Crunch 3 – Dec 9 to Apr 30 – Identifying Gene

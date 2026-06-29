@@ -34,6 +34,20 @@ To secure this wallet, we strongly suggest that you [enable 2FA on your account]
 This step is necessary for exporting the private key.
 {% endhint %}
 
+#### How to withdraw the funds?
+
+To withdraw funds from your Crunch account, click the <a href="https://hub.crunchdao.com/account/wallet" class="button primary">Send</a> button for the currency you just received.
+
+<figure><img src="../../.gitbook/assets/image (154).png" alt="" width="563"><figcaption></figcaption></figure>
+
+Then, you will be able to specify the destination address to which they should be sent. The last step is to ensure that you have accepted all of the disclaimers. **Once a transaction has been sent,&#x20;**<mark style="color:$danger;">**it cannot be reversed!**</mark>
+
+<figure><img src="../../.gitbook/assets/image (156).png" alt="" width="563"><figcaption></figcaption></figure>
+
+{% hint style="warning" %}
+If you're unsure about what you're doing, **we highly recommend performing a test transaction of 1 unit.**
+{% endhint %}
+
 ### Centralized Exchange Wallets
 
 To withdraw funds more quickly into a fiat currency, select the correct network and click the **`Receive USDC`** button on your exchange. This will ensure the funds appear directly in your account, so you won't need to cover the transfer fees.
