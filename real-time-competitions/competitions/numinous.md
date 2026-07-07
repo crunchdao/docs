@@ -119,6 +119,11 @@ The leaderboard ranks in ascending order. Lower Brier is better.
 
 The events window is long enough to smooth noise from individual events, and short enough to reward models that adapt as new information arrives.
 
+The event count requirements are as follows:
+
+* Global: a minimum of **200 events** is required, and **only the last 600** will be taken into account.
+* Geopolitical: a minimum of **100 events** is required, and **only the last 200** are taken into account.
+
 Those who are still below the event threshold will appear at the bottom of the leaderboard.
 
 ## Payouts
