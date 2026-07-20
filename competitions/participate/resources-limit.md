@@ -93,6 +93,35 @@ Most of the time, the data is fed directly to your function as an argument, as s
 
 Any users attempting to bypass the restriction mechanism will be **disqualified**!
 
+### `crunch.load_notebook()`
+
+Using `crunch.load_notebook()` in the cloud environment isn't supported and might raise an error in the future.
+
+CLI users accidentally use it when trying to convert notebooks into regular Python script files. For these users, two alternatives are offered:
+
+1. Use the dedicated `crunch test` command, which performs the testing command automatically, eliminating the need to write code.
+2. Use a dedicated script. By creating a file named [`local_test.py`](#user-content-fn-1)[^1], you can import the necessary functions and run the testing function yourself. It also allows for automated pipelines to manipulate the output for additional checks (if desired).
+
+{% code title="local_test.py" expandable="true" %}
+```python
+import crunch
+
+from main import train
+from main import infer
+
+crunch_tools = crunch.load_notebook()
+crunch_tools.test()
+
+...  #  read the prediction, do post-run analyses, ... 
+```
+{% endcode %}
+
+{% hint style="info" %}
+Only competitions in the old format (like DataCrunch's, ADIA Lab's, or EWSC at Broad Institute's) are compatible.
+
+For competitions that require Web3 (such as Synth or Numinous), please read their respective documentation. As an adapted code of the second method will work.
+{% endhint %}
+
 ## Predictions
 
 Your prediction must not exceed a certain size. This limit varies depending on the competition, but is usually large enough to accommodate everyone.
@@ -100,3 +129,5 @@ Your prediction must not exceed a certain size. This limit varies depending on t
 However, when participants are responsible for writing the prediction files themselves, they must also ensure that they name their files properly and use the correct flags to persist them in the correct format. The most common mistake is including the default pandas.DataFrame index when [saving a CSV file](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html).
 
 Participants cannot download prediction files. If a check fails, the error message should include enough details to help you debug the situation (extra or missing columns, `NaN` or infinite values, ...). If you need further assistance, please, [contact us on Discord](../faqs/contact-us.md#help-with-the-hub-competition).
+
+[^1]: The file name does not matter.
