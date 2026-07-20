@@ -126,7 +126,7 @@ For competitions that require Web3 (such as Synth or Numinous), please read thei
 
 Your prediction must not exceed a certain size. This limit varies depending on the competition, but is usually large enough to accommodate everyone.
 
-However, when participants are responsible for writing the prediction files themselves, they must also ensure that they name their files properly and use the correct flags to persist them in the correct format. The most common mistake is including the default pandas.DataFrame index when [saving a CSV file](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html).
+However, when participants are responsible for writing the prediction files themselves, they must also ensure that they name their files properly and use the correct flags to persist them in the correct format. The most common mistake is including the default `pandas.DataFrame` index when [saving a CSV file](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html).
 
 Participants cannot download prediction files. If a check fails, the error message should include enough details to help you debug the situation (extra or missing columns, `NaN` or infinite values, ...). If you need further assistance, please, [contact us on Discord](../faqs/contact-us.md#help-with-the-hub-competition).
 
