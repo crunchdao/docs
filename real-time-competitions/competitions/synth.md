@@ -159,7 +159,6 @@ The leaderboard displays several **relative performance indicators**, computed a
   * If a participant appears on both horizons, their prize is the sum.
 * The miners that Crunch manages can be found [here](https://taostats.io/subnets/50/metagraph?order=stake%3Adesc\&filter=5ECfazM69yvhX4SLX2CDzW4iSJvzJx3XESkhdncqM3HmyfKf).
   * The stake is not withdrawn each week; but only the new emissions are taken into account for the checkpoint.
-* The code is available [here](https://github.com/crunchdao/crunch-synth-coordinator/blob/72d657ed08d2b4610a239aa42aa91392ed326bed/coordinator-node/coordinator_node/services/mining_rewards_service.py#L165).
 
 ## Probabilistic Forecasting
 
@@ -241,4 +240,4 @@ You can refer to the [Tracker examples](https://github.com/crunchdao/crunch-synt
 
 [^3]: Conversion rate is coming from taostats' API.
 
-[^4]: Conversion rate is coming from Coingecko's API.
+[^4]: Conversion rate is coming from Coingecko' API.
