@@ -147,17 +147,19 @@ The leaderboard displays several **relative performance indicators**, computed a
 
 #### Payouts <a href="#payouts" id="payouts"></a>
 
-* $30K over the first 4 months followed by real mining rewards from Synth Miners (currently up to 50K / months)
-* Rewards are distributed at target resolution + 24h (every 7 + 1 days)
-* Fixed reward pool is allocated for each payout period.
-* The top 10 participants receive 100% of the pot.
-* Only models **outperforming the benchmark model (`synth/benchmarktracker`)** are rewarded.
-* Models with a score **below or equal to the benchmark at payout time** are included in calculations but receive no payout, leaving any fraction of the pool tied to lower-performing models undistributed.
-* The benchmark model is a reference model provided by the game in order to reward community outperformance over internal Benchmark and may evolve over time.
-
-<figure><img src="../../.gitbook/assets/Screenshot 2026-01-19 at 5.35.02 PM.png" alt=""><figcaption><p>Example of reward distribution when 7 people beat the Benchmark.</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/Screenshot 2026-01-19 at 5.35.13 PM.png" alt=""><figcaption><p>In this example, only 7 participants outperform the benchmark and receive approximately 70% of the weekly rewards. The remaining 30% is retained in the rewards pool.</p></figcaption></figure>
+* Rewards are distributed at target resolution + 24h (every 7 + 1 days).
+* Real mining rewards from Synth Miners (currently up to 50K / months).
+  * A 500 USD/month [(or 115.07 USD/week)](#user-content-fn-2)[^2] model hosting fee is applied.
+  * A 20% platform fee (after hosting fee) is applied.
+  * **The rest is the Pot.**
+  * Price is determined at the creation of the checkpoint by converting [Alpha to TAO](#user-content-fn-3)[^3] and then converting [TAO to USD](#user-content-fn-4)[^4].
+* Maximum of 8 players **receive 100% of the Pot.**
+  * Top 4 of the 1-hour horizon.
+  * Top 4 of the 24-hour horizon.
+  * If a participant appears on both horizons, their prize is the sum.
+* The miners that Crunch manages can be found [here](https://taostats.io/subnets/50/metagraph?order=stake%3Adesc\&filter=5ECfazM69yvhX4SLX2CDzW4iSJvzJx3XESkhdncqM3HmyfKf).
+  * The stake is not withdrawn each week; but only the new emissions are taken into account for the checkpoint.
+* The code is available [here](https://github.com/crunchdao/crunch-synth-coordinator/blob/72d657ed08d2b4610a239aa42aa91392ed326bed/coordinator-node/coordinator_node/services/mining_rewards_service.py#L165).
 
 ## Probabilistic Forecasting
 
@@ -220,7 +222,7 @@ It must return a sequence of **predictive density distributions** for the **incr
 
 * Forecast horizon: horizon seconds into the future
 * Temporal resolution: one density every step seconds
-* Output length: horizon // step
+* Output length: `horizon // step`
 
 Each density prediction must comply with the [density\_pdf](https://github.com/microprediction/densitypdf/blob/main/densitypdf/__init__.py) specification.
 
@@ -234,3 +236,9 @@ You can refer to the [Tracker examples](https://github.com/crunchdao/crunch-synt
 * Useful Python [packages](https://github.com/crunchdao/crunch-synth/blob/master/PACKAGES.md)
 
 [^1]: Still scored during the SP500 rollout; new prompts stop after the migration cutover, existing predictions age out naturally.
+
+[^2]: Equivalent to 500 / 4.34524, see why [here](https://www.cuemath.com/questions/what-is-the-average-number-of-weeks-in-a-month/).
+
+[^3]: Conversion rate is coming from taostats' API.
+
+[^4]: Conversion rate is coming from Coingecko's API.
