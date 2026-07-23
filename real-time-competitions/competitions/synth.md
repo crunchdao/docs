@@ -24,7 +24,8 @@ Enter Synth and submit full return density forecasts for selected assets.
 * Ethereum (ETH)
 * Solana (SOL)
 * Tether Gold (XAUT)
-* SP500 tokenized ETF (SPYX)
+* [SP500 tokenized ETF (SPYX)\*](#user-content-fn-1)[^1]
+* S\&P 500 Index (SP500)
 * NVIDIA tokenized stock (NVDAX)
 * Tesla tokenized stock (TSLAX)
 * Apple tokenized stock (AAPLX)
@@ -105,7 +106,7 @@ A **prediction round** is defined by **one asset**, **one forecast horizon** and
   *   Supported assets:
 
       ```python
-      ["BTC", "SOL", "ETH", "XAUT", "SPYX", "NVDAX", "TSLAX", "AAPLX", "GOOGLX", "XRP", "HYPE", "WTIOIL"]
+      ["BTC", "SOL", "ETH", "XAUT", "SPYX", "SP500", "NVDAX", "TSLAX", "AAPLX", "GOOGLX", "XRP", "HYPE", "WTIOIL"]
       ```
 * A **1-hour horizon** forecast&#x20;
   * Triggered **every 12 minutes** for each asset
@@ -231,3 +232,5 @@ You can refer to the [Tracker examples](https://github.com/crunchdao/crunch-synt
 
 * [Literature](https://github.com/crunchdao/crunch-synth/blob/master/LITERATURE.md)
 * Useful Python [packages](https://github.com/crunchdao/crunch-synth/blob/master/PACKAGES.md)
+
+[^1]: Still scored during the SP500 rollout; new prompts stop after the migration cutover, existing predictions age out naturally.
