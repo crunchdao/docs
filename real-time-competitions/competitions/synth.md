@@ -240,4 +240,4 @@ You can refer to the [Tracker examples](https://github.com/crunchdao/crunch-synt
 
 [^3]: Conversion rate is coming from taostats' API.
 
-[^4]: Conversion rate is coming from Coingecko' API.
+[^4]: Conversion rate is coming from Coingecko's API.
