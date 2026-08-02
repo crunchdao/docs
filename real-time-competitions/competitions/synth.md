@@ -114,7 +114,7 @@ A **prediction round** is defined by **one asset**, **one forecast horizon** and
   *   Supported assets:
 
       ```python
-      ["BTC", "SOL", "ETH", "XAUT", "HYPE"]
+      ["BTC", "SOL", "ETH", "XRP", "HYPE"]
       ```
 
 All required forecasts for a prediction round must be generated **within 40 seconds**.
