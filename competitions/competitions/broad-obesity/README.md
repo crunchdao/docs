@@ -2,6 +2,7 @@
 description: >-
   Can you design algorithms that identify genes driving obesity and metabolic
   disease?
+icon: lock
 cover: ../../../.gitbook/assets/banner.webp
 coverY: 0
 ---

@@ -84,7 +84,7 @@ The DataCrunch competition follows a fixed and transparent structure:
   * The first 15 years of the dataset. A smaller version of the latest 2.5 years of these 15 years is provided for small configurations.
 * Cloud data:
   * A public Out-of-Sample allowing participants to test your submission in the cloud. This data is on the first two month of 2020 year.
-  * A private Out-of-Sample allowing DataCrunch to have historical performance of the models in order to do meta-modelling and ensemble research.
+  * A private Out-of-Sample allowing DataCrunch to have historical performance of the models in order to do meta-modelling and ensemble research. (see below)
   * The last available date of the dataset will be scored on a weekly basis, after the target is resolved.
 
 {% hint style="info" %}
@@ -97,9 +97,36 @@ The window to submit and lock your model is removed. You can submit your code / 
 
 The prediction target takes 1 day + 4 weeks to be fully resolved, so the score for a model submitted in week #1 will be available and published in week #6.
 
+### Private Historical Performance Dataset
+
+The first time your model is run for the Out-of-Sample, you must first infer a mandatory \~300-moon test set, which is not scored but used for historical performance analysis. After that, you will only need to infer one moon per week.
+
+If you decide to submit (and select) a new model, you will need to predict this dataset again.
+
+### Train Frequency
+
+The train frequency is representing when your model's `train()` function will be called:
+
+* If set to 0, `train()` will never be called.
+* If set to 1, `train()` will be called at every moon.
+* If set to 2, `train()` will be called at every even moon.
+* If set to 10, `train()` will be called at every tenth moon.
+
+The number is based on the modulo of the moon itself, not the one of the iteration, meaning that a train frequency of 5 will run at moon 300, 305, 310, ...
+
+It is not based on the loop. If the cloud environment starts at moon 303, only after two moon (305) the `train()` function will be called.
+
+You can put frequency, but the smaller, the more time the `train()` function will be called, and the longer your code will take to run. Some models may not be able to run within the time constraint, considering that you must first pass the private historical performance dataset.
+
+When you run your model for the first time, you can choose the train frequency. This frequency will be used for the Out-of-Sample phase. It is not possible to change the frequency during an Out-of-Sample phase. If you need to change the frequency, you must submit again.
+
+<figure><img src="../../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
+
 ## Scoring and Evaluation
 
 Participants are evaluated using the [Pearson correlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) between their predictions and the target on the last date of the dataset.
+
+As mentioned in the Submission Cut-off section, it takes 5 weeks for a prediction to be scored and appear on the leaderboard.
 
 ## Computing Resources
 

@@ -1,5 +1,6 @@
 ---
 description: Can you outsmart the falcons and predict where the dove will go next?
+icon: lock
 ---
 
 # Falcon: The Collective Pricing Engine
