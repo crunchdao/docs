@@ -120,7 +120,7 @@ You can put frequency, but the smaller, the more time the `train()` function wil
 
 When you run your model for the first time, you can choose the train frequency. This frequency will be used for the Out-of-Sample phase. It is not possible to change the frequency during an Out-of-Sample phase. If you need to change the frequency, you must submit again.
 
-<figure><img src="../../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (157).png" alt=""><figcaption><p><code>train()</code> function calling matrix for a moon and a train frequency </p></figcaption></figure>
 
 ## Scoring and Evaluation
 
