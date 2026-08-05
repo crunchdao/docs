@@ -67,7 +67,11 @@ The allocated quota are different per competition, you should the overview secti
 
 You can also visualize your quota usage under the **Submissions & Runs** tab.
 
-Failed runs are not taken into account when computing the quota. This is to prevent situations where you accidentally use up your entire quota in one go and have to wait until next week to try again.
+Failed runs are only taken into account when computing the quota at a discounted rate:
+
+* Runs that reach a timeout will count for 5% of their duration.
+* Runs that are terminated will count for 5% of their duration.
+* All other crashes will count for 30% of their duration.
 
 #### Resets
 
