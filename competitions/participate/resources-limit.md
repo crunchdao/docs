@@ -53,9 +53,11 @@ Some consume the quota faster, some slower, but almost always at the normal spee
 
 #### Providers
 
-We have used AWS's managed [Fargate](https://aws.amazon.com/fargate/) and [Batch](https://aws.amazon.com/batch/) ([using `g4dn.8xlarge` instances](https://aws.amazon.com/ec2/instance-types/g4/)) services for a long time, but we recently introduced a new provider: [OpenGPU](https://opengpu.network/), which provides faster and more powerful GPUs for when you require extra processing power.
+We are using multiple compute provider under the hood:
 
-Using one provider instead of another should not affect your code. If you think there is a bug, please [contact us on Discord](../faqs/contact-us.md#help-with-the-hub-competition).
+<table><thead><tr><th width="163.75457763671875">Name</th><th width="179.6640625">Runtime Type</th><th>Context</th></tr></thead><tbody><tr><td><a href="https://aws.amazon.com/fargate/">AWS Fargate</a></td><td>CPU</td><td>General computing.</td></tr><tr><td><a href="https://aws.amazon.com/batch/">AWS Batch</a></td><td>GPU</td><td>General computing.</td></tr><tr><td><a href="https://opengpu.network/">OpenGPU</a></td><td>GPU</td><td>Powerful GPUs.</td></tr><tr><td><a href="https://cloud.google.com/batch?hl=en">GCP Batch</a></td><td>CPU + GPU</td><td>General computing.</td></tr></tbody></table>
+
+Using one provider instead of another should not affect your code as we make sure to always provide the same driver versions. If you think there is a bug, please [contact us on Discord](../faqs/contact-us.md#help-with-the-hub-competition).
 
 #### Networking
 
