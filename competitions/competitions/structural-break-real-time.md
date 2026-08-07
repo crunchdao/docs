@@ -246,18 +246,57 @@ Whatever approach you choose, the training set provides full supervision: the kn
 
 ## Prizes
 
-| Winners’ rank | Prize value |
-| ------------- | ----------- |
-| 1st place     | $40,000 USD |
-| 2nd place     | $20,000 USD |
-| 3rd place     | $10,000 USD |
-| 4th place     | $5,000 USD  |
-| 5th place     | $5,000 USD  |
-| 6th place     | $5,000 USD  |
-| 7th place     | $5,000 USD  |
-| 8th place     | $3,500 USD  |
-| 9th place     | $3,500 USD  |
-| 10th place    | $3,000 USD  |
+<table data-search="false"><thead><tr><th>Winners’ rank</th><th>Prize value</th></tr></thead><tbody><tr><td>1st place</td><td>$40,000 USD</td></tr><tr><td>2nd place</td><td>$20,000 USD</td></tr><tr><td>3rd place</td><td>$10,000 USD</td></tr><tr><td>4th place</td><td>$5,000 USD</td></tr><tr><td>5th place</td><td>$5,000 USD</td></tr><tr><td>6th place</td><td>$5,000 USD</td></tr><tr><td>7th place</td><td>$5,000 USD</td></tr><tr><td>8th place</td><td>$3,500 USD</td></tr><tr><td>9th place</td><td>$3,500 USD</td></tr><tr><td>10th place</td><td>$3,000 USD</td></tr></tbody></table>
+
+## FAQ
+
+<details>
+
+<summary>What data is used to compute the mean and standard deviation for standardizing each series?</summary>
+
+**Only the historical (reference) segment**, not the online period or the full series.
+
+</details>
+
+<details>
+
+<summary>Is standardization done separately for each series?</summary>
+
+**Yes**, each series is standardized independently.
+
+</details>
+
+<details>
+
+<summary>Are the normalization parameters (mean/std) updated once the online period starts?</summary>
+
+**No**. They are fixed before the online stream begins and never updated afterward.
+
+</details>
+
+<details>
+
+<summary>Are real and synthetic series normalized the same way?</summary>
+
+**Yes**, Both go through the same standardization pipeline.
+
+</details>
+
+<details>
+
+<summary>Is the reference window assumed to be free of structural breaks or irregularities?</summary>
+
+**Yes and no**: there are no structural breaks by definition (the reference window defines what is "normal"), but there can be irregularities (jumps, etc.).
+
+</details>
+
+<details>
+
+<summary>Can I use an AI assistant or LLM to help with the competition?</summary>
+
+**Yes**, as long as you don't copy the full dataset into its context.
+
+</details>
 
 [^1]: Sept. 16 will be the last quota refresh.
 
