@@ -246,7 +246,9 @@ Whatever approach you choose, the training set provides full supervision: the kn
 
 ## Prizes
 
-<table data-search="false"><thead><tr><th>Winners’ rank</th><th>Prize value</th></tr></thead><tbody><tr><td>1st place</td><td>$40,000 USD</td></tr><tr><td>2nd place</td><td>$20,000 USD</td></tr><tr><td>3rd place</td><td>$10,000 USD</td></tr><tr><td>4th place</td><td>$5,000 USD</td></tr><tr><td>5th place</td><td>$5,000 USD</td></tr><tr><td>6th place</td><td>$5,000 USD</td></tr><tr><td>7th place</td><td>$5,000 USD</td></tr><tr><td>8th place</td><td>$3,500 USD</td></tr><tr><td>9th place</td><td>$3,500 USD</td></tr><tr><td>10th place</td><td>$3,000 USD</td></tr></tbody></table>
+All prizes are in [USDC](https://www.usdc.com/), a cryptocurrency with the same value as the US dollar.
+
+<table data-search="false"><thead><tr><th>Winners’ rank</th><th>Prize value</th></tr></thead><tbody><tr><td>1st place</td><td>$40,000</td></tr><tr><td>2nd place</td><td>$20,000</td></tr><tr><td>3rd place</td><td>$10,000</td></tr><tr><td>4th place</td><td>$5,000</td></tr><tr><td>5th place</td><td>$5,000</td></tr><tr><td>6th place</td><td>$5,000</td></tr><tr><td>7th place</td><td>$5,000</td></tr><tr><td>8th place</td><td>$3,500</td></tr><tr><td>9th place</td><td>$3,500</td></tr><tr><td>10th place</td><td>$3,000</td></tr></tbody></table>
 
 ## FAQ
 
