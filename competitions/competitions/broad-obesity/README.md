@@ -195,6 +195,13 @@ Ranks 9 and 10 for the L1 Distance metrics were not rewarded as they did not man
 | 10th place    | 500              | 50                 | 450                |
 | Total         | 26,000           | 2,600              | 23,400             |
 
+{% hint style="info" %}
+Regarding the prizes for Evaluation 1:
+
+* The first and last places were awarded properly, but everyone else tied for second place, so the prize money was divided equally among them, with each winning proposal receiving 205 USD.
+* Only users who received at least two 3/3 are eligible.
+{% endhint %}
+
 ## External Resources
 
 Crunchers are encouraged to use publicly available external resources, including gene perturbation datasets and pre-trained models, as long as they are properly credited.
