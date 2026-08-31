@@ -10,6 +10,7 @@ layout:
   cover:
     visible: true
     size: full
+    mask: none
   title:
     visible: true
   description:
@@ -63,7 +64,7 @@ The ensembling of all the submissions will allow identifying which investments a
 The [F1 score](https://en.wikipedia.org/wiki/F-score) will be used in order to assess the models performance effectively. This metric balances the precision (true positives identified by the algorithm) and recall (accounting for missed opportunities). For the algorithm to demonstrate its effectiveness, it must accurately identify investment opportunities while minimizing false negatives and false positives. The F1 score will provide a comprehensive view of the algorithm's accuracy and reliability.
 
 $$
-F1=\frac{2∗Precision∗Recall}{Precision+Recall}
+F1=\frac{2*Precision*Recall}{Precision+Recall}
 $$
 
 Where:
@@ -76,7 +77,7 @@ $$
 Recall=\frac{TP}{TP+FN}
 $$
 
-## **Competition Phases and Format**
+## Competition Phases and Format
 
 In the first phase, participants are required to submit either a Python notebook (.ipynb) or Python script (.py) file. This file should contain the necessary code to build, load, or update their models trained on the data. The code will be executed by the CrunchDAO on the Out-Of-Sample data. Participants can either submit static models, trained only once on the initial training set, or dynamic models that update or retrain themselves on the unseen data, as explained further in the documentation.
 
@@ -124,4 +125,4 @@ The winners will be determined at the end of the [Out-of-Sample](../../other/glo
 
 ## Original Documentation
 
-{% embed url="https://crunchdao-1.gitbook.io/quant-venture-capital-documentation/the-tournament/prize" %}
+This competition is quite old. If you would like more information, please refer to [the original documentation](https://crunchdao-1.gitbook.io/quant-venture-capital-documentation).

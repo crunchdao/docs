@@ -7,6 +7,7 @@ layout:
   cover:
     visible: true
     size: full
+    mask: none
   title:
     visible: true
   description:
@@ -35,7 +36,7 @@ To illustrate an interesting use case of this problem, we can imagine an investm
 
 The dataset presented to the competitors is an obfuscated version of high-quality market data. Therefore, details such as the nature of each investment vehicle, the constant frequency at which dates are measured, and the definition of each feature, are not available. We hope you enjoy the challenge!
 
-## **Competition Phases and Format**
+## Competition Phases and Format
 
 This competition is focused on forecasting and has two phases. The first is the _submission phase_ where participants can submit and test their models. The second phase, which is automatic, involves running the models against unobserved live market data.
 
@@ -103,8 +104,8 @@ The dataset is obfuscated.
 
 The winner's rank will be determined at the end of the [Out-of-Sample](../../other/glossary.md#out-of-sample-phase) period, based on the metric described in the [#evaluation](adia-lab-market-prediction-competition.md#evaluation "mention") section.
 
-<table><thead><tr><th width="350"> Winner’s rank</th><th> Prize value</th><th data-hidden></th></tr></thead><tbody><tr><td>1st Place</td><td>$40,000</td><td></td></tr><tr><td>2nd Place</td><td>$20,000</td><td></td></tr><tr><td>3rd Place</td><td>$10,000</td><td></td></tr><tr><td>4th Place</td><td>$5,000</td><td></td></tr><tr><td>5th Place</td><td>$5,000</td><td></td></tr><tr><td>6th Place</td><td>$5,000</td><td></td></tr><tr><td>7th Place</td><td>$5,000</td><td></td></tr><tr><td>8th Place</td><td>$3,500</td><td></td></tr><tr><td>9th Place</td><td>$3,500</td><td></td></tr><tr><td>10th Place</td><td>$3,000</td><td></td></tr></tbody></table>
+<table><thead><tr><th width="350" valign="middle"> Winner’s rank</th><th> Prize value</th><th data-hidden></th></tr></thead><tbody><tr><td valign="middle">1st Place</td><td>$40,000</td><td></td></tr><tr><td valign="middle">2nd Place</td><td>$20,000</td><td></td></tr><tr><td valign="middle">3rd Place</td><td>$10,000</td><td></td></tr><tr><td valign="middle">4th Place</td><td>$5,000</td><td></td></tr><tr><td valign="middle">5th Place</td><td>$5,000</td><td></td></tr><tr><td valign="middle">6th Place</td><td>$5,000</td><td></td></tr><tr><td valign="middle">7th Place</td><td>$5,000</td><td></td></tr><tr><td valign="middle">8th Place</td><td>$3,500</td><td></td></tr><tr><td valign="middle">9th Place</td><td>$3,500</td><td></td></tr><tr><td valign="middle">10th Place</td><td>$3,000</td><td></td></tr></tbody></table>
 
 ## Original Documentation
 
-{% embed url="https://docs.adialab.crunchdao.com/" %}
+This competition is quite old. If you would like more information, please refer to [the original documentation](https://docs.adialab.crunchdao.com/).

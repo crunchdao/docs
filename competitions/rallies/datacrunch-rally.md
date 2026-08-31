@@ -7,6 +7,7 @@ layout:
   cover:
     visible: true
     size: full
+    mask: none
   title:
     visible: true
   description:
@@ -120,8 +121,4 @@ Only the predictions of the models will be used by DataCrunch, and only for rese
 
 ## Quickstarter Notebook
 
-A Quickstarter notebook, together with an Exploratory Data Analysis one, is available below so you can get familiar with what is expected from you and how to use the `crunch.alpha_score()` function.
-
-{% embed url="https://github.com/crunchdao/quickstarters/tree/master/competitions/datacrunch-rally" %}
-
-##
+A [Quickstarter notebook](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/datacrunch-rally/quickstarters/quickstarter/quickstarter.ipynb), together with an [Exploratory Data Analysis one](https://colab.research.google.com/github/crunchdao/quickstarters/blob/master/competitions/datacrunch-rally/quickstarters/eda/eda.ipynb), is available below so you can get familiar with what is expected from you and how to use the `crunch.alpha_score()` function.

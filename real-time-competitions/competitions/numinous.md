@@ -144,7 +144,7 @@ In order to be eligible for rewards, a model must:
 
 ### Code Interface
 
-Subclass `TrackerBase` from the [`numinous.tracker`](https://pypi.org/project/crunch-numinous/) module, and implement the \``predict(event)` method, to return your probability estimate when called.
+Subclass `TrackerBase` from the [`numinous.tracker`](https://pypi.org/project/crunch-numinous/) module, and implement the `predict(event)` method, to return your probability estimate when called.
 
 {% code title="Python Notebook Cell" expandable="true" %}
 ```python
@@ -170,7 +170,7 @@ class MyForecaster(TrackerBase):
 ```
 {% endcode %}
 
-{% embed url="https://pypi.org/project/crunch-numinous/" %}
+See the package [on PyPI](https://pypi.org/project/crunch-numinous/).
 
 ### Authentication
 
