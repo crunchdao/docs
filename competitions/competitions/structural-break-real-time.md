@@ -32,7 +32,8 @@ This edition mirrors a realistic monitoring scenario: you watch a stream of data
 
 * Start Date: May 6th, 2026 at 4:00 p.m. UTC
 * Quota Refresh: every Wednesday at 4:00 p.m. UTC
-* End Date: September 17th, 2026 at 4:00 p.m. UTC (Thursday)[^1]
+* ~~End Date: September 17th, 2026 at 4:00 p.m. UTC~~
+* End Date: October 1st, 2026 at 4:00 p.m. UTC (Thursday)[^1]
 * Final Evaluation: End of October, 2026
 * Winners Announcement: [During the ADIA Lab 2026 Symposium](https://www.adialab.ae/upcoming-events/adia-lab-symposium-2026) (26–28 October)
 
@@ -192,7 +193,7 @@ The ideal score is a step function: it stays at `0` as long as no break has occu
 
 The figure below shows how your detection algorithm's score sequence (solid line) compares to the ideal sequence (dashed step). The shaded area between them reflects how early and how cleanly the break was detected.
 
-<figure><img src="../../.gitbook/assets/evaluation_example.png" alt="Evaluation example: participant scores (solid) vs ideal step function (dashed). A good submission keeps the shaded area small."><figcaption><p>Evaluation example</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/evaluation_example.png" alt="Evaluation example: participant scores (solid) vs ideal step function (dashed). A good submission keeps the shaded area small."><figcaption><p>Evaluation example.</p></figcaption></figure>
 
 ### Computational note
 
@@ -300,7 +301,7 @@ All prizes are in [USDC](https://www.usdc.com/), a cryptocurrency with the same 
 
 </details>
 
-[^1]: Sept. 16 will be the last quota refresh.
+[^1]: Sept. 31 will be the last quota refresh.
 
 [^2]: Also known as Y train/test.
 
