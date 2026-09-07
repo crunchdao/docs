@@ -187,6 +187,29 @@ The execution time of your solution should not exceed the platform's time limits
 
 Your solution must be deterministic: when [**re-run on 10% of the data**](#user-content-fn-3)[^3], the predicted values should be the same (within a **tolerance of 1e-8**).
 
+#### Pre-trained models
+
+If you submit a pre-trained models without the training code, <mark style="color:$danger;">your model will be ineligible for rewards</mark>. This includes regular files of unknown origin and very long strings that are decoded at runtime.
+
+There multiple ways to remain eligible without having your `train(...)` function called in the cloud environment:
+
+1. Just don't ask for it: select "No training" on the run creation screen (the last step).\
+   <img src="../../.gitbook/assets/image (158).png" alt="" data-size="original">
+2.  Make it dead code by voluntarily returning at the first instruction while keeping the original code intact:
+
+    <pre class="language-python"><code class="lang-python">def train(datasets, model_directory_path):
+    <strong>    return  # stop right now, ignore the rest
+    </strong>
+    <strong>    model = ...  # but still keep the original code
+    </strong>    model.train(datasets)
+        joblib.dump(model, os.path.join(model_directory_path, "model.joblib"))
+    </code></pre>
+3.  If your pipeline does not fit well within the `train(...)` function, which force you to use external scripts or notebooks, you will still need to push them. Just add a comment stating where they can be found:
+
+    <pre class="language-python"><code class="lang-python">def train(datasets, model_directory_path):
+    <strong>    pass  # available in train_script/train.py
+    </strong></code></pre>
+
 #### What a good score sequence looks like
 
 The ideal score is a step function: it stays at `0` as long as no break has occurred, then jumps to `1` as soon as the break happens. If there is no break, the ideal score is `0` throughout.
