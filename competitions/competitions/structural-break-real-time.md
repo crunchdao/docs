@@ -197,7 +197,7 @@ There multiple ways to remain eligible without having your `train(...)` function
    <img src="../../.gitbook/assets/image (158).png" alt="" data-size="original">
 2.  Make it dead code by voluntarily returning at the first instruction while keeping the original code intact:
 
-    <pre class="language-python"><code class="lang-python">def train(datasets, model_directory_path):
+    <pre class="language-python" data-title="Python Notebook Cell"><code class="lang-python">def train(datasets, model_directory_path):
     <strong>    return  # stop right now, ignore the rest
     </strong>
     <strong>    model = ...  # but still keep the original code
@@ -206,7 +206,7 @@ There multiple ways to remain eligible without having your `train(...)` function
     </code></pre>
 3.  If your pipeline does not fit well within the `train(...)` function, which force you to use external scripts or notebooks, you will still need to push them. Just add a comment stating where they can be found:
 
-    <pre class="language-python"><code class="lang-python">def train(datasets, model_directory_path):
+    <pre class="language-python" data-title="Python Notebook Cell"><code class="lang-python">def train(datasets, model_directory_path):
     <strong>    pass  # available in train_script/train.py
     </strong></code></pre>
 
@@ -241,7 +241,7 @@ To ensure optimal performance, your model must follow a few restrictions:
 
 You can enable parallel processing by simply specifying the number of workers you want via a global constant:
 
-{% code title="Python Cell" expandable="true" %}
+{% code title="Python Notebook Cell" expandable="true" %}
 ```python
 # @crunch/keep:on
 INFER_PARALLELISM = 4
@@ -278,6 +278,26 @@ All prizes are in [USDC](https://www.usdc.com/), a cryptocurrency with the same 
 
 <details>
 
+<summary>Why is my code slower in the cloud environment?</summary>
+
+**It depends:**
+
+* The cloud environment asks you to predict 10,000 datasets, which is 100 times more than what you were given locally to test your code.
+* NumPy can sometimes conflict with the parallelism mechanism. See Known Issues.
+* If you need more help, you can join us on [Discord](https://discord.crunchdao.com/) or in the [Forum](https://forum.crunchdao.com/).
+
+</details>
+
+<details>
+
+<summary>I have a question on the competition or the dataset. Where can I ask for help?</summary>
+
+Join us on [Discord](https://discord.crunchdao.com/) (an account is required) or in the [Forum](https://forum.crunchdao.com/) (a Crunch account is all you need).
+
+</details>
+
+<details>
+
 <summary>What data is used to compute the mean and standard deviation for standardizing each series?</summary>
 
 **Only the historical (reference) segment**, not the online period or the full series.
@@ -304,7 +324,7 @@ All prizes are in [USDC](https://www.usdc.com/), a cryptocurrency with the same 
 
 <summary>Are real and synthetic series normalized the same way?</summary>
 
-**Yes**, Both go through the same standardization pipeline.
+**Yes**, both go through the same standardization pipeline.
 
 </details>
 
@@ -321,6 +341,16 @@ All prizes are in [USDC](https://www.usdc.com/), a cryptocurrency with the same 
 <summary>Can I use an AI assistant or LLM to help with the competition?</summary>
 
 **Yes**, as long as you don't copy the full dataset into its context.
+
+</details>
+
+<details>
+
+<summary>Is it possible to use the dataset from the previous Structural Break competition?</summary>
+
+**Yes, but it is not officially encouraged.** The dataset was designed for another type of problem, which does not match this year's objective of finding not _IF_, but _WHEN_ there is a structural break.
+
+You can find the dataset in the [Resources section](https://hub.crunchdao.com/competitions/structural-break/resources/datasets). Please note that you will also need to accept the rules of the old competition to access the files.
 
 </details>
 
