@@ -64,6 +64,11 @@
   * [Contact us](competitions/faqs/contact-us.md)
   * [Known Issues](competitions/faqs/known-issues.md)
 
+## Meta Ranking
+
+* [Global Leaderboard](meta-ranking/global-leaderboard.md)
+* [Medals & Titles](meta-ranking/medals-and-titles.md)
+
 ## Technical
 
 * [Tournament API](technical/tournament-api.md)
