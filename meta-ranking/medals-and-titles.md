@@ -58,6 +58,12 @@ Example for a competition that ran for 6 months (26 weeks of leaderboards):
 
 Real-Time competitions are a special case of Continuous competitions where the leaderboard positions are too dynamic to be used directly; instead, weekly payouts are used, in the same way as the [Global Leaderboard](global-leaderboard.md).
 
+### Follow-up Competitions
+
+There is one exception: the best ranking of the Structural Break Open Benchmark has been merged with the original Structural Break competition.
+
+This means that participants in either competition will receive the highest ranking from the two competitions, as we do not believe that distributing medals for a reopened competition based on the same problem and data is worthwhile.
+
 ## Medals
 
 These averaged ranks are then used to distribute medals:
