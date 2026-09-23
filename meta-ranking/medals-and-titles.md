@@ -58,12 +58,6 @@ Example for a competition that ran for 6 months (26 weeks of leaderboards):
 
 Real-Time competitions are a special case of Continuous competitions where the leaderboard positions are too dynamic to be used directly; instead, weekly payouts are used, in the same way as the [Global Leaderboard](global-leaderboard.md).
 
-### Follow-up Competitions
-
-There is one exception: the best ranking of the Structural Break Open Benchmark has been merged with the original Structural Break competition.
-
-This means that participants in either competition will receive the highest ranking from the two competitions, as we do not believe that distributing medals for a reopened competition based on the same problem and data is worthwhile.
-
 ## Medals
 
 These averaged ranks are then used to distribute medals:
@@ -71,7 +65,7 @@ These averaged ranks are then used to distribute medals:
 * <mark style="color:yellow;">🥇Gold</mark>: ended up 1st
 * <mark style="color:blue;">🥈</mark><mark style="color:$info;">Silver</mark>: ended up 2nd
 * <mark style="color:orange;">🥉Bronze</mark>: ended up 3rd
-* <mark style="color:blue;">⭐10%</mark>: ended up in the top 10%
+* <mark style="color:blue;">⭐Honorable Mention</mark>: [ended up between 4th and in the top 10%](#user-content-fn-2)[^2]
 
 A Cruncher can only receive one medal per competition. A Cruncher on a team will receive the same medal as their leader (if enabled) or their best-performing member.
 
@@ -80,9 +74,9 @@ A Cruncher can only receive one medal per competition. A Cruncher on a team will
 Titles are awarded based on the number of medals received:
 
 * Grandmaster: at least two <mark style="color:green;">🏅Podium</mark>
-* Master: <mark style="color:green;">🏅Podium</mark> AND <mark style="color:blue;">⭐10%</mark>
+* Master: <mark style="color:green;">🏅Podium</mark> AND <mark style="color:blue;">⭐Honorable Mention</mark>
 * Expert: <mark style="color:green;">🏅Podium</mark>
-* Ranked: <mark style="color:blue;">⭐10%</mark>
+* Ranked: <mark style="color:blue;">⭐Honorable Mention</mark>
 * Builder: submitted to three different competitions
 * Contributor: submitted to any competition
 * Novice: default title for new users
@@ -94,3 +88,5 @@ The <mark style="color:green;">🏅Podium</mark> refers to either one <mark styl
 {% endhint %}
 
 [^1]: Broad competitions required participating to the Peer Review phase.
+
+[^2]: If fewer than 10% of participants are in the 4th rank, only those in the 4th will receive this medal.
