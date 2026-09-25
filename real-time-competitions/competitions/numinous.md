@@ -1,3 +1,7 @@
+---
+icon: lock
+---
+
 # Numinous: Predictive Agents For Real World Outcome
 
 ## Overview
