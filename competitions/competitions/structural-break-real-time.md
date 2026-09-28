@@ -32,8 +32,9 @@ This edition mirrors a realistic monitoring scenario: you watch a stream of data
 
 * Start Date: May 6th, 2026 at 4:00 p.m. UTC
 * Quota Refresh: every Wednesday at 4:00 p.m. UTC
-* ~~End Date: September 17th, 2026 at 4:00 p.m. UTC~~
-* End Date: October 1st, 2026 at 4:00 p.m. UTC (Thursday)[^1]
+* ~~Submission Deadline: September 17th, 2026 at 4:00 p.m. UTC~~
+* Submission Deadline: October 1st, 2026 at 4:00 p.m. UTC (Thursday)[^1]
+* Selection Deadline: October 3rd, 2026 at 4:00 p.m. UTC ([What's that?](../participate/#select))
 * Final Evaluation: End of October, 2026
 * Winners Announcement: [During the ADIA Lab 2026 Symposium](https://www.adialab.ae/upcoming-events/adia-lab-symposium-2026) (26–28 October)
 
@@ -354,7 +355,7 @@ You can find the dataset in the [Resources section](https://hub.crunchdao.com/co
 
 </details>
 
-[^1]: Sept. 31 will be the last quota refresh.
+[^1]: Sept. 30 will be the last quota refresh.
 
 [^2]: Also known as Y train/test.
 
