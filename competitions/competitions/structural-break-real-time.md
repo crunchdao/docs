@@ -355,6 +355,28 @@ You can find the dataset in the [Resources section](https://hub.crunchdao.com/co
 
 </details>
 
+<details>
+
+<summary>Can I use external data?</summary>
+
+**Yes**, but you must be able to grant a license to it, [see 6.3. in the rules](https://hub.crunchdao.com/competitions/structural-break-real-time/rules):
+
+* A third-party dataset uploaded becomes part of the "Participant Submission."
+* Participants must grant CrunchDAO the specified distribution and sublicensing rights.
+* If the dataset license prohibits redistribution, participants cannot grant those rights.
+
+A purchased dataset is acceptable if you have the right to distribute it. However, it would likely be very expensive (at least more expensive than the prize pool).
+
+***
+
+The following are already known to not be allowed:
+
+* Yahoo Finance: as they [do not allow redistributing the data](https://help.yahoo.com/kb/finance/exchanges-markets-indices-covered-yahoo-finance-sln2310.html).
+* TabPFN: their [licensing is not compatible](https://docs.priorlabs.ai/models#what-about-previous-tabpfn-releases).
+* (Help us list more!)
+
+</details>
+
 [^1]: Sept. 30 will be the last quota refresh.
 
 [^2]: Also known as Y train/test.
