@@ -45,7 +45,7 @@ We reopened the submissions (no specific end date for now), if you still have id
 However, a few things are different:
 
 * The current public leaderboard is now permanently frozen.
-  * You can check your ranking against the public top 10 on the hidden leaderboard.
+  * You can check your ranking against the public top 10 on an [hidden leaderboard](https://hub.crunchdao.com/competitions/structural-break-real-time/leaderboard?crunchId=461).
 * Quota has been reduced:
   * Your 15-hour quota will refresh every two weeks.
   * Submissions are limited to five per day.
