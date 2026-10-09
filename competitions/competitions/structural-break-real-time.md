@@ -38,6 +38,22 @@ This edition mirrors a realistic monitoring scenario: you watch a stream of data
 * Final Evaluation: End of October, 2026
 * Winners Announcement: [During the ADIA Lab 2026 Symposium](https://www.adialab.ae/symposium-2026) (26–28 October)
 
+### Late Submissions
+
+We reopened the submissions (no specific end date for now), if you still have ideas you want to try.
+
+However, a few things are different:
+
+* The current public leaderboard is now permanently frozen.
+  * You can check your ranking against the public top 10 on the hidden leaderboard.
+* Quota has been reduced:
+  * Your 15-hour quota will refresh every two weeks.
+  * Submissions are limited to five per day.
+* The dataset remains exactly the same.
+  * Your old `crunch setup` still works.
+
+We’ll continue to provide basic support, but the competition is now running as-is: no new features or dataset changes are planned.
+
 ## What is a Structural Break?
 
 A **structural break** occurs when the statistical behaviour of a time series changes permanently at some point in time. Before the break, the data follows one process; from the break onwards, it follows a different one.
