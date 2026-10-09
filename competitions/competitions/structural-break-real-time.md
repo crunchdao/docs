@@ -51,6 +51,8 @@ However, a few things are different:
   * Submissions are limited to five per day.
 * The dataset remains exactly the same.
   * Your old `crunch setup` still works.
+* These submissions will never be run on the Out-of-Sample data.
+  * They are only for experimental purposes.
 
 We’ll continue to provide basic support, but the competition is now running as-is: no new features or dataset changes are planned.
 
