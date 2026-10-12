@@ -1,7 +1,8 @@
 ---
 description: >-
-  Forecast prices of Bitcoin, Ethereum, Solana, Tether Gold, and tokenized
-  stocks (Apple, Nvidia, Tesla, Alphabet, S&P 500).
+  Forecast prices of crypto assets (Bitcoin, Ethereum, Solana, Ripple,
+  Hyperliquid), Tether Gold, crude oil, the S&P 500 and tokenized stocks (Apple,
+  Nvidia, Tesla, Alphabet, SPCX).
 ---
 
 # Synth: Synthetic Price Data
@@ -10,13 +11,13 @@ description: >-
 
 [Synth](https://www.synthdata.co/) is a decentralized prediction subnet on Bittensor that forecasts crypto and financial asset prices through probabilistic modeling. Instead of predicting a single price, participants build models that output probability distributions, capturing not just where an asset might go, but the range of possibilities and their likelihoods. This approach helps model real market behavior like volatility clustering and tail risks that traditional forecasts often miss.
 
-In this Crunch, you need to build probabilistic forecasting models for Bitcoin, Ethereum, Solana, Tether Gold, and tokenized stocks (Apple, Nvidia, Tesla, Alphabet, S\&P 500). Your models will predict over 1-hour and 24-hour price distributions scored on statistical accuracy. The best-performing models will be aggregated into an ensemble forecast that captures collective intelligence from our community.
+In this Crunch, you need to build probabilistic forecasting models for the assets listed below. Your models will predict over 1-hour and 24-hour price distributions scored on statistical accuracy. The best-performing models will be aggregated into an ensemble forecast that captures collective intelligence from our community, and that ensemble is mined on Synth.
 
 ## How to participate
 
 Enter Synth and submit full return density forecasts for selected assets.
 
-**Trackers (models)** must generate returns density predictions, not single predictions and maximize accuracy overall forecasts. See open-source Crunch framewor&#x6B;**:** [Crunch-Synth](https://github.com/crunchdao/crunch-synth)
+**Trackers (models)** must generate returns density predictions, not single predictions and maximize accuracy overall forecasts. See open-source Crunch framewor&#x6B;**:** [crunch-synth](https://github.com/crunchdao/crunch-synth)
 
 **Covered Assets:**
 
@@ -24,21 +25,21 @@ Enter Synth and submit full return density forecasts for selected assets.
 * Ethereum (ETH)
 * Solana (SOL)
 * Tether Gold (XAUT)
-* [SP500 tokenized ETF (SPYX)\*](#user-content-fn-1)[^1]
 * S\&P 500 Index (SP500)
 * NVIDIA tokenized stock (NVDAX)
 * Tesla tokenized stock (TSLAX)
 * Apple tokenized stock (AAPLX)
 * Alphabet tokenized stock (GOOGLX)
+* SpaceX tokenized stock (SPCX)
 * Ripple (XRP)
 * Hyperliquid (HYPE)
 * Crude Oil WTI (WTIOIL)
 
 ## Phases
 
-* \[Phase 1] - 1-month warmup period before Live Trading
-* \[Phase 2] - 3 months live with a fixed $30,000 USDC prize pool
-* \[Phase 3] - Rewards pools will be generated from mining Synth subnet and may be higher.
+* ~~Phase 1: 1-month warmup period before Live Trading~~ (completed)
+* ~~Phase 2: 3 months live with a fixed $30,000 USDC prize pool~~ (completed)
+* Phase 3: Rewards pools will be generated from mining Synth subnet and may be higher. (current)
 
 ## Prediction Targets
 
@@ -53,7 +54,11 @@ For each defined step $$k$$ (e.g., 5 minutes, 1 hour, …), your tracker must re
 ## Visualize the challenge
 
 The Synth coordinator is evaluated on **incremental return predictions**, not raw prices.\
-Incremental returns capture the _relative_ change in price and produce a stationary series that is easier to model and compare across assets.
+Incremental returns are price changes over each step, in the asset's price units (not percentages), and produce a series that is easier to model than raw prices.
+
+```diff
+model.predict(asset="SOL", horizon=86400, step=300)
+```
 
 Below is an example of a **density forecast over incremental returns for the next 24h at 5-minute intervals**:
 
@@ -67,13 +72,11 @@ Below is a minimal example showing what your tracker might return:
 [
     {
         "step": (k + 1) * step,
-        "prediction": {
-            "type": "builtin",
-            "name": "norm",
-            "params": {
-                "loc": -0.01,       # mean return
-                "scale": 0.4     # standard deviation of return
-            }
+        "type": "builtin",
+        "name": "norm",
+        "params": {
+            "loc": -0.01,       # mean price change over the step
+            "scale": 0.4        # standard deviation of the price change
         }
     }
     for k in range(0, horizon // step)
@@ -101,33 +104,34 @@ In each prediction round, players must submit **a set of** **density forecasts**
 A **prediction round** is defined by **one asset**, **one forecast horizon** and **one or more step resolutions**.
 
 * A **24-hour horizon** forecast&#x20;
-  * Triggered **every 1 hour** for each asset
-  * Step resolutions: **{5-minute, 1-hour, 6-hour, 24-hour}**
-  *   Supported assets:
-
-      ```python
-      ["BTC", "SOL", "ETH", "XAUT", "SPYX", "SP500", "NVDAX", "TSLAX", "AAPLX", "GOOGLX", "XRP", "HYPE", "WTIOIL"]
-      ```
+  * Triggered **every 39 minutes** for each asset
+  * Step resolutions: **5-minute, 1-hour, 6-hour and 24-hour**
+  * Supported assets: `BTC`, `SOL`, `ETH`, `XAUT`, `SP500`, `NVDAX`, `TSLAX`, `AAPLX`, `GOOGLX`, `XRP`, `HYPE`, `WTIOIL`, and `SPCX`
 * A **1-hour horizon** forecast&#x20;
-  * Triggered **every 12 minutes** for each asset
-  * Step resolutions: **{1-minute, 5-minute, 15-minute, 30-minute, 1-hour}**
-  *   Supported assets:
-
-      ```python
-      ["BTC", "SOL", "ETH", "XRP", "HYPE"]
-      ```
+  * Triggered **every 8 minutes** for each asset
+  * Step resolutions: **1-minute, 5-minute, 15-minute, 30-minute, and 1-hour**
+  * Supported assets: `BTC`, `SOL`, `ETH`, `XRP`, and `HYPE`
 
 All required forecasts for a prediction round must be generated **within 40 seconds**.
 
 {% hint style="info" %}
-Don't submit models that needs more than 40 seconds to infer!
+Don't submit models that need more than 40 seconds to infer!
 {% endhint %}
+
+Each density can be a single distribution or a **mixture of at most 3 components**. Predictions with more components are rejected (and count as invalid).
 
 #### Scoring <a href="#scoring" id="scoring"></a>
 
 * Once the full horizon has passed, each prediction is scored using a [**CRPS**](https://en.wikipedia.org/wiki/Scoring_rule) **scoring function**.
+* Scoring uses **final (settled) 1-minute prices**, as Synth's validator does. A prediction is scored about 2–3 minutes after its horizon ends.
+* **1-hour horizon only (BTC, ETH, SOL, XRP, HYPE): volatility CRPS.** The 1h score is `price CRPS + volatility CRPS`:
+  * 1,000 price paths are simulated from your submitted densities.
+  * For each path, realized volatility (standard deviation of 1-minute returns) is computed over the **full hour**, **four 15-minute blocks** and **twelve 5-minute blocks**.
+  * Each block is scored with CRPS against the realized volatility. Blocks are weighted with λ = 5.25 (λ/3 for the hour, λ/12 per 15-minute block, λ/36 per 5-minute block), matching [Synth](https://synthdata.co/research/introducing-volatility-crps-updated).
+  * The volatility term typically accounts for about 1–3% of the 1h score.
 * A lower **CRPS score** reflects more accurate predictions.
-* Missing or invalid predictions receive the **worst CRPS score of the round**.
+* Missing or invalid predictions receive the **worst CRPS score of the round**. On the 1-hour horizon this includes predictions whose densities cannot be turned into price paths for volatility scoring.
+* **Low-score models are disabled:** a model whose Recent, Steady **and** Anchor scores are all below **0.30** is stopped automatically. After you resubmit it, it has **72 hours** to get back above 0.30 before it can be disabled again.
 
 Leaderboard ranking is based on a **7-day rolling average** of CRPS scores across **all assets and horizons**, evaluated **relative to other participants**, for each prediction round:
 
@@ -144,21 +148,40 @@ The leaderboard displays several **relative performance indicators**, computed a
 * **Secondary Metrics**
   * **Steady CRPS (3 days):** Rolling relative CRPS average over the past 3 days.
   * **Recent CRPS (24 hours):** Rolling relative CRPS average over the past 24 hours.
+* **Volatility Metrics (1-hour horizon, informational)**
+  * **Vol Anchor (7 days)**, **Vol Steady (3 days)**, **Vol Recent (24 hours):** Rolling relative volatility CRPS on its own.
+  * Volatility is **already included** in the 1-hour CRPS scores above. These columns are not counted a second time in the ranking.
+* **Synth Score (informational)**
+  * **Synth Anchor (7 days)**, **Synth Steady (3 days)**, **Synth Recent (24 hours)**, per horizon and overall.
+  * Measures how your tracker would do **on Synth itself**: each round is matched with the first Synth prompt that starts after it, 1,000 price paths are built from your densities (like our miner does), and they are scored with **Synth's own CRPS** (plus the volatility term on 1h). Your gap to the **best Synth miner** on that prompt is averaged over the window and mapped to a 0–1 score.
+  * **1** = best of all Synth miners on every prompt (nobody gets there). Synth's top miners currently score about 0.4 on 1h and 0.5–0.6 on 24h.
+  * Missed rounds count as a poor answer: Synth's 95th-percentile result for that prompt.
+  * Available about 35 minutes (1h) or about 3 hours (24h) after a round resolves, once Synth has published its own scores.
+  * **Not used for ranking or rewards.** It shows how far the ensemble is from what Synth rewards.
+* **Benchmark**
+  * The `synth/benchmarktracker` row replays a real Synth miner: Synth's **#1** miner on the 1-hour horizon and its **#20** on the 24-hour horizon. It is shown for comparison and never receives rewards.
 
 #### Payouts <a href="#payouts" id="payouts"></a>
 
 * Rewards are distributed at target resolution + 24h (every 7 + 1 days).
-* Real mining rewards from Synth Miners (currently up to 50K / months).
-  * A 500 USD/month [(or 115.07 USD/week)](#user-content-fn-2)[^2] model hosting fee is applied.
+* Real mining rewards from Synth Miners.
+  * **Currently paused:** see below.
+  * A 500 USD/month [(or 115.07 USD/week)](#user-content-fn-1)[^1] model hosting fee is applied.
   * A 20% platform fee (after hosting fee) is applied.
   * **The rest is the Pot.**
-  * Price is determined at the creation of the checkpoint by converting [Alpha to TAO](#user-content-fn-3)[^3] and then converting [TAO to USD](#user-content-fn-4)[^4].
+  * Price is determined at the creation of the checkpoint by converting [Alpha to TAO](#user-content-fn-2)[^2] and then converting [TAO to USD](#user-content-fn-3)[^3].
 * Maximum of 8 players **receive 100% of the Pot.**
   * Top 4 of the 1-hour horizon.
   * Top 4 of the 24-hour horizon.
   * If a participant appears on both horizons, their prize is the sum.
 * The miners that Crunch manages can be found [here](https://taostats.io/subnets/50/metagraph?order=stake%3Adesc\&filter=5ECfazM69yvhX4SLX2CDzW4iSJvzJx3XESkhdncqM3HmyfKf).
   * The stake is not withdrawn each week; but only the new emissions are taken into account for the checkpoint.
+
+{% hint style="warning" %}
+**Why are the rewards currently paused?**
+
+Crunch's miners were deregistered from the Synth subnet in October 2026. New miners will be registered once the community models perform well enough on the 24-hour horizon (see the Synth Score). Until then, there are no mining rewards to distribute.
+{% endhint %}
 
 ## Probabilistic Forecasting
 
@@ -189,7 +212,7 @@ For example, you can try to forecast the target location by a gaussian density f
         "name": "norm",
         "params": {
             "loc": y_mean,
-            "scale": y_var
+            "scale": y_std
         }
     },
     "weight": weight
@@ -225,19 +248,25 @@ It must return a sequence of **predictive density distributions** for the **incr
 
 Each density prediction must comply with the [density\_pdf](https://github.com/microprediction/densitypdf/blob/main/densitypdf/__init__.py) specification.
 
+**For 1-hour horizon:** price paths are simulated from your densities at every step resolution and then combined. Volatility CRPS therefore rewards well-calibrated **per-minute volatility** and **consistent scales across step resolutions**, not just a good end-of-hour distribution.
+
+**Evaluate locally:** `TrackerEvaluator` scores your tracker exactly like the live leaderboard (since `crunch-synth` 0.15.0, including the volatility term on 1h) and ranks it against the live scores of all trackers over a recent week. Results from older versions of the package are not comparable.
+
+**Check your Synth Score:** `evaluate_synth_score(tracker, asset, horizon, steps, start, end)` replays real Synth prompts the way our miner answers them and returns your Synth Score, your gap to the best Synth miner and your rank among Synth miners. On 24h, a good score needs your step resolutions (5 minutes, 1 hour, 6 hours, 24 hours) to be **consistent with each other**, since Synth also scores 30-minute, 3-hour and 24-hour changes along the paths.
+
 {% hint style="info" %}
-You can refer to the [Tracker examples](https://github.com/crunchdao/crunch-synth/tree/master/crunch_synth/examples) for guidance.
+You can refer to the [Tracker examples](https://github.com/crunchdao/crunch-synth/tree/master/crunch_synth/examples) for guidance.\
+Both notebooks include a Synth Score and a volatility CRPS section.
 {% endhint %}
 
 ## Additional Resources
 
 * [Literature](https://github.com/crunchdao/crunch-synth/blob/master/LITERATURE.md)
 * Useful Python [packages](https://github.com/crunchdao/crunch-synth/blob/master/PACKAGES.md)
+* Synth: [Introducing Volatility CRPS](https://synthdata.co/research/introducing-volatility-crps-updated)
 
-[^1]: Still scored during the SP500 rollout; new prompts stop after the migration cutover, existing predictions age out naturally.
+[^1]: Equivalent to 500 / 4.34524, see why [here](https://www.cuemath.com/questions/what-is-the-average-number-of-weeks-in-a-month/).
 
-[^2]: Equivalent to 500 / 4.34524, see why [here](https://www.cuemath.com/questions/what-is-the-average-number-of-weeks-in-a-month/).
+[^2]: Conversion rate is coming from taostats' API.
 
-[^3]: Conversion rate is coming from taostats' API.
-
-[^4]: Conversion rate is coming from Coingecko's API.
+[^3]: Conversion rate is coming from Coingecko's API.
