@@ -10,7 +10,7 @@ description: >-
 
 [Synth](https://www.synthdata.co/) is a decentralized prediction subnet on Bittensor where miners forecast asset prices as probability distributions, which captures volatility and tail risks that single-value forecasts miss.
 
-In this Crunch, you build models, called **trackers**, that forecast the distribution of an asset's price changes over the next hour and the next 24 hours. The best trackers are combined into an ensemble, and that ensemble is what Crunch mines on Synth. Trackers are built with the open-source [crunch-synth](https://github.com/crunchdao/crunch-synth) framework.
+In this Crunch, you build models, called **trackers**, that forecast the distribution of an asset's price changes over two **horizons**: the next 1-hour and the next 24-hours. The best trackers are combined into an ensemble, and that ensemble is what Crunch mines on Synth. Trackers are built using the [crunch-synth](https://github.com/crunchdao/crunch-synth) package.
 
 ### Latest Changes
 
@@ -52,7 +52,7 @@ $$
 r_{t,k} = P_t - P_{t-k}
 $$
 
-The change is in the asset's price units, not a percentage. Rather than one value, your tracker returns a full **probability density function (PDF)** of $$r\_{t,k}$$ for every step up to the horizon. Below is an example of a density forecast of price changes over the next 24 hours, at 5-minute steps:
+The change is in the asset's price units, not a percentage. Rather than one value, your tracker returns a full **probability density function (PDF)** of $$r_{t,k}$$ for every step up to the horizon. Below is an example of a density forecast of price changes over the next 24 hours, at 5-minute steps:
 
 <figure><img src="https://3895192033-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FrZv71uKEauXe2J8CJm1h%2Fuploads%2FnuN5AApOG0aVraNkYQG4%2Fimage.png?alt=media&#x26;token=851f03af-035a-41f4-8da4-6fbaf80a130a" alt=""><figcaption></figcaption></figure>
 
@@ -193,7 +193,9 @@ The format follows the [density\_pdf](https://github.com/microprediction/density
 
 A tracker receives asset prices as they arrive and is asked for forecasts at specific times. You can use the prices provided by the challenge or any other dataset to improve your predictions.
 
-Subclass `TrackerBase` and implement `predict()`. The framework stores the prices for you and calls `predict()` once per step resolution of a round:
+### Your tracker
+
+Subclass `TrackerBase` and implement `predict()`. The base class stores the prices for you and calls `predict()` once per step resolution of a round:
 
 ```python
 import numpy as np
@@ -203,7 +205,7 @@ from crunch_synth import TrackerBase
 class MyTracker(TrackerBase):
 
     def predict(self, asset: str, horizon: int, step: int):
-        # Prices pushed by the framework, resampled at 5 minutes over the last 3 days
+        # Prices pushed by Crunch, resampled at 5 minutes over the last 3 days
         prices = self.prices.get_prices(asset, days=3, resolution=300)
         if len(prices) < 2:
             return []
@@ -232,11 +234,11 @@ A few things to note:
 * On the **1-hour horizon**, the volatility CRPS rewards a well-calibrated **per-minute volatility** and **consistent scales across step resolutions**, not just a good end-of-hour distribution.
 * On the **24-hour horizon**, your step resolutions (5 minutes, 1 hour, 6 hours, 24 hours) must be **consistent with each other**, since Synth also scores the 30-minute, 3-hour and 24-hour changes along the paths.
 
-#### Evaluate locally
+### Evaluate locally
 
 `TrackerEvaluator` scores your tracker exactly like the live leaderboard (since `crunch-synth` 0.15.0, including the volatility term on 1 hour) and ranks it against the live scores of all trackers over a recent week. Results from older versions of the package are not comparable.
 
-#### Check your Synth score
+### Check your Synth score
 
 `evaluate_synth_score` replays real Synth prompts the way our miner answers them:
 
@@ -259,6 +261,31 @@ print(result)  # SynthScoreResult(BTC 24h: score=0.019, mean gap=168.2, rank #24
 {% hint style="info" %}
 The [tracker examples](https://github.com/crunchdao/crunch-synth/tree/master/crunch_synth/examples) show a complete tracker, its local evaluation, and the Synth score and volatility CRPS sections.
 {% endhint %}
+
+### Price data
+
+The prices your tracker receives come from **PriceDB**, Crunch's price database, which is also the source used to score your predictions. You can query it directly to build your training data:
+
+```python
+from datetime import datetime, timezone
+from crunch_synth import pricedb
+
+start = datetime(2026, 10, 1, tzinfo=timezone.utc)
+end = datetime(2026, 10, 2, tzinfo=timezone.utc)
+
+# 1-minute closing prices, as [(timestamp, price), ...]
+prices = pricedb.get_price_history(asset="BTC", from_=start, to=end)
+
+# Or several columns at once, as a pandas DataFrame
+candles = pricedb.get_price_history(
+    asset="BTC", from_=start, to=end,
+    columns=["open", "high", "low", "close", "volume"],
+)
+```
+
+* Prices are **1-minute bars** only, refreshed every 30 seconds so each bar is stored as soon as it closes. Available columns are `open`, `high`, `low`, `close`, `volume` and `number_of_trades`.
+* Every covered asset is available.
+* The same data is available over HTTP. See the [API Doc](https://pricedb.crunchdao.com/docs).
 
 ## Additional Resources
 
