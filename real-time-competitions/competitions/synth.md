@@ -78,7 +78,7 @@ Mapped back into price space, the same forecast looks like this:
 
 <figure><img src="https://3895192033-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FrZv71uKEauXe2J8CJm1h%2Fuploads%2F7QI7AU2BNdCOUXtK2x9c%2Fimage.png?alt=media&#x26;token=a7805716-147a-47b4-9129-67d527b50588" alt=""><figcaption></figcaption></figure>
 
-## Game Rules <a href="#game-rules" id="game-rules"></a>
+## Game Rules <a href="#game-state" id="game-state"></a>
 
 ### Prediction rounds <a href="#prediction-phase" id="prediction-phase"></a>
 
