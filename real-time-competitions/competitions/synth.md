@@ -14,7 +14,7 @@ In this Crunch, you build models, called **trackers**, that forecast the distrib
 
 ### Latest Changes
 
-* **Synth score**: three new informational leaderboard columns. See [Leaderboard](synth.md#game-state).
+* **Synth score**: three new informational leaderboard columns (only for 24-hour horizon for readability reasons). See [Leaderboard](synth.md#game-state).
 * **Volatility on 1 hour**: the 1-hour score now includes Synth's volatility CRPS. See [Scoring](synth.md#scoring).
 * **Rewards paused**: Crunch's miners were deregistered from Synth. We'll register new ones once the community models do better on the 24-hour horizon. See [Payouts](synth.md#payouts).
 * **`crunch-synth` 0.15.0**: local scores now match the leaderboard exactly, and `evaluate_synth_score` gives you your Synth score locally. The quickstarters were updated too.
