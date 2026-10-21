@@ -275,11 +275,11 @@ This prevents any problems if your token is accidentally shared, as it will like
 
 This token allows the CLI to download the data and submit your submission on your behalf.
 
-#### API Key (new!) <a href="#api-key" id="api-key"></a>
+#### API Key <a href="#api-key" id="api-key"></a>
 
 In environments like Kaggle, using single-use tokens causes the notebook to crash when committing.
 
-You can now use an API key to set up your environment:
+You can now use an API Key to set up your environment:
 
 * `crunch setup-notebook <competition-name> @api-key <project-name>`&#x20;
 * `crunch setup <competition-name> <project-name> @api-key --token @api-key`&#x20;
@@ -287,8 +287,8 @@ You can now use an API key to set up your environment:
 The way the key must be provided depends on where you are using this command:
 
 * In Google Colab, via the `CRUNCH_API_KEY` secret ([see the documentation](https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Authentication.ipynb))
-* In Kaggle, via the `CRUNCH_API_KEY` secret ([see documentation](https://www.kaggle.com/discussions/getting-started/450378))
-* Everywhere else, via the `CRUNCH_API_KEY` environment variable.
+* In Kaggle, via the `CRUNCH_API_KEY` secret ([see documentation](https://www.kaggle.com/discussions/product-feedback/114053))
+* Everywhere else, via the `CRUNCH_API_KEY` environment variable or via a `.env`.
 
 {% hint style="info" %}
 You only need to add your API key as a secret once.
