@@ -30,7 +30,7 @@ competition = client.competitions.get("structural-break")
 round_ = competition.rounds.get(1)
 phase = round_.phases.submission
 
-for crunch_ in phase.crunches:
+for crunch_ in phase.crunches.list():
     if not crunch_.published:
         continue
 
@@ -63,7 +63,7 @@ You can generate an API-Key in the [API Management section of your account](http
 
 Any message that does not return a `2XX` or `3XX` error code is considered an error.
 
-All errors are formatted in the following way:
+All errors are formatted in the following format:
 
 {% code title="API Error Response" %}
 ```json

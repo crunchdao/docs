@@ -10,7 +10,7 @@ description: >-
 
 Creating an account on the CrunchDAO platform will allow you to be identified and get access to the competition dataset. Follow the link below to join the competition.
 
-{% embed url="https://account.crunchdao.com/auth/register?ref=doc" %}
+{% embed url="http://hub.crunchdao.com/signup?ref=doc" %}
 
 ## Submit
 
@@ -41,7 +41,7 @@ Run the commands to set up your environment and download the data to be ready to
 %pip install crunch-cli --upgrade
 
 # Authenticates yourself, it will downloads your last submission and the data
-!crunch setup <competition name> <model name> --notebook --token <token>
+!crunch setup-notebook <competition name> --token <token>
 ```
 {% endcode %}
 
@@ -267,11 +267,34 @@ You need to submit the `requirements.txt` yourself.
 
 ### Setup Tokens
 
+#### Project Tokens
+
 The site generates new tokens every minute, and each token can only be used once within a 3-minute timeframe.
 
 This prevents any problems if your token is accidentally shared, as it will likely have already been used or expired. Even the team shares their expired tokens in Quickstarters.
 
 This token allows the CLI to download the data and submit your submission on your behalf.
+
+#### API Key (new!) <a href="#api-key" id="api-key"></a>
+
+In environments like Kaggle, using single-use tokens causes the notebook to crash when committing.
+
+You can now use an API key to set up your environment:
+
+* `crunch setup-notebook <competition-name> @api-key <project-name>`&#x20;
+* `crunch setup <competition-name> <project-name> @api-key --token @api-key`&#x20;
+
+The way the key must be provided depends on where you are using this command:
+
+* In Google Colab, via the `CRUNCH_API_KEY` secret ([see the documentation](https://colab.research.google.com/github/google-gemini/cookbook/blob/main/quickstarts/Authentication.ipynb))
+* In Kaggle, via the `CRUNCH_API_KEY` secret ([see documentation](https://www.kaggle.com/discussions/getting-started/450378))
+* Everywhere else, via the `CRUNCH_API_KEY` environment variable.
+
+{% hint style="info" %}
+You only need to add your API key as a secret once.
+
+Then, the Crunch CLI will prompt you to allow it if it is not already allowed.
+{% endhint %}
 
 ## Run
 

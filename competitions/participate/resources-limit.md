@@ -101,7 +101,7 @@ Any users attempting to bypass the restriction mechanism will be **disqualified*
 
 ### `crunch.load_notebook()`
 
-Using `crunch.load_notebook()` in the cloud environment isn't supported and might raise an error in the future.
+Using `crunch.load_notebook()` in the cloud environment isn't supported and will raise an error.
 
 CLI users accidentally use it when trying to convert notebooks into regular Python script files. For these users, two alternatives are offered:
 
