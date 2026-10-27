@@ -15,6 +15,7 @@ In this Crunch, you build models, called **trackers**, that forecast the distrib
 ### Latest Changes
 
 * **Synth score**: three new informational leaderboard columns (only for 24-hour horizon for readability reasons). See [Leaderboard](synth.md#game-state).
+* **Synth score timing**: each Synth prompt is now answered with the latest round made before its request, as our miner does. See Leaderboard.
 * **Volatility on 1 hour**: the 1-hour score now includes Synth's volatility CRPS. See [Scoring](synth.md#scoring).
 * **Rewards paused**: Crunch's miners were deregistered from Synth. We'll register new ones once the community models do better on the 24-hour horizon. See [Payouts](synth.md#payouts).
 * **`crunch-synth` 0.15.0**: local scores now match the leaderboard exactly, and `evaluate_synth_score` gives you your Synth score locally. The quickstarters were updated too.
@@ -123,14 +124,16 @@ The leaderboard averages the relative scores over three rolling windows, across 
 | Steady, Recent                           | 3 days, 24 hours    | Information               |
 | Vol Anchor, Vol Steady, Vol Recent       | 7 days, 3 days, 24h | Information (1-hour only) |
 | Synth Anchor, Synth Steady, Synth Recent | 7 days, 3 days, 24h | Information               |
+|                                          |                     |                           |
 
 The **Vol** columns show the volatility CRPS on its own. It is already part of the 1-hour scores, so it is not counted twice.
 
-The **Synth** columns show how your tracker would do **on Synth itself**. Each round is matched with the first Synth prompt that starts after it, 1,000 price paths are built from your densities as our miner does, and they are scored with Synth's own CRPS (including the volatility term on 1 hour). Your gap to the best Synth miner on each prompt is averaged over the window and mapped to a score between 0 and 1:
+The **Synth** columns show how your tracker would do **on Synth itself**. Each Synth prompt is answered with the latest round made before its request, as our miner does: 1,000 price paths are built from your densities and scored with Synth's own CRPS (including the volatility term on 1 hour). Your gap to the best Synth miner on each prompt is averaged over the window and mapped to a score between 0 and 1:
 
 * **1** means being the best Synth miner on every prompt. Nobody gets there: Synth's top miners currently score about 0.4 on 1 hour and 0.5 to 0.6 on 24 hours.
 * A missed round counts as Synth's 95th-percentile result for that prompt, as on Synth.\
   A model that answered less than 80% of the rounds of a window gets no Synth score for it.
+* Rounds run on their own schedule, so the round sent to a prompt is on average about 5 minutes old on 1 hour and 22 minutes old on 24 hours.
 * The score is available about 35 minutes (1 hour) or 3 hours (24 hours) after a round resolves, once Synth has published its own scores.
 * It is **not used for ranking or rewards**: it shows how far the ensemble is from what Synth rewards.
 
@@ -240,7 +243,7 @@ A few things to note:
 
 ### Check your Synth score
 
-`evaluate_synth_score` replays real Synth prompts the way our miner answers them:
+`evaluate_synth_score` replays real Synth prompts, with your tracker predicting at each prompt's request time. With no round delay, it reads slightly higher than the leaderboard:
 
 ```python
 from datetime import datetime, timezone
