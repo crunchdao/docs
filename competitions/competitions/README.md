@@ -96,6 +96,10 @@ Data cannot be shared directly, whether in file format or as visualizations.\
 Only your work should be explained, and the visualizations should focus on your model.
 {% endhint %}
 
+The write-up will then be displayed on the leaderboard for everyone to read once the competition closes:
+
+<figure><img src="../../.gitbook/assets/image (159).png" alt="ADIA Lab Structural Break Challenge&#x27;s Leaderboard"><figcaption></figcaption></figure>
+
 ### 4. The Reveal
 
 The reveal will happen at the very end, after the private leaderboard is published.
